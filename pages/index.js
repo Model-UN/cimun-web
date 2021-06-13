@@ -14,7 +14,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <Link href="http://cimun.org">CIMUN XVIII</a>!
+          Welcome to <Link href="http://cimun.org">CIMUN XVIII</Link>!
         </h1>
 
         <p className={styles.description}>
