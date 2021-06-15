@@ -34,6 +34,8 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
+---
+
 <p align="center">
   <a href="https://vercel.com?utm_source=model-un&utm_campaign=oss" target="blank">
     <img src="./public/vercel-banner.svg" width="320" alt="Vercel Banner" />
