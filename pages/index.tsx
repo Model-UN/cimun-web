@@ -24,12 +24,12 @@ export default function Home() {
           This is Model UN
         </Header>
         <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
+          <a href="https://nextjs.org/docs?utm_source=model-un&utm_campaign=oss" className={styles.card}>
             <h3>Directorate Applications &rarr;</h3>
             <p>Help lead the conference by applying for a leadership role</p>
           </a>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
+          <a href="https://nextjs.org/learn?utm_source=model-un&utm_campaign=oss" className={styles.card}>
             <h3>What&#39;s CIMUN? &rarr;</h3>
             <p>Discover what makes CIMUN a unique Model UN organization</p>
           </a>
@@ -43,7 +43,7 @@ export default function Home() {
           </a>
 
           <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+            href="https://vercel.com?utm_source=model-un&utm_campaign=oss"
             className={styles.card}
           >
             <h3>Committees &rarr;</h3>
