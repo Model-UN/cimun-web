@@ -1,26 +1,3 @@
-.display {
-  max-height: 86vh;
-  width: 94vw;
-  margin: 4vw auto;
-  height: 48.375vw; /* height:width ratio = 9/16 = .5625  */
-  max-width: 94vw; /* width:height ratio = 16/916 = 1.7777  */
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-
-.display h1 {
-  color: white;
-  font-size: 18vw;
-  line-height: 1;
-}
-
-.display h2 {
-  color: white;
-  font-size: 2vw;
-  line-height: 1.25;
-}
-
 .topDisplay {
   align-self: flex-start;
   margin-left: -3vw;

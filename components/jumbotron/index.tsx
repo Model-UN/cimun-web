@@ -1,24 +1,25 @@
-import { JSXElementConstructor } from 'react';
+import { Display, Header } from '../../styles/typography'
+import { ComponentWrapper } from '../../styles/containers'
 import styles from './Jumbotron.module.css'
 
 const Jumbotron = () => {
   return (
-    <div className={styles.display} style={{
+    <ComponentWrapper height="48.375vw" minHeight="40.5vw" maxHeight="86vh" justify="flex-end" style={{
       backgroundImage: "url(/jumbotron-bg.svg)", backgroundPosition: 'bottom', backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat'
     }}>
       <div className={styles.middleDisplay}>
-        <h1 className={styles.topDisplay}>
+        <Display margins="0 0 0 -3vw">
           CIMUN
-      </h1>
-        <h2 className={styles.subDisplay}>
+        </Display>
+        <Header color="white" margins="0 1vw 0 3vw" line={1.25} width="32vw" self="center">
           THE 18TH ANNUAL CHICAGO INTERNATIONAL MODEL UNITED NATIONS CONFERENCE
-      </h2>
+        </Header>
       </div>
-      <h1 className={styles.bottomDisplay}>
+      <Display self="flex-end" margins="0 3vw -3vw 0">
         XVIII
-    </h1>
-    </div>
+      </Display>
+    </ComponentWrapper>
   )
 }
 
