@@ -43,7 +43,7 @@ export default function Home() {
           </a>
 
           <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+            href="https://vercel.com?utm_source=model-un&utm_campaign=oss"
             className={styles.card}
           >
             <h3>Committees &rarr;</h3>
@@ -55,12 +55,12 @@ export default function Home() {
       </ComponentWrapper>
       <footer className={styles.footer}>
         <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+          href="https://vercel.com?utm_source=model-un&utm_campaign=oss"
           target="_blank"
           rel="noopener noreferrer"
         >
           Powered by{' '}
-          <span className={styles.logo}>
+          <span className={styles.vercel}>
             <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
           </span>
         </a>
