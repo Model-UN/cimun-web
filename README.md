@@ -1,6 +1,6 @@
 # CIMUN XVIII
 
-Hello! Welcome to the repository for the CIMUN 18 web application. This is an
+Hello! Welcome to the repository for the CIMUN XVIII web application. This is an
 open-source [Next.js](https://nextjs.org/) project developed and maintained by
 the volunteer-run CIMUN Department of Technology.
 
@@ -56,6 +56,3 @@ To learn more about Next.js, take a look at the following resources:
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Vercel
-
