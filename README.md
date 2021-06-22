@@ -1,5 +1,34 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with
-[`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# CIMUN XVIII Front End Web Application
+
+Hello! Welcome to the repository for the CIMUN XVIII web application. This is an
+open-source [Next.js](https://nextjs.org/) project developed and maintained by
+the volunteer-run CIMUN Department of Technology.
+
+Chicago International Model United Nations (CIMUN) is an annual inter-scholastic
+(high school) Model UN conference in Chicago, IL. Our focus is to create realistic 
+educational opportunities for young leaders in the scholastic MUN community.
+We are organized by the Model United Nations Development Organization (MUNDO).
+
+This project is the first iteration of hopefully many projects from the CIMUN
+engineering team to provide future conference organizers with the tools necessary
+to organize Model UN conferences for the 21st Century.
+
+Our FE stack uses Next.js, React, and TypeScript in order to create exciting
+front-ends for conference attendees, as well as Model UN-specific, CRM-like
+administrative tools for conference organizers and stakeholders.
+
+The project here, as well as the projects on the
+[model-un](https://github.com/model-un) GitHub organization page are all **open source**,
+licensed under the [GNU GPL v2](./LICENSE) license.
+
+This project uses [Vercel](https://vercel.com?utm_source=model-un&utm_campaign=oss) for all
+our continuous deployment needs.
+
+<p align="center">
+  <a href="https://vercel.com?utm_source=model-un&utm_campaign=oss" target="blank">
+    <img src="./public/vercel-banner.svg" width="200" alt="Vercel Banner" />
+  </a>
+</p>
 
 ## Getting Started
 
@@ -27,14 +56,3 @@ To learn more about Next.js, take a look at the following resources:
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Vercel
-
-We use the [Vercel Platform](https://vercel.com?utm_source=model-un&utm_campaign=oss) from the creators of Next.js for
-our continuous deployment needs.
-
-<p align="center">
-  <a href="https://vercel.com?utm_source=model-un&utm_campaign=oss" target="blank">
-    <img src="./public/vercel-banner.svg" width="200" alt="Vercel Banner" />
-  </a>
-</p>
