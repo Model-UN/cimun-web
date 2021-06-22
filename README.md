@@ -1,4 +1,4 @@
-# CIMUN XVIII
+# CIMUN XVIII Front End Web Application
 
 Hello! Welcome to the repository for the CIMUN XVIII web application. This is an
 open-source [Next.js](https://nextjs.org/) project developed and maintained by
