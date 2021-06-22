@@ -1,3 +1,5 @@
+# CIMUN XVIII
+
 Hello! Welcome to the repository for the CIMUN 18 web application. This is an
 open-source [Next.js](https://nextjs.org/) project developed and maintained by
 the volunteer-run CIMUN Department of Technology.
