@@ -1,58 +1,82 @@
 import React from 'react';
 import Image from 'next/image';
-import { FooterSection, StyledFooter, VercelLink, LogoBox } from './Footer.styles';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  FooterSection, StyledFooter, VercelLink, LogoBox, FooterNav, FooterCol, FooterColFirst, Icon
+} from './Footer.styles';
 
 const Footer: React.FC = () => (
-  <StyledFooter >
-    <FooterSection>
-      <div >
-        <a href="https://www.facebook.com/CIMUNMUNDO" target="_blank" rel="noreferrer">
+  <StyledFooter>
+    <FooterNav>
+      <FooterSection>
+        <FooterColFirst >
+          <div>
+            <Image
+              src='/CIMUN_White.png'
+              layout='responsive'
+              width={120}
+              height={34}
+            />
+          </div>
+          <p>
+            It's your world,
+            <strong> fix it...</strong>
+          </p>
+        </FooterColFirst>
+
+        <FooterCol>
+            <h4>Explore</h4>
+
+            <div >
+              <a href="https://www.cimunmerch.org">The CIMUN Store</a>
+            </div>
+
+            <div >
+              <a href="http://www.mimun.mx/" target="_blank" rel="noreferrer">Check out MIMUN</a>
+            </div>
+        </FooterCol>
+
+        <FooterCol>
+            <h4>Connect with Us</h4>
+            <div >
+              <a href="mailto:SC@cimun.org">sc@CIMUN.org</a>
+            </div>
+            <br></br>
+            <div >
+              <a href="https://www.facebook.com/CIMUNMUNDO" target="_blank" rel="noreferrer">
+                <Icon icon={['fab', 'facebook-square']} />
+              </a>
+              <a href="https://www.instagram.com/cimun_mundo/" target="_blank" rel="noreferrer">
+                <Icon icon={['fab', 'instagram-square']} />
+              </a>
+              <a href="https://twitter.com/CIMUN_MUNDO" target="_blank" rel="noreferrer">
+                <Icon icon={['fab', 'twitter-square']} />
+              </a>
+            </div>
+        </FooterCol>
+      </FooterSection>
+      <FooterSection>
+        <small>&copy; 2021 MUNDO. All Rights Reserved.</small>
+        <VercelLink
+          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Powered by{' '}
           <LogoBox>
-            <FontAwesomeIcon icon={['fab', 'facebook-square']} />
+            <Image
+              alt="Vercel Logo"
+              height={16}
+              src="/vercel.svg"
+              width={72}
+              color="white"
+            />
           </LogoBox>
-        </a>
-        <a href="https://www.instagram.com/cimun_mundo/" target="_blank" rel="noreferrer">
-          <LogoBox>
-            <FontAwesomeIcon icon={['fab', 'instagram-square']} />
-          </LogoBox>
-        </a>
-        <a href="https://twitter.com/CIMUN_MUNDO" target="_blank" rel="noreferrer">
-          <LogoBox>
-            <FontAwesomeIcon icon={['fab', 'twitter-square']} />
-          </LogoBox>
-        </a>
-      </div>
-      <div >
-        <a href=" https://forms.gle/qDLJH7VgahsHG9ec8" target="_blank">Register Here</a>
-      </div>
-      <div >
-        <a href="https://www.cimunmerch.org">The CIMUN Store</a>
-      </div>
-      <div >
-        <a href="mailto:SC@cimun.org">Contact Us</a>
-      </div>
-      <div >
-        <a href="http://www.mimun.mx/" target="_blank" rel="noreferrer">Check out MIMUN</a>
-      </div>
-    </FooterSection>
-    <FooterSection>
-      <VercelLink
-        href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Powered by{' '}
-        <LogoBox>
-          <Image
-            src="/vercel.svg"
-            alt="Vercel Logo"
-            width={72}
-            height={16}
-          />
-        </LogoBox>
-      </VercelLink>
-    </FooterSection>
+        </VercelLink>
+        <div>
+          A MUNDO Conference
+        </div>
+      </FooterSection>
+    </FooterNav>
   </StyledFooter>
 );
 

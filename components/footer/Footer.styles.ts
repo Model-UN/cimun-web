@@ -1,30 +1,65 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styled from 'styled-components'
+import { colors } from '../../styles/colors';
 
 export const StyledFooter = styled.footer`
-  width: 100%;
-  height: 100px;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: auto;
+  ;
+  background-color: ${colors.primaryBlue};
   border-top: 1px solid #eaeaea;
+  color: white;
+  font-size: 12px;
+  // padding: 50px 0;
+  padding-bottom: 120px;
+  padding-top: 90px;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+`;
+
+export const FooterNav = styled.nav`
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
   flex-direction: column;
+  margin: auto;
+  max-width: 1200px;
+  width: 90%;
 `;
 
 export const FooterSection = styled.div`
+  align-items: top;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: space-between;
   width: 100%;
 `;
 
-export const VercelLink = styled.a`
+export const FooterCol = styled.section`
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  margin-right: 2rem;
+  width: 14rem;
+`;
+
+export const FooterColFirst = styled(FooterCol)`
+  width: 18rem;
+  padding-bottom: 50px;
+`
+
+export const VercelLink = styled.a`
+  align-self: center;
   align-items: center;
-  flex-grow: 1;
 `;
 
 export const LogoBox = styled.span`
+  height: 1rem;
+  margin-left: 0.5rem;
+  flex-grow: 2;
+`;
+
+export const Icon = styled(FontAwesomeIcon)`
+  font-size: 2em;
   height: 1em;
   margin-left: 0.5rem;
-`;
+`
