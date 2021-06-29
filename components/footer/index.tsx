@@ -13,8 +13,8 @@ const Footer: React.FC = () => (
             <Image
               src='/CIMUN_White.png'
               layout='responsive'
-              width={120}
-              height={34}
+              width={105}
+              height={30}
             />
           </div>
           <p>
@@ -36,32 +36,32 @@ const Footer: React.FC = () => (
         </FooterCol>
 
         <FooterCol>
-            <h4>Connect with Us</h4>
-            <div >
-              <a href="mailto:SC@cimun.org">sc@CIMUN.org</a>
-            </div>
-            <br></br>
-            <div >
-              <a href="https://www.facebook.com/CIMUNMUNDO" target="_blank" rel="noreferrer">
-                <Icon icon={['fab', 'facebook-square']} />
-              </a>
-              <a href="https://www.instagram.com/cimun_mundo/" target="_blank" rel="noreferrer">
-                <Icon icon={['fab', 'instagram-square']} />
-              </a>
-              <a href="https://twitter.com/CIMUN_MUNDO" target="_blank" rel="noreferrer">
-                <Icon icon={['fab', 'twitter-square']} />
-              </a>
-            </div>
+          <h4>Connect with Us</h4>
+          <div >
+            <a href="mailto:SC@cimun.org">sc@CIMUN.org</a>
+          </div>
+          <br />
+          <div >
+            <a href="https://www.facebook.com/CIMUNMUNDO" target="_blank" rel="noreferrer">
+              <Icon icon={['fab', 'facebook-square']} />
+            </a>
+            <a href="https://www.instagram.com/cimun_mundo/" target="_blank" rel="noreferrer">
+              <Icon icon={['fab', 'instagram-square']} />
+            </a>
+            <a href="https://twitter.com/CIMUN_MUNDO" target="_blank" rel="noreferrer">
+              <Icon icon={['fab', 'twitter-square']} />
+            </a>
+          </div>
         </FooterCol>
       </FooterSection>
       <FooterSection>
-        <small>&copy; 2021 MUNDO. All Rights Reserved.</small>
+        <div/>
         <VercelLink
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
+          Powered by{'    '}
           <LogoBox>
             <Image
               alt="Vercel Logo"
@@ -72,9 +72,7 @@ const Footer: React.FC = () => (
             />
           </LogoBox>
         </VercelLink>
-        <div>
-          A MUNDO Conference
-        </div>
+        <div/>
       </FooterSection>
     </FooterNav>
   </StyledFooter>
