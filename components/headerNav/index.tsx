@@ -4,6 +4,15 @@ import { breakpoints } from "../../styles/breakpoints";
 import Link from 'next/link'
 import styled from 'styled-components'
 
+const HeaderWrapper = styled(ComponentWrapper)`
+  height: 3.9375vw;
+  min-height: 45px;
+  max-height: 7vh;
+  width: 94vw;
+  margin: auto;
+  flex-direction: row;
+  justify-content: space-between;
+`;
 const ListContainer = styled.ul`
   display: flex;
   height: 100%;
@@ -59,12 +68,12 @@ const Logo = styled.img`
 
 const HeaderNav = () => {
   return (
-    <ComponentWrapper height="3.9375vw" minHeight="45px" maxHeight="7vh" width="94vw" margins="auto" direction="row" justify="space-between" >
-      <div style={{ justifySelf: "flex-start", alignItems: "center", justifyContent: "center", alignSelf: "center" }}><Link href="/"><Logo src="/cimun-logo.png" /></Link></div>
+    <HeaderWrapper>
+      <div style={{ justifySelf: "flex-start", alignItems: "center", justifyContent: "center" }}><Link href="/"><Logo src="/cimun-logo.png" /></Link></div>
       <ListContainer>
         <ListItem><Link href="/"><Anchor>Home</Anchor></Link></ListItem>
       </ListContainer>
-    </ComponentWrapper>
+    </HeaderWrapper>
   )
 }
 
