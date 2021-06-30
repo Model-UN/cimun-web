@@ -1,6 +1,8 @@
 import { colors } from "./colors";
 import styled from 'styled-components'
 
+/* responsive full screen height:width ratio = 9/16 = .5625  */
+
 interface ContainerType {
   color?: string; ///Passing Optional Props
   margins?: string;
@@ -52,7 +54,3 @@ export const ComponentWrapper = styled.div<ContainerType>`
   align-items: ${(props: ContainerType) =>
       props.align ? props.align : "center"};
 `;
-
-// max-height: 86vh;
-//   min-height: 40.5vw;
-//   height: 48.375vw; /* height:width ratio = 9/16 = .5625  */
