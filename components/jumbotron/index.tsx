@@ -12,7 +12,7 @@ const Jumbotron = () => {
         <Display margins="0 0 0 -3vw">
           CIMUN
         </Display>
-        <Header size="2.5vw" color="white" margins="0 0 0 2vw" line={1.25} width="32vw" self="center">
+        <Header size="2.3vw" color="white" margins="6vw -1vw 0 0" line={1.20} width="34vw" self="center">
           THE 18TH ANNUAL CHICAGO INTERNATIONAL MODEL UNITED NATIONS CONFERENCE
         </Header>
       </div>
