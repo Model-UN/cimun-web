@@ -21,6 +21,7 @@ import styled from 'styled-components'
   margins?: string;
   self?: string;
   width?: string;
+  align?: string;
 };
 
 export const Display = styled.h1<TextType>`
@@ -36,6 +37,8 @@ export const Display = styled.h1<TextType>`
       props.line ? props.line : 1};
   width: ${(props: TextType) =>
       props.width ? props.width : undefined};
+  text-align: ${(props: TextType) =>
+      props.align ? props.align : 'left'};
 `;
 
 export const Header = styled.h2<TextType>`
@@ -51,4 +54,40 @@ export const Header = styled.h2<TextType>`
       props.line ? props.line : undefined};
   width: ${(props: TextType) =>
       props.width ? props.width : undefined};
+  text-align: ${(props: TextType) =>
+      props.align ? props.align : 'left'};
+`;
+
+export const SubTitle = styled.h3<TextType>`
+  font-family: ${fonts.subtitle} , sans-serif;
+  align-self: ${(props: TextType) =>
+      props.self ? props.self : "flex-start"};
+  margin: ${(props: TextType) =>
+      props.margins ? props.margins : undefined};
+  color: ${(props: TextType) => props.color ? props.color : "black"};
+  font-size: ${(props: TextType) =>
+      props.size ? props.size : "2rem"};
+  line-height: ${(props: TextType) =>
+      props.line ? props.line : undefined};
+  width: ${(props: TextType) =>
+      props.width ? props.width : undefined};
+  text-align: ${(props: TextType) =>
+      props.align ? props.align : 'left'};
+`;
+
+export const Body = styled.p<TextType>`
+  font-family: ${fonts.body} , sans-serif;
+  align-self: ${(props: TextType) =>
+      props.self ? props.self : "flex-start"};
+  margin: ${(props: TextType) =>
+      props.margins ? props.margins : undefined};
+  color: ${(props: TextType) => props.color ? props.color : "black"};
+  font-size: ${(props: TextType) =>
+      props.size ? props.size : "1rem"};
+  line-height: ${(props: TextType) =>
+      props.line ? props.line : undefined};
+  width: ${(props: TextType) =>
+      props.width ? props.width : undefined};
+  text-align: ${(props: TextType) =>
+      props.align ? props.align : 'left'};
 `;
