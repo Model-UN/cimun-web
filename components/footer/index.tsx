@@ -57,16 +57,16 @@ const Footer: React.FC = () => (
       <FooterSection>
         <div/>
         <VercelLink
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+          href="https://vercel.com?utm_source=model-un&utm_campaign=oss"
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noopener"
         >
           Powered by{'    '}
           <LogoBox>
             <Image
               alt="Vercel Logo"
               height={16}
-              src="/vercel.svg"
+              src="/Vercel/logotype/light/vercel-logotype-light.svg"
               width={72}
               color="white"
             />
