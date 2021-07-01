@@ -5,14 +5,14 @@ import styles from './Jumbotron.module.css'
 const Jumbotron = () => {
   return (
     <ComponentWrapper height="48.375vw" minHeight="40.5vw" maxHeight="86vh" justify="flex-end" margins="0" style={{
-      backgroundImage: "url(/jumbotron-bg.svg)", backgroundPosition: 'bottom', backgroundSize: 'cover',
+      backgroundImage: "url(/jumbotron-bg.png)", backgroundPosition: 'bottom', backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat'
     }}>
       <div className={styles.middleDisplay}>
         <Display margins="0 0 0 -3vw">
           CIMUN
         </Display>
-        <Header color="white" margins="0 1vw 0 3vw" line={1.25} width="32vw" self="center">
+        <Header size="2.3vw" color="white" margins="6vw -1vw 0 0" line={1.20} width="34vw" self="center">
           THE 18TH ANNUAL CHICAGO INTERNATIONAL MODEL UNITED NATIONS CONFERENCE
         </Header>
       </div>
