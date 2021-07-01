@@ -4,7 +4,7 @@ import styles from './Jumbotron.module.css'
 
 const Jumbotron = () => {
   return (
-    <ComponentWrapper height="48.375vw" minHeight="40.5vw" maxHeight="86vh" justify="flex-end" style={{
+    <ComponentWrapper height="48.375vw" minHeight="40.5vw" maxHeight="86vh" justify="flex-end" margins="0" style={{
       backgroundImage: "url(/jumbotron-bg.svg)", backgroundPosition: 'bottom', backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat'
     }}>
