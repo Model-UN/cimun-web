@@ -4,15 +4,15 @@ import { colors } from '../../styles/colors';
 
 export const StyledFooter = styled.footer`
   -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: auto;
+  -webkit-font-smoothing: antialiased;
   ;
   background-color: ${colors.primaryBlue};
-  border-top: 1px solid #eaeaea;
+  border-top: 1px solid #EAEAEA;
   color: white;
-  font-size: 12px;
+  font-size: 18px;
   // padding: 50px 0;
   padding-bottom: 120px;
-  padding-top: 90px;
+  padding-top: 48px;
   position: relative;
   width: 100%;
   z-index: 1;
@@ -27,7 +27,7 @@ export const FooterNav = styled.nav`
 `;
 
 export const FooterSection = styled.div`
-  align-items: top;
+  align-items: start;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -44,12 +44,13 @@ export const FooterCol = styled.section`
 
 export const FooterColFirst = styled(FooterCol)`
   width: 18rem;
-  padding-bottom: 50px;
+  padding-bottom: 25px;
 `
 
 export const VercelLink = styled.a`
   align-self: center;
   align-items: center;
+  width: 14rem;
 `;
 
 export const LogoBox = styled.span`

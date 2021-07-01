@@ -18,40 +18,47 @@ const Footer: React.FC = () => (
             />
           </div>
           <p>
-            It's your world,
-            <strong> fix it...</strong>
+            It's your world... <strong>fix it!</strong>
           </p>
         </FooterColFirst>
 
         <FooterCol>
-            <h4>Explore</h4>
+            <h2>Explore</h2>
 
             <div >
               <a href="https://www.cimunmerch.org">The CIMUN Store</a>
             </div>
 
             <div >
-              <a href="http://www.mimun.mx/" target="_blank" rel="noreferrer">Check out MIMUN</a>
+              <a href="https://www.mimun.mx/"
+                 target="_blank"
+                 rel="noreferrer">Check out MIMUN</a>
             </div>
+          <br/>
         </FooterCol>
 
         <FooterCol>
-          <h4>Connect with Us</h4>
+          <h2>Connect with Us</h2>
           <div >
-            <a href="mailto:SC@cimun.org">sc@CIMUN.org</a>
-          </div>
-          <br />
-          <div >
-            <a href="https://www.facebook.com/CIMUNMUNDO" target="_blank" rel="noreferrer">
+            <a href="https://www.facebook.com/CIMUNMUNDO"
+               target="_blank"
+               rel="noreferrer">
               <Icon icon={['fab', 'facebook-square']} />
             </a>
-            <a href="https://www.instagram.com/cimun_mundo/" target="_blank" rel="noreferrer">
+            <a href="https://www.instagram.com/cimun_mundo/"
+               target="_blank"
+               rel="noreferrer">
               <Icon icon={['fab', 'instagram-square']} />
             </a>
             <a href="https://twitter.com/CIMUN_MUNDO" target="_blank" rel="noreferrer">
               <Icon icon={['fab', 'twitter-square']} />
             </a>
           </div>
+          <br />
+          <div >
+            <a href="mailto:sc@cimun.org">sc@cimun.org</a>
+          </div>
+          <br/>
         </FooterCol>
       </FooterSection>
       <FooterSection>
