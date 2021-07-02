@@ -1,6 +1,7 @@
 import { fonts } from "./fonts";
 import { colors } from "./colors";
 import styled from 'styled-components'
+import {breakpoints} from "./breakpoints";
 
 /* Example on how to pass custom prop without pissing off typescript
  ${(props: {
@@ -85,8 +86,8 @@ export const Body = styled.p<TextType>`
       props.margins ? props.margins : undefined};
   color: ${(props: TextType) => props.color ? props.color : "black"};
   font-size: ${(props: TextType) =>
-      props.size ? props.size : "1rem"};
-  line-height: ${(props: TextType) =>
+      props.size ? props.size : "1.2rem"};
+ line-height: ${(props: TextType) =>
       props.line ? props.line : undefined};
   width: ${(props: TextType) =>
       props.width ? props.width : undefined};

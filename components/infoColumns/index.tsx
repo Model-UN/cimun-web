@@ -60,7 +60,7 @@ const CardContainer = styled.div<{
 `;
 const Title = styled(SubTitle)`
   font-size: 6rem;
-  ${breakpoints("font-size", "", [{ 1000: "4rem" }])};
+  ${breakpoints("font-size", "", [{ 1000: "2.75rem" }])};
   width: 100px;
   ${breakpoints("width", "", [{ 1000: "100%" }])};
   margin: 0 0 0 0;
@@ -72,7 +72,7 @@ const InfoColumns = () => {
     <InfoColumnWrapper>
       <CardContainer flex="1" margins="1rem 0" pad="0 2rem 0 0">
         <Title line={0.9}>Welcome Back, Delegates.</Title>
-        <Body size="1.rrem" line={1.4}>
+        <Body line={1.4}>
           For 18 years, CIMUN has been a premier conference for scholastic Model
           United Nations programs. <br />
           <br />
@@ -109,10 +109,10 @@ const InfoColumns = () => {
         <CardContainer
           bordered
           height="600px"
-          color={colors.fadedPrimaryBlue}
+          color={colors.primaryBlue}
           margins="1rem 1rem 0 0"
         >
-          <SubTitle size="4rem" margins="10px 0" self="center" align="center" line={0.9}>
+          <SubTitle size="3.5rem" margins="10px 0" self="center" align="center" line={0.9} color={colors.ltGray}>
             Join us in-person!
           </SubTitle>
           <div
@@ -121,10 +121,10 @@ const InfoColumns = () => {
               justifyContent: "center",
             }}
           >
-            <Body align="center" self="center" size="2rem" weight={700}>
+            <Body align="center" self="center" size="2rem" weight={700} color={colors.ltGray}>
               February 3rd - 4th, 2022
             </Body>
-            <Body align="center" self="center" size="2rem">
+            <Body align="center" self="center" size="2rem" color={colors.ltGray}>
               <b>The Palmer House Hilton Hotel</b>
               <br />
               <i>17 East Monroe Street<br />Chicago, IL 60603</i>
@@ -134,13 +134,13 @@ const InfoColumns = () => {
         <CardContainer
           bordered
           height="600px"
-          color={colors.primaryBlue}
+          color={colors.fadedPrimaryBlue}
           margins="1rem 0 0 1rem"
         >
-          <SubTitle size="4rem" margins="10px 0" self="center" align="center" color={colors.ltGray} line={0.9}>
+          <SubTitle size="3.5rem" margins="10px 0" self="center" align="center" line={0.9}>
             Don't Miss Out!
           </SubTitle>
-          <SubTitle size="2rem" margins="25px 0 -10px" self="center" align="center" color={colors.ltGray}>
+          <SubTitle size="2rem" margins="25px 0" self="center" align="center">
             Save these dates:
           </SubTitle>
           <div
@@ -149,13 +149,13 @@ const InfoColumns = () => {
               justifyContent: "center",
             }}
           >
-            <Body align="center" self="center" size="1.75rem" color={colors.ltGray}>
+            <Body align="center" self="center" size="1.75rem">
               <b>September 1st, 2021</b> - School Applications Open
             </Body>
-            <Body align="center" self="center" size="1.75rem" color={colors.ltGray}>
+            <Body align="center" self="center" size="1.75rem">
               <b>August 1st, 2021</b> - Staff Applications Open
             </Body>
-            <Body align="center" self="center" size="1.75rem" color={colors.ltGray}>
+            <Body align="center" self="center" size="1.75rem">
               <b>January 16th, 2022</b> - Position Papers Submissions
             </Body>
           </div>
