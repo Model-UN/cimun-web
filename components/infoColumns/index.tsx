@@ -10,7 +10,7 @@ const InfoColumnWrapper = styled(ComponentWrapper)`
   flex: 1;
   width: 94vw;
   margin: 3.9375vw auto;
-  ${breakpoints("margin", "", [{ 1000: "50px 0" }])};
+  ${breakpoints("margin", "", [{ 1000: "10px 0" }])};
   justify-content: space-between;
   flex-direction: row;
   ${breakpoints("flex-direction", "", [{ 1000: "column" }])};
@@ -19,52 +19,60 @@ const CardWrapper = styled.div<{
   bordered?: boolean;
   flex?: string;
   height?: string;
+  margins?: string;
+  pad?: string;
 }>`
   display: flex;
   flex: ${(props) => (props.flex ? props.flex : "1")};
-  ${breakpoints("flex", "", [{ 1200: "1" }])};
+  ${breakpoints("flex", "", [{ 1400: "1" }])};
+  ${breakpoints("width", "", [{ 1400: "100%" }])};
   align-items: center;
   flex-direction: row;
-  ${breakpoints("flex-direction", "", [{ 1200: "column" }])};
-  justify-content: space-evenly;
-  margin: 1rem;
-  padding: 1.5rem;
-  ${breakpoints("padding", "", [{ 1200: "1.5rem auto" }])};
-  ${breakpoints("margin", "", [{ 1200: "1rem 3vw" }])};
+  ${breakpoints("flex-direction", "", [{ 1400: "column" }])};
+  justify-content: space-between;
+  ${breakpoints("align-items", "", [{ 1400: "flex-end" }])};
+  margin: ${(props) => (props.margins ? props.margins : "1rem")};
+  padding: ${(props) => (props.pad ? props.pad : "1.5rem")};
+  ${breakpoints("padding", "", [{ 1400: "1.5rem auto" }])};
+  ${breakpoints("margin", "", [{ 1400: "1rem 0" }])};
 `;
 const CardContainer = styled.div<{
   bordered?: boolean;
   flex?: string;
   height?: string;
+  color?: string;
+  margins?: string;
+  pad?: string;
 }>`
   display: flex;
   flex: ${(props) => (props.flex ? props.flex : "1")};
-  ${breakpoints("flex", "", [{ 1200: "1" }])};
-  ${breakpoints("min-width", "", [{ 1200: "42vw" }])};
+  ${breakpoints("flex", "", [{ 1400: "1" }])};
+  ${breakpoints("min-width", "", [{ 1400: "45vw" }])};
   ${breakpoints("width", "", [{ 1000: "94vw" }])};
   height: ${(props) => (props.height ? props.height : "auto")};
   align-items: center;
   flex-direction: column;
-  justify-content: space-evenly;
-  border: ${(props) =>
-    props.bordered ? `8px solid ${colors.primaryBlue}` : null};
-  border-radius: ${(props) => (props.bordered ? `24px` : null)};
-  margin: 1rem;
-  padding: 1.5rem;
-  ${breakpoints("padding", "", [{ 1200: "1.5rem auto" }])};
-  ${breakpoints("margin", "", [{ 1200: "1rem auto" }])};
+  justify-content: center;
+  background-color: ${(props) => (props.color ? props.color : "transparent")};
+  margin: ${(props) => (props.margins ? props.margins : "1rem")};
+  padding: ${(props) => (props.pad ? props.pad : "1.5rem")};
+  ${breakpoints("padding", "", [{ 1400: "1.5rem auto" }])};
+  ${breakpoints("margin", "", [{ 1400: "1rem 0" }])};
+`;
+const Title = styled(SubTitle)`
+  font-size: 4rem;
+  ${breakpoints("font-size", "", [{ 1000: "2.5rem" }])};
+  width: 100px;
+  ${breakpoints("width", "", [{ 1000: "100%" }])};
+  margin: 0;
 `;
 
 const InfoColumns = () => {
   return (
     <InfoColumnWrapper>
-      <CardContainer flex="1">
-        <SubTitle size="4rem" margins="0">
-          About
-          <br />
-          CIMUN
-        </SubTitle>
-        <Body size="1rem">
+      <CardContainer flex="1" margins="1rem 0" pad="1rem 1rem 1rem 0">
+        <Title>About CIMUN</Title>
+        <Body size="1rem" line={1.4}>
           For 18 years, CIMUN has been a premier conference for scholastic Model
           United Nations programs. <br />
           <br />
@@ -92,21 +100,38 @@ const InfoColumns = () => {
           high-caliber educational experience to our delegates.
         </Body>
       </CardContainer>
-      <CardWrapper flex="2">
-        <CardContainer bordered height="500px">
+      <CardWrapper flex="2" margins="1rem 0" pad="1rem 0 1rem 1rem">
+        <CardContainer
+          bordered
+          height="600px"
+          color={colors.fadedPrimaryBlue}
+          margins="1rem 1rem 0 0"
+        >
           <SubTitle size="2.5rem" margins="20px 0" self="center">
             Join Us!
           </SubTitle>
-          <Body align="center" self="center" size="1.2rem">
-            <b>February 3rd 2022 - February 6th 2022</b>
-          </Body>
-          <Body align="center" self="center" size="1.2rem">
-            <b>The Palmer House Hilton Hotel</b>
-            <br />
-            <i>17 East Monroe Street Chicago, IL 60603</i>
-          </Body>
+          <div
+            style={{
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <Body align="center" self="center" size="1.2rem">
+              <b>February 3rd - 6th 2022</b>
+            </Body>
+            <Body align="center" self="center" size="1.2rem">
+              <b>The Palmer House Hilton Hotel</b>
+              <br />
+              <i>17 East Monroe Street Chicago, IL 60603</i>
+            </Body>
+          </div>
         </CardContainer>
-        <CardContainer bordered height="500px">
+        <CardContainer
+          bordered
+          height="600px"
+          color={colors.fadedltGray}
+          margins="1rem 0 0 1rem"
+        >
           <SubTitle size="2.5rem" margins="20px 0" self="center" align="center">
             Don't Miss Out!
           </SubTitle>
