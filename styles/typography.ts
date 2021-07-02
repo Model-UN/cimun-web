@@ -22,7 +22,8 @@ import styled from 'styled-components'
   self?: string;
   width?: string;
   align?: string;
-};
+  weight?: number;
+}
 
 export const Display = styled.h1<TextType>`
   font-family: ${fonts.display} , sans-serif;
@@ -67,6 +68,7 @@ export const SubTitle = styled.h3<TextType>`
   color: ${(props: TextType) => props.color ? props.color : "black"};
   font-size: ${(props: TextType) =>
       props.size ? props.size : "2rem"};
+  font-weight: 1000;
   line-height: ${(props: TextType) =>
       props.line ? props.line : undefined};
   width: ${(props: TextType) =>
@@ -90,4 +92,6 @@ export const Body = styled.p<TextType>`
       props.width ? props.width : undefined};
   text-align: ${(props: TextType) =>
       props.align ? props.align : 'left'};
+  font-weight: ${(props: TextType) =>
+     props.weight ? props.weight : 500};
 `;
