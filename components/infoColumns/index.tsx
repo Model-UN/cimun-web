@@ -72,7 +72,7 @@ const InfoColumns = () => {
     <InfoColumnWrapper>
       <CardContainer flex="1" margins="1rem 0" pad="0 2rem 0 0">
         <Title line={0.9}>Welcome Back, Delegates.</Title>
-        <Body line={1.4}>
+        <Body line={1.4} align={"justify"}>
           For 18 years, CIMUN has been a premier conference for scholastic Model
           United Nations programs. <br />
           <br />
@@ -100,8 +100,8 @@ const InfoColumns = () => {
           high-caliber educational experience to our delegates.
           <br />
           <br />
-          This coming year, we welcome you - delegates, faculty, sponsors, and all others
-          - <em>in-person</em>, for the <strong> 18th Chicago International Model United Nations
+          This coming year, we welcome you - delegates, faculty, sponsors, and all others -
+          <em> in-person</em>, to the <strong> 18th Chicago International Model United Nations
           conference</strong>. We hope you can make it!
         </Body>
       </CardContainer>
