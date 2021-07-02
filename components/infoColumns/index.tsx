@@ -60,7 +60,8 @@ const CardContainer = styled.div<{
 `;
 const Title = styled(SubTitle)`
   font-size: 6rem;
-  ${breakpoints("font-size", "", [{ 1000: "2.25rem" }])};
+  ${breakpoints("font-size", "", [{ 1280: "4rem" }])};
+  ${breakpoints("font-size", "", [{ 720: "2.25rem" }])};
   width: 100px;
   ${breakpoints("width", "", [{ 1000: "100%" }])};
   margin: 0 0 0 0;
