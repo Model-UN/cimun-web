@@ -14,6 +14,7 @@ interface ContainerType {
   align?: string;
   direction?: string;
   display?: string;
+  brightness?: string
 };
 
 
