@@ -60,11 +60,10 @@ const CardContainer = styled.div<{
 `;
 const Title = styled(SubTitle)`
   font-size: 6rem;
-  ${breakpoints("font-size", "", [{ 1280: "4rem" }])};
-  ${breakpoints("font-size", "", [{ 720: "2.25rem" }])};
+  ${breakpoints("font-size", "", [{ 1000: "4rem" }, { 720: "2.25rem" }])};
   width: 100px;
   ${breakpoints("width", "", [{ 1000: "100%" }])};
-  margin: 0 0 0 0;
+  margin: 0;
   font-weight: 1000;
 `;
 
@@ -113,7 +112,13 @@ const InfoColumns = () => {
           color={colors.primaryBlue}
           margins="1rem 1rem 0 0"
         >
-          <SubTitle size="3.5rem" margins="10px 0" self="center" align="center" line={0.9} color={colors.ltGray}>
+          <SubTitle size="3.5rem"
+                    mobSize="2rem"
+                    margins="10px 0"
+                    self="center"
+                    align="center"
+                    line={0.9}
+                    color={colors.ltGray}>
             Join us in-person!
           </SubTitle>
           <div
@@ -138,10 +143,10 @@ const InfoColumns = () => {
           color={colors.fadedPrimaryBlue}
           margins="1rem 0 0 1rem"
         >
-          <SubTitle size="3.5rem" margins="10px 0" self="center" align="center" line={0.9}>
+          <SubTitle size="3.5rem" mobSize="1.9rem" margins="10px 0" self="center" align="center" line={0.9}>
             Don't Miss Out!
           </SubTitle>
-          <SubTitle size="2rem" margins="25px 0" self="center" align="center">
+          <SubTitle size="2rem" margins="10px 0" self="center" align="center">
             Save these dates:
           </SubTitle>
           <div

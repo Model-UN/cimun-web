@@ -18,6 +18,7 @@ import {breakpoints} from "./breakpoints";
  interface TextType {
   color?: string; ///Passing Optional Props
   size?: string;
+  mobSize?: string; // mobile size
   line?: number;
   margins?: string;
   self?: string;
@@ -69,6 +70,11 @@ export const SubTitle = styled.h3<TextType>`
   color: ${(props: TextType) => props.color ? props.color : "black"};
   font-size: ${(props: TextType) =>
       props.size ? props.size : "2rem"};
+ ${(props: TextType) => 
+    props.mobSize ?
+        breakpoints("font-size", "", [{1000: props.mobSize}]) :
+        breakpoints("font-size", "", [{1000: "1.2rem"}])
+  } 
   font-weight: 1000;
   line-height: ${(props: TextType) =>
       props.line ? props.line : undefined};
