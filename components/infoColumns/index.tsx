@@ -55,7 +55,7 @@ const CardContainer = styled.div<{
   background-color: ${(props) => (props.color ? props.color : "transparent")};
   margin: ${(props) => (props.margins ? props.margins : "1rem")};
   padding: ${(props) => (props.pad ? props.pad : "1.5rem")};
-  ${breakpoints("padding", "", [{ 1400: "1.5rem auto" }])};
+  ${breakpoints("padding", "", [{ 1400: "1rem" }])};
   ${breakpoints("margin", "", [{ 1400: "1rem 0" }])};
 `;
 const Title = styled(SubTitle)`
@@ -70,7 +70,7 @@ const Title = styled(SubTitle)`
 const InfoColumns = () => {
   return (
     <InfoColumnWrapper>
-      <CardContainer flex="1" margins="1rem 0" pad="0 2rem 0 0">
+      <CardContainer flex="1" margins="1rem 0" pad="0 1rem 0 0">
         <Title line={0.9}>Welcome Back, Delegates.</Title>
         <Body line={1.4} align={"justify"}>
           For 18 years, CIMUN has been a premier conference for scholastic Model
