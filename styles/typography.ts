@@ -87,7 +87,8 @@ export const Body = styled.p<TextType>`
   color: ${(props: TextType) => props.color ? props.color : "black"};
   font-size: ${(props: TextType) =>
       props.size ? props.size : "1.2rem"};
- line-height: ${(props: TextType) =>
+  ${breakpoints("font-size", "", [{ 400: ".9rem" }])};
+  line-height: ${(props: TextType) =>
       props.line ? props.line : undefined};
   width: ${(props: TextType) =>
       props.width ? props.width : undefined};
