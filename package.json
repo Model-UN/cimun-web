@@ -10,9 +10,15 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.35",
+    "@fortawesome/free-brands-svg-icons": "^5.15.3",
+    "@fortawesome/free-regular-svg-icons": "^5.15.3",
+    "@fortawesome/free-solid-svg-icons": "^5.15.3",
+    "@fortawesome/react-fontawesome": "^0.1.14",
     "next": "10.2.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
+    "styled-components": "^5.3.0",
     "vercel": "^23.0.0"
   },
   "devDependencies": {
@@ -22,7 +28,45 @@
     "@storybook/addon-links": "^6.2.9",
     "@storybook/react": "^6.2.9",
     "@types/react": "^17.0.6",
+    "@types/styled-components": "^5.1.10",
     "babel-loader": "^8.2.2",
-    "typescript": "^4.2.4"
+    "babel-plugin-styled-components": "^1.12.0",
+    "typescript": "^4.2.4",
+    "typescript-plugin-styled-components": "^1.6.0"
+  },
+  "resolutions": {
+    "styled-components": "^5"
+  },
+  "babel": {
+    "env": {
+      "development": {
+        "presets": [
+          "next/babel"
+        ],
+        "plugins": [
+          [
+            "styled-components",
+            {
+              "ssr": true,
+              "displayName": true
+            }
+          ]
+        ]
+      },
+      "production": {
+        "presets": [
+          "next/babel"
+        ],
+        "plugins": [
+          [
+            "styled-components",
+            {
+              "ssr": true,
+              "displayName": false
+            }
+          ]
+        ]
+      }
+    }
   }
 }

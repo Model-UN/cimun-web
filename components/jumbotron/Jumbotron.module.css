@@ -1,0 +1,24 @@
+.topDisplay {
+  align-self: flex-start;
+  margin-left: -3vw;
+}
+
+.middleDisplay {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: -3vw;
+}
+
+.bottomDisplay {
+  align-self: flex-end;
+  margin-right: 3vw;
+  margin-bottom: -3vw;
+}
+
+.subDisplay {
+  margin-right: 1vw;
+  margin-left: 3vw;
+  width: 35vw;
+}
