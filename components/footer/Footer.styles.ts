@@ -64,3 +64,6 @@ export const Icon = styled(FontAwesomeIcon)`
   height: 1em;
   margin-left: 0.5rem;
 `
+export const FootH2 = styled.h2`
+  margin-top:0;
+`;
