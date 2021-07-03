@@ -33,6 +33,6 @@ our continuous deployment needs.
 
 <p align="center">
   <a href="https://vercel.com?utm_source=model-un&utm_campaign=oss" target="blank">
-    <img src="./public/vercel-banner.svg" width="200" alt="Vercel Banner" />
+    <img src="public/Vercel/banner/vercel-banner.svg" width="200" alt="Vercel Banner" />
   </a>
 </p>
