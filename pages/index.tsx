@@ -2,10 +2,12 @@ import Head from 'next/head'
 import Image from 'next/image'
 import HeaderNav from '../components/headerNav'
 import Jumbotron from '../components/jumbotron'
+import InfoColumns from "../components/infoColumns";
 import Footer from '../components/footer';
 import styles from '../styles/Home.module.css'
 import { Wrapper, ComponentWrapper } from '../styles/containers'
 import { Header } from '../styles/typography'
+import { Component } from "react";
 
 export default function Home() {
   return (
@@ -16,48 +18,27 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@900&display=swap" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@600&display=swap" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@500&family=Alegreya:wght@600&display=swap" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@500&family=Alegreya:wght@600&family=Source+Sans+Pro&display=swap" rel="stylesheet" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Mulish:wght@900&display=swap"
+          rel="stylesheet"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Alegreya:wght@600&display=swap"
+          rel="stylesheet"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@500&family=Alegreya:wght@600&display=swap"
+          rel="stylesheet"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@500&family=Alegreya:wght@600&family=Source+Sans+Pro&display=swap"
+          rel="stylesheet"
+        />
       </Head>
       <HeaderNav />
       <Jumbotron />
-      <ComponentWrapper>
-        <Header self="center">
-          This is Model UN
-        </Header>
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Directorate Applications &rarr;</h3>
-            <p>Help lead the conference by applying for a leadership role</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>What&#39;s CIMUN? &rarr;</h3>
-            <p>Discover what makes CIMUN a unique Model UN organization</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>About the Conference &rarr;</h3>
-            <p>Learn more about the upcoming 2022 conference and how to participate</p>
-          </a>
-
-          <a
-            href="https://vercel.com?utm_source=model-un&utm_campaign=oss"
-            className={styles.card}
-          >
-            <h3>Committees &rarr;</h3>
-            <p>
-              Explore all the committees that will be active at the next CIMUN conference
-            </p>
-          </a>
-        </div>
-      </ComponentWrapper>
+      <InfoColumns />
       <Footer/>
     </Wrapper>
-  )
+  );
 }
