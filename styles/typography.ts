@@ -75,8 +75,9 @@ export const SubTitle = styled.h3<TextType>`
         breakpoints("font-size", "", [{1000: props.mobSize}]) :
         breakpoints("font-size", "", [{1000: "1.2rem"}])
   } 
-  font-weight: 1000;
-  line-height: ${(props: TextType) =>
+ font-weight: ${(props: TextType) =>
+     props.weight ? props.weight : 1000};
+ line-height: ${(props: TextType) =>
       props.line ? props.line : undefined};
   width: ${(props: TextType) =>
       props.width ? props.width : undefined};
