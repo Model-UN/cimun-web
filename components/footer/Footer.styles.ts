@@ -3,14 +3,10 @@ import styled from 'styled-components'
 import { colors } from '../../styles/colors';
 
 export const StyledFooter = styled.footer`
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  ;
   background-color: ${colors.primaryBlue};
   border-top: 1px solid #EAEAEA;
   color: white;
   font-size: 18px;
-  // padding: 50px 0;
   padding-bottom: 120px;
   padding-top: 48px;
   position: relative;
