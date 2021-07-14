@@ -112,13 +112,15 @@ const InfoColumns = () => {
           color={colors.primaryBlue}
           margins="1rem 1rem 0 0"
         >
-          <SubTitle size="3.5rem"
-                    mobSize="2rem"
-                    margins="10px 0"
-                    self="center"
-                    align="center"
-                    line={0.9}
-                    color={colors.ltGray}>
+          <SubTitle
+            size="3.5rem"
+            mobSize="2rem"
+            margins="10px 0"
+            self="center"
+            align="center"
+            line={0.9}
+            color={colors.ltGray}
+          >
             Join us in-person!
           </SubTitle>
           <div
@@ -128,7 +130,7 @@ const InfoColumns = () => {
             }}
           >
             <Body align="center" self="center" size="2rem" weight={700} color={colors.ltGray}>
-              February 3rd - 4th, 2022
+              February 3rd - 6th, 2022
             </Body>
             <Body align="center" self="center" size="2rem" color={colors.ltGray}>
               <b>The Palmer House Hilton Hotel</b>
