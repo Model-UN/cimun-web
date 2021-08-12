@@ -77,16 +77,16 @@ const InfoColumns = () => {
           United Nations programs. <br />
           <br />
           Beginning with our opening ceremonies, delegates are introduced to a
-          fully-integrated simulation, where they are challenged to work
-          across committees as they confront complex present-day and historical
-          issues. <br />
+          fully-integrated simulation, where they are challenged to work across
+          committees as they confront complex present-day and historical issues.{" "}
           <br />
-          The CIMUN Philosophy is to educate through <em>accuracy and realism</em>.
-          In this regard, action taken in one committee affects the
-          proceedings in every other committee. Crises occur in real-time
-          throughout the weekend, and CIMUN staff diligently work to create a
-          conference that is fast-paced, nuanced, and above all else,
-          educational. CIMUN recognizes that nations cannot always solve
+          <br />
+          The CIMUN Philosophy is to educate through{" "}
+          <em>accuracy and realism</em>. In this regard, action taken in one
+          committee affects the proceedings in every other committee. Crises
+          occur in real-time throughout the weekend, and CIMUN staff diligently
+          work to create a conference that is fast-paced, nuanced, and above all
+          else, educational. CIMUN recognizes that nations cannot always solve
           problems together, and that the complexity of international affairs is
           high. Delegates are rewarded for demonstrating comprehensive knowledge
           of their nation's stance and role on the global stage, rather than for
@@ -100,9 +100,13 @@ const InfoColumns = () => {
           high-caliber educational experience to our delegates.
           <br />
           <br />
-          This coming year, we welcome you - delegates, faculty, sponsors, and all others -
-          <em> in-person</em>, to the <strong> 18th Chicago International Model United Nations
-          conference</strong>. We hope you can make it!
+          This coming year, we welcome you - delegates, faculty, sponsors, and
+          all others -<em> in-person</em>, to the{" "}
+          <strong>
+            {" "}
+            18th Chicago International Model United Nations conference
+          </strong>
+          . We hope you can make it!
         </Body>
       </CardContainer>
       <CardWrapper flex="2" margins="1rem 0" pad="1rem 0 6rem 1rem">
@@ -112,13 +116,15 @@ const InfoColumns = () => {
           color={colors.primaryBlue}
           margins="1rem 1rem 0 0"
         >
-          <SubTitle size="3.5rem"
-                    mobSize="2rem"
-                    margins="10px 0"
-                    self="center"
-                    align="center"
-                    line={0.9}
-                    color={colors.ltGray}>
+          <SubTitle
+            size="3.5rem"
+            mobSize="2rem"
+            margins="10px 0"
+            self="center"
+            align="center"
+            line={0.9}
+            color={colors.ltGray}
+          >
             Join us in-person!
           </SubTitle>
           <div
@@ -127,13 +133,28 @@ const InfoColumns = () => {
               justifyContent: "center",
             }}
           >
-            <Body align="center" self="center" size="2rem" weight={700} color={colors.ltGray}>
-              February 3rd - 4th, 2022
+            <Body
+              align="center"
+              self="center"
+              size="2rem"
+              weight={700}
+              color={colors.ltGray}
+            >
+              February 3rd - 6th, 2022
             </Body>
-            <Body align="center" self="center" size="2rem" color={colors.ltGray}>
+            <Body
+              align="center"
+              self="center"
+              size="2rem"
+              color={colors.ltGray}
+            >
               <b>The Palmer House Hilton Hotel</b>
               <br />
-              <i>17 East Monroe Street<br />Chicago, IL 60603</i>
+              <i>
+                17 East Monroe Street
+                <br />
+                Chicago, IL 60603
+              </i>
             </Body>
           </div>
         </CardContainer>
@@ -143,7 +164,14 @@ const InfoColumns = () => {
           color={colors.fadedPrimaryBlue}
           margins="1rem 0 0 1rem"
         >
-          <SubTitle size="3.5rem" mobSize="1.9rem" margins="10px 0" self="center" align="center" line={0.9}>
+          <SubTitle
+            size="3.5rem"
+            mobSize="1.9rem"
+            margins="10px 0"
+            self="center"
+            align="center"
+            line={0.9}
+          >
             Don't Miss Out!
           </SubTitle>
           <SubTitle size="2rem" margins="10px 0" self="center" align="center">
@@ -156,10 +184,10 @@ const InfoColumns = () => {
             }}
           >
             <Body align="center" self="center" size="1.75rem">
-              <b>September 1st, 2021</b> - School Applications Open
+              <b>August 15th, 2021</b> - Staff Applications Open
             </Body>
             <Body align="center" self="center" size="1.75rem">
-              <b>August 1st, 2021</b> - Staff Applications Open
+              <b>September 1st, 2021</b> - School Applications Open
             </Body>
             <Body align="center" self="center" size="1.75rem">
               <b>January 16th, 2022</b> - Position Papers Submissions
