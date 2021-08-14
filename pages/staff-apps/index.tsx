@@ -1,12 +1,12 @@
+import React from "react";
 import Head from "next/head";
-import Image from "next/image";
-import HeaderNav from "../components/headerNav";
-import Jumbotron from "../components/jumbotron";
-import InfoColumns from "../components/infoColumns";
-import Footer from "../components/footer";
-import { Wrapper } from "../styles/containers";
+import HeaderNav from "../../components/headerNav";
+import Jumbotron from "../../components/jumbotron";
+import Footer from "../../components/footer";
+import SteppedForm from "../../components/stepped-form";
+import { Wrapper } from "../../styles/containers";
 
-export default function Home() {
+function StaffApps() {
   return (
     <Wrapper>
       <Head>
@@ -36,14 +36,11 @@ export default function Home() {
         />
       </Head>
       <HeaderNav />
-      <Jumbotron
-        titleOne="CIMUN"
-        titleTwo="XVIII"
-        subTitle="THE 18TH ANNUAL CHICAGO INTERNATIONAL MODEL UNITED NATIONS CONFERENCE"
-        height={86}
-      />
-      <InfoColumns />
+      <Jumbotron titleOne="STAFF" titleTwo="APPLICATION" height={65} />
+      <SteppedForm />
       <Footer />
     </Wrapper>
   );
 }
+
+export default StaffApps;

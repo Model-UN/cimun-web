@@ -1,26 +1,59 @@
-import { Display, Header } from '../../styles/typography'
-import { ComponentWrapper } from '../../styles/containers'
-import styles from './Jumbotron.module.css'
+import { Display, Header } from "../../styles/typography";
+import { ComponentWrapper } from "../../styles/containers";
+import styles from "./Jumbotron.module.css";
 
-const Jumbotron = () => {
+interface JumboTronProps {
+  titleOne: string;
+  titleTwo: string;
+  height: number;
+  subTitle?: string;
+}
+
+const Jumbotron = (props: JumboTronProps) => {
+  const { titleOne, titleTwo, subTitle, height } = props;
+
+  const heightCalc = height * 0.5625;
+  const minDiffCalc = (100 - height) * 0.5625;
+  const minHeightCalc = heightCalc - minDiffCalc;
+
+  const sizeTitleOne = titleOne.length > 6 ? "16vw" : "18vw";
+  const sizeTitleTwo = titleTwo.length > 7 ? "14vw" : "18vw";
+
   return (
-    <ComponentWrapper height="48.375vw" minHeight="40.5vw" maxHeight="86vh" justify="flex-end" margins="0" style={{
-      backgroundImage: "linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)),url(/jumbotron-bg.png)", backgroundPosition: 'bottom', backgroundSize: 'cover',
-      backgroundRepeat: 'no-repeat'
-    }}>
+    <ComponentWrapper
+      height={`${heightCalc}vw`}
+      minHeight={`${minHeightCalc}vw`}
+      maxHeight={`${height}vh`}
+      justify="flex-end"
+      margins="0"
+      style={{
+        backgroundImage:
+          "linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)),url(/jumbotron-bg.png)",
+        backgroundPosition: "bottom",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
       <div className={styles.middleDisplay}>
-        <Display margins="0 0 0 -3vw">
-          CIMUN
+        <Display size={sizeTitleOne} margins="0 0 0 -3vw">
+          {titleOne}
         </Display>
-        <Header size="2.3vw" color="white" margins="6vw -1vw 0 0" line={1.20} width="34vw" self="center">
-          THE 18TH ANNUAL CHICAGO INTERNATIONAL MODEL UNITED NATIONS CONFERENCE
+        <Header
+          size="2.3vw"
+          color="white"
+          margins="6vw -1vw 0 0"
+          line={1.2}
+          width="34vw"
+          self="center"
+        >
+          {subTitle}
         </Header>
       </div>
-      <Display self="flex-end" margins="0 3vw -3vw 0">
-        XVIII
+      <Display size={sizeTitleTwo} self="flex-end" margins="0 3vw -3vw 0">
+        {titleTwo}
       </Display>
     </ComponentWrapper>
-  )
-}
+  );
+};
 
 export default Jumbotron;
