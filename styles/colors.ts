@@ -1,5 +1,6 @@
 export const colors = {
   primaryBlue: "#134C72",
+  kindaFadedPrimaryBlue: "#134C7275",
   fadedPrimaryBlue: "#134C7210",
   accentBlue: "#009EDB",
   ltGray: "#E0E0E2",

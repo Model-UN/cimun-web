@@ -16,8 +16,8 @@ const Jumbotron = (props: JumboTronProps) => {
   const minDiffCalc = (100 - height) * 0.5625;
   const minHeightCalc = heightCalc - minDiffCalc;
 
-  const sizeTitleOne = titleOne.length > 6 ? "16vw" : "18vw";
-  const sizeTitleTwo = titleTwo.length > 7 ? "14vw" : "18vw";
+  const sizeTitleOne = titleOne.length > 6 ? "13.5vw" : "18vw";
+  const sizeTitleTwo = titleTwo.length > 7 ? "13.5vw" : "18vw";
 
   return (
     <ComponentWrapper

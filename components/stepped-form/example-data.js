@@ -119,7 +119,7 @@ export const exampleData = {
                     "required": true,
                     "fieldType": "RANK",
                     "content": "Please rank the following departments based on your level of interest.",
-                    "description": "",
+                    "description": "1 being most interested, 6 being least interested.",
                     "values": [
                         "Simulations - Our Simulations Department is responsible for developing and executing all of the content for our conference. Months before the conference begins, they work to create topics and background guides that help to educate our delegates. During the conference, the Simulations Department designs and executes the real-time crisis simulations that frame the debate over the course of the weekend.",
                         "Committees - Our Committees Department is responsible for serving as our chairs, vice-chairs, and station officers for our over 30 committees and 1100 delegates. Together they work to help create our background guides and topics, facilitate debate, and deliver the Model UN product.",

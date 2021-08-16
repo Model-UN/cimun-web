@@ -12,14 +12,11 @@ const Form = styled.form`
   display: flex;
   flex-direction: column;
   width: 50%;
+  ${breakpoints("width", "", [{ 800: "97.5%" }])};
   justify-content: center;
   margin: 7vh 0;
+  ${breakpoints("margin", "", [{ 800: "3vh 0" }])};
   padding: 0;
-`;
-const Label = styled.label`
-  margin: 0px 7px;
-  font-size: 0.9rem ${breakpoints("font-size", "", [{ 1000: ".7rem" }])};
-  font-style: italic;
 `;
 const SeggsyInput = styled.input`
   width: 100%;
@@ -40,6 +37,29 @@ const SeggsyInput = styled.input`
   &:hover {
     background-color: rgba(255, 255, 255, 0.45);
     border-color: ${colors.ltGray};
+  }
+`;
+
+const SeggsySubmit = styled.input`
+  width: 25%;
+  ${breakpoints("width", "", [{ 800: "75%" }])};
+  height: 56px;
+  align-self: center;
+  margin: 100px 0px;
+  padding: 0px 16px;
+  border: none;
+  border-radius: 4px;
+  font-family: ${fonts.body}, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+  background-color: ${colors.primaryBlue};
+  color: white;
+  transition: 0.5s width ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+    width: 50%;
   }
 `;
 
@@ -128,7 +148,7 @@ const SteppedForm = () => {
         inputType = "text";
         break;
       case "RANK":
-        inputType = "text";
+        inputType = "rank";
         break;
       case "SINGLE_RESPONSE":
         inputType = "select";
@@ -195,12 +215,60 @@ const SteppedForm = () => {
         </div>
       );
     }
+    if (inputType === "rank") {
+      InputContent = (
+        <>
+          {field.values.map((value, index) => {
+            return (
+              <div
+                style={{
+                  flexDirection: "row",
+                  width: "100%",
+                  display: "flex",
+                  alignItems: "space-between",
+                  margin: "10px 0px",
+                }}
+              >
+                <div
+                  style={{
+                    flexDirection: "row",
+                    display: "flex",
+                    alignItems: "center",
+                  }}
+                >
+                  <SelectSeggsyInput
+                    name={`${field.fieldType}-input`}
+                    ref={inputRefs.current[index]}
+                  >
+                    {field.values.map((_, index) => {
+                      return <option value="value">{index + 1}</option>;
+                    })}
+                  </SelectSeggsyInput>
+                </div>
+                <Body
+                  size="16px"
+                  self="center"
+                  width="80%"
+                  margins="0 0 0 7.5%"
+                >
+                  {value}
+                </Body>
+              </div>
+            );
+          })}
+        </>
+      );
+    }
     return (
       <>
-        <Body>
-          {field.content}
-          {field.description && <Label>({field.description})</Label>}
-        </Body>
+        <div style={{ marginBottom: field.description ? "-30px" : "0px" }}>
+          <Body>{field.content}</Body>
+        </div>
+        {field.description && (
+          <Body size="14px" styling="italic" margins="12.5px 0 20px 0">
+            {field.description}
+          </Body>
+        )}
         {InputContent}
       </>
     );
@@ -208,13 +276,14 @@ const SteppedForm = () => {
 
   return (
     <ComponentWrapper>
-      <SubTitle align="center">
+      <SubTitle align="center" width="75%" self="center">
         {exampleData.sections[0].content.intro}
       </SubTitle>
       <Form>
         {exampleData.sections[0].fields.map((field, index) => {
           return renderFormItem(field, index);
         })}
+        <SeggsySubmit type="submit" value="Submit" />
       </Form>
     </ComponentWrapper>
   );
