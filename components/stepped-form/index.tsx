@@ -110,6 +110,45 @@ const SelectSeggsyInput = styled.select`
   }
 `;
 
+const CheckySeggsyInput = styled.input`
+  width: 32px;
+  height: 32px;
+  appearance: none;
+  -webkit-appearance: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.3);
+  border: 2px solid ${colors.kindaFadedltGray};
+  border-radius: 4px;
+  transition: 0.3s all ease-in-out;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.45);
+    border-color: ${colors.ltGray};
+  }
+  &:active,
+  :checked:active {
+    background-color: ${colors.fadedPrimaryBlue};
+    border: 2px solid ${colors.fadedPrimaryBlue};
+  }
+  &:checked {
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 2px solid ${colors.primaryBlue};
+    color: white;
+    background-color: ${colors.primaryBlue};
+  }
+  &:checked:after {
+    content: "✓";
+    font-family: ${fonts.body}, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: normal;
+    color: white;
+  }
+`;
+
 const Icon = styled(FontAwesomeIcon)`
   font-size: 16px;
   height: 16px;
@@ -150,10 +189,10 @@ const SteppedForm = () => {
       case "RANK":
         inputType = "rank";
         break;
-      case "SINGLE_RESPONSE":
+      case "SELECTION":
         inputType = "select";
         break;
-      case "MULTIPLE_CHOICE":
+      case "MULTIPLE_SELECTION":
         inputType = "checkbox";
         break;
       case "DROPDOWN":
@@ -208,11 +247,49 @@ const SteppedForm = () => {
             ref={inputRefs.current[index]}
           >
             {field.values.map((value, index) => {
-              return <option value="value">{value}</option>;
+              return (
+                <option value={`value-${value.value}`}>{value.value}</option>
+              );
             })}
           </SelectSeggsyInput>
           <Icon icon={"chevron-down"} />
         </div>
+      );
+    }
+    if (inputType === "checkbox") {
+      InputContent = (
+        <>
+          {field.values.map((value, index) => {
+            return (
+              <div
+                style={{
+                  flexDirection: "row",
+                  width: "100%",
+                  display: "flex",
+                  alignItems: "space-between",
+                  margin: "5px 0px",
+                }}
+              >
+                <div
+                  style={{
+                    flexDirection: "row",
+                    display: "flex",
+                    alignItems: "center",
+                  }}
+                >
+                  <CheckySeggsyInput
+                    name={`${field.id}-input`}
+                    ref={inputRefs.current[index]}
+                    type="checkbox"
+                  />
+                </div>
+                <Body size="16px" self="center" width="80%" margins="0 0 0 3%">
+                  {value.value}
+                </Body>
+              </div>
+            );
+          })}
+        </>
       );
     }
     if (inputType === "rank") {
@@ -240,8 +317,12 @@ const SteppedForm = () => {
                     name={`${field.fieldType}-input`}
                     ref={inputRefs.current[index]}
                   >
-                    {field.values.map((_, index) => {
-                      return <option value="value">{index + 1}</option>;
+                    {field.values.map((value, index) => {
+                      return (
+                        <option value={`value-${value.value}`}>
+                          {index + 1}
+                        </option>
+                      );
                     })}
                   </SelectSeggsyInput>
                 </div>
@@ -251,7 +332,7 @@ const SteppedForm = () => {
                   width="80%"
                   margins="0 0 0 7.5%"
                 >
-                  {value}
+                  {value.value}
                 </Body>
               </div>
             );
@@ -277,7 +358,7 @@ const SteppedForm = () => {
   return (
     <ComponentWrapper>
       <SubTitle align="center" width="75%" self="center">
-        {exampleData.sections[0].content.intro}
+        {exampleData.sections[0].intro}
       </SubTitle>
       <Form>
         {exampleData.sections[0].fields.map((field, index) => {
