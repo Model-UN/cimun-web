@@ -1,12 +1,15 @@
-import React, { useRef, useEffect, createRef } from "react";
+import React, { useEffect, useState } from "react";
 import { SubTitle, Body } from "../../styles/typography";
 import { ComponentWrapper } from "../../styles/containers";
-import { exampleData } from "./example-data";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { breakpoints } from "../../styles/breakpoints";
 import { fonts } from "../../styles/fonts";
 import { colors } from "../../styles/colors";
+import {
+  getFormTemplate,
+  postFormSubmission,
+} from "../../services/axiosHandler";
 
 const Form = styled.form`
   display: flex;
@@ -166,13 +169,20 @@ interface FormField {
 }
 
 const SteppedForm = () => {
-  const inputRefs = useRef([]);
+  const [formData, setFormData] = useState<object>({});
+  const [loading, setLoading] = useState<boolean>(true);
+
+  const initForm = () => {
+    setLoading(true);
+    const getFormData = getFormTemplate("1", "1");
+    setFormData(getFormData);
+    console.log(getFormData);
+    setLoading(false);
+  };
 
   useEffect(() => {
-    inputRefs.current = Array(exampleData.sections[0].fields.length)
-      .fill(inputRefs)
-      .map((_, i) => inputRefs.current[i] || createRef());
-  }, [inputRefs]);
+    initForm();
+  }, []);
 
   const renderFormItem = (field: FormField, index: number) => {
     let inputType: string;
@@ -219,19 +229,10 @@ const SteppedForm = () => {
     }
 
     let InputContent = (
-      <SeggsyInput
-        name={`${field.fieldType}-input`}
-        type={inputType}
-        ref={inputRefs.current[index]}
-      />
+      <SeggsyInput name={`${field.id}-input`} type={inputType} />
     );
     if (inputType === "textarea") {
-      InputContent = (
-        <LongSeggsyInput
-          name={`${field.fieldType}-input`}
-          ref={inputRefs.current[index]}
-        />
-      );
+      InputContent = <LongSeggsyInput name={`${field.id}-input`} />;
     }
     if (inputType === "select") {
       InputContent = (
@@ -242,10 +243,7 @@ const SteppedForm = () => {
             alignItems: "center",
           }}
         >
-          <SelectSeggsyInput
-            name={`${field.fieldType}-input`}
-            ref={inputRefs.current[index]}
-          >
+          <SelectSeggsyInput name={`${field.id}-input`}>
             {field.values.map((value, index) => {
               return (
                 <option value={`value-${value.value}`}>{value.value}</option>
@@ -279,7 +277,6 @@ const SteppedForm = () => {
                 >
                   <CheckySeggsyInput
                     name={`${field.id}-input`}
-                    ref={inputRefs.current[index]}
                     type="checkbox"
                   />
                 </div>
@@ -313,10 +310,7 @@ const SteppedForm = () => {
                     alignItems: "center",
                   }}
                 >
-                  <SelectSeggsyInput
-                    name={`${field.fieldType}-input`}
-                    ref={inputRefs.current[index]}
-                  >
+                  <SelectSeggsyInput name={`${field.id}-input`}>
                     {field.values.map((value, index) => {
                       return (
                         <option value={`value-${value.value}`}>
@@ -357,15 +351,17 @@ const SteppedForm = () => {
 
   return (
     <ComponentWrapper>
-      <SubTitle align="center" width="75%" self="center">
-        {exampleData.sections[0].intro}
+      {/* <SubTitle align="center" width="75%" self="center">
+        {formData.sections[0].intro}
       </SubTitle>
-      <Form>
-        {exampleData.sections[0].fields.map((field, index) => {
-          return renderFormItem(field, index);
-        })}
-        <SeggsySubmit type="submit" value="Submit" />
-      </Form>
+      {!loading && (
+        <Form action="" method="post">
+          {formData.sections[0].fields.map((field, index) => {
+            return renderFormItem(field, index);
+          })}
+          <SeggsySubmit type="submit" value="Submit" />
+        </Form>
+      )} */}
     </ComponentWrapper>
   );
 };
