@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "http://18.218.0.14:3000";
+const BASE_URL = "https://api.cimun.org"
 
 export class SubmitFormDto {
   responses: Array<FormFieldResponseDto>;
