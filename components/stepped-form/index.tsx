@@ -368,10 +368,12 @@ const SteppedForm = () => {
 
   return (
     <ComponentWrapper>
-      <SubTitle align="center" width="75%" self="center">
-        {loading ? "" : formData.sections[0].intro}
-      </SubTitle>
-      {!loading && (
+      {!loading && formData !== null && formData !== undefined && (
+        <SubTitle align="center" width="75%" self="center">
+          {formData.sections[0].intro}
+        </SubTitle>
+      )}
+      {!loading && formData !== null && formData !== undefined && (
         <Form onSubmit={handleSubmit}>
           {formData.sections[0].fields.map((field, index) => {
             return renderFormItem(field, index);
