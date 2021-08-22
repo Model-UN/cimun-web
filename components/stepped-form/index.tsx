@@ -194,9 +194,15 @@ const SteppedForm = () => {
     initForm();
   }, []);
 
-  const handleSubmit = (event) => {
-    // #TODO - make this work
-    console.log(event)
+  const handleSubmit = async (event) => {
+    event.preventDefault()
+    // array of objects containing id and value from input
+    const responses = []
+    // get id and values from input field
+    for (const response of event.target) {
+      responses.push({id: response.name, value: response.value})
+    }
+    console.log(responses)
 
     // #TODO - the below
     // get event data
