@@ -168,14 +168,24 @@ interface FormField {
   values?: any[]; // optional values to select
 }
 
+interface FormData {
+  id: number
+  active: boolean
+  createdBy: number
+  updatedBy: number
+  createdOn: Date
+  updatedOn: Date
+  sections: Array<object>
+}
+
 const SteppedForm = () => {
-  const [formData, setFormData] = useState<object>({});
+  const [formData, setFormData] = useState<FormData>();
   const [loading, setLoading] = useState<boolean>(true);
 
-  const initForm = () => {
+  const initForm = async () => {
     setLoading(true);
     const getFormData = getFormTemplate("1", "1");
-    setFormData(getFormData);
+    setFormData(await getFormData);
     console.log(getFormData);
     setLoading(false);
   };
@@ -183,6 +193,16 @@ const SteppedForm = () => {
   useEffect(() => {
     initForm();
   }, []);
+
+  const handleSubmit = (event) => {
+    // #TODO - make this work
+    console.log(event)
+
+    // #TODO - the below
+    // get event data
+    // mutate event data into new object for post
+    // post submission to API
+  }
 
   const renderFormItem = (field: FormField, index: number) => {
     let inputType: string;
@@ -351,17 +371,17 @@ const SteppedForm = () => {
 
   return (
     <ComponentWrapper>
-      {/* <SubTitle align="center" width="75%" self="center">
-        {formData.sections[0].intro}
+      <SubTitle align="center" width="75%" self="center">
+        {loading ? "" : formData.sections[0].intro}
       </SubTitle>
       {!loading && (
-        <Form action="" method="post">
+        <Form onSubmit={handleSubmit}>
           {formData.sections[0].fields.map((field, index) => {
             return renderFormItem(field, index);
           })}
           <SeggsySubmit type="submit" value="Submit" />
         </Form>
-      )} */}
+      )}
     </ComponentWrapper>
   );
 };
