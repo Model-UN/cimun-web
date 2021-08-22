@@ -10,6 +10,7 @@ import {
   getFormTemplate,
   postFormSubmission,
 } from "../../services/axiosHandler";
+import {ApiFormData, FormField} from "./form-interfaces";
 
 const Form = styled.form`
   display: flex;
@@ -159,33 +160,14 @@ const Icon = styled(FontAwesomeIcon)`
   color: ${colors.dkGray};
 `;
 
-interface FormField {
-  id: number;
-  fieldType: string;
-  required: boolean;
-  content: string; // the "question"
-  description?: string; // optional description
-  values?: any[]; // optional values to select
-}
-
-interface FormData {
-  id: number
-  active: boolean
-  createdBy: number
-  updatedBy: number
-  createdOn: Date
-  updatedOn: Date
-  sections: Array<object>
-}
-
 const SteppedForm = () => {
-  const [formData, setFormData] = useState<FormData>();
+  const [formData, setFormData] = useState<ApiFormData>();
   const [loading, setLoading] = useState<boolean>(true);
 
   const initForm = async () => {
     setLoading(true);
-    const getFormData = getFormTemplate("1", "1");
-    setFormData(await getFormData);
+    const getFormData = await getFormTemplate("1", "1");
+    setFormData(getFormData);
     console.log(getFormData);
     setLoading(false);
   };
