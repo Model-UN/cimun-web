@@ -10,7 +10,7 @@ import {
   getFormTemplate,
   postFormSubmission,
 } from "../../services/axiosHandler";
-import {ApiFormData, FormField} from "./form-interfaces";
+import { ApiFormData, FormField } from "./form-interfaces";
 
 const Form = styled.form`
   display: flex;
@@ -177,20 +177,28 @@ const SteppedForm = () => {
   }, []);
 
   const handleSubmit = async (event) => {
-    event.preventDefault()
+    event.preventDefault();
     // array of objects containing id and value from input
-    const responses = []
+    const responses = [];
     // get id and values from input field
     for (const response of event.target) {
-      responses.push({id: response.name, value: response.value})
+      if (response.type !== "checkbox") {
+        responses.push({ id: response.name, value: response.value });
+      }
+      if (response.type === "checkbox" && response.checked === true) {
+        responses.push({ id: response.name, value: `${response.value}-true` });
+      }
+      if (response.type === "checkbox" && response.checked === false) {
+        responses.push({ id: response.name, value: `${response.value}-false` });
+      }
     }
-    console.log(responses)
+    console.log(responses);
 
     // #TODO - the below
     // get event data
     // mutate event data into new object for post
     // post submission to API
-  }
+  };
 
   const renderFormItem = (field: FormField, index: number) => {
     let inputType: string;
@@ -284,7 +292,8 @@ const SteppedForm = () => {
                   }}
                 >
                   <CheckySeggsyInput
-                    name={`${field.id}-input`}
+                    name={`${field.id}-${index}-input`}
+                    value={value.value}
                     type="checkbox"
                   />
                 </div>
@@ -318,10 +327,10 @@ const SteppedForm = () => {
                     alignItems: "center",
                   }}
                 >
-                  <SelectSeggsyInput name={`${field.id}-input`}>
-                    {field.values.map((value, index) => {
+                  <SelectSeggsyInput name={`${field.id}-${index}-input`}>
+                    {field.values.map((_, index) => {
                       return (
-                        <option value={`value-${value.value}`}>
+                        <option value={`value-${index + 1}`}>
                           {index + 1}
                         </option>
                       );
