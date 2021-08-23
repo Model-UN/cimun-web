@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios, {AxiosResponse} from "axios";
 
 const BASE_URL = "https://api.cimun.org"
 
@@ -30,7 +30,7 @@ export const postFormSubmission = async (
   formId: string,
   submitFormDto: SubmitFormDto
 ) => {
-  axios
+  return await axios
     .post(
       `${BASE_URL}/conferences/${confId}/forms/${formId}/submissions`,
       submitFormDto
