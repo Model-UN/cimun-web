@@ -11,7 +11,7 @@ import {
   postFormSubmission, SubmitFormDto,
 } from "../../services/axiosHandler";
 import { ApiFormData, FormField } from "./form-interfaces";
-import {check} from "react-docgen-typescript/lib/__tests__/testUtils";
+import {Redirect} from "@reach/router";
 
 const Form = styled.form`
   display: flex;
@@ -164,6 +164,7 @@ const Icon = styled(FontAwesomeIcon)`
 const SteppedForm = () => {
   const [formData, setFormData] = useState<ApiFormData>();
   const [loading, setLoading] = useState<boolean>(true);
+  const [errorMessage, setErrors] = useState<string>("");
 
   const initForm = async () => {
     setLoading(true);
@@ -176,7 +177,8 @@ const SteppedForm = () => {
     initForm();
   }, []);
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = async (props) => {
+    const event = props.event;
     event.preventDefault();
     // array of objects containing id and value from input
     const responses = [];
@@ -247,170 +249,149 @@ const SteppedForm = () => {
     }
     const request = new SubmitFormDto()
     request.responses = responses
-    console.log(request)
     const submit = await postFormSubmission('1', '1', {responses})
-    console.log(submit)
+    // #TODO - redirect home and try-catch with rendered error message "Something went wrong, try again (err: error_code)"
+    props.history.push('')
   };
 
-  const renderFormItem = (field: FormField, index: number) => {
-    let inputType: string;
-    switch (field.fieldType) {
-      case "SHORT_ANSWER":
-        inputType = "text";
+  const renderFormItem = ({content, description, fieldType, id, required, values}: FormField, index: number) => {
+    const fieldInputTypeMap = {
+      "SHORT_ANSWER": "text",
+      "LONG_ANSWER": "textarea",
+      "SCALE": "text",
+      "RANK": "rank",
+      "SELECTION": "select",
+      "MULTIPLE_SELECTION": "checkbox",
+      "DROPDOWN": "select",
+      "DATE": "date",
+      "EMAIL": "email",
+      "TELEPHONE": "tel",
+      "SECURE_INPUT": "password",
+      "POSTAL_CODE": "text",
+    };
+    const inputType = fieldInputTypeMap[fieldType];
+
+    let InputContent: JSX.Element
+    switch (inputType) {
+      case 'textarea':
+          InputContent = <LongSeggsyInput required={required} name={`${id}`} />
         break;
-      case "LONG_ANSWER":
-        inputType = "textarea";
+      case 'rank':
+        InputContent = (
+            <>
+              {values.map((value, index) => {
+                return (
+                  <div
+                    style={{
+                      flexDirection: "row",
+                      width: "100%",
+                      display: "flex",
+                      alignItems: "space-between",
+                      margin: "10px 0px",
+                    }}
+                  >
+                    <div
+                      style={{
+                        flexDirection: "row",
+                        display: "flex",
+                        alignItems: "center",
+                      }}
+                    >
+                      <SelectSeggsyInput required={required} name={`${id}-${value.id}-rank`}>
+                        {values.map((_, index) => {
+                          return (
+                            <option value={`${index + 1}`}>
+                              {index + 1}
+                            </option>
+                          );
+                        })}
+                      </SelectSeggsyInput>
+                    </div>
+                    <Body
+                      size="16px"
+                      self="center"
+                      width="80%"
+                      margins="0 0 0 7.5%"
+                    >
+                      {value.value}
+                    </Body>
+                  </div>
+                );
+              })}
+            </>
+        );
         break;
-      case "SCALE":
-        inputType = "text";
+      case 'select':
+        InputContent = (
+          <div
+            style={{
+              flexDirection: "row",
+              display: "flex",
+              alignItems: "center",
+            }}
+          >
+            <SelectSeggsyInput required={required} name={`${id}`}>
+              {values.map((value, index) => {
+                return (
+                    <option value={`${value.id}`}>{value.value}</option>
+                );
+              })}
+            </SelectSeggsyInput>
+            <Icon icon={"chevron-down"} />
+          </div>
+        );
         break;
-      case "RANK":
-        inputType = "rank";
+      case 'checkbox':
+        InputContent = (
+          <>
+            {values.map((value, index) => {
+              return (
+                <div
+                  style={{
+                    flexDirection: "row",
+                    width: "100%",
+                    display: "flex",
+                    alignItems: "space-between",
+                    margin: "5px 0px",
+                  }}
+                >
+                  <div
+                    style={{
+                      flexDirection: "row",
+                      display: "flex",
+                      alignItems: "center",
+                    }}
+                  >
+                    <CheckySeggsyInput
+                      required={required}
+                      name={`${id}-${index}-input`}
+                      value={value.id}
+                      type="checkbox"
+                    />
+                  </div>
+                  <Body size="16px" self="center" width="80%" margins="0 0 0 3%">
+                    {value.value}
+                  </Body>
+                </div>
+              );
+            })}
+          </>
+        );
         break;
-      case "SELECTION":
-        inputType = "select";
-        break;
-      case "MULTIPLE_SELECTION":
-        inputType = "checkbox";
-        break;
-      case "DROPDOWN":
-        inputType = "select";
-        break;
-      case "DATE":
-        inputType = "date";
-        break;
-      case "EMAIL":
-        inputType = "email";
-        break;
-      case "TELEPHONE":
-        inputType = "tel";
-        break;
-      case "SECURE_INPUT":
-        inputType = "password";
-        break;
-      case "POSTAL_CODE":
-        inputType = "text";
-        break;
+      case 'text':
       default:
-        inputType = "text";
+        InputContent = <SeggsyInput required={required} name={`${id}`} type={inputType} />
         break;
     }
 
-    let InputContent = (
-      <SeggsyInput name={`${field.id}`} type={inputType} />
-    );
-    if (inputType === "textarea") {
-      InputContent = <LongSeggsyInput name={`${field.id}`} />;
-    }
-    if (inputType === "select") {
-      InputContent = (
-        <div
-          style={{
-            flexDirection: "row",
-            display: "flex",
-            alignItems: "center",
-          }}
-        >
-          <SelectSeggsyInput name={`${field.id}`}>
-            {field.values.map((value, index) => {
-              return (
-                <option value={`${value.id}`}>{value.value}</option>
-              );
-            })}
-          </SelectSeggsyInput>
-          <Icon icon={"chevron-down"} />
-        </div>
-      );
-    }
-    if (inputType === "checkbox") {
-      InputContent = (
-        <>
-          {field.values.map((value, index) => {
-            return (
-              <div
-                style={{
-                  flexDirection: "row",
-                  width: "100%",
-                  display: "flex",
-                  alignItems: "space-between",
-                  margin: "5px 0px",
-                }}
-              >
-                <div
-                  style={{
-                    flexDirection: "row",
-                    display: "flex",
-                    alignItems: "center",
-                  }}
-                >
-                  <CheckySeggsyInput
-                    name={`${field.id}-${index}-input`}
-                    value={value.id}
-                    type="checkbox"
-                  />
-                </div>
-                <Body size="16px" self="center" width="80%" margins="0 0 0 3%">
-                  {value.value}
-                </Body>
-              </div>
-            );
-          })}
-        </>
-      );
-    }
-    if (inputType === "rank") {
-      InputContent = (
-        <>
-          {field.values.map((value, index) => {
-            return (
-              <div
-                style={{
-                  flexDirection: "row",
-                  width: "100%",
-                  display: "flex",
-                  alignItems: "space-between",
-                  margin: "10px 0px",
-                }}
-              >
-                <div
-                  style={{
-                    flexDirection: "row",
-                    display: "flex",
-                    alignItems: "center",
-                  }}
-                >
-                  <SelectSeggsyInput name={`${field.id}-${value.id}-rank`}>
-                    {field.values.map((_, index) => {
-                      return (
-                        <option value={`${index + 1}`}>
-                          {index + 1}
-                        </option>
-                      );
-                    })}
-                  </SelectSeggsyInput>
-                </div>
-                <Body
-                  size="16px"
-                  self="center"
-                  width="80%"
-                  margins="0 0 0 7.5%"
-                >
-                  {value.value}
-                </Body>
-              </div>
-            );
-          })}
-        </>
-      );
-    }
     return (
       <>
-        <div style={{ marginBottom: field.description ? "-30px" : "0px" }}>
-          <Body>{field.content}</Body>
+        <div style={{ marginBottom: description ? "-30px" : "0px" }}>
+          <Body>{content}</Body>
         </div>
-        {field.description && (
+        {description && (
           <Body size="14px" styling="italic" margins="12.5px 0 20px 0">
-            {field.description}
+            {description}
           </Body>
         )}
         {InputContent}
@@ -430,6 +411,7 @@ const SteppedForm = () => {
           {formData.sections[0].fields.map((field, index) => {
             return renderFormItem(field, index);
           })}
+          {errorMessage ? <p>{errorMessage}</p> : ""}
           <SeggsySubmit type="submit" value="Submit" />
         </Form>
       )}

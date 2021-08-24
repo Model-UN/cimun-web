@@ -29,13 +29,10 @@ export const postFormSubmission = async (
   confId: string,
   formId: string,
   submitFormDto: SubmitFormDto
-) => {
+): Promise<AxiosResponse> => {
   return await axios
     .post(
       `${BASE_URL}/conferences/${confId}/forms/${formId}/submissions`,
       submitFormDto
     )
-    .catch((error) => {
-      console.log(error);
-    });
 };
