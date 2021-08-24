@@ -6,6 +6,7 @@ import InfoColumns from "../components/infoColumns";
 import Footer from "../components/footer";
 import { Wrapper } from "../styles/containers";
 
+
 export default function Home() {
   return (
     <Wrapper>
