@@ -11,6 +11,7 @@ import {
   postFormSubmission, SubmitFormDto,
 } from "../../services/axiosHandler";
 import { ApiFormData, FormField } from "./form-interfaces";
+import { useRouter } from "next/router";
 
 const Form = styled.form`
   display: flex;
@@ -164,6 +165,7 @@ const SteppedForm = () => {
   const [loading, setLoading] = useState<boolean>(true);
   // #TODO - why doesn't this work correctly lol
   const [errorMessage, setErrors] = useState<string>("");
+  const router = useRouter();
 
   const initForm = async () => {
     setLoading(true);
@@ -176,8 +178,7 @@ const SteppedForm = () => {
     initForm();
   }, []);
 
-  const handleSubmit = async (props) => {
-    const event = props.event;
+  const handleSubmit = async (event) => {
     event.preventDefault();
     // array of objects containing id and value from input
     const responses = [];
@@ -249,9 +250,13 @@ const SteppedForm = () => {
     const request = new SubmitFormDto()
     request.responses = responses;
     // Submit!
-    await postFormSubmission('1', '1', {responses})
-    // #TODO - redirect home and try-catch with rendered error message "Something went wrong, try again (err: error_code)"
-    props.history.push('')
+    try {
+      await postFormSubmission('1', '1', {responses})
+      await router.replace('/')
+    } catch (err) {
+      console.log(err.response)
+      setErrors(`${err.response.status} Error:  `) ;
+    }
   };
 
   const renderFormItem = ({content, description, fieldType, id, required, values}: FormField, index: number) => {
