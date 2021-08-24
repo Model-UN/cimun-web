@@ -1,6 +1,6 @@
-import axios from "axios";
+import axios, {AxiosResponse} from "axios";
 
-const BASE_URL = "http://18.218.0.14:3000";
+const BASE_URL = "https://api.cimun.org"
 
 export class SubmitFormDto {
   responses: Array<FormFieldResponseDto>;
@@ -29,13 +29,10 @@ export const postFormSubmission = async (
   confId: string,
   formId: string,
   submitFormDto: SubmitFormDto
-) => {
-  axios
+): Promise<AxiosResponse> => {
+  return await axios
     .post(
       `${BASE_URL}/conferences/${confId}/forms/${formId}/submissions`,
       submitFormDto
     )
-    .catch((error) => {
-      console.log(error);
-    });
 };
