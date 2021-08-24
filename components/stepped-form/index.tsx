@@ -11,7 +11,6 @@ import {
   postFormSubmission, SubmitFormDto,
 } from "../../services/axiosHandler";
 import { ApiFormData, FormField } from "./form-interfaces";
-import {Redirect} from "@reach/router";
 
 const Form = styled.form`
   display: flex;
@@ -27,7 +26,7 @@ const SeggsyInput = styled.input`
   width: 100%;
   height: 56px;
   position: relative;
-  padding: 0px 16px;
+  padding: 0 16px;
   border: 2px solid ${colors.kindaFadedltGray};
   border-radius: 4px;
   font-family: ${fonts.body}, sans-serif;
@@ -50,8 +49,8 @@ const SeggsySubmit = styled.input`
   ${breakpoints("width", "", [{ 800: "75%" }])};
   height: 56px;
   align-self: center;
-  margin: 100px 0px;
-  padding: 0px 16px;
+  margin: 100px 0;
+  padding: 0 16px;
   border: none;
   border-radius: 4px;
   font-family: ${fonts.body}, sans-serif;
@@ -139,7 +138,6 @@ const CheckySeggsyInput = styled.input`
     border: 2px solid ${colors.fadedPrimaryBlue};
   }
   &:checked {
-    background-color: rgba(255, 255, 255, 0.3);
     border: 2px solid ${colors.primaryBlue};
     color: white;
     background-color: ${colors.primaryBlue};
@@ -164,6 +162,7 @@ const Icon = styled(FontAwesomeIcon)`
 const SteppedForm = () => {
   const [formData, setFormData] = useState<ApiFormData>();
   const [loading, setLoading] = useState<boolean>(true);
+  // #TODO - why doesn't this work correctly lol
   const [errorMessage, setErrors] = useState<string>("");
 
   const initForm = async () => {
@@ -248,8 +247,9 @@ const SteppedForm = () => {
       responses.push({id: +id, response: rankingResponse})
     }
     const request = new SubmitFormDto()
-    request.responses = responses
-    const submit = await postFormSubmission('1', '1', {responses})
+    request.responses = responses;
+    // Submit!
+    await postFormSubmission('1', '1', {responses})
     // #TODO - redirect home and try-catch with rendered error message "Something went wrong, try again (err: error_code)"
     props.history.push('')
   };
@@ -279,7 +279,7 @@ const SteppedForm = () => {
       case 'rank':
         InputContent = (
             <>
-              {values.map((value, index) => {
+              {values.map((value, _) => {
                 return (
                   <div
                     style={{
@@ -331,7 +331,7 @@ const SteppedForm = () => {
             }}
           >
             <SelectSeggsyInput required={required} name={`${id}`}>
-              {values.map((value, index) => {
+              {values.map((value, _) => {
                 return (
                     <option value={`${value.id}`}>{value.value}</option>
                 );
