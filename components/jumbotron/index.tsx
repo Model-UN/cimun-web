@@ -7,7 +7,7 @@ interface JumboTronProps {
   titleTwo: string;
   height: number;
   subTitle?: string;
-  image: string;  // background image
+  image?: string;  // background image
 }
 
 const Jumbotron = (props: JumboTronProps) => {
