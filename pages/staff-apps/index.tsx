@@ -36,7 +36,7 @@ function StaffApps() {
         />
       </Head>
       <HeaderNav />
-      <Jumbotron titleOne="STAFF" titleTwo="APPLICATION" height={65} />
+      <Jumbotron titleOne="STAFF" titleTwo="APPLICATION" height={65} image="cimun-staff.png" />
       <SteppedForm />
       <Footer />
     </Wrapper>

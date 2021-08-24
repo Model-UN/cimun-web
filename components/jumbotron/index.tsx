@@ -7,10 +7,17 @@ interface JumboTronProps {
   titleTwo: string;
   height: number;
   subTitle?: string;
+  image: string;  // background image
 }
 
 const Jumbotron = (props: JumboTronProps) => {
-  const { titleOne, titleTwo, subTitle, height } = props;
+  const { titleOne, titleTwo, subTitle, height, image } = props;
+
+  // handle set background image logic
+  let bgImage = image
+  if (!bgImage) {
+    bgImage = "jumbotron-bg.png";
+  }
 
   const heightCalc = height * 0.5625;
   const minDiffCalc = (100 - height) * 0.5625;
@@ -28,7 +35,7 @@ const Jumbotron = (props: JumboTronProps) => {
       margins="0"
       style={{
         backgroundImage:
-          "linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)),url(/jumbotron-bg.png)",
+          `linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)),url(/${bgImage})`,
         backgroundPosition: "bottom",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
