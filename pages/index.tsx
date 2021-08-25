@@ -1,17 +1,20 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import HeaderNav from '../components/headerNav'
-import Jumbotron from '../components/jumbotron'
+import Head from "next/head";
+import Image from "next/image";
+import HeaderNav from "../components/headerNav";
+import Jumbotron from "../components/jumbotron";
 import InfoColumns from "../components/infoColumns";
-import Footer from '../components/footer';
-import { Wrapper } from '../styles/containers'
+import Footer from "../components/footer";
+import { Wrapper } from "../styles/containers";
 
 export default function Home() {
   return (
     <Wrapper>
       <Head>
         <title>Chicago International Model UN</title>
-        <meta name="description" content="Chicago International Model United Nations" />
+        <meta
+          name="description"
+          content="Chicago International Model United Nations"
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -33,9 +36,14 @@ export default function Home() {
         />
       </Head>
       <HeaderNav />
-      <Jumbotron />
+      <Jumbotron
+        titleOne="CIMUN"
+        titleTwo="XVIII"
+        subTitle="THE 18TH ANNUAL CHICAGO INTERNATIONAL MODEL UNITED NATIONS CONFERENCE"
+        height={86}
+      />
       <InfoColumns />
-      <Footer/>
+      <Footer />
     </Wrapper>
   );
 }
