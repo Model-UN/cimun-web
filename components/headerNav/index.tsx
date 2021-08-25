@@ -70,14 +70,17 @@ const HeaderNav = () => {
           justifyContent: "center",
         }}
       >
-        <Link href="/">
-          <Logo src="/cimun-logo.png" />
-        </Link>
+        <Link href="/"><Logo src="/cimun-logo.png" /></Link>
       </div>
       <ListContainer>
         <Link href="/">
           <ListItem>
             <Anchor>Home</Anchor>
+          </ListItem>
+        </Link>
+        <Link href="/about">
+          <ListItem>
+            <Anchor>About</Anchor>
           </ListItem>
         </Link>
         <Link href="/staff-apps">
@@ -91,4 +94,3 @@ const HeaderNav = () => {
 };
 
 export default HeaderNav;
-
