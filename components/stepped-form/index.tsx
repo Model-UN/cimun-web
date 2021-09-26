@@ -276,6 +276,7 @@ const SteppedForm = (props: OwnProps) => {
     { content, description, fieldType, id, required, values }: FormField,
     index: number
   ) => {
+    content = required ? `${content}*` : content
     const fieldInputTypeMap = {
       SHORT_ANSWER: "text",
       LONG_ANSWER: "textarea",
@@ -435,7 +436,9 @@ const SteppedForm = (props: OwnProps) => {
       )}
       {!loading && formData !== null && formData !== undefined && (
         <Form onSubmit={handleSubmit}>
-          {formData.sections[0].fields.map((field, index) => {
+          {formData.sections[0].fields.sort((a, b) => {
+            return a.index - b.index
+          }).map((field, index) => {
             return renderFormItem(field, index);
           })}
           {/* {errorMessage ? <p>{errorMessage}</p> : ""} */}
