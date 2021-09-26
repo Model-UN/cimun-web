@@ -435,7 +435,9 @@ const SteppedForm = (props: OwnProps) => {
       )}
       {!loading && formData !== null && formData !== undefined && (
         <Form onSubmit={handleSubmit}>
-          {formData.sections[0].fields.map((field, index) => {
+          {formData.sections[0].fields.sort((a, b) => {
+            return a.index - b.index
+          }).map((field, index) => {
             return renderFormItem(field, index);
           })}
           {/* {errorMessage ? <p>{errorMessage}</p> : ""} */}
