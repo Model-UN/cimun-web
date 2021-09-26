@@ -277,7 +277,6 @@ const SteppedForm = (props: OwnProps) => {
     index: number
   ) => {
     content = required ? `${content}*` : content
-    console.log(content)
     const fieldInputTypeMap = {
       SHORT_ANSWER: "text",
       LONG_ANSWER: "textarea",
