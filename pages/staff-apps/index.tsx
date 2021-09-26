@@ -6,7 +6,7 @@ import Footer from "../../components/footer";
 import SteppedForm from "../../components/stepped-form";
 import { Wrapper } from "../../styles/containers";
 
-function StaffApps() {
+const StaffApps = () => {
   return (
     <Wrapper>
       <Head>
@@ -36,11 +36,16 @@ function StaffApps() {
         />
       </Head>
       <HeaderNav />
-      <Jumbotron titleOne="STAFF" titleTwo="APPLICATION" height={65} image="cimun-staff.png" />
-      <SteppedForm />
+      <Jumbotron
+        titleOne="STAFF"
+        titleTwo="APPLICATION"
+        height={65}
+        image="cimun-staff.png"
+      />
+      <SteppedForm formId="1" confId="1" />
       <Footer />
     </Wrapper>
   );
-}
+};
 
 export default StaffApps;

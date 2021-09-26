@@ -28,6 +28,7 @@ const ListItem = styled.li`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  transition: all 0.2s;
 
   &:hover {
     background-color: ${colors.fadedPrimaryBlue};
@@ -85,10 +86,14 @@ const HeaderNav = () => {
             <Anchor>Staff Applications</Anchor>
           </ListItem>
         </Link>
+        <Link href="/school-registration">
+          <ListItem>
+            <Anchor>School Registration</Anchor>
+          </ListItem>
+        </Link>
       </ListContainer>
     </HeaderWrapper>
   );
 };
 
 export default HeaderNav;
-

@@ -7,14 +7,14 @@ interface JumboTronProps {
   titleTwo: string;
   height: number;
   subTitle?: string;
-  image?: string;  // background image
+  image?: string; // background image
 }
 
 const Jumbotron = (props: JumboTronProps) => {
   const { titleOne, titleTwo, subTitle, height, image } = props;
 
   // handle set background image logic
-  let bgImage = image
+  let bgImage = image;
   if (!bgImage) {
     bgImage = "jumbotron-bg.png";
   }
@@ -23,8 +23,18 @@ const Jumbotron = (props: JumboTronProps) => {
   const minDiffCalc = (100 - height) * 0.5625;
   const minHeightCalc = heightCalc - minDiffCalc;
 
-  const sizeTitleOne = titleOne.length > 6 ? "13.5vw" : "18vw";
-  const sizeTitleTwo = titleTwo.length > 7 ? "13.5vw" : "18vw";
+  let sizeTitleOne = "18vw";
+  let sizeTitleTwo = "18vw";
+  if (titleOne.length >= 12) {
+    sizeTitleOne = "12vw";
+  } else if (titleOne.length >= 6) {
+    sizeTitleOne = "13.5vw";
+  }
+  if (titleTwo.length >= 12) {
+    sizeTitleTwo = "12vw";
+  } else if (titleTwo.length >= 6) {
+    sizeTitleTwo = "13.5vw";
+  }
 
   return (
     <ComponentWrapper
@@ -34,8 +44,7 @@ const Jumbotron = (props: JumboTronProps) => {
       justify="flex-end"
       margins="0"
       style={{
-        backgroundImage:
-          `linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)),url(/${bgImage})`,
+        backgroundImage: `linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)),url(/${bgImage})`,
         backgroundPosition: "bottom",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
