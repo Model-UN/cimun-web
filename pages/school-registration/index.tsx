@@ -6,7 +6,7 @@ import Footer from "../../components/footer";
 import SteppedForm from "../../components/stepped-form";
 import { Wrapper } from "../../styles/containers";
 
-const StaffApps = () => {
+const SchoolRegistration = () => {
   return (
     <Wrapper>
       <Head>
@@ -37,15 +37,15 @@ const StaffApps = () => {
       </Head>
       <HeaderNav />
       <Jumbotron
-        titleOne="STAFF"
-        titleTwo="APPLICATION"
+        titleOne="SCHOOL"
+        titleTwo="REGISTRATION"
         height={65}
         image="cimun-staff.png"
       />
-      <SteppedForm formId="1" confId="1" />
+      <SteppedForm confId="1" formId="2" />
       <Footer />
     </Wrapper>
   );
 };
 
-export default StaffApps;
+export default SchoolRegistration;
