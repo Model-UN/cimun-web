@@ -1,8 +1,10 @@
+import React, { useState } from "react";
 import { ComponentWrapper } from "../../styles/containers";
 import { colors } from "../../styles/colors";
 import { breakpoints } from "../../styles/breakpoints";
 import Link from "next/link";
 import styled from "styled-components";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const HeaderWrapper = styled(ComponentWrapper)`
   height: 3.9375vw;
@@ -21,6 +23,24 @@ const ListContainer = styled.ul`
   list-style-type: none;
   margin: 0;
   padding: 0;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+`;
+const BurgerListContainer = styled.ul`
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: ${colors.primaryBlue};
+  height: 32vh;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 `;
 const ListItem = styled.li`
   display: flex;
@@ -35,6 +55,29 @@ const ListItem = styled.li`
     cursor: pointer;
   }
 `;
+const BurgerListItem = styled.li`
+  display: flex;
+  height: 7vh;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+
+  &:hover {
+    background-color: ${colors.fadedPrimaryBlue};
+    cursor: pointer;
+  }
+`;
+const BurgerSeparator = styled.hr`
+  display: flex;
+  size: 1px;
+  width: 70%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+`;
 const Anchor = styled.a`
   display: flex;
   color: ${colors.primaryBlue};
@@ -48,6 +91,9 @@ const Anchor = styled.a`
   ])};
   font-size: 1rem;
   text-decoration: none;
+  @media screen and (max-width: 768px) {
+    color: white;
+  }
 `;
 const Logo = styled.img`
   height: 2.8125vw;
@@ -55,13 +101,50 @@ const Logo = styled.img`
   ${breakpoints("height", "px", [{ 1200: 35 }, { 800: 30 }])};
   ${breakpoints("margin-top", "px", [{ 1200: 5 }, { 800: 7.5 }])};
   object-fit: contain;
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 3vw;
+  /* z-index: 10; */
 
   &:hover {
     cursor: pointer;
   }
 `;
+const Burger = styled.button`
+  display: none;
+  @media screen and (max-width: 768px) {
+    height: 2.8125vw;
+    margin-top: 0.46875vw;
+    ${breakpoints("height", "px", [{ 1200: 35 }, { 800: 30 }])};
+    ${breakpoints("margin-top", "px", [{ 1200: 5 }, { 800: 7.5 }])};
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 3vw;
+    z-index: 10;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+`;
+const Icon = styled(FontAwesomeIcon)<{
+  color?: string;
+}>`
+  font-size: 24px;
+  height: 2vw;
+  ${breakpoints("height", "px", [{ 1200: 35 }, { 800: 30 }])};
+  color: ${(props) => (props.color ? props.color : colors.dkGray)};
+`;
 
 const HeaderNav = () => {
+  const [burgerOpen, setBurgerOpen] = useState(false);
+
   return (
     <HeaderWrapper>
       <div
@@ -92,11 +175,36 @@ const HeaderNav = () => {
           </ListItem>
         </Link>
       </ListContainer>
+      {burgerOpen && (
+        <BurgerListContainer>
+          <Link href="/">
+            <BurgerListItem>
+              <Anchor>Home</Anchor>
+            </BurgerListItem>
+          </Link>
+          <BurgerSeparator />
+          <Link href="/staff-apps">
+            <BurgerListItem>
+              <Anchor>Staff Applications</Anchor>
+            </BurgerListItem>
+          </Link>
+          <BurgerSeparator />
+          <Link href="/school-registration">
+            <BurgerListItem>
+              <Anchor>School Registration</Anchor>
+            </BurgerListItem>
+          </Link>
+        </BurgerListContainer>
+      )}
+      <Burger onClick={() => setBurgerOpen(!burgerOpen)}>
+        {!burgerOpen ? (
+          <Icon icon={"bars"} />
+        ) : (
+          <Icon icon={"times"} color="white" />
+        )}
+      </Burger>
     </HeaderWrapper>
   );
 };
 
-
 export default HeaderNav;
-
-
