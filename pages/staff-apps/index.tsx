@@ -1,10 +1,10 @@
 import React from "react";
 import Head from "next/head";
-import HeaderNav from "../../components/headerNav";
-import Jumbotron from "../../components/jumbotron";
-import Footer from "../../components/footer";
-import SteppedForm from "../../components/stepped-form";
-import { Wrapper } from "../../styles/containers";
+import HeaderNav from "../../app/components/headerNav";
+import Jumbotron from "../../app/components/jumbotron";
+import Footer from "../../app/components/footer";
+import SteppedForm from "../../app/components/stepped-form";
+import { Wrapper } from "../../app/styles/containers";
 
 const StaffApps = () => {
   return (

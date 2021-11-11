@@ -10,7 +10,7 @@ import {
   getFormTemplate,
   postFormSubmission,
   SubmitFormDto,
-} from "../../services/axiosHandler";
+} from "../../api/axiosHandler";
 import { ApiFormData, FormField } from "./form-interfaces";
 import { useRouter } from "next/router";
 

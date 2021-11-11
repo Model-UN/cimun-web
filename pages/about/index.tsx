@@ -1,6 +1,6 @@
-import { Display } from '../../styles/typography'
-import { Wrapper, ComponentWrapper } from '../../styles/containers'
-import HeaderNav from '../../components/headerNav'
+import { Display } from '../../app/styles/typography'
+import { Wrapper, ComponentWrapper } from '../../app/styles/containers'
+import HeaderNav from '../../app/components/headerNav'
 
 const About = () => {
   return (

@@ -1,10 +1,10 @@
 import Head from "next/head";
 import Image from "next/image";
-import HeaderNav from "../components/headerNav";
-import Jumbotron from "../components/jumbotron";
-import InfoColumns from "../components/infoColumns";
-import Footer from "../components/footer";
-import { Wrapper } from "../styles/containers";
+import HeaderNav from "../app/components/headerNav";
+import Jumbotron from "../app/components/jumbotron";
+import InfoColumns from "../app/components/infoColumns";
+import Footer from "../app/components/footer";
+import { Wrapper } from "../app/styles/containers";
 
 export default function Home() {
   return (
