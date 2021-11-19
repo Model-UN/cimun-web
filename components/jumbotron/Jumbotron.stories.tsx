@@ -1,5 +1,5 @@
 import React from "react";
-import { Meta, Story } from '@storybook/react';
+import { Meta } from '@storybook/react';
 import Jumbotron from ".";
 
 export default {
@@ -7,6 +7,11 @@ export default {
   component: Jumbotron
 } as Meta;
 
-const Template: Story = (args) => <Jumbotron {...args} />;
-
-export const base = Template.bind({});
+export const base = () => (
+  <Jumbotron
+    titleOne={"CIMUN"}
+    titleTwo={"Chicago"}
+    subTitle={"THE 18TH ANNUAL CHICAGO INTERNATIONAL MODEL UNITED NATIONS CONFERENCE"}
+    height={86}
+  />
+);
