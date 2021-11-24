@@ -5,7 +5,7 @@ open-source [Next.js](https://nextjs.org/) project developed and maintained by
 the volunteer-run CIMUN Department of Technology.
 
 Chicago International Model United Nations (CIMUN) is an annual inter-scholastic
-(high school) Model UN conference in Chicago, IL. Our focus is to create realistic 
+(high school) Model UN conference in Chicago, IL. Our focus is to create realistic
 educational opportunities for young leaders in the scholastic MUN community.
 We are organized by the Model United Nations Development Organization (MUNDO).
 
@@ -26,7 +26,7 @@ our continuous deployment needs.
 
 <p align="center">
   <a href="https://vercel.com?utm_source=model-un&utm_campaign=oss" target="blank">
-    <img src="./public/vercel-banner.svg" width="200" alt="Vercel Banner" />
+    <img src="public/vercel-banner.svg" width="200" alt="Vercel Banner" />
   </a>
 </p>
 

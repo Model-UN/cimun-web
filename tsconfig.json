@@ -1,16 +1,28 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "_": ["./*"],
+      "_app/*": ["app/*"],
+      "_api/*": ["app/api/*"],
+      "_components/*": ["app/components/*"],
+      "_hooks/*": ["app/hooks"],
+      "_styles/*": ["app/styles"],
+      "_types/*": ["app/types"],
+      "_utils/*": ["app/utils"],
+      "_constants/*": ["app/utils/constants/*"],
+      "_Constants": ["app/utils/constants"],
+      "_pages/*": ["pages/*"],
+      "_public/*": ["public/*"],
+    },
     "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
+    "incremental": true,
     "esModuleInterop": true,
     "module": "esnext",
     "moduleResolution": "node",
@@ -19,11 +31,18 @@
     "jsx": "preserve"
   },
   "include": [
+    "./.eslintrc.js",
     "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx"
+    "pages",
+    "public",
+    "app",
+    "./pages/_document.tsx",
+    "./**/*.{ts,tsx,d.ts,js,jsx}"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    ".next",
+    "stories",
+    "**/*.stories.{ts,tsx,d.ts,js,jsx}"
   ]
 }

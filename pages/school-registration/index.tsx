@@ -1,51 +1,31 @@
-import React from "react";
-import Head from "next/head";
-import HeaderNav from "../../components/headerNav";
-import Jumbotron from "../../components/jumbotron";
-import Footer from "../../components/footer";
-import SteppedForm from "../../components/stepped-form";
-import { Wrapper } from "../../styles/containers";
+import React from 'react';
+import Head from 'next/head';
+import { Wrapper } from '_app/styles/containers';
+import HeaderNav from '../../app/components/headerNav';
+import Jumbotron from '../../app/components/jumbotron';
+import Footer from '../../app/components/footer';
+import SteppedForm from '../../app/components/stepped-form';
 
-const SchoolRegistration = () => {
-  return (
-    <Wrapper>
-      <Head>
-        <title>Chicago International Model UN</title>
-        <meta
-          name="description"
-          content="Chicago International Model United Nations"
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Mulish:wght@900&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Alegreya:wght@600&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@500&family=Alegreya:wght@600&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@500&family=Alegreya:wght@600&family=Source+Sans+Pro&display=swap"
-          rel="stylesheet"
-        />
-      </Head>
-      <HeaderNav />
-      <Jumbotron
-        titleOne="SCHOOL"
-        titleTwo="REGISTRATION"
-        height={65}
-        image="cimun-staff.png"
+const SchoolRegistration = () => (
+  <Wrapper>
+    <Head>
+      <title>Register Your School | CIMUN XVIII</title>
+      <meta
+        name="description"
+        content="Register your school for CIMUN XVIII!"
       />
-      <SteppedForm confId="1" formId="2" />
-      <Footer />
-    </Wrapper>
-  );
-};
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+    </Head>
+    <HeaderNav />
+    <Jumbotron
+      titleOne="SCHOOL"
+      titleTwo="REGISTRATION"
+      height={65}
+      bgImage="cimun-staff.png"
+    />
+    <SteppedForm confId="1" formId="2" />
+    <Footer />
+  </Wrapper>
+);
 
 export default SchoolRegistration;
