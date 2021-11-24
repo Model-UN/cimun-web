@@ -3,20 +3,23 @@ body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 h1 {
   font-family: "Mulish", sans-serif;
+  font-weight: 900;
   margin: 0;
 }
 
 h2 {
   font-family: "Alegreya", serif;
+  font-weight: 900;
 }
 
 h3 {
   font-family: "Alegreya Sans", sans-serif;
+  font-weight: 500;
 }
 
 p {
@@ -30,4 +33,29 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.topDisplay {
+  align-self: flex-start;
+  margin-left: -3vw;
+}
+
+.middleDisplay {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: -3vw;
+}
+
+.bottomDisplay {
+  align-self: flex-end;
+  margin-right: 3vw;
+  margin-bottom: -3vw;
+}
+
+.subDisplay {
+  margin-right: 1vw;
+  margin-left: 3vw;
+  width: 35vw;
 }

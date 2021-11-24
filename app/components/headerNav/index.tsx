@@ -1,10 +1,10 @@
-import React, { useState } from "react";
-import { ComponentWrapper } from "../../styles/containers";
-import { colors } from "../../styles/colors";
-import { breakpoints } from "../../styles/breakpoints";
-import Link from "next/link";
-import styled from "styled-components";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React, { useState } from 'react';
+import Link from 'next/link';
+import styled from 'styled-components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { breakpoints } from '_app/styles/breakpoints';
+import { ComponentWrapper } from '_app/styles/containers';
+import colors from '../../styles/colors';
 
 const HeaderWrapper = styled(ComponentWrapper)`
   height: 3.9375vw;
@@ -83,11 +83,11 @@ const Anchor = styled.a`
   color: ${colors.primaryBlue};
   text-align: center;
   padding: 0 20px;
-  ${breakpoints("padding", "", [
-    { 1200: "0 16px" },
-    { 800: "0 14px" },
-    { 600: "0 12px" },
-    { 450: "0 10px" },
+  ${breakpoints('padding', '', [
+    { 1200: '0 16px' },
+    { 800: '0 14px' },
+    { 600: '0 12px' },
+    { 450: '0 10px' },
   ])};
   font-size: 1rem;
   text-decoration: none;
@@ -98,8 +98,8 @@ const Anchor = styled.a`
 const Logo = styled.img`
   height: 2.8125vw;
   margin-top: 0.46875vw;
-  ${breakpoints("height", "px", [{ 1200: 35 }, { 800: 30 }])};
-  ${breakpoints("margin-top", "px", [{ 1200: 5 }, { 800: 7.5 }])};
+  ${breakpoints('height', 'px', [{ 1200: 35 }, { 800: 30 }])};
+  ${breakpoints('margin-top', 'px', [{ 1200: 5 }, { 800: 7.5 }])};
   object-fit: contain;
   display: flex;
   position: absolute;
@@ -116,8 +116,8 @@ const Burger = styled.button`
   @media screen and (max-width: 768px) {
     height: 2.8125vw;
     margin-top: 0.46875vw;
-    ${breakpoints("height", "px", [{ 1200: 35 }, { 800: 30 }])};
-    ${breakpoints("margin-top", "px", [{ 1200: 5 }, { 800: 7.5 }])};
+    ${breakpoints('height', 'px', [{ 1200: 35 }, { 800: 30 }])};
+    ${breakpoints('margin-top', 'px', [{ 1200: 5 }, { 800: 7.5 }])};
     display: flex;
     position: absolute;
     top: 0;
@@ -138,7 +138,7 @@ const Icon = styled(FontAwesomeIcon)<{
 }>`
   font-size: 24px;
   height: 2vw;
-  ${breakpoints("height", "px", [{ 1200: 35 }, { 800: 30 }])};
+  ${breakpoints('height', 'px', [{ 1200: 35 }, { 800: 30 }])};
   color: ${(props) => (props.color ? props.color : colors.dkGray)};
 `;
 
@@ -149,27 +149,29 @@ const HeaderNav = () => {
     <HeaderWrapper>
       <div
         style={{
-          justifySelf: "flex-start",
-          alignItems: "center",
-          justifyContent: "center",
+          justifySelf: 'flex-start',
+          alignItems: 'center',
+          justifyContent: 'center',
         }}
       >
         <Link href="/">
-          <Logo src="/cimun-logo.png" />
+          <a>
+            <Logo src="/cimun-logo.png" />
+          </a>
         </Link>
       </div>
       <ListContainer>
-        <Link href="/">
+        <Link href="/" passHref>
           <ListItem>
             <Anchor>Home</Anchor>
           </ListItem>
         </Link>
-        <Link href="/staff-apps">
+        <Link href="/staff-apps" passHref>
           <ListItem>
             <Anchor>Staff Applications</Anchor>
           </ListItem>
         </Link>
-        <Link href="/school-registration">
+        <Link href="/school-registration" passHref>
           <ListItem>
             <Anchor>School Registration</Anchor>
           </ListItem>
@@ -177,19 +179,19 @@ const HeaderNav = () => {
       </ListContainer>
       {burgerOpen && (
         <BurgerListContainer>
-          <Link href="/">
+          <Link href="/" passHref>
             <BurgerListItem>
               <Anchor>Home</Anchor>
             </BurgerListItem>
           </Link>
           <BurgerSeparator />
-          <Link href="/staff-apps">
+          <Link href="/staff-apps" passHref>
             <BurgerListItem>
               <Anchor>Staff Applications</Anchor>
             </BurgerListItem>
           </Link>
           <BurgerSeparator />
-          <Link href="/school-registration">
+          <Link href="/school-registration" passHref>
             <BurgerListItem>
               <Anchor>School Registration</Anchor>
             </BurgerListItem>
@@ -198,15 +200,13 @@ const HeaderNav = () => {
       )}
       <Burger onClick={() => setBurgerOpen(!burgerOpen)}>
         {!burgerOpen ? (
-          <Icon icon={"bars"} />
+          <Icon icon="bars" />
         ) : (
-          <Icon icon={"times"} color="white" />
+          <Icon icon="times" color="white" />
         )}
       </Burger>
     </HeaderWrapper>
   );
 };
 
-
 export default HeaderNav;
-

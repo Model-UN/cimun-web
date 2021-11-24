@@ -1,12 +1,13 @@
-import React from 'react';
-import { Story, Meta } from '@storybook/react';
-import Footer from './index';
+import React from "react";
+// import { Story, Meta } from "@storybook/react";
+import Footer from "./index";
 
 export default {
-  title: 'Layout/Footer',
+  title: "Layout/Footer",
   component: Footer,
-} as Meta;
+}
+// } as Meta;
 
-const Template: Story = (args) => <Footer {...args} />;
+// const Template: Story = (args) => <Footer {...args} />;
 
-export const base = Template.bind({});
+// export const base = Template.bind({});

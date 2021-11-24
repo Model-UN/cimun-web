@@ -1,10 +1,10 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import styled from 'styled-components'
-import { colors } from '../../styles/colors';
+import styled from 'styled-components';
+import colors from '_app/styles/colors';
 
 export const StyledFooter = styled.footer`
   background-color: ${colors.primaryBlue};
-  border-top: 1px solid #EAEAEA;
+  border-top: 1px solid #eaeaea;
   color: white;
   font-size: 18px;
   padding-bottom: 120px;
@@ -41,7 +41,7 @@ export const FooterCol = styled.section`
 export const FooterColFirst = styled(FooterCol)`
   width: 18rem;
   padding-bottom: 25px;
-`
+`;
 
 export const VercelLink = styled.a`
   align-self: center;
@@ -59,7 +59,7 @@ export const Icon = styled(FontAwesomeIcon)`
   font-size: 2em;
   height: 1em;
   margin-left: 0.5rem;
-`
+`;
 export const FootH2 = styled.h2`
-  margin-top:0;
+  margin-top: 0;
 `;

@@ -1,165 +1,22 @@
-import React, { useEffect, useState } from "react";
-import { SubTitle, Body } from "../../styles/typography";
-import { ComponentWrapper } from "../../styles/containers";
-import styled from "styled-components";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { breakpoints } from "../../styles/breakpoints";
-import { fonts } from "../../styles/fonts";
-import { colors } from "../../styles/colors";
+import React, { useEffect, useState } from 'react';
+// import { useRouter } from 'next/router';
+import { Body, SubTitle } from '_app/styles/typography';
+import { ComponentWrapper } from '_app/styles/containers';
+import FetchFormResponseDto from '_api/dto/FetchFormResponse.dto';
+import MundoClient from '_api/MundoClient';
+import FormFieldDto from '_api/dto/FormField.dto';
+import SubmitFormDto from '_api/dto/SubmitForm.dto';
+import FieldInputTypeMap from '_app/types/enums/FieldInputTypeMap';
+import FormFieldResponseDto from '_api/dto/FormFieldResponse.dto';
 import {
-  getFormTemplate,
-  postFormSubmission,
-  SubmitFormDto,
-} from "../../api/axiosHandler";
-import { ApiFormData, FormField } from "./form-interfaces";
-import { useRouter } from "next/router";
-
-const Form = styled.form`
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-  ${breakpoints("width", "", [{ 800: "97.5%" }])};
-  justify-content: center;
-  margin: 7vh 0;
-  ${breakpoints("margin", "", [{ 800: "3vh 0" }])};
-  padding: 0;
-`;
-const SeggsyInput = styled.input`
-  width: 100%;
-  height: 56px;
-  position: relative;
-  padding: 0 16px;
-  border: 2px solid ${colors.kindaFadedltGray};
-  border-radius: 4px;
-  font-family: ${fonts.body}, sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: normal;
-  background-color: rgba(255, 255, 255, 0.3);
-  color: #282828;
-  outline-color: ${colors.primaryBlue};
-  transition: 0.3s background-color ease-in-out, 0.3s border-color ease-in-out;
-
-  &:hover {
-    background-color: rgba(255, 255, 255, 0.45);
-    border-color: ${colors.ltGray};
-  }
-`;
-
-const SeggsySubmit = styled.input`
-  width: 25%;
-  ${breakpoints("width", "", [{ 800: "75%" }])};
-  height: 56px;
-  align-self: center;
-  margin: 100px 0;
-  padding: 0 16px;
-  border: none;
-  border-radius: 4px;
-  font-family: ${fonts.body}, sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: normal;
-  background-color: ${colors.primaryBlue};
-  color: white;
-  transition: 0.5s width ease-in-out;
-
-  &:hover {
-    cursor: pointer;
-    width: 50%;
-  }
-`;
-
-const LongSeggsyInput = styled.textarea`
-  width: 100%;
-  height: 150px;
-  position: relative;
-  padding: 8px 16px;
-  border: 2px solid ${colors.kindaFadedltGray};
-  border-radius: 4px;
-  font-family: ${fonts.body}, sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: normal;
-  background-color: rgba(255, 255, 255, 0.3);
-  color: #282828;
-  outline-color: ${colors.primaryBlue};
-  transition: 0.3s background-color ease-in-out, 0.3s border-color ease-in-out;
-
-  &:hover {
-    background-color: rgba(255, 255, 255, 0.45);
-    border-color: ${colors.ltGray};
-  }
-`;
-
-const SelectSeggsyInput = styled.select`
-  width: 100%;
-  height: 56px;
-  position: relative;
-  padding: 4px 16px;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  border: 2px solid ${colors.kindaFadedltGray};
-  border-radius: 4px;
-  font-family: ${fonts.body}, sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: normal;
-  background-color: rgba(255, 255, 255, 0.3);
-  color: #282828;
-  outline-color: ${colors.primaryBlue};
-  transition: 0.3s background-color ease-in-out, 0.3s border-color ease-in-out;
-
-  &:hover {
-    background-color: rgba(255, 255, 255, 0.45);
-    border-color: ${colors.ltGray};
-  }
-`;
-
-const CheckySeggsyInput = styled.input`
-  width: 32px;
-  height: 32px;
-  appearance: none;
-  -webkit-appearance: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  background-color: rgba(255, 255, 255, 0.3);
-  border: 2px solid ${colors.kindaFadedltGray};
-  border-radius: 4px;
-  transition: 0.3s all ease-in-out;
-
-  &:hover {
-    background-color: rgba(255, 255, 255, 0.45);
-    border-color: ${colors.ltGray};
-  }
-  &:active,
-  :checked:active {
-    background-color: ${colors.fadedPrimaryBlue};
-    border: 2px solid ${colors.fadedPrimaryBlue};
-  }
-  &:checked {
-    border: 2px solid ${colors.primaryBlue};
-    color: white;
-    background-color: ${colors.primaryBlue};
-  }
-  &:checked:after {
-    content: "✓";
-    font-family: ${fonts.body}, sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: normal;
-    color: white;
-  }
-`;
-
-const Icon = styled(FontAwesomeIcon)`
-  font-size: 16px;
-  height: 16px;
-  margin-left: -32px;
-  color: ${colors.dkGray};
-`;
+  CheckySeggsyInput,
+  Form,
+  Icon,
+  LongSeggsyInput,
+  SeggsyInput,
+  SeggsySubmit,
+  SelectSeggsyInput,
+} from './SteppedForm.styles';
 
 interface OwnProps {
   confId: string;
@@ -168,61 +25,68 @@ interface OwnProps {
 
 const SteppedForm = (props: OwnProps) => {
   const { confId, formId } = props;
-  const [formData, setFormData] = useState<ApiFormData>();
+  const [formData, setFormData] = useState<FetchFormResponseDto>();
   const [loading, setLoading] = useState<boolean>(true);
   // #TODO - why doesn't this work correctly lol
-  const [errorMessage, setErrors] = useState<string>("");
-  const router = useRouter();
-
-  const initForm = async () => {
-    setLoading(true);
-    const getFormData = await getFormTemplate(confId, formId);
-    setFormData(getFormData);
-    setLoading(false);
-  };
+  const [errorMessage, setErrors] = useState<string>('');
+  // const router = useRouter();
 
   useEffect(() => {
-    initForm();
-  }, []);
+    const client = new MundoClient();
 
-  const handleSubmit = async (event) => {
+    async function initForm() {
+      setLoading(true);
+      const getFormData = await client.getFormTemplate(confId, formId);
+      setFormData(getFormData);
+      setLoading(false);
+    }
+
+    initForm().catch(() => setErrors('Something went wrong, please try'
+        + ' again later. If this issue persists, please contact our'
+        + ' development team at engineering@cimun.org.'));
+  }, [setErrors, confId, formId]);
+
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     // array of objects containing id and value from input
-    const responses = [];
+    const responses: FormFieldResponseDto[] = [];
     // map out data from checkbox responses
-    const checkboxMap = {};
+    const checkboxMap: Record<string, Array<number>> = {};
     // map out data from ranking responses
-    const rankingMap = { "0": { "0": "0" } };
-    for (const response of event.target) {
+    const rankingMap: Record<number, Record<number, string>> = { 0: { 0: '0' } };
+
+    for (let idx = 0; idx < event.currentTarget.elements.length; idx += 1) {
+      const response = event.currentTarget[idx] as HTMLInputElement;
       if (response.value) {
         switch (response.type) {
-          case "select-one":
+          case 'select-one':
             // handle rank type
-            if (response.name.split("-").length === 3) {
-              const split = response.name.split("-");
-              const responseId = split[0];
+            if (response.name.split('-').length === 3) {
+              const split = response.name.split('-');
+              const responseId: number = +split[0];
               const value = split[1];
-              const idx = `${+response.value - 1}`;
+              const valueIdx = `${+response.value - 1}`;
               if (!rankingMap[responseId]) {
                 rankingMap[responseId] = {};
               }
-              rankingMap[responseId][idx] = value;
+              rankingMap[responseId][valueIdx] = value;
               break;
             }
             responses.push({ id: +response.name, response: +response.value });
             break;
-          case "dropdown":
-            responses.push({ id: response.name, response: +response.value });
+          case 'dropdown':
+            responses.push({ id: +response.name, response: +response.value });
             break;
-          case "checkbox":
-            const responseId = response.name.split("-")[0];
+          case 'checkbox':
             if (response.checked) {
-              checkboxMap[responseId]
-                ? checkboxMap[responseId].push(+response.value)
-                : (checkboxMap[responseId] = [+response.value]);
+              if (checkboxMap[response.name.split('-')[0]]) {
+                checkboxMap[response.name.split('-')[0]].push(+response.value);
+              } else {
+                (checkboxMap[response.name.split('-')[0]] = [+response.value]);
+              }
             }
             break;
-          case "date":
+          case 'date':
             if (response.value) {
               responses.push({
                 id: +response.name,
@@ -230,181 +94,180 @@ const SteppedForm = (props: OwnProps) => {
               });
             }
             break;
-          case "submit":
+          case 'submit':
             break;
-          case "password":
-          case "text":
-          case "textarea":
-          case "email":
-          case "tel":
+          case 'password':
+          case 'text':
+          case 'textarea':
+          case 'email':
+          case 'tel':
           default:
             responses.push({ id: +response.name, response: response.value });
             break;
         }
       }
     }
-    // handle creating checkbox responses
+
     for (const id in checkboxMap) {
-      responses.push({ id: +id, response: checkboxMap[id] });
+      if (Object.prototype.hasOwnProperty.call(checkboxMap, id)) {
+        responses.push({ id: +id, response: checkboxMap[id] });
+      }
     }
     // handle creating ranking responses
     for (const id in rankingMap) {
-      if (id === "0") {
-        continue;
+      if (Object.prototype.hasOwnProperty.call(rankingMap, id) && id !== '0') {
+        const rankingResponse = [];
+        for (const index in rankingMap[id]) {
+          if (Object.prototype.hasOwnProperty.call(rankingMap, id)) {
+            const value = rankingMap[id][index];
+            rankingResponse.splice(+index, 1, +value);
+          }
+        }
+        responses.push({ id: +id, response: rankingResponse });
       }
-      const rankingResponse = [];
-      for (const index in rankingMap[id]) {
-        const value = rankingMap[id][index];
-        rankingResponse.splice(+index, 1, +value);
-      }
-      responses.push({ id: +id, response: rankingResponse });
     }
-    const request = new SubmitFormDto();
+    const request: SubmitFormDto = new SubmitFormDto();
     request.responses = responses;
     // Submit!
     try {
-      await postFormSubmission(confId, formId, { responses });
-      await router.replace("/");
-      alert(`Application submitted successfully!`);
+      const client = new MundoClient();
+      await client.postFormSubmission(confId, formId, { responses });
+      // await router.replace('/');
+      // alert('Application submitted successfully!');
     } catch (error) {
-      console.log(error.response.data.error);
-      alert(`Couldn't submit application. ${error.response.data.error}`);
+      console.log(error);
+      // alert(`Couldn't submit application. ${error.response.data.error}`);
     }
   };
 
   const renderFormItem = (
-    { content, description, fieldType, id, required, values }: FormField,
-    index: number
+    {
+      content, description, fieldType, id, required, values,
+    }: FormFieldDto,
+    index: number,
   ) => {
-    content = required ? `${content}*` : content
-    const fieldInputTypeMap = {
-      SHORT_ANSWER: "text",
-      LONG_ANSWER: "textarea",
-      SCALE: "text",
-      RANK: "rank",
-      SELECTION: "select",
-      MULTIPLE_SELECTION: "checkbox",
-      DROPDOWN: "select",
-      DATE: "date",
-      EMAIL: "email",
-      TELEPHONE: "tel",
-      SECURE_INPUT: "password",
-      POSTAL_CODE: "text",
-    };
-    const inputType = fieldInputTypeMap[fieldType];
-
+    const inputType = FieldInputTypeMap.get(fieldType);
     let InputContent: JSX.Element;
+    let optionIdx: number = index;
+
     switch (inputType) {
-      case "textarea":
+      case 'textarea':
         InputContent = <LongSeggsyInput required={required} name={`${id}`} />;
         break;
-      case "rank":
+      case 'rank':
         InputContent = (
           <>
-            {values.map((value, _) => {
-              return (
+            {values.map((value) => (
+              <div
+                style={{
+                  flexDirection: 'row',
+                  width: '100%',
+                  display: 'flex',
+                  alignItems: 'space-between',
+                  margin: '10px 0px',
+                }}
+              >
                 <div
                   style={{
-                    flexDirection: "row",
-                    width: "100%",
-                    display: "flex",
-                    alignItems: "space-between",
-                    margin: "10px 0px",
+                    flexDirection: 'row',
+                    display: 'flex',
+                    alignItems: 'center',
                   }}
                 >
-                  <div
-                    style={{
-                      flexDirection: "row",
-                      display: "flex",
-                      alignItems: "center",
-                    }}
+                  <SelectSeggsyInput
+                    required={required}
+                    name={`${id}-${value.id}-rank`}
                   >
-                    <SelectSeggsyInput
-                      required={required}
-                      name={`${id}-${value.id}-rank`}
-                    >
-                      {values.map((_, index) => {
+                    {values.map(
+                      () => {
+                        optionIdx += 1;
                         return (
-                          <option value={`${index + 1}`}>{index + 1}</option>
+                          <option
+                            value={`${optionIdx + 1}`}
+                          >
+                            {optionIdx + 1}
+                          </option>
                         );
-                      })}
-                    </SelectSeggsyInput>
-                  </div>
-                  <Body
-                    size="16px"
-                    self="center"
-                    width="80%"
-                    margins="0 0 0 7.5%"
-                  >
-                    {value.value}
-                  </Body>
+                      },
+                    )}
+                  </SelectSeggsyInput>
                 </div>
-              );
-            })}
+                <Body
+                  size="16px"
+                  self="center"
+                  width="80%"
+                  margins="0 0 0 7.5%"
+                >
+                  {value.value}
+                </Body>
+              </div>
+            ))}
           </>
         );
         break;
-      case "select":
+      case 'select':
         InputContent = (
           <div
             style={{
-              flexDirection: "row",
-              display: "flex",
-              alignItems: "center",
+              flexDirection: 'row',
+              display: 'flex',
+              alignItems: 'center',
             }}
           >
             <SelectSeggsyInput required={required} name={`${id}`}>
-              {values.map((value, _) => {
-                return <option value={`${value.id}`}>{value.value}</option>;
-              })}
+              {values.map((value) => (
+                <option
+                  value={`${value.id}`}
+                >
+                  {value.value}
+                </option>
+              ))}
             </SelectSeggsyInput>
-            <Icon icon={"chevron-down"} />
+            <Icon icon="chevron-down" />
           </div>
         );
         break;
-      case "checkbox":
+      case 'checkbox':
         InputContent = (
           <>
-            {values.map((value, index) => {
-              return (
+            {values.map((value) => (
+              <div
+                style={{
+                  flexDirection: 'row',
+                  width: '100%',
+                  display: 'flex',
+                  alignItems: 'space-between',
+                  margin: '5px 0px',
+                }}
+              >
                 <div
                   style={{
-                    flexDirection: "row",
-                    width: "100%",
-                    display: "flex",
-                    alignItems: "space-between",
-                    margin: "5px 0px",
+                    flexDirection: 'row',
+                    display: 'flex',
+                    alignItems: 'center',
                   }}
                 >
-                  <div
-                    style={{
-                      flexDirection: "row",
-                      display: "flex",
-                      alignItems: "center",
-                    }}
-                  >
-                    <CheckySeggsyInput
-                      required={required}
-                      name={`${id}-${index}-input`}
-                      value={value.id}
-                      type="checkbox"
-                    />
-                  </div>
-                  <Body
-                    size="16px"
-                    self="center"
-                    width="80%"
-                    margins="0 0 0 3%"
-                  >
-                    {value.value}
-                  </Body>
+                  <CheckySeggsyInput
+                    required={required}
+                    name={`${id}-${optionIdx}-input`}
+                    value={value.id}
+                    type="checkbox"
+                  />
                 </div>
-              );
-            })}
+                <Body
+                  size="16px"
+                  self="center"
+                  width="80%"
+                  margins="0 0 0 3%"
+                >
+                  {value.value}
+                </Body>
+              </div>
+            ))}
           </>
         );
         break;
-      case "text":
+      case 'text':
       default:
         InputContent = (
           <SeggsyInput required={required} name={`${id}`} type={inputType} />
@@ -414,8 +277,8 @@ const SteppedForm = (props: OwnProps) => {
 
     return (
       <>
-        <div style={{ marginBottom: description ? "-30px" : "0px" }}>
-          <Body>{content}</Body>
+        <div style={{ marginBottom: description ? '-30px' : '0px' }}>
+          <Body>{required ? `${content}*` : content}</Body>
         </div>
         {description && (
           <Body size="14px" styling="italic" margins="12.5px 0 20px 0">
@@ -436,12 +299,10 @@ const SteppedForm = (props: OwnProps) => {
       )}
       {!loading && formData !== null && formData !== undefined && (
         <Form onSubmit={handleSubmit}>
-          {formData.sections[0].fields.sort((a, b) => {
-            return a.index - b.index
-          }).map((field, index) => {
-            return renderFormItem(field, index);
-          })}
-          {/* {errorMessage ? <p>{errorMessage}</p> : ""} */}
+          {formData.sections[0].fields
+            .sort((a, b) => a.index - b.index)
+            .map((field, index) => renderFormItem(field, index))}
+          {errorMessage ? <p>{errorMessage}</p> : ''}
           <SeggsySubmit type="submit" value="Submit" />
         </Form>
       )}

@@ -1,11 +1,13 @@
-export const colors = {
-  primaryBlue: "#134C72",
-  kindaFadedPrimaryBlue: "#134C7275",
-  fadedPrimaryBlue: "#134C7210",
-  accentBlue: "#009EDB",
-  ltGray: "#E0E0E2",
-  fadedltGray: "#E0E0E250",
-  kindaFadedltGray: "#E0E0E275",
-  dkGray: "#4F4E4F",
-  accentRed: "#CC393E",
+const colors = {
+  primaryBlue: '#134c72',
+  kindaFadedPrimaryBlue: '#134c7275',
+  fadedPrimaryBlue: '#134c7210',
+  accentBlue: '#009edb',
+  ltGray: '#e0e0e2',
+  fadedltGray: '#e0e0e250',
+  kindaFadedltGray: '#e0e0e275',
+  dkGray: '#4f4e4f',
+  accentRed: '#cc393e',
 };
+
+export default colors;
