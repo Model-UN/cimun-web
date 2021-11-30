@@ -10,7 +10,6 @@ const HeaderWrapper = styled(ComponentWrapper)`
   height: 3.9375vw;
   min-height: 45px;
   max-height: 7vh;
-  width: 94vw;
   margin: auto;
   flex-direction: row;
   justify-content: space-between;
@@ -108,16 +107,9 @@ const Anchor = styled.a`
 `;
 
 const Logo = styled.img`
-  height: 2.8125vw;
-  margin-top: 0.46875vw;
-  ${breakpoints("height", "px", [{ 1200: 35 }, { 800: 30 }])};
-  ${breakpoints("margin-top", "px", [{ 1200: 5 }, { 800: 7.5 }])};
+  height: 90%;
   object-fit: contain;
-  display: flex;
-  position: absolute;
-  top: 0;
   left: 3vw;
-  /* z-index: 10; */
 
   &:hover {
     cursor: pointer;
@@ -171,9 +163,10 @@ const HeaderNav = () => {
     <HeaderWrapper>
       <div
         style={{
-          justifySelf: "flex-start",
-          alignItems: "center",
-          justifyContent: "center",
+          height: '100%',
+          width: '20%',
+          display: 'flex',
+          alignItems: 'center',
         }}
       >
         <Link href="/">
