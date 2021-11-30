@@ -430,7 +430,7 @@ const SteppedForm = (props: OwnProps) => {
   return (
     <ComponentWrapper>
       {!loading && formData !== null && formData !== undefined && (
-        <SubTitle align="center" width="75%" self="center">
+        <SubTitle align="left" width="75%" self="center" weight={600}>
           {formData.sections[0].intro}
         </SubTitle>
       )}
