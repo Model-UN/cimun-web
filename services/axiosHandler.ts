@@ -33,6 +33,7 @@ export const postFormSubmission = async (
   return await axios
     .post(
       `${BASE_URL}/conferences/${confId}/forms/${formId}/submissions`,
-      submitFormDto
+      submitFormDto,
+        {headers: {"Accept": "*"}}
     )
 };

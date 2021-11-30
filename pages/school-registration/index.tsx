@@ -41,8 +41,9 @@ const SchoolRegistration = () => {
       <Jumbotron
         titleOne="SCHOOL"
         titleTwo="REGISTRATION"
-        height={65}
-        image="cimun-staff.png"
+        subTitle="Register for CIMUN XVIII!"
+        height={75}
+        image="awards.jpg"
       />
       <ComponentWrapper margins="auto auto -3vw auto">
         <SubTitle

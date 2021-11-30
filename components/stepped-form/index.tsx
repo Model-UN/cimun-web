@@ -51,7 +51,7 @@ const SeggsySubmit = styled.input`
   ${breakpoints("width", "", [{ 800: "75%" }])};
   height: 56px;
   align-self: center;
-  margin: 100px 0;
+  margin: 50px 0;
   padding: 0 16px;
   border: none;
   border-radius: 4px;
@@ -262,14 +262,13 @@ const SteppedForm = (props: OwnProps) => {
     const request = new SubmitFormDto();
     request.responses = responses;
     // Submit!
-    try {
-      await postFormSubmission(confId, formId, { responses });
-      await router.replace("/");
-      alert(`Application submitted successfully!`);
-    } catch (error) {
-      console.log(error.response.data.error);
-      alert(`Couldn't submit application. ${error.response.data.error}`);
+    await postFormSubmission(confId, formId, { responses }).then(res => {
+      router.replace("/");
     }
+    ).catch(err => {
+          setErrors(`Couldn't submit application. ${ err.response.data.error }`);
+        }
+    );
   };
 
   const renderFormItem = (
@@ -441,7 +440,7 @@ const SteppedForm = (props: OwnProps) => {
           }).map((field, index) => {
             return renderFormItem(field, index);
           })}
-          {/* {errorMessage ? <p>{errorMessage}</p> : ""} */}
+           {errorMessage ? <Body color={colors.accentRed}>{errorMessage}</Body> : ""}
           <SeggsySubmit type="submit" value="Submit" />
         </Form>
       )}
