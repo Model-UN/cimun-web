@@ -265,8 +265,8 @@ const SteppedForm = (props: OwnProps) => {
     // Submit!
     await postFormSubmission(confId, formId, { responses }).then(res => {
       router.replace("/");
-    }
-    ).catch(err => {
+    })
+      .catch(err => {
           setErrors(`Couldn't submit application. ${ err.response.data.error }`);
         }
     );
