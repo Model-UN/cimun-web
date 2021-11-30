@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link'
 import {
   FooterSection, StyledFooter, VercelLink, LogoBox,
   FooterNav, FooterCol, FooterColFirst, Icon, FootH2,
@@ -23,11 +24,28 @@ const Footer: React.FC = () => (
           </p>
         </FooterColFirst>
         <FooterCol>
+          <FootH2>Attend CIMUN</FootH2>
+          <div >
+            <a
+                href="/registration-information.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+              Pricing & Registration
+            </a>
+          </div>
+          <div >
+            <Link href="/school-registration"><a>Register Your School</a></Link>
+          </div>
+          <div >
+            <Link href="/staff-apps"><a>Join Our Team</a></Link>
+          </div>
+        </FooterCol>
+        <FooterCol>
           <FootH2>Explore</FootH2>
           <div >
             <a href="https://www.cimunmerch.org">The CIMUN Store</a>
           </div>
-
           <div >
             <a
               href="https://www.mimun.mx/"
@@ -37,9 +55,15 @@ const Footer: React.FC = () => (
               Check out MIMUN
             </a>
           </div>
+          <div >
+            <Link href="/open-source">
+              <a>
+                Licenses & Credits
+              </a>
+            </Link>
+          </div>
           <br/>
         </FooterCol>
-
         <FooterCol>
           <FootH2>Connect with Us</FootH2>
           <div >
@@ -59,7 +83,7 @@ const Footer: React.FC = () => (
           </div>
           <br />
           <div >
-            <a href="mailto:sc@cimun.org">sc@cimun.org</a>
+            Email: <a href="mailto:sc@cimun.org">sc@cimun.org</a>
           </div>
           <br/>
         </FooterCol>
