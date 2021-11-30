@@ -108,7 +108,6 @@ const Anchor = styled.a`
 
 const LogoWrapper = styled.div`
   height: 100%;
-  width: 100%;
   display: flex;
   align-items: center;
   
