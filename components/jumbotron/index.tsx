@@ -6,7 +6,7 @@ interface JumboTronProps {
   titleOne: string;
   titleTwo: string;
   height: number;
-  subTitle?: string;
+  subTitle?: string | JSX.Element;
   image?: string; // background image
 }
 
