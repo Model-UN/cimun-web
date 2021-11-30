@@ -4,6 +4,10 @@ import {breakpoints} from "../../styles/breakpoints";
 import {SubTitle} from "../../styles/typography";
 
 export const InfoColumnWrapper = styled(ComponentWrapper)`
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex: 1;
   width: 90%;
@@ -24,7 +28,12 @@ export const CardWrapper = styled.div<{
   direction?: string;
   noMargins?: boolean;
 }>`
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
+  flex: 1;
   justify-content: space-around;
   align-items: center;
 
@@ -32,16 +41,33 @@ export const CardWrapper = styled.div<{
   ${breakpoints("flex", "", [{ 1500: "1" }])};
   
   flex-direction: ${props => (props.direction ? props.direction : "row")}};
-  ${breakpoints("flex-direction", "", [{ 1200: "column" }])};
+  ${breakpoints("flex-direction", "", [
+      { 1200: "column" }
+  ])};
 
-  margin: ${(props) => (props.margins ? props.margins : "1rem 0 0 0")};
-  ${breakpoints("margin", "", [{ 1500: "0" }])};
+  ${(props) => (
+      props.margins
+      ? `margin: ${props.margins}`
+      : `margin: 1rem 0 0 0`
+  )};
+  ${breakpoints("margin", "", [
+      { 1500: "0" }
+  ])};
 
-  padding: ${(props) => (props.pad ? props.pad : "auto")};
-  ${breakpoints("padding", "", [{ 1500: "auto" }])};
-  
-  ${breakpoints("width", "", [{ 1500: "100%" }])};
-  ${breakpoints("align-items", "", [{ 1500: "flex-end" }])};
+  ${(props) => (
+      props.pad
+      ? `padding: ${props.pad}`
+      : "padding: auto"
+  )};
+  ${breakpoints("padding", "", [
+      { 1500: "auto" }
+  ])};
+  ${breakpoints("width", "", [
+      { 1500: "100%" }
+  ])};
+  ${breakpoints("align-items", "", [
+      { 1500: "flex-end" }
+  ])};
 `;
 
 export const CardContainer = styled.div<{
@@ -55,6 +81,10 @@ export const CardContainer = styled.div<{
   align?: string;
   radius?: string;
 }>`
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex; 
   display: flex;
   flex-direction: column;
   flex: ${(props) => (props.flex ? props.flex : "1")};
