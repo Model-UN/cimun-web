@@ -106,6 +106,20 @@ const Anchor = styled.a`
   }
 `;
 
+const LogoWrapper = styled.div`
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  
+  ${breakpoints('width', "", [
+    {768: "100%"}
+  ])}
+  ${breakpoints('justify-content', "", [
+    {768: "center"}
+  ])}
+`
+
 const Logo = styled.img`
   height: 90%;
   object-fit: contain;
@@ -161,18 +175,11 @@ const HeaderNav = () => {
 
   return (
     <HeaderWrapper>
-      <div
-        style={{
-          height: '100%',
-          width: '20%',
-          display: 'flex',
-          alignItems: 'center',
-        }}
-      >
+      <LogoWrapper>
         <Link href="/">
           <Logo src="/cimun-logo.png" />
         </Link>
-      </div>
+      </LogoWrapper>
       <ListContainer>
         <Link href="/">
           <ListItem>
