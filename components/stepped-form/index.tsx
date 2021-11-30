@@ -176,8 +176,9 @@ const SteppedForm = (props: OwnProps) => {
 
   const initForm = async () => {
     setLoading(true);
-    const getFormData = await getFormTemplate(confId, formId);
-    setFormData(getFormData);
+    await getFormTemplate(confId, formId)
+        .then(data => setFormData(data))
+        .catch(() => setFormData(undefined));
     setLoading(false);
   };
 
@@ -443,6 +444,15 @@ const SteppedForm = (props: OwnProps) => {
            {errorMessage ? <Body color={colors.accentRed}>{errorMessage}</Body> : ""}
           <SeggsySubmit type="submit" value="Submit" />
         </Form>
+      )}
+      {!loading && !formData && (
+        <SubTitle align="center" width="75%" self="center" weight={300}>
+          Something went wrong while attempting to retrieve this form.
+          Please try again in a few minutes.<br/><br/>If this issue persists,
+          please reach out to us at <a
+            href="mailto:engineering@modelun.net"><u>engineering@modelun.net</u>
+          </a> and we will be able to assist you. Thank you for your cooperation.
+        </SubTitle>
       )}
     </ComponentWrapper>
   );
