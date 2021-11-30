@@ -55,13 +55,14 @@ const Footer: React.FC = () => (
               Check out MIMUN
             </a>
           </div>
-          <div >
-            <Link href="/open-source">
-              <a>
-                Licenses & Credits
-              </a>
-            </Link>
-          </div>
+          {/* TODO: Add open source credits page */}
+          {/*<div >*/}
+          {/*  <Link href="/open-source">*/}
+          {/*    <a>*/}
+          {/*      Licenses & Credits*/}
+          {/*    </a>*/}
+          {/*  </Link>*/}
+          {/*</div>*/}
           <br/>
         </FooterCol>
         <FooterCol>
