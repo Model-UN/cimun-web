@@ -10,11 +10,11 @@ const HeaderWrapper = styled(ComponentWrapper)`
   height: 3.9375vw;
   min-height: 45px;
   max-height: 7vh;
-  width: 94vw;
   margin: auto;
   flex-direction: row;
   justify-content: space-between;
 `;
+
 const ListContainer = styled.ul`
   display: flex;
   height: 100%;
@@ -27,21 +27,22 @@ const ListContainer = styled.ul`
     display: none;
   }
 `;
+
 const BurgerListContainer = styled.ul`
   display: flex;
   position: absolute;
   top: 0;
   left: 0;
   background-color: ${colors.primaryBlue};
-  height: 32vh;
   width: 100%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   list-style-type: none;
   margin: 0;
-  padding: 0;
+  padding: 2vh 2vh;
 `;
+
 const ListItem = styled.li`
   display: flex;
   height: 100%;
@@ -55,9 +56,10 @@ const ListItem = styled.li`
     cursor: pointer;
   }
 `;
+
 const BurgerListItem = styled.li`
   display: flex;
-  height: 7vh;
+  height: 5vh;
   width: 100%;
   flex-direction: column;
   align-items: center;
@@ -69,6 +71,7 @@ const BurgerListItem = styled.li`
     cursor: pointer;
   }
 `;
+
 const BurgerSeparator = styled.hr`
   display: flex;
   size: 1px;
@@ -78,6 +81,7 @@ const BurgerSeparator = styled.hr`
   justify-content: center;
   color: white;
 `;
+
 const Anchor = styled.a`
   display: flex;
   color: ${colors.primaryBlue};
@@ -89,28 +93,50 @@ const Anchor = styled.a`
     { 600: "0 12px" },
     { 450: "0 10px" },
   ])};
-  font-size: 1rem;
+  font-size: 1.2rem;
+  ${breakpoints("font-size", "", [
+    { 1200: "1.1rem" },
+    { 800: "1rem" },
+    { 600: "0.9rem" },
+    { 450: "0.9rem" },
+  ])};
   text-decoration: none;
   @media screen and (max-width: 768px) {
     color: white;
   }
 `;
-const Logo = styled.img`
-  height: 2.8125vw;
-  margin-top: 0.46875vw;
-  ${breakpoints("height", "px", [{ 1200: 35 }, { 800: 30 }])};
-  ${breakpoints("margin-top", "px", [{ 1200: 5 }, { 800: 7.5 }])};
-  object-fit: contain;
+
+const LogoWrapper = styled.div`
+  height: 100%;
   display: flex;
-  position: absolute;
-  top: 0;
+  align-items: center;
+  
+  ${breakpoints('width', "", [
+    {768: "100%"}
+  ])}
+  ${breakpoints('justify-content', "", [
+    {768: "center"}
+  ])}
+`
+
+const Logo = styled.img`
+  height: 90%;
+  object-fit: contain;
   left: 3vw;
-  /* z-index: 10; */
 
   &:hover {
     cursor: pointer;
   }
 `;
+
+
+const BurgerLogo = styled.img`
+  height: 40px;
+  ${breakpoints("height", "px", [{ 550: 35, 300: 30}])};
+  object-fit: contain;
+  display: flex;
+`;
+
 const Burger = styled.button`
   display: none;
   @media screen and (max-width: 768px) {
@@ -133,10 +159,11 @@ const Burger = styled.button`
     cursor: pointer;
   }
 `;
+
 const Icon = styled(FontAwesomeIcon)<{
   color?: string;
 }>`
-  font-size: 24px;
+  font-size: 25px;
   height: 2vw;
   ${breakpoints("height", "px", [{ 1200: 35 }, { 800: 30 }])};
   color: ${(props) => (props.color ? props.color : colors.dkGray)};
@@ -147,17 +174,11 @@ const HeaderNav = () => {
 
   return (
     <HeaderWrapper>
-      <div
-        style={{
-          justifySelf: "flex-start",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
+      <LogoWrapper>
         <Link href="/">
           <Logo src="/cimun-logo.png" />
         </Link>
-      </div>
+      </LogoWrapper>
       <ListContainer>
         <Link href="/">
           <ListItem>
@@ -166,12 +187,12 @@ const HeaderNav = () => {
         </Link>
         <Link href="/staff-apps">
           <ListItem>
-            <Anchor>Staff Applications</Anchor>
+            <Anchor>Join Our Staff</Anchor>
           </ListItem>
         </Link>
         <Link href="/school-registration">
           <ListItem>
-            <Anchor>School Registration</Anchor>
+            <Anchor>Register For CIMUN XVIII</Anchor>
           </ListItem>
         </Link>
       </ListContainer>
@@ -194,6 +215,10 @@ const HeaderNav = () => {
               <Anchor>School Registration</Anchor>
             </BurgerListItem>
           </Link>
+          <BurgerSeparator />
+            <BurgerListItem>
+              <BurgerLogo src="/White_CIMUN_Logo.png" />
+            </BurgerListItem>
         </BurgerListContainer>
       )}
       <Burger onClick={() => setBurgerOpen(!burgerOpen)}>

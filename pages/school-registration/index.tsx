@@ -4,7 +4,9 @@ import HeaderNav from "../../components/headerNav";
 import Jumbotron from "../../components/jumbotron";
 import Footer from "../../components/footer";
 import SteppedForm from "../../components/stepped-form";
-import { Wrapper } from "../../styles/containers";
+import { Wrapper, ComponentWrapper} from "../../styles/containers";
+import { SubTitle } from "../../styles/typography";
+import {colors} from "../../styles/colors";
 
 const SchoolRegistration = () => {
   return (
@@ -39,9 +41,30 @@ const SchoolRegistration = () => {
       <Jumbotron
         titleOne="SCHOOL"
         titleTwo="REGISTRATION"
-        height={65}
-        image="cimun-staff.png"
+        subTitle="Register for CIMUN XVIII!"
+        height={75}
+        image="awards.jpg"
       />
+      <ComponentWrapper margins="auto auto -3vw auto">
+        <SubTitle
+            align="center"
+            color={colors.accentRed}
+            width="75%"
+            self="center"
+            weight={500}
+        >
+          <a
+              href="/registration-information.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+          >
+            <em>
+              Looking for pricing & registration details? <strong><u>Click
+              here</u> to download our registration guide!</strong>
+            </em>
+          </a>
+        </SubTitle>
+      </ComponentWrapper>
       <SteppedForm confId="1" formId="2" />
       <Footer />
     </Wrapper>

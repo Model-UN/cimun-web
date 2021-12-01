@@ -51,7 +51,7 @@ const SeggsySubmit = styled.input`
   ${breakpoints("width", "", [{ 800: "75%" }])};
   height: 56px;
   align-self: center;
-  margin: 100px 0;
+  margin: 50px 0;
   padding: 0 16px;
   border: none;
   border-radius: 4px;
@@ -176,8 +176,9 @@ const SteppedForm = (props: OwnProps) => {
 
   const initForm = async () => {
     setLoading(true);
-    const getFormData = await getFormTemplate(confId, formId);
-    setFormData(getFormData);
+    await getFormTemplate(confId, formId)
+        .then(data => setFormData(data))
+        .catch(() => setFormData(undefined));
     setLoading(false);
   };
 
@@ -262,14 +263,13 @@ const SteppedForm = (props: OwnProps) => {
     const request = new SubmitFormDto();
     request.responses = responses;
     // Submit!
-    try {
-      await postFormSubmission(confId, formId, { responses });
-      await router.replace("/");
-      alert(`Application submitted successfully!`);
-    } catch (error) {
-      console.log(error.response.data.error);
-      alert(`Couldn't submit application. ${error.response.data.error}`);
-    }
+    await postFormSubmission(confId, formId, { responses }).then(res => {
+      router.replace("/");
+    })
+      .catch(err => {
+          setErrors(`Couldn't submit application. ${ err.response.data.error }`);
+        }
+    );
   };
 
   const renderFormItem = (
@@ -430,7 +430,7 @@ const SteppedForm = (props: OwnProps) => {
   return (
     <ComponentWrapper>
       {!loading && formData !== null && formData !== undefined && (
-        <SubTitle align="center" width="75%" self="center">
+        <SubTitle align="left" width="75%" self="center" weight={600}>
           {formData.sections[0].intro}
         </SubTitle>
       )}
@@ -441,9 +441,18 @@ const SteppedForm = (props: OwnProps) => {
           }).map((field, index) => {
             return renderFormItem(field, index);
           })}
-          {/* {errorMessage ? <p>{errorMessage}</p> : ""} */}
+           {errorMessage ? <Body color={colors.accentRed}>{errorMessage}</Body> : ""}
           <SeggsySubmit type="submit" value="Submit" />
         </Form>
+      )}
+      {!loading && !formData && (
+        <SubTitle align="center" width="75%" self="center" weight={300}>
+          Something went wrong while attempting to retrieve this form.
+          Please try again in a few minutes.<br/><br/>If this issue persists,
+          please reach out to us at <a
+            href="mailto:engineering@modelun.net"><u>engineering@modelun.net</u>
+          </a> and we will be able to assist you. Thank you for your cooperation.
+        </SubTitle>
       )}
     </ComponentWrapper>
   );
