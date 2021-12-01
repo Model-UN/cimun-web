@@ -1,202 +1,241 @@
-import { ComponentWrapper } from "../../styles/containers";
+import Link from "next/link";
 import { SubTitle, Body } from "../../styles/typography";
 import { colors } from "../../styles/colors";
-import { breakpoints } from "../../styles/breakpoints";
-import styled from "styled-components";
+import { InfoColumnWrapper, CardWrapper, CardContainer } from "./infoColumns.styles";
+import LetterElement from "./letter.element";
 
-const InfoColumnWrapper = styled(ComponentWrapper)`
-  display: flex;
-  flex: 1;
-  width: 94vw;
-  margin: 3.9375vw auto;
-  ${breakpoints("margin", "", [{ 1000: "10px 0" }])};
-  justify-content: space-between;
-  flex-direction: row;
-  ${breakpoints("flex-direction", "", [{ 1000: "column" }])};
-`;
-const CardWrapper = styled.div<{
-  bordered?: boolean;
-  flex?: string;
-  height?: string;
-  margins?: string;
-  pad?: string;
-}>`
-  display: flex;
-  flex: ${(props) => (props.flex ? props.flex : "1")};
-  ${breakpoints("flex", "", [{ 1400: "1" }])};
-  ${breakpoints("width", "", [{ 1400: "100%" }])};
-  align-items: center;
-  flex-direction: row;
-  ${breakpoints("flex-direction", "", [{ 1400: "column" }])};
-  justify-content: space-between;
-  ${breakpoints("align-items", "", [{ 1400: "flex-end" }])};
-  margin: ${(props) => (props.margins ? props.margins : "1rem")};
-  padding: ${(props) => (props.pad ? props.pad : "1.5rem")};
-  ${breakpoints("padding", "", [{ 1400: "1.5rem auto" }])};
-  ${breakpoints("margin", "", [{ 1400: "1rem 0" }])};
-`;
-const CardContainer = styled.div<{
-  bordered?: boolean;
-  flex?: string;
-  height?: string;
-  color?: string;
-  margins?: string;
-  pad?: string;
-}>`
-  display: flex;
-  flex: ${(props) => (props.flex ? props.flex : "1")};
-  ${breakpoints("flex", "", [{ 1400: "1" }])};
-  ${breakpoints("min-width", "", [{ 1400: "45vw" }])};
-  ${breakpoints("width", "", [{ 1000: "94vw" }])};
-  height: ${(props) => (props.height ? props.height : "auto")};
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  background-color: ${(props) => (props.color ? props.color : "transparent")};
-  margin: ${(props) => (props.margins ? props.margins : "1rem")};
-  padding: ${(props) => (props.pad ? props.pad : "1.5rem")};
-  ${breakpoints("padding", "", [{ 1400: "1rem" }])};
-  ${breakpoints("margin", "", [{ 1400: "1rem 0" }])};
-`;
-const Title = styled(SubTitle)`
-  font-size: 6rem;
-  ${breakpoints("font-size", "", [{ 1000: "4rem" }, { 720: "2.25rem" }])};
-  width: 100px;
-  ${breakpoints("width", "", [{ 1000: "100%" }])};
-  margin: 0;
-  font-weight: 1000;
-`;
-
-const InfoColumns = () => {
+export default function InfoColumns(): JSX.Element {
   return (
-    <InfoColumnWrapper>
-      <CardContainer flex="1" margins="1rem 0" pad="0 1rem 0 0">
-        <Title line={0.9}>Welcome Back, Delegates.</Title>
-        <Body line={1.4} align={"justify"}>
-          For 18 years, CIMUN has been a premier conference for scholastic Model
-          United Nations programs. <br />
-          <br />
-          Beginning with our opening ceremonies, delegates are introduced to a
-          fully-integrated simulation, where they are challenged to work across
-          committees as they confront complex present-day and historical issues.{" "}
-          <br />
-          <br />
-          The CIMUN Philosophy is to educate through{" "}
-          <em>accuracy and realism</em>. In this regard, action taken in one
-          committee affects the proceedings in every other committee. Crises
-          occur in real-time throughout the weekend, and CIMUN staff diligently
-          work to create a conference that is fast-paced, nuanced, and above all
-          else, educational. CIMUN recognizes that nations cannot always solve
-          problems together, and that the complexity of international affairs is
-          high. Delegates are rewarded for demonstrating comprehensive knowledge
-          of their nation's stance and role on the global stage, rather than for
-          passing empty resolutions or for compromising their nation's values.
-          <br />
-          <br />
-          As an independent conference, CIMUN is not affiliated with any
-          university. Rather, we are a diverse and talented team of students,
-          post-graduates, and professionals from backgrounds in academia,
-          finance, politics, business, technology and more to deliver a
-          high-caliber educational experience to our delegates.
-          <br />
-          <br />
-          This coming year, we welcome you - delegates, faculty, sponsors, and
-          all others -<em> in-person</em>, to the{" "}
-          <strong>
-            {" "}
-            18th Chicago International Model United Nations conference
-          </strong>
-          . We hope you can make it!
-        </Body>
-      </CardContainer>
-      <CardWrapper flex="2" margins="1rem 0" pad="1rem 0 6rem 1rem">
-        <CardContainer
-          bordered
-          height="600px"
-          color={colors.primaryBlue}
-          margins="1rem 1rem 0 0"
-        >
-          <SubTitle
-            size="3.5rem"
-            mobSize="2rem"
-            margins="10px 0"
-            self="center"
-            align="center"
-            line={0.9}
-            color={colors.ltGray}
+      <>
+        <LetterElement />
+        <InfoColumnWrapper>
+          <CardWrapper
+              flex="1"
+              margins="0 15% 0 15%"
+              pad="0 0 2rem 0rem"
+              direction="row"
           >
-            Join us in-person!
-          </SubTitle>
-          <div
-            style={{
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            <Body
-              align="center"
-              self="center"
-              size="2rem"
-              weight={700}
-              color={colors.ltGray}
+            <CardWrapper
+              margins="0 0"
+              direction="column"
             >
-              February 3rd - 6th, 2022
-            </Body>
-            <Body
-              align="center"
-              self="center"
-              size="2rem"
-              color={colors.ltGray}
+              <CardContainer
+                  noMargins
+                  color={colors.primaryBlue}
+              >
+                <Body
+                    align="start"
+                    self="start"
+                    margins="0 0 0.25rem 0"
+                    size="2rem"
+                    weight={700}
+                    color={colors.ltGray}
+                >
+                  <em><u>Conference Date</u></em>
+                </Body>
+                <SubTitle
+                    size="3.5rem"
+                    width="80%"
+                    mobSize="2rem"
+                    margins="0 0"
+                    self="start"
+                    align="start"
+                    line={0.9}
+                    color={colors.ltGray}
+                >
+                  February 3rd - 6th, 2022
+                </SubTitle>
+                <Body
+                    align="end"
+                    self="end"
+                    margins="0 0 0.25rem 0"
+                    size="2rem"
+                    weight={700}
+                    color={colors.ltGray}
+                >
+                  <em><u>Conference Location</u></em>
+                </Body>
+                <SubTitle
+                    size="3.5rem"
+                    mobSize="2rem"
+                    width="70%"
+                    margins="0 0"
+                    self="end"
+                    align="end"
+                    line={0.9}
+                    color={colors.ltGray}
+                >
+                  The Palmer House Hilton Hotel
+                </SubTitle>
+                <Body
+                    align="end"
+                    self="end"
+                    size="1.5rem"
+                    margins="0 0 0 0"
+                    color={colors.ltGray}
+                >
+                  <i>17 East Monroe Street<br/>Chicago, IL, 60603</i>
+                </Body>
+              </CardContainer>
+
+              <CardContainer
+                  noMargins
+                  color={colors.ltGray}
+              >
+                <Body
+                    align="start"
+                    self="start"
+                    margins="0 0 0.25rem 0"
+                    size="2rem"
+                    weight={700}
+                    color={colors.primaryBlue}
+                >
+                  <em><u>Delegates, save the date!</u></em>
+                </Body>
+                <SubTitle
+                    size="3.5rem"
+                    width="70%"
+                    mobSize="2rem"
+                    margins="0 0"
+                    self="start"
+                    align="start"
+                    line={0.9}
+                    color={colors.primaryBlue}
+                >
+                  Position Paper Submission
+                </SubTitle>
+                <Body
+                    align="start"
+                    self="start"
+                    margins="0 0 0.25rem 0"
+                    size="2rem"
+                    color={colors.primaryBlue}
+                >
+                  Begins <strong><em>January 16, 2022</em></strong>
+                </Body>
+                <Body
+                    align="end"
+                    self="end"
+                    margins="0 0 0.25rem 0"
+                    size="2rem"
+                    weight={700}
+                    color={colors.primaryBlue}
+                >
+                  <em><u>Coming soon to CIMUN.org...</u></em>
+                </Body>
+                <SubTitle
+                    size="3.5rem"
+                    width="70%"
+                    mobSize="2rem"
+                    margins="0 0"
+                    self="end"
+                    align="end"
+                    line={0.9}
+                    color={colors.primaryBlue}
+                >
+                  Background Guides & Committee Information
+                </SubTitle>
+                <Body
+                    align="end"
+                    self="end"
+                    margins="0 0 0.25rem 0"
+                    size="2rem"
+                    color={colors.primaryBlue}
+                >
+                  Stay tuned for more updates!
+                </Body>
+              </CardContainer>
+
+            </CardWrapper>
+            <CardWrapper
+                margins="0"
+                direction="column"
             >
-              <b>The Palmer House Hilton Hotel</b>
-              <br />
-              <i>
-                17 East Monroe Street
-                <br />
-                Chicago, IL 60603
-              </i>
-            </Body>
-          </div>
-        </CardContainer>
-        <CardContainer
-          bordered
-          height="600px"
-          color={colors.fadedPrimaryBlue}
-          margins="1rem 0 0 1rem"
-        >
-          <SubTitle
-            size="3.5rem"
-            mobSize="1.9rem"
-            margins="10px 0"
-            self="center"
-            align="center"
-            line={0.9}
-          >
-            Don't Miss Out!
-          </SubTitle>
-          <SubTitle size="2rem" margins="10px 0" self="center" align="center">
-            Save these dates:
-          </SubTitle>
-          <div
-            style={{
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            <Body align="center" self="center" size="1.75rem">
-              <b>August 15th, 2021</b> - Staff Applications Open
-            </Body>
-            <Body align="center" self="center" size="1.75rem">
-              <b>September 1st, 2021</b> - School Applications Open
-            </Body>
-            <Body align="center" self="center" size="1.75rem">
-              <b>January 16th, 2022</b> - Position Papers Submissions
-            </Body>
-          </div>
-        </CardContainer>
-      </CardWrapper>
-    </InfoColumnWrapper>
+              <CardContainer
+                  margins="0 0 1rem 1rem"
+                  flex="1"
+                  color={colors.accentRed}
+              >
+                <Body
+                    align="start"
+                    self="start"
+                    margins="0 0 0.25rem 0"
+                    size="2rem"
+                    weight={700}
+                    color={colors.ltGray}
+                >
+                  <em><u>Interested in attending CIMUN?</u></em>
+                </Body>
+                <SubTitle
+                    size="3.5rem"
+                    width="80%"
+                    mobSize="2rem"
+                    margins="0 0"
+                    self="start"
+                    align="start"
+                    line={0.9}
+                    color={colors.ltGray}
+                >
+                  Register your school for CIMUN XVIII!
+                </SubTitle>
+                <Body
+                    align="start"
+                    self="start"
+                    margins="0.5rem 0"
+                    size="2rem"
+                    weight={700}
+                    color={colors.ltGray}
+                >
+                  <Link href="/school-registration">
+                    <a><strong>[<u>Click Here</u>]</strong></a>
+                  </Link>
+                </Body>
+              </CardContainer>
+            <CardContainer
+              margins="0 0 1rem 1rem"
+              flex="1"
+              color={colors.dkGray}
+            >
+                <Body
+                    align="end"
+                    self="end"
+                    margins="0 0 0.25rem 0"
+                    size="2rem"
+                    weight={700}
+                    color={colors.ltGray}
+                >
+                  <em><u>Want to volunteer for CIMUN?</u></em>
+                </Body>
+                <SubTitle
+                    size="3.5rem"
+                    width="80%"
+                    mobSize="2rem"
+                    margins="0 0"
+                    self="end"
+                    align="end"
+                    line={0.9}
+                    color={colors.ltGray}
+                >
+                  Apply to Join Our Staff!
+                </SubTitle>
+              <Body
+                  align="end"
+                  self="end"
+                  margins="0.5rem 0"
+                  size="2rem"
+                  color={colors.ltGray}
+              >
+                Applicants are being considered on a rolling basis to
+                join our amazing team!
+                <br/>
+                <Link href="/staff-apps">
+                  <a><strong>[<u>Click Here</u>]</strong></a>
+                </Link>
+              </Body>
+            </CardContainer>
+            </CardWrapper>
+          </CardWrapper>
+        </InfoColumnWrapper>
+        </>
   );
 };
-
-export default InfoColumns;

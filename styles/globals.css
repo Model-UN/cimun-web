@@ -28,6 +28,10 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  cursor: pointer;
+}
+
 * {
   box-sizing: border-box;
 }
