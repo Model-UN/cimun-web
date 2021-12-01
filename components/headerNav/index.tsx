@@ -93,6 +93,7 @@ const Anchor = styled.a`
     { 600: "0 12px" },
     { 450: "0 10px" },
   ])};
+
   font-size: 1.2rem;
   ${breakpoints("font-size", "", [
     { 1200: "1.1rem" },
@@ -100,6 +101,7 @@ const Anchor = styled.a`
     { 600: "0.9rem" },
     { 450: "0.9rem" },
   ])};
+
   text-decoration: none;
   @media screen and (max-width: 768px) {
     color: white;
@@ -234,4 +236,3 @@ const HeaderNav = () => {
 
 
 export default HeaderNav;
-
