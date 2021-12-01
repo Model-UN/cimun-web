@@ -7,6 +7,7 @@ export interface FormField {
     updatedOn: Date;
     fieldType: string;
     required: boolean;
+    index: number; // the index for the field in the form itself
     content: string; // the "question"
     description?: string; // optional description
     values?: any[]; // optional values to select

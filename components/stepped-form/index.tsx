@@ -161,7 +161,13 @@ const Icon = styled(FontAwesomeIcon)`
   color: ${colors.dkGray};
 `;
 
-const SteppedForm = () => {
+interface OwnProps {
+  confId: string;
+  formId: string;
+}
+
+const SteppedForm = (props: OwnProps) => {
+  const { confId, formId } = props;
   const [formData, setFormData] = useState<ApiFormData>();
   const [loading, setLoading] = useState<boolean>(true);
   // #TODO - why doesn't this work correctly lol
@@ -170,7 +176,7 @@ const SteppedForm = () => {
 
   const initForm = async () => {
     setLoading(true);
-    const getFormData = await getFormTemplate("1", "1");
+    const getFormData = await getFormTemplate(confId, formId);
     setFormData(getFormData);
     setLoading(false);
   };
@@ -257,7 +263,7 @@ const SteppedForm = () => {
     request.responses = responses;
     // Submit!
     try {
-      await postFormSubmission("1", "1", { responses });
+      await postFormSubmission(confId, formId, { responses });
       await router.replace("/");
       alert(`Application submitted successfully!`);
     } catch (error) {
@@ -270,6 +276,7 @@ const SteppedForm = () => {
     { content, description, fieldType, id, required, values }: FormField,
     index: number
   ) => {
+    content = required ? `${content}*` : content
     const fieldInputTypeMap = {
       SHORT_ANSWER: "text",
       LONG_ANSWER: "textarea",
@@ -429,7 +436,9 @@ const SteppedForm = () => {
       )}
       {!loading && formData !== null && formData !== undefined && (
         <Form onSubmit={handleSubmit}>
-          {formData.sections[0].fields.map((field, index) => {
+          {formData.sections[0].fields.sort((a, b) => {
+            return a.index - b.index
+          }).map((field, index) => {
             return renderFormItem(field, index);
           })}
           {/* {errorMessage ? <p>{errorMessage}</p> : ""} */}
