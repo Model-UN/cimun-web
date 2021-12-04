@@ -143,12 +143,9 @@ const Burger = styled.button`
   display: none;
   @media screen and (max-width: 768px) {
     height: 2.8125vw;
-    margin-top: 0.46875vw;
     ${breakpoints("height", "px", [{ 1200: 35 }, { 800: 30 }])};
-    ${breakpoints("margin-top", "px", [{ 1200: 5 }, { 800: 7.5 }])};
     display: flex;
     position: absolute;
-    top: 0;
     right: 3vw;
     z-index: 10;
     align-items: center;
@@ -236,3 +233,4 @@ const HeaderNav = () => {
 
 
 export default HeaderNav;
+export {Anchor};

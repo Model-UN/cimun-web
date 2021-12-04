@@ -187,7 +187,11 @@ export default function InfoColumns(): JSX.Element {
                     color={colors.ltGray}
                 >
                   <Link href="/school-registration">
-                    <a><strong>[<u>Click Here</u>]</strong></a>
+                    <a><strong>[<u>Register Now</u>]</strong></a>
+                  </Link>
+                  {" "}|{" "}
+                  <Link href="/registration-information.pdf">
+                    <a><strong>[<u>Pricing & More Info</u>]</strong></a>
                   </Link>
                 </Body>
               </CardContainer>
@@ -229,7 +233,7 @@ export default function InfoColumns(): JSX.Element {
                 join our amazing team!
                 <br/>
                 <Link href="/staff-apps">
-                  <a><strong>[<u>Click Here</u>]</strong></a>
+                  <a><strong>[<u>Click Here To Apply</u>]</strong></a>
                 </Link>
               </Body>
             </CardContainer>
