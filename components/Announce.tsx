@@ -16,7 +16,7 @@ const RegistrationOpen = () => {
           Want to bring your school to CIMUN XVIII? You're in luck!
           {" - "}
           <Link href="/school-registration">
-            <a><u>Apply Now</u></a>
+            <a><u>Register Now</u></a>
           </Link>
           {" - "}
           <Link href="/registration-information.pdf">
