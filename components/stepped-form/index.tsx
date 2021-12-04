@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Link from 'next/link';
 import { SubTitle, Body } from "../../styles/typography";
 import { ComponentWrapper } from "../../styles/containers";
 import styled from "styled-components";
@@ -172,7 +173,7 @@ const SteppedForm = (props: OwnProps) => {
   const [loading, setLoading] = useState<boolean>(true);
   // #TODO - why doesn't this work correctly lol
   const [errorMessage, setErrors] = useState<string>("");
-  const router = useRouter();
+  const [submitted, setSubmitted] = useState<boolean>(false);
 
   const initForm = async () => {
     setLoading(true);
@@ -263,8 +264,8 @@ const SteppedForm = (props: OwnProps) => {
     const request = new SubmitFormDto();
     request.responses = responses;
     // Submit!
-    await postFormSubmission(confId, formId, { responses }).then(res => {
-      router.replace("/");
+    await postFormSubmission(confId, formId, { responses }).then(() => {
+      setSubmitted(true)
     })
       .catch(err => {
           setErrors(`Couldn't submit application. ${ err.response.data.error }`);
@@ -429,12 +430,12 @@ const SteppedForm = (props: OwnProps) => {
 
   return (
     <ComponentWrapper>
-      {!loading && formData !== null && formData !== undefined && (
+      {!loading && formData !== null && formData !== undefined && !submitted && (
         <SubTitle align="left" width="75%" self="center" weight={600}>
           {formData.sections[0].intro}
         </SubTitle>
       )}
-      {!loading && formData !== null && formData !== undefined && (
+      {!loading && formData !== null && formData !== undefined && !submitted &&(
         <Form onSubmit={handleSubmit}>
           {formData.sections[0].fields.sort((a, b) => {
             return a.index - b.index
@@ -445,7 +446,7 @@ const SteppedForm = (props: OwnProps) => {
           <SeggsySubmit type="submit" value="Submit" />
         </Form>
       )}
-      {!loading && !formData && (
+      {!loading && !formData && !submitted && (
         <SubTitle align="center" width="75%" self="center" weight={300}>
           Something went wrong while attempting to retrieve this form.
           Please try again in a few minutes.<br/><br/>If this issue persists,
@@ -453,6 +454,24 @@ const SteppedForm = (props: OwnProps) => {
             href="mailto:engineering@modelun.net"><u>engineering@modelun.net</u>
           </a> and we will be able to assist you. Thank you for your cooperation.
         </SubTitle>
+      )}
+      {submitted && (
+        <>
+          <SubTitle align="center" width="75%" self="center" weight={300}>
+            Your submission was received! Thank you so much for your interest in
+            CIMUN XVIII.
+            <br/><br/>
+            We will be in touch with you after reviewing your submission. In the
+            meantime, if you have any further inquiries, you are welcome to
+            reach out to our Steering Committee at <a
+              href="mailto:sc@cimun.org">
+              <u>sc@cimun.org</u>
+            </a> for assistance.
+            <br/><br/>
+            Once again, thank you so much for your interest in CIMUN. We hope to
+            see you there!
+          </SubTitle>
+        </>
       )}
     </ComponentWrapper>
   );
