@@ -13,7 +13,6 @@ import {
   SubmitFormDto,
 } from "../../services/axiosHandler";
 import { ApiFormData, FormField } from "./form-interfaces";
-import { useRouter } from "next/router";
 
 const Form = styled.form`
   display: flex;
@@ -25,6 +24,7 @@ const Form = styled.form`
   ${breakpoints("margin", "", [{ 800: "3vh 0" }])};
   padding: 0;
 `;
+
 const SeggsyInput = styled.input`
   width: 100%;
   height: 56px;
@@ -165,13 +165,13 @@ const Icon = styled(FontAwesomeIcon)`
 interface OwnProps {
   confId: string;
   formId: string;
+  submissionType?: string;
 }
 
 const SteppedForm = (props: OwnProps) => {
   const { confId, formId } = props;
   const [formData, setFormData] = useState<ApiFormData>();
   const [loading, setLoading] = useState<boolean>(true);
-  // #TODO - why doesn't this work correctly lol
   const [errorMessage, setErrors] = useState<string>("");
   const [submitted, setSubmitted] = useState<boolean>(false);
 
@@ -458,10 +458,13 @@ const SteppedForm = (props: OwnProps) => {
       {submitted && (
         <>
           <SubTitle align="center" width="75%" self="center" weight={300}>
-            Your submission was received! Thank you so much for your interest in
-            CIMUN XVIII.
+            Your {props.submissionType ? props.submissionType : "submission"} has
+            been received! Thank you so much for your interest in CIMUN XVIII.
             <br/><br/>
-            We will be in touch with you after reviewing your submission. In the
+            We will be in touch with you after reviewing your {
+            props.submissionType
+                ? props.submissionType
+                : "submission"}. In the
             meantime, if you have any further inquiries, you are welcome to
             reach out to our Steering Committee at <a
               href="mailto:sc@cimun.org">
