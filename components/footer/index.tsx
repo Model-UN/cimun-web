@@ -35,6 +35,15 @@ const Footer: React.FC = () => (
             </a>
           </div>
           <div >
+            <a
+                href="/schedule.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+              Conference Schedule
+            </a>
+          </div>
+          <div >
             <Link href="/school-registration"><a>Register Your School</a></Link>
           </div>
           <div >
