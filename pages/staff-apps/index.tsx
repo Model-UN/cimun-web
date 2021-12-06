@@ -42,7 +42,7 @@ const StaffApps = () => {
         height={65}
         image="cimun-staff.png"
       />
-      <SteppedForm formId="1" confId="1" />
+      <SteppedForm formId="1" confId="1" submissionType="application" />
       <Footer />
     </Wrapper>
   );

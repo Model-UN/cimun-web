@@ -65,7 +65,7 @@ const SchoolRegistration = () => {
           </a>
         </SubTitle>
       </ComponentWrapper>
-      <SteppedForm confId="1" formId="2" />
+      <SteppedForm confId="1" formId="2" submissionType={"registration"} />
       <Footer />
     </Wrapper>
   );
