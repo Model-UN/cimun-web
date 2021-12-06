@@ -3,6 +3,7 @@ import { SubTitle, Body } from "../../styles/typography";
 import { colors } from "../../styles/colors";
 import { InfoColumnWrapper, CardWrapper, CardContainer } from "./infoColumns.styles";
 import LetterElement from "./letter.element";
+import React from "react";
 
 export default function InfoColumns(): JSX.Element {
   return (
@@ -45,6 +46,21 @@ export default function InfoColumns(): JSX.Element {
                 >
                   February 3rd - 6th, 2022
                 </SubTitle>
+                  <Body
+                      align="start"
+                      self="start"
+                      margins="0 0 0.25rem 0"
+                      size="2rem"
+                      color={colors.ltGray}
+                  >
+                    <a
+                        href="/schedule.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                      <strong>[See Full Schedule <u>Here</u>]</strong>
+                    </a>
+                  </Body>
                 <Body
                     align="end"
                     self="end"
@@ -111,7 +127,7 @@ export default function InfoColumns(): JSX.Element {
                     size="2rem"
                     color={colors.primaryBlue}
                 >
-                  Begins <strong><em>January 16, 2022</em></strong>
+                  <em>Opening soon</em>, due <strong><em>January 30, 2022</em></strong>
                 </Body>
                 <Body
                     align="end"
@@ -187,7 +203,11 @@ export default function InfoColumns(): JSX.Element {
                     color={colors.ltGray}
                 >
                   <Link href="/school-registration">
-                    <a><strong>[<u>Click Here</u>]</strong></a>
+                    <a><strong>[<u>Register Now</u>]</strong></a>
+                  </Link>
+                  {" "}|{" "}
+                  <Link href="/registration-information.pdf">
+                    <a><strong>[<u>Pricing & More Info</u>]</strong></a>
                   </Link>
                 </Body>
               </CardContainer>
@@ -229,7 +249,7 @@ export default function InfoColumns(): JSX.Element {
                 join our amazing team!
                 <br/>
                 <Link href="/staff-apps">
-                  <a><strong>[<u>Click Here</u>]</strong></a>
+                  <a><strong>[<u>Click Here To Apply</u>]</strong></a>
                 </Link>
               </Body>
             </CardContainer>
