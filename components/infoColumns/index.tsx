@@ -118,7 +118,7 @@ export default function InfoColumns(): JSX.Element {
                     line={0.9}
                     color={colors.primaryBlue}
                 >
-                  Position Paper Submissions
+                  Position Paper Submission
                 </SubTitle>
                 <Body
                     align="start"
