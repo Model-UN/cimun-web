@@ -1,4 +1,4 @@
-import React, {SyntheticEvent, useState} from 'react';
+import React, {MouseEventHandler, SyntheticEvent, useState} from 'react';
 import { CommitteeDetails } from '../shared/constants';
 import {colors} from "../../styles/colors";
 import {SubTitle, Header} from "../../styles/typography";
@@ -10,17 +10,19 @@ const CommitteeDisplay = () => {
   const [committeeType, setCommitteeType] = useState<string>("COMMS")
   let committees = CommitteeDetails[timePeriod][committeeType].map(committee => committee.getJSX())
 
-  const handleSelectPeriod = (e: SyntheticEvent<PillProps>) => {
+  const handleSelectPeriod = (e) => {
     e.preventDefault()
     setTimePeriod(e.currentTarget.id)
+    return null
   }
 
-  const handleSelectCommitteeType = (e: SyntheticEvent<PillProps>) => {
+  const handleSelectCommitteeType = (e) => {
     e.preventDefault()
     setCommitteeType(e.currentTarget.id)
-    return e
+    return null
   }
 
+  // @ts-ignore
   return (
       <>
         <PillButtonRow>
