@@ -25,11 +25,14 @@ p {
 
 a {
   color: inherit;
-  text-decoration: none;
 }
 
 a:hover {
   cursor: pointer;
+}
+
+a:visited {
+  opacity: 10%;
 }
 
 * {

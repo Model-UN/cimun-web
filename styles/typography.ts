@@ -48,7 +48,11 @@ export const Header = styled.h2<TextType>`
   align-self: ${(props: TextType) => (props.self ? props.self : "flex-start")};
   margin: ${(props: TextType) => (props.margins ? props.margins : undefined)};
   color: ${(props: TextType) => (props.color ? props.color : "black")};
-  font-size: ${(props: TextType) => (props.size ? props.size : "2vw")};
+  font-size: ${(props: TextType) => (props.size ? props.size : "2rem")};
+  ${(props: TextType) =>
+          props.mobSize
+                  ? breakpoints("font-size", "", [{ 1000: props.mobSize }])
+                  : breakpoints("font-size", "", [{ 1000: "1.0rem" }])}
   line-height: ${(props: TextType) => (props.line ? props.line : undefined)};
   width: ${(props: TextType) => (props.width ? props.width : undefined)};
   text-align: ${(props: TextType) => (props.align ? props.align : "left")};
@@ -65,7 +69,7 @@ export const SubTitle = styled.h3<TextType>`
   ${(props: TextType) =>
     props.mobSize
       ? breakpoints("font-size", "", [{ 1000: props.mobSize }])
-      : breakpoints("font-size", "", [{ 1000: "1.2rem" }])}
+      : breakpoints("font-size", "", [{ 1000: "1.5rem" }])}
   font-weight: ${(props: TextType) => (props.weight ? props.weight : 1000)};
   line-height: ${(props: TextType) => (props.line ? props.line : undefined)};
   width: ${(props: TextType) => (props.width ? props.width : undefined)};
