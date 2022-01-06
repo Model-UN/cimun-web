@@ -36,10 +36,10 @@ const VirtualConference = () => {
             align="center"
             margins="0.5rem"
         >
-          Delegates and Advisors: CIMUN XVIII will be held virtually this year.
+          CIMUN XVIII will take place <em>virtually</em> this year from February 4th to 6th
           {" - "}
-          <Link href="#letter">
-            <a><u>Read More</u></a>
+          <Link href="/#letter">
+            <a><u>Click Here to Read More</u></a>
           </Link>
         </Body>
       </AnnouncementBar>

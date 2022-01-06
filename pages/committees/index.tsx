@@ -39,7 +39,7 @@ const Committees = () => {
               rel="stylesheet"
           />
         </Head>
-        <Announce.RegistrationOpen />
+        <Announce.VirtualConference />
         <HeaderNav />
         <Jumbotron
             titleOne=".....COMMITTEES"

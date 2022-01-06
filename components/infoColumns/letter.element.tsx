@@ -1,8 +1,6 @@
 import Link from 'next/link'
 import {
-  CardContainer,
-  CardWrapper,
-  InfoColumnWrapper, Title
+  CardWrapper, InfoColumnWrapper, Title
 } from "./infoColumns.styles";
 import {Body} from "../../styles/typography";
 import {MaterialCard} from "../../app/components/elements";
