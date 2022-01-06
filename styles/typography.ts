@@ -19,6 +19,7 @@ interface TextType {
   color?: string; ///Passing Optional Props
   size?: string;
   mobSize?: string; // mobile size
+  mobMargins?: string; // mobile size
   line?: number;
   margins?: string;
   self?: string;
@@ -82,6 +83,10 @@ export const Body = styled.p<TextType>`
     props.styling ? props.styling : "normal"};
   align-self: ${(props: TextType) => (props.self ? props.self : "flex-start")};
   margin: ${(props: TextType) => (props.margins ? props.margins : undefined)};
+  ${(props) =>
+          props.mobMargins
+                  ? breakpoints("margin", "", [{ 1000: props.mobMargins }])
+                  : breakpoints("margin", "", [{ 1000: "1rem 1rem 0 1rem" }])}
   color: ${(props: TextType) => (props.color ? props.color : "black")};
   font-size: ${(props: TextType) => (props.size ? props.size : "1.2rem")};
   ${breakpoints("font-size", "", [{ 1000: ".9rem" }])};

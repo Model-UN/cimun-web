@@ -35,7 +35,7 @@ export default function Home() {
               rel="stylesheet"
           />
         </Head>
-        <Announce.RegistrationOpen/>
+        <Announce.VirtualConference/>
         <HeaderNav/>
         <Jumbotron
             titleOne="CIMUN"
