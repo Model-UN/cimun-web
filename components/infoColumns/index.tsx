@@ -12,7 +12,7 @@ export default function InfoColumns(): JSX.Element {
         <InfoColumnWrapper>
           <CardWrapper
               flex="1"
-              margins="0 15% 0 15%"
+              margins="2rem 15% 0 15%"
               pad="0 0 2rem 0rem"
               direction="row"
           >
@@ -44,12 +44,12 @@ export default function InfoColumns(): JSX.Element {
                     line={0.9}
                     color={colors.ltGray}
                 >
-                  February 3rd - 6th, 2022
+                  February 4th - 6th, 2022
                 </SubTitle>
                   <Body
                       align="start"
                       self="start"
-                      margins="0 0 0.25rem 0"
+                      margins="0.5rem 0 0.25rem 0"
                       size="2rem"
                       color={colors.ltGray}
                   >
@@ -58,42 +58,10 @@ export default function InfoColumns(): JSX.Element {
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                      <strong>[See Full Schedule <u>Here</u>]</strong>
+                      <strong>[View the Full Schedule <u>Here</u>]</strong>
                     </a>
                   </Body>
-                <Body
-                    align="end"
-                    self="end"
-                    margins="0 0 0.25rem 0"
-                    size="2rem"
-                    weight={700}
-                    color={colors.ltGray}
-                >
-                  <em><u>Conference Location</u></em>
-                </Body>
-                <SubTitle
-                    size="3.5rem"
-                    mobSize="2rem"
-                    width="70%"
-                    margins="0 0"
-                    self="end"
-                    align="end"
-                    line={0.9}
-                    color={colors.ltGray}
-                >
-                  The Palmer House Hilton Hotel
-                </SubTitle>
-                <Body
-                    align="end"
-                    self="end"
-                    size="1.5rem"
-                    margins="0 0 0 0"
-                    color={colors.ltGray}
-                >
-                  <i>17 East Monroe Street<br/>Chicago, IL, 60603</i>
-                </Body>
               </CardContainer>
-
               <CardContainer
                   noMargins
                   color={colors.ltGray}
@@ -106,7 +74,7 @@ export default function InfoColumns(): JSX.Element {
                     weight={700}
                     color={colors.primaryBlue}
                 >
-                  <em><u>Delegates, save the date!</u></em>
+                  <em><u>Other Important Dates!</u></em>
                 </Body>
                 <SubTitle
                     size="3.5rem"
@@ -127,12 +95,12 @@ export default function InfoColumns(): JSX.Element {
                     size="2rem"
                     color={colors.primaryBlue}
                 >
-                  <em>Opening soon</em>, due <strong><em>January 30, 2022</em></strong>
+                  <em>Begins soon</em>, due <strong><em>February 1st, 2022</em></strong>
                 </Body>
                 <Body
                     align="end"
                     self="end"
-                    margins="0 0 0.25rem 0"
+                    margins="0.5rem 0 0.25rem 0"
                     size="2rem"
                     weight={700}
                     color={colors.primaryBlue}
@@ -149,7 +117,7 @@ export default function InfoColumns(): JSX.Element {
                     line={0.9}
                     color={colors.primaryBlue}
                 >
-                  Background Guides & Committee Information
+                  Background Guides
                 </SubTitle>
                 <Body
                     align="end"
@@ -158,7 +126,7 @@ export default function InfoColumns(): JSX.Element {
                     size="2rem"
                     color={colors.primaryBlue}
                 >
-                  Stay tuned for more updates!
+                  <em><strong>January 10th, 2022</strong></em>
                 </Body>
               </CardContainer>
 
@@ -167,6 +135,46 @@ export default function InfoColumns(): JSX.Element {
                 margins="0"
                 direction="column"
             >
+              <CardContainer
+                  margins="0 0 1rem 1rem"
+                  flex="1"
+                  color={colors.dkGray}
+              >
+                <Body
+                    align="start"
+                    self="start"
+                    margins="0 0 0.25rem 0"
+                    size="2rem"
+                    weight={700}
+                    color={colors.ltGray}
+                >
+                  <u>NOW LIVE!</u>
+                </Body>
+                <SubTitle
+                    size="3.5rem"
+                    width="100%"
+                    mobSize="2rem"
+                    margins="0 0"
+                    self="start"
+                    align="start"
+                    line={0.9}
+                    color={colors.ltGray}
+                >
+                  Check out this year's committees, cabinets, and topics!
+                </SubTitle>
+                <Body
+                    align="start"
+                    self="start"
+                    margins="0.5rem 0"
+                    size="2rem"
+                    weight={700}
+                    color={colors.ltGray}
+                >
+                  <Link href="/committees">
+                    <a><strong>[<u>Read More</u>]</strong></a>
+                  </Link>
+                </Body>
+              </CardContainer>
               <CardContainer
                   margins="0 0 1rem 1rem"
                   flex="1"
@@ -205,10 +213,10 @@ export default function InfoColumns(): JSX.Element {
                   <Link href="/school-registration">
                     <a><strong>[<u>Register Now</u>]</strong></a>
                   </Link>
-                  {" "}|{" "}
-                  <Link href="/registration-information.pdf">
-                    <a><strong>[<u>Pricing & More Info</u>]</strong></a>
-                  </Link>
+                  {/*{" "}|{" "}*/}
+                  {/*<Link href="/registration-information.pdf">*/}
+                  {/*  <a><strong>[<u>Pricing & More Info</u>]</strong></a>*/}
+                  {/*</Link>*/}
                 </Body>
               </CardContainer>
             <CardContainer

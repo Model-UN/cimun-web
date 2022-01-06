@@ -40,7 +40,7 @@ export const FooterCol = styled.section`
 
 export const FooterColFirst = styled(FooterCol)`
   width: 18rem;
-  padding-bottom: 25px;
+  padding-bottom: 0.5rem;
 `
 
 export const VercelLink = styled.a`

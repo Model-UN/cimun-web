@@ -5,6 +5,7 @@ import Jumbotron from "../../components/jumbotron";
 import Footer from "../../components/footer";
 import SteppedForm from "../../components/stepped-form";
 import { Wrapper } from "../../styles/containers";
+import Announce from "../../components/Announce";
 
 const StaffApps = () => {
   return (
@@ -35,6 +36,7 @@ const StaffApps = () => {
           rel="stylesheet"
         />
       </Head>
+      <Announce.VirtualConference/>
       <HeaderNav />
       <Jumbotron
         titleOne="STAFF"
