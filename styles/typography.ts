@@ -86,7 +86,7 @@ export const Body = styled.p<TextType>`
   ${(props) =>
           props.mobMargins
                   ? breakpoints("margin", "", [{ 1000: props.mobMargins }])
-                  : breakpoints("margin", "", [{ 1000: "1rem 1rem 0 1rem" }])}
+                  : breakpoints("margin", "", [{ 1000: "0 0 0 0" }])}
   color: ${(props: TextType) => (props.color ? props.color : "black")};
   font-size: ${(props: TextType) => (props.size ? props.size : "1.2rem")};
   ${breakpoints("font-size", "", [{ 1000: ".9rem" }])};

@@ -11,7 +11,7 @@ export default function LetterElement(): JSX.Element {
       <CardWrapper flex="1" margins="1rem 15% 0 15%" pad="auto">
         <MaterialCard column noAnimate>
           <Title margins="1rem 0 0 6rem" line={0.9}>From the Desk of the Secretary-General</Title>
-          <Body margins="2rem 6rem 2rem 6rem" size="1.1rem" line={1.4} align={"justify"}>
+          <Body margins="2rem 6rem 2rem 6rem" mobMargins="1rem 1rem 0 1rem" size="1.1rem" line={1.4} align={"justify"}>
             <em><strong>Delegates, Faculty, and Distinguished Guests:</strong></em>
             <br/><br/>
             It is our distinct pleasure to welcome you to the <strong> eighteenth annual

@@ -415,11 +415,11 @@ const SteppedForm = (props: OwnProps) => {
 
     return (
       <>
-        <div style={{ marginBottom: description ? "-30px" : "0px" }}>
+        <div style={{ marginBottom: description ? "-12px" : "0px" }}>
           <Body>{content}</Body>
         </div>
         {description && (
-          <Body size="14px" styling="italic" margins="12.5px 0 20px 0">
+          <Body size="14px" styling="italic" margins="12.5px 0 20px 0" mobMargins="12.5px 0 20px 0">
             {description}
           </Body>
         )}
