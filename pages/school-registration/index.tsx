@@ -7,6 +7,7 @@ import SteppedForm from "../../components/stepped-form";
 import { Wrapper, ComponentWrapper} from "../../styles/containers";
 import { SubTitle } from "../../styles/typography";
 import {colors} from "../../styles/colors";
+import Announce from "../../components/Announce";
 
 const SchoolRegistration = () => {
   return (
@@ -37,6 +38,7 @@ const SchoolRegistration = () => {
           rel="stylesheet"
         />
       </Head>
+      <Announce.VirtualConference/>
       <HeaderNav />
       <Jumbotron
         titleOne="SCHOOL"
@@ -53,16 +55,16 @@ const SchoolRegistration = () => {
             self="center"
             weight={500}
         >
-          <a
-              href="/registration-information.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-          >
-            <em>
-              Looking for pricing & registration details? <strong><u>Click
-              here</u> to download our registration guide!</strong>
-            </em>
-          </a>
+          {/*<a*/}
+          {/*    href="/registration-information.pdf"*/}
+          {/*    target="_blank"*/}
+          {/*    rel="noopener noreferrer"*/}
+          {/*>*/}
+          {/*  <em>*/}
+          {/*    Looking for pricing & registration details? <strong><u>Click*/}
+          {/*    here</u> to download our registration guide!</strong>*/}
+          {/*  </em>*/}
+          {/*</a>*/}
         </SubTitle>
       </ComponentWrapper>
       <SteppedForm confId="1" formId="2" submissionType={"registration"} />

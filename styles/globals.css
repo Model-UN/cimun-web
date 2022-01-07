@@ -1,5 +1,6 @@
 html,
 body {
+  scroll-behavior: smooth;
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
@@ -25,11 +26,14 @@ p {
 
 a {
   color: inherit;
-  text-decoration: none;
 }
 
 a:hover {
   cursor: pointer;
+}
+
+a:visited {
+  opacity: 10%;
 }
 
 * {

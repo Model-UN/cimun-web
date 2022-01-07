@@ -27,8 +27,28 @@ const RegistrationOpen = () => {
   )
 };
 
+const VirtualConference = () => {
+  return (
+      <AnnouncementBar>
+        <Body
+            color={colors.ltGray}
+            weight={600}
+            align="center"
+            margins="0.5rem"
+        >
+          CIMUN XVIII will take place <em>virtually</em> this year from February 4th to 6th
+          {" - "}
+          <Link href="/#letter">
+            <a><u>Click Here to Read More</u></a>
+          </Link>
+        </Body>
+      </AnnouncementBar>
+  )
+};
+
 const Announce = {
-  RegistrationOpen
+  RegistrationOpen,
+  VirtualConference,
 };
 
 export default Announce;
