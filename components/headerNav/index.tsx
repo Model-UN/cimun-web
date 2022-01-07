@@ -194,12 +194,23 @@ const HeaderNav = () => {
             <Anchor>Register For CIMUN XVIII</Anchor>
           </ListItem>
         </Link>
+        <Link href="/committees">
+          <ListItem>
+            <Anchor>Committees & Cabinets</Anchor>
+          </ListItem>
+        </Link>
       </ListContainer>
       {burgerOpen && (
         <BurgerListContainer>
           <Link href="/">
             <BurgerListItem>
               <Anchor>Home</Anchor>
+            </BurgerListItem>
+          </Link>
+          <BurgerSeparator />
+          <Link href="/committees">
+            <BurgerListItem>
+              <Anchor>CIMUN XVIII Committees & Cabinets</Anchor>
             </BurgerListItem>
           </Link>
           <BurgerSeparator />
@@ -219,7 +230,7 @@ const HeaderNav = () => {
               <BurgerLogo src="/White_CIMUN_Logo.png" />
             </BurgerListItem>
         </BurgerListContainer>
-      )}
+        )}
       <Burger onClick={() => setBurgerOpen(!burgerOpen)}>
         {!burgerOpen ? (
           <Icon icon={"bars"} />
