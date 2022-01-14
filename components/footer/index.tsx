@@ -24,14 +24,14 @@ const Footer: React.FC = () => (
           </p>
         </FooterColFirst>
         <FooterCol>
-          <FootH2>Attend CIMUN</FootH2>
+          <FootH2>CIMUN XVIII</FootH2>
           <div >
             <a
-                href="/registration-information.pdf"
+                href="DelegateGuide.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
             >
-              Pricing & Registration
+              Delegate Guide
             </a>
           </div>
           <div >
@@ -42,12 +42,6 @@ const Footer: React.FC = () => (
             >
               Conference Schedule
             </a>
-          </div>
-          <div >
-            <Link href="/school-registration"><a>Register Your School</a></Link>
-          </div>
-          <div >
-            <Link href="/staff-apps"><a>Join Our Team</a></Link>
           </div>
         </FooterCol>
         <FooterCol>

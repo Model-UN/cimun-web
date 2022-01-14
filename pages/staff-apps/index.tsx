@@ -36,7 +36,7 @@ const StaffApps = () => {
           rel="stylesheet"
         />
       </Head>
-      <Announce.VirtualConference/>
+      <Announce.DelegateGuide />
       <HeaderNav />
       <Jumbotron
         titleOne="STAFF"

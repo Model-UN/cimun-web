@@ -38,7 +38,7 @@ const SchoolRegistration = () => {
           rel="stylesheet"
         />
       </Head>
-      <Announce.VirtualConference/>
+      <Announce.DelegateGuide />
       <HeaderNav />
       <Jumbotron
         titleOne="SCHOOL"

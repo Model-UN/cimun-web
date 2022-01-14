@@ -8,7 +8,6 @@ import React from "react";
 export default function InfoColumns(): JSX.Element {
   return (
       <>
-        <LetterElement />
         <InfoColumnWrapper>
           <CardWrapper
               flex="1"
@@ -54,11 +53,18 @@ export default function InfoColumns(): JSX.Element {
                       color={colors.ltGray}
                   >
                     <a
+                        href="/DelegateGuide.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                      <strong>[Delegate Guide]</strong>
+                    </a><br/>
+                    <a
                         href="/schedule.pdf"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                      <strong>[View the Full Schedule <u>Here</u>]</strong>
+                      <strong>[Full Conference Schedule]</strong>
                     </a>
                   </Body>
               </CardContainer>
@@ -200,70 +206,13 @@ export default function InfoColumns(): JSX.Element {
                     line={0.9}
                     color={colors.ltGray}
                 >
-                  Register your school for CIMUN XVIII!
+                  Registration has closed. Stay tuned for CIMUN XIX!
                 </SubTitle>
-                <Body
-                    align="start"
-                    self="start"
-                    margins="0.5rem 0"
-                    size="2rem"
-                    weight={700}
-                    color={colors.ltGray}
-                >
-                  <Link href="/school-registration">
-                    <a><strong>[<u>Register Now</u>]</strong></a>
-                  </Link>
-                  {/*{" "}|{" "}*/}
-                  {/*<Link href="/registration-information.pdf">*/}
-                  {/*  <a><strong>[<u>Pricing & More Info</u>]</strong></a>*/}
-                  {/*</Link>*/}
-                </Body>
               </CardContainer>
-            <CardContainer
-              margins="0 0 1rem 1rem"
-              flex="1"
-              color={colors.dkGray}
-            >
-                <Body
-                    align="end"
-                    self="end"
-                    margins="0 0 0.25rem 0"
-                    size="2rem"
-                    weight={700}
-                    color={colors.ltGray}
-                >
-                  <em><u>Want to volunteer for CIMUN?</u></em>
-                </Body>
-                <SubTitle
-                    size="3.5rem"
-                    width="80%"
-                    mobSize="2rem"
-                    margins="0 0"
-                    self="end"
-                    align="end"
-                    line={0.9}
-                    color={colors.ltGray}
-                >
-                  Apply to Join Our Staff!
-                </SubTitle>
-              <Body
-                  align="end"
-                  self="end"
-                  margins="0.5rem 0"
-                  size="2rem"
-                  color={colors.ltGray}
-              >
-                Applicants are being considered on a rolling basis to
-                join our amazing team!
-                <br/>
-                <Link href="/staff-apps">
-                  <a><strong>[<u>Click Here To Apply</u>]</strong></a>
-                </Link>
-              </Body>
-            </CardContainer>
             </CardWrapper>
           </CardWrapper>
         </InfoColumnWrapper>
+        <LetterElement />
         </>
   );
 };

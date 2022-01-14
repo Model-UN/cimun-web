@@ -26,7 +26,7 @@ export default function LetterElement(): JSX.Element {
             over 50 colleges and universities, selected through a highly-competitive
             application process. Nearly 80% of our staff are returning delegates from
             previous CIMUN conferences, and we urge all those who are interested in joining
-            our team to apply <Link href="/staff-apps"><a>here</a></Link>. CIMUN also offers
+            our team to stay tuned for our CIMUN XIX staff applications. CIMUN also offers
             one of the lowest staff-to-delegate ratios of any major conference, with one
             staff member for every seven delegates.
             <br/><br/>

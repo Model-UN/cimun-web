@@ -48,9 +48,29 @@ const VirtualConference = () => {
   )
 };
 
+const DelegateGuide = () => {
+  return (
+      <AnnouncementBar backgroundColor={colors.accentBlue}>
+        <Body
+            color="white"
+            weight={600}
+            align="center"
+            margins="0.5rem 0 0.5rem 0"
+            mobMargins="0.5rem 0 0.5rem 0"
+        >
+          <Link href="DelegateGuide.pdf">
+            <a><strong>DELEGATES!</strong> - Getting ready for CIMUN XVIII?
+              Click <strong>here</strong> to review our Delegate Guide!</a>
+          </Link>
+        </Body>
+      </AnnouncementBar>
+  )
+};
+
 const Announce = {
   RegistrationOpen,
   VirtualConference,
+  DelegateGuide,
 };
 
 export default Announce;
