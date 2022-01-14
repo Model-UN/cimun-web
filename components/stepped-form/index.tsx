@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Link from 'next/link';
 import { SubTitle, Body } from "../../styles/typography";
 import { ComponentWrapper } from "../../styles/containers";
 import styled from "styled-components";
