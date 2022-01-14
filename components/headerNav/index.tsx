@@ -184,19 +184,14 @@ const HeaderNav = () => {
             <Anchor>Home</Anchor>
           </ListItem>
         </Link>
-        <Link href="/staff-apps">
-          <ListItem>
-            <Anchor>Join Our Staff</Anchor>
-          </ListItem>
-        </Link>
-        <Link href="/school-registration">
-          <ListItem>
-            <Anchor>Register For CIMUN XVIII</Anchor>
-          </ListItem>
-        </Link>
         <Link href="/committees">
           <ListItem>
             <Anchor>Committees & Cabinets</Anchor>
+          </ListItem>
+        </Link>
+        <Link href="DelegateGuide.pdf">
+          <ListItem>
+            <Anchor>Delegate Guide</Anchor>
           </ListItem>
         </Link>
       </ListContainer>
@@ -214,15 +209,9 @@ const HeaderNav = () => {
             </BurgerListItem>
           </Link>
           <BurgerSeparator />
-          <Link href="/staff-apps">
+          <Link href="/DelegateGuide.pdf">
             <BurgerListItem>
-              <Anchor>Staff Applications</Anchor>
-            </BurgerListItem>
-          </Link>
-          <BurgerSeparator />
-          <Link href="/school-registration">
-            <BurgerListItem>
-              <Anchor>School Registration</Anchor>
+              <Anchor>Delegate Guide</Anchor>
             </BurgerListItem>
           </Link>
           <BurgerSeparator />
