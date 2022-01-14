@@ -11,7 +11,8 @@ const RegistrationOpen = () => {
             color={colors.ltGray}
             weight={600}
             align="center"
-            margins="0.5rem"
+            margins="0 0 0 0"
+            mobMargins="0 0 0 0"
         >
           Want to bring your school to CIMUN XVIII? You're in luck!
           {" - "}
@@ -34,7 +35,8 @@ const VirtualConference = () => {
             color={colors.ltGray}
             weight={600}
             align="center"
-            margins="0.5rem"
+            margins="0.5rem 0 0.5rem 0"
+            mobMargins="0.5rem 0 0.5rem 0"
         >
           CIMUN XVIII will take place <em>virtually</em> this year from February 4th to 6th
           {" - "}
