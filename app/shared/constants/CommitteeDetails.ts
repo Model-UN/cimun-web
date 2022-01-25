@@ -39,7 +39,7 @@ export const CommitteeDetails: CommitteeConfig = {
             ),
             new Topic(
                 2,
-                "Sexual & Reproductive Health"
+                "Climate Change as a Public Health Crisis"
             ),
             new Topic(
                 3,
