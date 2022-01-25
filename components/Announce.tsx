@@ -83,10 +83,7 @@ const BackgroundGuides = () => {
             mobMargins="0.5rem 0 0.5rem 0"
         >
           <Link href="committees">
-            <a
-                target="_blank"
-                rel="noopener noreferrer"
-            >
+            <a>
               CIMUN XVIII begins Friday, February 4th. Click here to see our Committees & Background Guides!
             </a>
           </Link>
