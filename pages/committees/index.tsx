@@ -40,6 +40,7 @@ const Committees = () => {
           />
         </Head>
         <Announce.DelegateGuide />
+        <Announce.BackgroundGuides />
         <HeaderNav />
         <Jumbotron
             titleOne=".....COMMITTEES"

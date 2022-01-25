@@ -36,7 +36,8 @@ const StaffApps = () => {
           rel="stylesheet"
         />
       </Head>
-      <Announce.DelegateGuide />
+      <Announce.DelegateGuide/>
+      <Announce.BackgroundGuides/>
       <HeaderNav />
       <Jumbotron
         titleOne="STAFF"

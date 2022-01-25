@@ -9,6 +9,7 @@ export class Committee {
   Img: string;
   Size?: number;
   Topics?: Topic[];
+  Guide: string;
 
   constructor(
       name: string,
@@ -16,7 +17,8 @@ export class Committee {
       site: string,
       img: string,
       size?: number,
-      topics?: Topic[]
+      topics?: Topic[],
+      guide?: string,
   ) {
     this.Name = name;
     this.Abbr = abbr;
@@ -24,6 +26,7 @@ export class Committee {
     this.Img = img;
     this.Size = size;
     this.Topics = topics;
+    this.Guide = guide;
   }
 
   getJSX() {

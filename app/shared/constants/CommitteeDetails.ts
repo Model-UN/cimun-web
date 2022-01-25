@@ -23,7 +23,8 @@ export const CommitteeDetails: CommitteeConfig = {
                 3,
                 "Preventing Armament in Space"
             )
-          ]
+          ],
+          "UNSC (2022).pdf"
       ),
       new Committee(
           "World Health Organization",
@@ -44,7 +45,8 @@ export const CommitteeDetails: CommitteeConfig = {
                 3,
                 "Air Pollution & Its Effects on Human Health"
             )
-          ]
+          ],
+          "WHO BG (2022).pdf"
       ),
     ],
     CABS: [
@@ -69,7 +71,8 @@ export const CommitteeDetails: CommitteeConfig = {
                 "Domestic Topics: Challenging Economy and a Changing" +
                 " Social Landscape"
             )
-          ]
+          ],
+          "US Cabinet (2022).pdf"
       ),
       new Committee(
           "Ministries of the People's Republic of China",
@@ -93,7 +96,8 @@ export const CommitteeDetails: CommitteeConfig = {
                 "Domestic Topics: A Housing Boom, Avoiding the Fate of" +
                 " Japan, and Becoming a Climate Change Leader at Home"
             )
-          ]
+          ],
+          "People's Republic of China (2022).pdf"
       ),
       new Committee(
           "Council of Ministers of the Russian Federation",
@@ -118,7 +122,8 @@ export const CommitteeDetails: CommitteeConfig = {
                 "Domestic Topics: Domestic Unrest, Transitioning to an" +
                 " Oil-free World, and the Fragility of Russian Civil Society"
             )
-          ]
+          ],
+          "Cabinet of the Russian Federation (2022).pdf"
       ),
       new Committee(
           "Federal Cabinet of Germany",
@@ -143,7 +148,8 @@ export const CommitteeDetails: CommitteeConfig = {
                 "Domestic Topics: The Fall of Merkel & the CDU and the New" +
                 " Age of The German Green Party"
             )
-          ]
+          ],
+          "Germany (2022).pdf"
       ),
       new Committee(
           "Presidential Cabinet of Turkey",
@@ -169,7 +175,8 @@ export const CommitteeDetails: CommitteeConfig = {
                 " the Turkish Feminist Movement With the Death of the" +
                 " Istanbul Accords"
             )
-          ]
+          ],
+          "Cabinet of Turkey (2022).pdf"
       ),
       new Committee(
           "Bill & Melinda Gates Foundation",
@@ -194,7 +201,8 @@ export const CommitteeDetails: CommitteeConfig = {
                 " and NGOs to Operate Without Undue Negative Political" +
                 " Repercussions"
             )
-          ]
+          ],
+          "Gates Foundation (2022).pdf"
       ),
       new Committee(
           "Defense Leadership Forum",
@@ -220,7 +228,8 @@ export const CommitteeDetails: CommitteeConfig = {
                 "The New Frontier of Space: R&D, Industry Collaboration, and" +
                 " Working With Countries to Promote a New Space Age"
             )
-          ]
+          ],
+          "Defense Leadership Forum (2022).pdf"
       ),
     ],
   },
@@ -241,7 +250,8 @@ export const CommitteeDetails: CommitteeConfig = {
                 2,
                 "The Situation in China"
             )
-          ]
+          ],
+          "Security Council (1950).pdf"
       ),
       new Committee(
           "United States Senate",
@@ -259,7 +269,8 @@ export const CommitteeDetails: CommitteeConfig = {
                 "Protecting the Internal Security of the United States from" +
                 " Sabotage and Espionage"
             )
-          ]
+          ],
+          "US Senate (1950).pdf"
       ),
     ],
     CABS: [
@@ -278,7 +289,8 @@ export const CommitteeDetails: CommitteeConfig = {
                 2,
                 "The Situation in China"
             )
-          ]
+          ],
+          "USA Cabinet (1950).pdf",
       ),
       new Committee(
           "Ministries of the Central People's Government",
@@ -295,7 +307,8 @@ export const CommitteeDetails: CommitteeConfig = {
                 2,
                 "Managing Relations With the Communist Bloc"
             )
-          ]
+          ],
+          "PRC Cabinet (1950).pdf"
       ),
       new Committee(
           "Council of Ministers of the Soviet Union",
@@ -312,7 +325,8 @@ export const CommitteeDetails: CommitteeConfig = {
                 2,
                 "Managing Relations With the Communist Bloc"
             )
-          ]
+          ],
+          "USSR Cabinet (1950).pdf"
       ),
       new Committee(
           "Cabinet of North Korea",
@@ -329,7 +343,8 @@ export const CommitteeDetails: CommitteeConfig = {
                 2,
                 "Managing Relations With the Communist Bloc"
             )
-          ]
+          ],
+          "DPRK Cabinet (1950).pdf"
       ),
     ],
   },

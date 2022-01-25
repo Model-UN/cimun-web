@@ -59,8 +59,36 @@ const DelegateGuide = () => {
             mobMargins="0.5rem 0 0.5rem 0"
         >
           <Link href="DelegateGuide.pdf">
-            <a><strong>DELEGATES!</strong> - Getting ready for CIMUN XVIII?
-              Click <strong>here</strong> to review our Delegate Guide!</a>
+            <a
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+              <strong>DELEGATES!</strong> - Getting ready for CIMUN XVIII?
+              Click <strong>here</strong> to review our Delegate Guide!
+            </a>
+          </Link>
+        </Body>
+      </AnnouncementBar>
+  )
+};
+
+const BackgroundGuides = () => {
+  return (
+      <AnnouncementBar backgroundColor={colors.accentRed}>
+        <Body
+            color="white"
+            weight={600}
+            align="center"
+            margins="0.5rem 0 0.5rem 0"
+            mobMargins="0.5rem 0 0.5rem 0"
+        >
+          <Link href="committees">
+            <a
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+              CIMUN XVIII begins Friday, February 4th. Click here to see our Committees & Background Guides!
+            </a>
           </Link>
         </Body>
       </AnnouncementBar>
@@ -71,6 +99,7 @@ const Announce = {
   RegistrationOpen,
   VirtualConference,
   DelegateGuide,
+  BackgroundGuides,
 };
 
 export default Announce;
