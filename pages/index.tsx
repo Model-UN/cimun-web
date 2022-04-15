@@ -40,8 +40,8 @@ export default function Home() {
         <HeaderNav/>
         <Jumbotron
             titleOne="CIMUN"
-            titleTwo="XVIII"
-            subTitle="THE 18TH ANNUAL CHICAGO INTERNATIONAL MODEL UNITED NATIONS CONFERENCE"
+            titleTwo="XIX"
+            subTitle="THE 19TH ANNUAL CHICAGO INTERNATIONAL MODEL UNITED NATIONS CONFERENCE"
             height={ 86 }
         />
         <InfoColumns/>
