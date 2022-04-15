@@ -203,12 +203,12 @@ const HeaderNav = () => {
             </BurgerListItem>
           </Link>
           <BurgerSeparator />
-          <Link href="/committees">
+<!--           <Link href="/committees">
             <BurgerListItem>
               <Anchor>CIMUN XVIII Committees & Cabinets</Anchor>
             </BurgerListItem>
           </Link>
-          <BurgerSeparator />
+          <BurgerSeparator /> -->
           <Link href="/DelegateGuide.pdf">
             <BurgerListItem>
               <Anchor>Delegate Guide</Anchor>
