@@ -83,7 +83,7 @@ export default function InfoColumns(): JSX.Element {
                     self="start"
                     margins="0 0 0.25rem 0"
                     size="2rem"
-                    color={colors.primaryBlue}
+                    color={colors.ltGray}
                 >
                   <strong><em>17 E Monroe Street, Chicago, Illinois</em></strong>
                 </Body>
@@ -91,7 +91,6 @@ export default function InfoColumns(): JSX.Element {
             </CardWrapper>
           </CardWrapper>
         </InfoColumnWrapper>
-        // <LetterElement />
         </>
   );
 };
