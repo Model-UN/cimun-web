@@ -43,9 +43,9 @@ export default function InfoColumns(): JSX.Element {
                     line={0.9}
                     color={colors.ltGray}
                 >
-                  February 4th - 6th, 2022
+                  February 2th - 4th, 2023
                 </SubTitle>
-                  <Body
+<!--                   <Body
                       align="start"
                       self="start"
                       margins="0.5rem 0 0.25rem 0"
@@ -66,9 +66,9 @@ export default function InfoColumns(): JSX.Element {
                     >
                       <strong>[Full Conference Schedule]</strong>
                     </a>
-                  </Body>
+                  </Body> -->
               </CardContainer>
-              <CardContainer
+<!--               <CardContainer
                   noMargins
                   color={colors.ltGray}
               >
@@ -134,7 +134,7 @@ export default function InfoColumns(): JSX.Element {
                 >
                   <em><strong>January 10th, 2022</strong></em>
                 </Body>
-              </CardContainer>
+              </CardContainer> -->
 
             </CardWrapper>
             <CardWrapper
