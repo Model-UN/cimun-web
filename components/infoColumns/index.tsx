@@ -43,7 +43,7 @@ export default function InfoColumns(): JSX.Element {
                     line={0.9}
                     color={colors.ltGray}
                 >
-                  February 2th - 4th, 2023
+                  February 2nd - 5th, 2023
                 </SubTitle>
               </CardContainer>
             </CardWrapper>
