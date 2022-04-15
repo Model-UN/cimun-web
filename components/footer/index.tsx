@@ -24,7 +24,7 @@ const Footer: React.FC = () => (
           </p>
         </FooterColFirst>
         <FooterCol>
-          <FootH2>CIMUN XVIII</FootH2>
+          <FootH2>CIMUN XIX</FootH2>
           <div >
             <a
                 href="DelegateGuide.pdf"
@@ -32,15 +32,6 @@ const Footer: React.FC = () => (
                 rel="noopener noreferrer"
             >
               Delegate Guide
-            </a>
-          </div>
-          <div >
-            <a
-                href="/schedule.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-              Conference Schedule
             </a>
           </div>
         </FooterCol>
