@@ -141,7 +141,7 @@ export default function InfoColumns(): JSX.Element {
                 margins="0"
                 direction="column"
             >
-              <CardContainer
+<!--               <CardContainer
                   margins="0 0 1rem 1rem"
                   flex="1"
                   color={colors.dkGray}
@@ -180,7 +180,7 @@ export default function InfoColumns(): JSX.Element {
                     <a><strong>[<u>Read More</u>]</strong></a>
                   </Link>
                 </Body>
-              </CardContainer>
+              </CardContainer> -->
               <CardContainer
                   margins="0 0 1rem 1rem"
                   flex="1"
@@ -194,7 +194,7 @@ export default function InfoColumns(): JSX.Element {
                     weight={700}
                     color={colors.ltGray}
                 >
-                  <em><u>Interested in attending CIMUN?</u></em>
+                  <em><u>Join us in 2023 at...</u></em>
                 </Body>
                 <SubTitle
                     size="3.5rem"
@@ -206,8 +206,17 @@ export default function InfoColumns(): JSX.Element {
                     line={0.9}
                     color={colors.ltGray}
                 >
-                  Registration has closed. Stay tuned for CIMUN XIX!
+                  The Palmer House Hilton Chicago
                 </SubTitle>
+                <Body
+                    align="start"
+                    self="start"
+                    margins="0 0 0.25rem 0"
+                    size="2rem"
+                    color={colors.primaryBlue}
+                >
+                  <strong><em>17 E Monroe Street, Chicago, Illinois</em></strong>
+                </Body>
               </CardContainer>
             </CardWrapper>
           </CardWrapper>
