@@ -184,11 +184,6 @@ const HeaderNav = () => {
             <Anchor>Home</Anchor>
           </ListItem>
         </Link>
-<!--         <Link href="/committees">
-          <ListItem>
-            <Anchor>Committees & Cabinets</Anchor>
-          </ListItem>
-        </Link> -->
         <Link href="DelegateGuide.pdf">
           <ListItem>
             <Anchor>Delegate Guide</Anchor>
@@ -203,12 +198,6 @@ const HeaderNav = () => {
             </BurgerListItem>
           </Link>
           <BurgerSeparator />
-<!--           <Link href="/committees">
-            <BurgerListItem>
-              <Anchor>CIMUN XVIII Committees & Cabinets</Anchor>
-            </BurgerListItem>
-          </Link>
-          <BurgerSeparator /> -->
           <Link href="/DelegateGuide.pdf">
             <BurgerListItem>
               <Anchor>Delegate Guide</Anchor>
