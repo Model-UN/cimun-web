@@ -212,7 +212,7 @@ export default function InfoColumns(): JSX.Element {
             </CardWrapper>
           </CardWrapper>
         </InfoColumnWrapper>
-        <LetterElement />
+        // <LetterElement />
         </>
   );
 };
