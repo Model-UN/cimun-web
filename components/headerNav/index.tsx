@@ -184,11 +184,11 @@ const HeaderNav = () => {
             <Anchor>Home</Anchor>
           </ListItem>
         </Link>
-        <Link href="/committees">
+<!--         <Link href="/committees">
           <ListItem>
             <Anchor>Committees & Cabinets</Anchor>
           </ListItem>
-        </Link>
+        </Link> -->
         <Link href="DelegateGuide.pdf">
           <ListItem>
             <Anchor>Delegate Guide</Anchor>
