@@ -27,6 +27,7 @@ interface TextType {
   align?: string;
   weight?: number;
   styling?: string;
+  deco?: string;
 }
 
 export const Display = styled.h1<TextType>`
@@ -51,9 +52,9 @@ export const Header = styled.h2<TextType>`
   color: ${(props: TextType) => (props.color ? props.color : "black")};
   font-size: ${(props: TextType) => (props.size ? props.size : "2rem")};
   ${(props: TextType) =>
-          props.mobSize
-                  ? breakpoints("font-size", "", [{ 1000: props.mobSize }])
-                  : breakpoints("font-size", "", [{ 1000: "1.0rem" }])}
+    props.mobSize
+      ? breakpoints("font-size", "", [{ 1000: props.mobSize }])
+      : breakpoints("font-size", "", [{ 1000: "1.0rem" }])}
   line-height: ${(props: TextType) => (props.line ? props.line : undefined)};
   width: ${(props: TextType) => (props.width ? props.width : undefined)};
   text-align: ${(props: TextType) => (props.align ? props.align : "left")};
@@ -81,17 +82,18 @@ export const Body = styled.p<TextType>`
   font-family: ${fonts.body}, sans-serif;
   font-style: ${(props: TextType) =>
     props.styling ? props.styling : "normal"};
+  text-decoration: ${(props: TextType) => (props.deco ? props.deco : "none")};
   align-self: ${(props: TextType) => (props.self ? props.self : "flex-start")};
   margin: ${(props: TextType) => (props.margins ? props.margins : undefined)};
   ${(props) =>
-          props.mobMargins
-                  ? breakpoints("margin", "", [{ 1000: props.mobMargins }])
-                  : breakpoints("margin", "", [{ 1000: "0 0 0 0" }])}
+    props.mobMargins
+      ? breakpoints("margin", "", [{ 1000: props.mobMargins }])
+      : breakpoints("margin", "", [{ 1000: "0 0 0 0" }])}
   color: ${(props: TextType) => (props.color ? props.color : "black")};
   font-size: ${(props: TextType) => (props.size ? props.size : "1.2rem")};
-  ${breakpoints("font-size", "", [{ 1000: ".9rem" }])};
+  ${breakpoints("font-size", "", [{ 1000: "1.5rem" }])};
   line-height: ${(props: TextType) => (props.line ? props.line : undefined)};
-  ${breakpoints("line-height", "", [{ 1000: "1.2rem" }])};
+  ${breakpoints("line-height", "", [{ 1000: "1.75rem" }])};
   width: ${(props: TextType) => (props.width ? props.width : undefined)};
   text-align: ${(props: TextType) => (props.align ? props.align : "left")};
   font-weight: ${(props: TextType) => (props.weight ? props.weight : 500)};

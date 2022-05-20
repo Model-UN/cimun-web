@@ -42,7 +42,7 @@ const Jumbotron = (props: JumboTronProps) => {
       minHeight={`${minHeightCalc}vw`}
       maxHeight={`${height}vh`}
       justify="flex-end"
-      margins="0"
+      margins="0 0 3.9375vw 0"
       style={{
         backgroundImage: `linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)),url(/${bgImage})`,
         backgroundPosition: "bottom",
