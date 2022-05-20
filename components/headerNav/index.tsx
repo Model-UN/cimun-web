@@ -112,14 +112,9 @@ const LogoWrapper = styled.div`
   height: 100%;
   display: flex;
   align-items: center;
-  
-  ${breakpoints('width', "", [
-    {768: "100%"}
-  ])}
-  ${breakpoints('justify-content', "", [
-    {768: "center"}
-  ])}
-`
+
+  ${breakpoints("width", "", [{ 768: "100%" }])}
+`;
 
 const Logo = styled.img`
   height: 90%;
@@ -131,10 +126,9 @@ const Logo = styled.img`
   }
 `;
 
-
 const BurgerLogo = styled.img`
   height: 40px;
-  ${breakpoints("height", "px", [{ 550: 35, 300: 30}])};
+  ${breakpoints("height", "px", [{ 550: 35, 300: 30 }])};
   object-fit: contain;
   display: flex;
 `;
@@ -143,7 +137,7 @@ const Burger = styled.button`
   display: none;
   @media screen and (max-width: 768px) {
     height: 2.8125vw;
-    ${breakpoints("height", "px", [{ 1200: 35 }, { 800: 30 }])};
+    ${breakpoints("height", "px", [{ 550: 35 }, { 300: 30 }])};
     display: flex;
     position: absolute;
     right: 3vw;
@@ -192,6 +186,9 @@ const HeaderNav = () => {
       </ListContainer>
       {burgerOpen && (
         <BurgerListContainer>
+          <LogoWrapper>
+            <BurgerLogo src="/White_CIMUN_Logo.png" />
+          </LogoWrapper>
           <Link href="/">
             <BurgerListItem>
               <Anchor>Home</Anchor>
@@ -203,12 +200,8 @@ const HeaderNav = () => {
               <Anchor>Delegate Guide</Anchor>
             </BurgerListItem>
           </Link>
-          <BurgerSeparator />
-            <BurgerListItem>
-              <BurgerLogo src="/White_CIMUN_Logo.png" />
-            </BurgerListItem>
         </BurgerListContainer>
-        )}
+      )}
       <Burger onClick={() => setBurgerOpen(!burgerOpen)}>
         {!burgerOpen ? (
           <Icon icon={"bars"} />
@@ -220,6 +213,5 @@ const HeaderNav = () => {
   );
 };
 
-
 export default HeaderNav;
-export {Anchor};
+export { Anchor };
