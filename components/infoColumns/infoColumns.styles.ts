@@ -11,7 +11,6 @@ export const InfoColumnWrapper = styled(ComponentWrapper)`
   display: flex;
   flex: 1;
   width: 90%;
-  margin: "0 0 3.9375vw 0";
   justify-content: space-between;
   flex-direction: row;
 

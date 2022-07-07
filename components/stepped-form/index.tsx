@@ -12,16 +12,30 @@ import {
   SubmitFormDto,
 } from "../../services/axiosHandler";
 import { ApiFormData, FormField } from "./form-interfaces";
+import { exampleData } from "./example-data";
 
 const Form = styled.form`
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 100%;
+  background-color: "transparent";
+  border-radius: 16px;
+  margin-bottom: 7rem;
   ${breakpoints("width", "", [{ 800: "97.5%" }])};
   justify-content: center;
-  margin: 7vh 0;
   ${breakpoints("margin", "", [{ 800: "3vh 0" }])};
   padding: 0;
+`;
+
+const QuestionContainer = styled.div`
+  justify-content: center;
+  align-items: center;
+  padding: 5vh;
+  width: 65%;
+  margin-top: 56px;
+  border-radius: 8px;
+  background-color: ${colors.ivory};
+  align-self: center;
 `;
 
 const SeggsyInput = styled.input`
@@ -35,13 +49,12 @@ const SeggsyInput = styled.input`
   font-size: 16px;
   font-weight: 400;
   line-height: normal;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: ${colors.ivory};
   color: #282828;
   outline-color: ${colors.primaryBlue};
   transition: 0.3s background-color ease-in-out, 0.3s border-color ease-in-out;
 
   &:hover {
-    background-color: rgba(255, 255, 255, 0.45);
     border-color: ${colors.ltGray};
   }
 `;
@@ -51,21 +64,24 @@ const SeggsySubmit = styled.input`
   ${breakpoints("width", "", [{ 800: "75%" }])};
   height: 56px;
   align-self: center;
-  margin: 50px 0;
+  margin: 7rem 0 0 0;
   padding: 0 16px;
   border: none;
-  border-radius: 4px;
+  border-radius: 56px;
   font-family: ${fonts.body}, sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: normal;
-  background-color: ${colors.primaryBlue};
+  background-color: ${colors.accentOrange};
   color: white;
-  transition: 0.5s width ease-in-out;
+  transition: 60s width ease-in-out, 60s height ease-in-out,
+    60s font-size ease-in-out;
 
   &:hover {
     cursor: pointer;
     width: 50%;
+    height: 112px;
+    font-size: 32px;
   }
 `;
 
@@ -80,13 +96,12 @@ const LongSeggsyInput = styled.textarea`
   font-size: 16px;
   font-weight: 400;
   line-height: normal;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: ${colors.ivory};
   color: #282828;
   outline-color: ${colors.primaryBlue};
   transition: 0.3s background-color ease-in-out, 0.3s border-color ease-in-out;
 
   &:hover {
-    background-color: rgba(255, 255, 255, 0.45);
     border-color: ${colors.ltGray};
   }
 `;
@@ -105,13 +120,12 @@ const SelectSeggsyInput = styled.select`
   font-size: 16px;
   font-weight: 400;
   line-height: normal;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: ${colors.ivory};
   color: #282828;
   outline-color: ${colors.primaryBlue};
   transition: 0.3s background-color ease-in-out, 0.3s border-color ease-in-out;
 
   &:hover {
-    background-color: rgba(255, 255, 255, 0.45);
     border-color: ${colors.ltGray};
   }
 `;
@@ -125,13 +139,12 @@ const CheckySeggsyInput = styled.input`
   justify-content: center;
   align-items: center;
   position: relative;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: ${colors.ivory};
   border: 2px solid ${colors.kindaFadedltGray};
   border-radius: 4px;
   transition: 0.3s all ease-in-out;
 
   &:hover {
-    background-color: rgba(255, 255, 255, 0.45);
     border-color: ${colors.ltGray};
   }
   &:active,
@@ -169,21 +182,22 @@ interface OwnProps {
 
 const SteppedForm = (props: OwnProps) => {
   const { confId, formId } = props;
-  const [formData, setFormData] = useState<ApiFormData>();
-  const [loading, setLoading] = useState<boolean>(true);
+  const [formData, setFormData] = useState<ApiFormData>(exampleData);
+  const [loading, setLoading] = useState<boolean>(false);
   const [errorMessage, setErrors] = useState<string>("");
   const [submitted, setSubmitted] = useState<boolean>(false);
 
-  const initForm = async () => {
-    setLoading(true);
-    await getFormTemplate(confId, formId)
-        .then(data => setFormData(data))
-        .catch(() => setFormData(undefined));
-    setLoading(false);
-  };
+  // const initForm = async () => {
+  //   setLoading(true);
+  //   await getFormTemplate(confId, formId)
+  //       .then(data => setFormData(data))
+  //       .catch(() => setFormData(undefined));
+  //   setLoading(false);
+  // };
 
   useEffect(() => {
-    initForm();
+    // initForm();
+    setFormData(exampleData);
   }, []);
 
   const handleSubmit = async (event) => {
@@ -263,20 +277,19 @@ const SteppedForm = (props: OwnProps) => {
     const request = new SubmitFormDto();
     request.responses = responses;
     // Submit!
-    await postFormSubmission(confId, formId, { responses }).then(() => {
-      setSubmitted(true)
-    })
-      .catch(err => {
-          setErrors(`Couldn't submit application. ${ err.response.data.error }`);
-        }
-    );
+    await postFormSubmission(confId, formId, { responses })
+      .then(() => {
+        setSubmitted(true);
+      })
+      .catch((err) => {
+        setErrors(`Couldn't submit application. ${err.response.data.error}`);
+      });
   };
 
   const renderFormItem = (
     { content, description, fieldType, id, required, values }: FormField,
     index: number
   ) => {
-    content = required ? `${content}*` : content
     const fieldInputTypeMap = {
       SHORT_ANSWER: "text",
       LONG_ANSWER: "textarea",
@@ -358,7 +371,7 @@ const SteppedForm = (props: OwnProps) => {
                 return <option value={`${value.id}`}>{value.value}</option>;
               })}
             </SelectSeggsyInput>
-            <Icon icon={"chevron-down"} />
+            <Icon icon={"chevron-down"} style={{ zIndex: 10 }} />
           </div>
         );
         break;
@@ -413,63 +426,97 @@ const SteppedForm = (props: OwnProps) => {
     }
 
     return (
-      <>
-        <div style={{ marginBottom: description ? "-12px" : "0px" }}>
+      <QuestionContainer>
+        <div
+          style={{
+            marginBottom: description ? "-12px" : "0px",
+            marginTop: required ? "-12px" : "-32px",
+          }}
+        >
+          {required && (
+            <Body margins="0" color="red" size="16px">
+              required *
+            </Body>
+          )}
           <Body>{content}</Body>
         </div>
         {description && (
-          <Body size="14px" styling="italic" margins="12.5px 0 20px 0" mobMargins="12.5px 0 20px 0">
+          <Body
+            size="14px"
+            styling="italic"
+            margins="12.5px 0 20px 0"
+            mobMargins="12.5px 0 20px 0"
+          >
             {description}
           </Body>
         )}
         {InputContent}
-      </>
+      </QuestionContainer>
     );
   };
 
   return (
-    <ComponentWrapper>
+    <ComponentWrapper color={colors.primaryBlue} margins="0" width="100vw">
       {!loading && formData !== null && formData !== undefined && !submitted && (
-        <SubTitle align="left" width="75%" self="center" weight={600}>
+        <SubTitle
+          align="center"
+          width="55%"
+          self="center"
+          weight={400}
+          color="white"
+          margins="60px 0 0 0"
+        >
           {formData.sections[0].intro}
         </SubTitle>
       )}
-      {!loading && formData !== null && formData !== undefined && !submitted &&(
+      {!loading && formData !== null && formData !== undefined && !submitted && (
         <Form onSubmit={handleSubmit}>
-          {formData.sections[0].fields.sort((a, b) => {
-            return a.index - b.index
-          }).map((field, index) => {
-            return renderFormItem(field, index);
-          })}
-           {errorMessage ? <Body color={colors.accentRed}>{errorMessage}</Body> : ""}
-          <SeggsySubmit type="submit" value="Submit" />
+          {formData.sections[0].fields
+            .sort((a, b) => {
+              return a.index - b.index;
+            })
+            .map((field, index) => {
+              return renderFormItem(field, index);
+            })}
+          {errorMessage ? (
+            <Body color={colors.accentOrange}>{errorMessage}</Body>
+          ) : (
+            ""
+          )}
+          <SeggsySubmit type="submit" value="Submit Application" />
         </Form>
       )}
       {!loading && !formData && !submitted && (
         <SubTitle align="center" width="75%" self="center" weight={300}>
-          Something went wrong while attempting to retrieve this form.
-          Please try again in a few minutes.<br/><br/>If this issue persists,
-          please reach out to us at <a
-            href="mailto:engineering@modelun.net"><u>engineering@modelun.net</u>
-          </a> and we will be able to assist you. Thank you for your cooperation.
+          Something went wrong while attempting to retrieve this form. Please
+          try again in a few minutes.
+          <br />
+          <br />
+          If this issue persists, please reach out to us at{" "}
+          <a href="mailto:engineering@modelun.net">
+            <u>engineering@modelun.net</u>
+          </a>{" "}
+          and we will be able to assist you. Thank you for your cooperation.
         </SubTitle>
       )}
       {submitted && (
         <>
           <SubTitle align="center" width="75%" self="center" weight={300}>
-            Your {props.submissionType ? props.submissionType : "submission"} has
-            been received! Thank you so much for your interest in CIMUN XVIII.
-            <br/><br/>
-            We will be in touch with you after reviewing your {
-            props.submissionType
-                ? props.submissionType
-                : "submission"}. In the
+            Your {props.submissionType ? props.submissionType : "submission"}{" "}
+            has been received! Thank you so much for your interest in CIMUN
+            XVIII.
+            <br />
+            <br />
+            We will be in touch with you after reviewing your{" "}
+            {props.submissionType ? props.submissionType : "submission"}. In the
             meantime, if you have any further inquiries, you are welcome to
-            reach out to our Steering Committee at <a
-              href="mailto:sc@cimun.org">
+            reach out to our Steering Committee at{" "}
+            <a href="mailto:sc@cimun.org">
               <u>sc@cimun.org</u>
-            </a> for assistance.
-            <br/><br/>
+            </a>{" "}
+            for assistance.
+            <br />
+            <br />
             Once again, thank you so much for your interest in CIMUN. We hope to
             see you there!
           </SubTitle>

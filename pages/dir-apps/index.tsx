@@ -1,12 +1,13 @@
+import React from "react";
 import Head from "next/head";
-import HeaderNav from "../components/headerNav";
-import Jumbotron from "../components/jumbotron";
-import InfoColumns from "../components/infoColumns";
-import Footer from "../components/footer";
-import Announce from "../components/Announce";
-import { Wrapper } from "../styles/containers";
+import HeaderNav from "../../components/headerNav";
+import Jumbotron from "../../components/jumbotron";
+import Footer from "../../components/footer";
+import SteppedForm from "../../components/stepped-form";
+import { Wrapper } from "../../styles/containers";
+import Announce from "../../components/Announce";
 
-export default function Home() {
+const DirApps = () => {
   return (
     <Wrapper>
       <Head>
@@ -37,13 +38,15 @@ export default function Home() {
       </Head>
       <HeaderNav />
       <Jumbotron
-        titleOne="CIMUN"
-        titleTwo="XIX"
-        subTitle="THE 19TH ANNUAL CHICAGO INTERNATIONAL MODEL UNITED NATIONS CONFERENCE"
+        titleOne="DIRECTORATE"
+        titleTwo="APPLICATION"
         height={85}
+        image="cimun-staff.png"
       />
-      <InfoColumns />
+      <SteppedForm formId="1" confId="1" submissionType="application" />
       <Footer />
     </Wrapper>
   );
-}
+};
+
+export default DirApps;
