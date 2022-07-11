@@ -222,10 +222,10 @@ const SteppedForm = (props: OwnProps) => {
               rankingMap[responseId][idx] = value;
               break;
             }
-            responses.push({ id: +response.name, response: +response.value });
+            responses.push({ _id: +response.name, response: +response.value });
             break;
           case "dropdown":
-            responses.push({ id: response.name, response: +response.value });
+            responses.push({ _id: response.name, response: +response.value });
             break;
           case "checkbox":
             const responseId = response.name.split("-")[0];
@@ -238,7 +238,7 @@ const SteppedForm = (props: OwnProps) => {
           case "date":
             if (response.value) {
               responses.push({
-                id: +response.name,
+                _id: +response.name,
                 response: new Date(response.value),
               });
             }
@@ -251,14 +251,14 @@ const SteppedForm = (props: OwnProps) => {
           case "email":
           case "tel":
           default:
-            responses.push({ id: +response.name, response: response.value });
+            responses.push({ _id: +response.name, response: response.value });
             break;
         }
       }
     }
     // handle creating checkbox responses
     for (const id in checkboxMap) {
-      responses.push({ id: +id, response: checkboxMap[id] });
+      responses.push({ _id: +id, response: checkboxMap[id] });
     }
     // handle creating ranking responses
     for (const id in rankingMap) {
@@ -270,7 +270,7 @@ const SteppedForm = (props: OwnProps) => {
         const value = rankingMap[id][index];
         rankingResponse.splice(+index, 1, +value);
       }
-      responses.push({ id: +id, response: rankingResponse });
+      responses.push({ _id: +id, response: rankingResponse });
     }
     const request = new SubmitFormDto();
     request.responses = responses;
