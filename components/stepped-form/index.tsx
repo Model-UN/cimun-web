@@ -12,13 +12,12 @@ import {
   SubmitFormDto,
 } from "../../services/axiosHandler";
 import { ApiFormData, FormField } from "./form-interfaces";
-import { exampleData } from "./example-data";
 
 const Form = styled.form`
   display: flex;
   flex-direction: column;
   width: 100%;
-  background-color: "transparent";
+  background-color: transparent;
   border-radius: 16px;
   margin-bottom: 7rem;
   ${breakpoints("width", "", [{ 800: "97.5%" }])};
@@ -182,22 +181,21 @@ interface OwnProps {
 
 const SteppedForm = (props: OwnProps) => {
   const { confId, formId } = props;
-  const [formData, setFormData] = useState<ApiFormData>(exampleData);
-  const [loading, setLoading] = useState<boolean>(false);
+  const [formData, setFormData] = useState<ApiFormData>();
+  const [loading, setLoading] = useState<boolean>(true);
   const [errorMessage, setErrors] = useState<string>("");
   const [submitted, setSubmitted] = useState<boolean>(false);
 
-  // const initForm = async () => {
-  //   setLoading(true);
-  //   await getFormTemplate(confId, formId)
-  //       .then(data => setFormData(data))
-  //       .catch(() => setFormData(undefined));
-  //   setLoading(false);
-  // };
+  const initForm = async () => {
+    setLoading(true);
+    await getFormTemplate(formId)
+        .then(data => setFormData(data))
+        .catch(() => setFormData(undefined));
+    setLoading(false);
+  };
 
   useEffect(() => {
-    // initForm();
-    setFormData(exampleData);
+    initForm();
   }, []);
 
   const handleSubmit = async (event) => {
@@ -287,7 +285,7 @@ const SteppedForm = (props: OwnProps) => {
   };
 
   const renderFormItem = (
-    { content, description, fieldType, id, required, values }: FormField,
+    { content, description, field_type, _id, required, values }: FormField,
     index: number
   ) => {
     const fieldInputTypeMap = {
@@ -304,12 +302,12 @@ const SteppedForm = (props: OwnProps) => {
       SECURE_INPUT: "password",
       POSTAL_CODE: "text",
     };
-    const inputType = fieldInputTypeMap[fieldType];
+    const inputType = fieldInputTypeMap[field_type];
 
     let InputContent: JSX.Element;
     switch (inputType) {
       case "textarea":
-        InputContent = <LongSeggsyInput required={required} name={`${id}`} />;
+        InputContent = <LongSeggsyInput required={required} name={`${_id}`} />;
         break;
       case "rank":
         InputContent = (
@@ -334,7 +332,7 @@ const SteppedForm = (props: OwnProps) => {
                   >
                     <SelectSeggsyInput
                       required={required}
-                      name={`${id}-${value.id}-rank`}
+                      name={`${_id}-${value.id}-rank`}
                     >
                       {values.map((_, index) => {
                         return (
@@ -366,7 +364,7 @@ const SteppedForm = (props: OwnProps) => {
               alignItems: "center",
             }}
           >
-            <SelectSeggsyInput required={required} name={`${id}`}>
+            <SelectSeggsyInput required={required} name={`${_id}`}>
               {values.map((value, _) => {
                 return <option value={`${value.id}`}>{value.value}</option>;
               })}
@@ -398,7 +396,7 @@ const SteppedForm = (props: OwnProps) => {
                   >
                     <CheckySeggsyInput
                       required={required}
-                      name={`${id}-${index}-input`}
+                      name={`${_id}-${index}-input`}
                       value={value.id}
                       type="checkbox"
                     />
@@ -420,7 +418,7 @@ const SteppedForm = (props: OwnProps) => {
       case "text":
       default:
         InputContent = (
-          <SeggsyInput required={required} name={`${id}`} type={inputType} />
+          <SeggsyInput required={required} name={`${_id}`} type={inputType} />
         );
         break;
     }

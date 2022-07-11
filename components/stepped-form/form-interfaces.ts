@@ -1,11 +1,7 @@
 export interface FormField {
-    id: number;
+    _id: string;
     active: boolean;
-    createdBy: number;
-    updatedBy: number;
-    createdOn: Date;
-    updatedOn: Date;
-    fieldType: string;
+    field_type: string;
     required: boolean;
     index: number; // the index for the field in the form itself
     content: string; // the "question"
@@ -14,23 +10,17 @@ export interface FormField {
 }
 
 export interface ApiFormData {
-    id: number;
-    active: boolean;
-    createdBy: number;
-    updatedBy: number;
-    createdOn: Date;
-    updatedOn: Date;
+    _id: string;
+    created_by: number;
+    updated_by: number;
+    created_on: Date;
+    updated_on: Date;
     sections: FormSection[];
 }
 
 interface FormSection {
-    id: number;
+    _id: string;
     active: boolean;
-    createdBy: number;
-    updatedBy: number;
-    createdOn: Date;
-    updatedOn: Date;
-    formId: number;
     title?: string;
     subtitle?: string;
     intro?: string;

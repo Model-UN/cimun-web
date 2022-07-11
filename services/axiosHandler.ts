@@ -1,6 +1,6 @@
 import axios, {AxiosResponse} from "axios";
 
-const BASE_URL = "https://api.cimun.org"
+const BASE_URL = "https://api.cimun.org/api/v1"
 
 export class SubmitFormDto {
   responses: Array<FormFieldResponseDto>;
@@ -11,10 +11,10 @@ export class FormFieldResponseDto {
   response: any;
 }
 
-export const getFormTemplate = async (confId: string, formId: string) => {
+export const getFormTemplate = async (formId: string) => {
   let responseData;
   await axios
-    .get(`${BASE_URL}/conferences/${confId}/forms/${formId}`)
+    .get(`${BASE_URL}/forms/${formId}`)
     .then((response) => {
       console.log(response);
       responseData = response.data;
