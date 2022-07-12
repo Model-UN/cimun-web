@@ -170,7 +170,7 @@ const Icon = styled(FontAwesomeIcon)`
   font-size: 16px;
   height: 16px;
   margin-left: -32px;
-  color: ${colors.dkGray};
+  color: ${colors.ltGray};
 `;
 
 interface OwnProps {
@@ -206,6 +206,7 @@ const SteppedForm = (props: OwnProps) => {
     const checkboxMap = {};
     // map out data from ranking responses
     const rankingMap = { "0": { "0": "0" } };
+
     for (const response of event.target) {
       if (response.value) {
         switch (response.type) {
@@ -215,30 +216,30 @@ const SteppedForm = (props: OwnProps) => {
               const split = response.name.split("-");
               const responseId = split[0];
               const value = split[1];
-              const idx = `${+response.value - 1}`;
+              const idx = `${response.value - 1}`;
               if (!rankingMap[responseId]) {
                 rankingMap[responseId] = {};
               }
               rankingMap[responseId][idx] = value;
               break;
             }
-            responses.push({ _id: +response.name, response: +response.value });
+            responses.push({ _id: response.name, response: response.value });
             break;
           case "dropdown":
-            responses.push({ _id: response.name, response: +response.value });
+            responses.push({ _id: response.name, response: response.value });
             break;
           case "checkbox":
             const responseId = response.name.split("-")[0];
             if (response.checked) {
               checkboxMap[responseId]
-                ? checkboxMap[responseId].push(+response.value)
-                : (checkboxMap[responseId] = [+response.value]);
+                ? checkboxMap[responseId].push(response.value)
+                : (checkboxMap[responseId] = [response.value]);
             }
             break;
           case "date":
             if (response.value) {
               responses.push({
-                _id: +response.name,
+                _id: response.name,
                 response: new Date(response.value),
               });
             }
@@ -251,14 +252,14 @@ const SteppedForm = (props: OwnProps) => {
           case "email":
           case "tel":
           default:
-            responses.push({ _id: +response.name, response: response.value });
+            responses.push({ _id: response.name, response: response.value });
             break;
         }
       }
     }
     // handle creating checkbox responses
     for (const id in checkboxMap) {
-      responses.push({ _id: +id, response: checkboxMap[id] });
+      responses.push({ _id: id, response: checkboxMap[id] });
     }
     // handle creating ranking responses
     for (const id in rankingMap) {
@@ -268,9 +269,9 @@ const SteppedForm = (props: OwnProps) => {
       const rankingResponse = [];
       for (const index in rankingMap[id]) {
         const value = rankingMap[id][index];
-        rankingResponse.splice(+index, 1, +value);
+        rankingResponse.splice(+index, 1, value);
       }
-      responses.push({ _id: +id, response: rankingResponse });
+      responses.push({ _id: id, response: rankingResponse });
     }
     const request = new SubmitFormDto();
     request.responses = responses;
@@ -332,7 +333,7 @@ const SteppedForm = (props: OwnProps) => {
                   >
                     <SelectSeggsyInput
                       required={required}
-                      name={`${_id}-${value.id}-rank`}
+                      name={`${_id}-${value._id}-rank`}
                     >
                       {values.map((_, index) => {
                         return (
@@ -366,7 +367,7 @@ const SteppedForm = (props: OwnProps) => {
           >
             <SelectSeggsyInput required={required} name={`${_id}`}>
               {values.map((value, _) => {
-                return <option value={`${value.id}`}>{value.value}</option>;
+                return <option value={`${value._id}`}>{value.value}</option>;
               })}
             </SelectSeggsyInput>
             <Icon icon={"chevron-down"} style={{ zIndex: 10 }} />
@@ -397,7 +398,7 @@ const SteppedForm = (props: OwnProps) => {
                     <CheckySeggsyInput
                       required={required}
                       name={`${_id}-${index}-input`}
-                      value={value.id}
+                      value={value._id}
                       type="checkbox"
                     />
                   </div>

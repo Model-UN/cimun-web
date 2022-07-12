@@ -33,7 +33,7 @@ export const postFormSubmission = async (
 ): Promise<AxiosResponse> => {
   return await axios
     .post(
-      `${BASE_URL}/conferences/${confId}/forms/${formId}/submissions`,
+      `${BASE_URL}/forms/${formId}`,
       submitFormDto
     )
 };
