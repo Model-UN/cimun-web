@@ -37,7 +37,6 @@ const Footer: React.FC = () => (
           <div >
             <a
                 href="/staff-apps"
-                target="_blank"
                 rel="noopener noreferrer"
             >
               Staff Applications
