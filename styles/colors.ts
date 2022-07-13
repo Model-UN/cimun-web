@@ -11,4 +11,7 @@ export const colors = {
   blueGray: "#2C666E",
   accentOrange: "#D69D36",
   plum: "#66101F",
+  indigo: "#134c72",
+  carolinaBlue: "#009ed8",
+  lemonYellow: "#ffee44",
 };

@@ -15,7 +15,7 @@ export default function InfoColumns(): JSX.Element {
       <CardWrapper margins="0" direction="column">
         <CardContainer
           margins="0 0.5rem 0 0"
-          color={colors.accentBlue}
+          color={colors.carolinaBlue}
           radius="8px"
         >
           <Body
@@ -58,7 +58,7 @@ export default function InfoColumns(): JSX.Element {
         <CardContainer
           margins="0 0 0 0.5rem"
           flex="1"
-          color={colors.accentOrange}
+          color={colors.indigo}
           radius="8px"
         >
           <Body
