@@ -502,7 +502,7 @@ const SteppedForm = (props: OwnProps) => {
           <SubTitle align="center" width="75%" self="center" weight={300} color={colors.ivory}>
             Your {props.submissionType ? props.submissionType : "submission"}{" "}
             has been received! Thank you so much for your interest in CIMUN
-            XVIII.
+            XIX.
             <br />
             <br />
             We will be in touch with you after reviewing your{" "}
