@@ -27,7 +27,6 @@ export const getFormTemplate = async (formId: string) => {
 };
 
 export const postFormSubmission = async (
-  confId: string,
   formId: string,
   submitFormDto: SubmitFormDto
 ): Promise<AxiosResponse> => {

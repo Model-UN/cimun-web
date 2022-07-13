@@ -174,13 +174,12 @@ const Icon = styled(FontAwesomeIcon)`
 `;
 
 interface OwnProps {
-  confId: string;
   formId: string;
   submissionType?: string;
 }
 
 const SteppedForm = (props: OwnProps) => {
-  const { confId, formId } = props;
+  const { formId } = props;
   const [formData, setFormData] = useState<ApiFormData>();
   const [loading, setLoading] = useState<boolean>(true);
   const [errorMessage, setErrors] = useState<string>("");
@@ -276,7 +275,7 @@ const SteppedForm = (props: OwnProps) => {
     const request = new SubmitFormDto();
     request.responses = responses;
     // Submit!
-    await postFormSubmission(confId, formId, { responses })
+    await postFormSubmission(formId, { responses })
       .then(() => {
         setSubmitted(true);
       })

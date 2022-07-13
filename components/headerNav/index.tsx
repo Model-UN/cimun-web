@@ -159,7 +159,7 @@ const Icon = styled(FontAwesomeIcon)<{
   font-size: 25px;
   height: 2vw;
   ${breakpoints("height", "px", [{ 1200: 35 }, { 800: 30 }])};
-  color: ${(props) => (props.color ? props.color : colors.dkGray)};
+  color: ${(props) => (props.color ? props.color : colors.fadedltGray)};
 `;
 
 const HeaderNav = () => {

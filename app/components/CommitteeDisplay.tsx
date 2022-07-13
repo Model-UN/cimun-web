@@ -31,8 +31,8 @@ const CommitteeDisplay = () => {
           <PillButton id="HST" currentSelection={timePeriod} onClick={handleSelectPeriod}>Historical</PillButton>
         </PillButtonRow>
         <PillButtonRow className="committeeTypes">
-          <PillButton id="COMMS" currentSelection={committeeType} selectedColor={colors.accentRed} onClick={handleSelectCommitteeType}>Committees</PillButton>
-          <PillButton id="CABS" currentSelection={committeeType} selectedColor={colors.accentRed} onClick={handleSelectCommitteeType}>Cabinets</PillButton>
+          <PillButton id="COMMS" currentSelection={committeeType} selectedColor={colors.plum} onClick={handleSelectCommitteeType}>Committees</PillButton>
+          <PillButton id="CABS" currentSelection={committeeType} selectedColor={colors.plum} onClick={handleSelectCommitteeType}>Cabinets</PillButton>
         </PillButtonRow>
         </PillButtonRow>
         <SubTitle size="4rem" self="center" align="center" line={1} margins="1rem auto 0 auto">{CommitteeAbbrToCopy[timePeriod]} {CommitteeAbbrToCopy[committeeType]}</SubTitle>
