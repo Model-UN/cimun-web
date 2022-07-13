@@ -485,7 +485,7 @@ const SteppedForm = (props: OwnProps) => {
         </Form>
       )}
       {!loading && !formData && !submitted && (
-        <SubTitle align="center" width="75%" self="center" weight={300}>
+        <SubTitle align="center" width="75%" self="center" weight={300} color={colors.ivory}>
           Something went wrong while attempting to retrieve this form. Please
           try again in a few minutes.
           <br />
