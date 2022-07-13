@@ -69,10 +69,10 @@ const SeggsySubmit = styled.input`
   border-radius: 56px;
   font-family: ${fonts.body}, sans-serif;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 600;
   line-height: normal;
-  background-color: ${colors.accentOrange};
-  color: white;
+  background-color: ${colors.carolinaBlue};
+  color: ${colors.ivory};
   transition: 60s width ease-in-out, 60s height ease-in-out,
     60s font-size ease-in-out;
 
