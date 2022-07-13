@@ -7,7 +7,7 @@ import SteppedForm from "../../components/stepped-form";
 import { Wrapper } from "../../styles/containers";
 import Announce from "../../components/Announce";
 
-const StaffApps = () => {
+const DirApps = () => {
   return (
     <Wrapper>
       <Head>
@@ -36,19 +36,17 @@ const StaffApps = () => {
           rel="stylesheet"
         />
       </Head>
-      <Announce.DelegateGuide/>
-      <Announce.BackgroundGuides/>
       <HeaderNav />
       <Jumbotron
         titleOne="STAFF"
         titleTwo="APPLICATION"
-        height={65}
+        height={85}
         image="cimun-staff.png"
       />
-      <SteppedForm formId="1" confId="1" submissionType="application" />
+      <SteppedForm formId="62cba0f20000000000dc31fb" submissionType="application" />
       <Footer />
     </Wrapper>
   );
 };
 
-export default StaffApps;
+export default DirApps;

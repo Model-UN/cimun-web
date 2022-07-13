@@ -16,12 +16,25 @@ import { ApiFormData, FormField } from "./form-interfaces";
 const Form = styled.form`
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 100%;
+  background-color: transparent;
+  border-radius: 16px;
+  margin-bottom: 7rem;
   ${breakpoints("width", "", [{ 800: "97.5%" }])};
   justify-content: center;
-  margin: 7vh 0;
   ${breakpoints("margin", "", [{ 800: "3vh 0" }])};
   padding: 0;
+`;
+
+const QuestionContainer = styled.div`
+  justify-content: center;
+  align-items: center;
+  padding: 5vh;
+  width: 65%;
+  margin-top: 56px;
+  border-radius: 8px;
+  background-color: ${colors.ivory};
+  align-self: center;
 `;
 
 const SeggsyInput = styled.input`
@@ -35,13 +48,12 @@ const SeggsyInput = styled.input`
   font-size: 16px;
   font-weight: 400;
   line-height: normal;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: ${colors.ivory};
   color: #282828;
   outline-color: ${colors.primaryBlue};
   transition: 0.3s background-color ease-in-out, 0.3s border-color ease-in-out;
 
   &:hover {
-    background-color: rgba(255, 255, 255, 0.45);
     border-color: ${colors.ltGray};
   }
 `;
@@ -51,21 +63,24 @@ const SeggsySubmit = styled.input`
   ${breakpoints("width", "", [{ 800: "75%" }])};
   height: 56px;
   align-self: center;
-  margin: 50px 0;
+  margin: 7rem 0 0 0;
   padding: 0 16px;
   border: none;
-  border-radius: 4px;
+  border-radius: 56px;
   font-family: ${fonts.body}, sans-serif;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 600;
   line-height: normal;
-  background-color: ${colors.primaryBlue};
-  color: white;
-  transition: 0.5s width ease-in-out;
+  background-color: ${colors.carolinaBlue};
+  color: ${colors.ivory};
+  transition: 60s width ease-in-out, 60s height ease-in-out,
+    60s font-size ease-in-out;
 
   &:hover {
     cursor: pointer;
     width: 50%;
+    height: 112px;
+    font-size: 32px;
   }
 `;
 
@@ -80,13 +95,12 @@ const LongSeggsyInput = styled.textarea`
   font-size: 16px;
   font-weight: 400;
   line-height: normal;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: ${colors.ivory};
   color: #282828;
   outline-color: ${colors.primaryBlue};
   transition: 0.3s background-color ease-in-out, 0.3s border-color ease-in-out;
 
   &:hover {
-    background-color: rgba(255, 255, 255, 0.45);
     border-color: ${colors.ltGray};
   }
 `;
@@ -105,13 +119,12 @@ const SelectSeggsyInput = styled.select`
   font-size: 16px;
   font-weight: 400;
   line-height: normal;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: ${colors.ivory};
   color: #282828;
   outline-color: ${colors.primaryBlue};
   transition: 0.3s background-color ease-in-out, 0.3s border-color ease-in-out;
 
   &:hover {
-    background-color: rgba(255, 255, 255, 0.45);
     border-color: ${colors.ltGray};
   }
 `;
@@ -125,13 +138,12 @@ const CheckySeggsyInput = styled.input`
   justify-content: center;
   align-items: center;
   position: relative;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: ${colors.ivory};
   border: 2px solid ${colors.kindaFadedltGray};
   border-radius: 4px;
   transition: 0.3s all ease-in-out;
 
   &:hover {
-    background-color: rgba(255, 255, 255, 0.45);
     border-color: ${colors.ltGray};
   }
   &:active,
@@ -158,17 +170,16 @@ const Icon = styled(FontAwesomeIcon)`
   font-size: 16px;
   height: 16px;
   margin-left: -32px;
-  color: ${colors.dkGray};
+  color: ${colors.ltGray};
 `;
 
 interface OwnProps {
-  confId: string;
   formId: string;
   submissionType?: string;
 }
 
 const SteppedForm = (props: OwnProps) => {
-  const { confId, formId } = props;
+  const { formId } = props;
   const [formData, setFormData] = useState<ApiFormData>();
   const [loading, setLoading] = useState<boolean>(true);
   const [errorMessage, setErrors] = useState<string>("");
@@ -176,7 +187,7 @@ const SteppedForm = (props: OwnProps) => {
 
   const initForm = async () => {
     setLoading(true);
-    await getFormTemplate(confId, formId)
+    await getFormTemplate(formId)
         .then(data => setFormData(data))
         .catch(() => setFormData(undefined));
     setLoading(false);
@@ -194,6 +205,7 @@ const SteppedForm = (props: OwnProps) => {
     const checkboxMap = {};
     // map out data from ranking responses
     const rankingMap = { "0": { "0": "0" } };
+
     for (const response of event.target) {
       if (response.value) {
         switch (response.type) {
@@ -203,30 +215,30 @@ const SteppedForm = (props: OwnProps) => {
               const split = response.name.split("-");
               const responseId = split[0];
               const value = split[1];
-              const idx = `${+response.value - 1}`;
+              const idx = `${response.value - 1}`;
               if (!rankingMap[responseId]) {
                 rankingMap[responseId] = {};
               }
               rankingMap[responseId][idx] = value;
               break;
             }
-            responses.push({ id: +response.name, response: +response.value });
+            responses.push({ _id: response.name, response: response.value });
             break;
           case "dropdown":
-            responses.push({ id: response.name, response: +response.value });
+            responses.push({ _id: response.name, response: response.value });
             break;
           case "checkbox":
             const responseId = response.name.split("-")[0];
             if (response.checked) {
               checkboxMap[responseId]
-                ? checkboxMap[responseId].push(+response.value)
-                : (checkboxMap[responseId] = [+response.value]);
+                ? checkboxMap[responseId].push(response.value)
+                : (checkboxMap[responseId] = [response.value]);
             }
             break;
           case "date":
             if (response.value) {
               responses.push({
-                id: +response.name,
+                _id: response.name,
                 response: new Date(response.value),
               });
             }
@@ -239,14 +251,14 @@ const SteppedForm = (props: OwnProps) => {
           case "email":
           case "tel":
           default:
-            responses.push({ id: +response.name, response: response.value });
+            responses.push({ _id: response.name, response: response.value });
             break;
         }
       }
     }
     // handle creating checkbox responses
     for (const id in checkboxMap) {
-      responses.push({ id: +id, response: checkboxMap[id] });
+      responses.push({ _id: id, response: checkboxMap[id] });
     }
     // handle creating ranking responses
     for (const id in rankingMap) {
@@ -256,27 +268,26 @@ const SteppedForm = (props: OwnProps) => {
       const rankingResponse = [];
       for (const index in rankingMap[id]) {
         const value = rankingMap[id][index];
-        rankingResponse.splice(+index, 1, +value);
+        rankingResponse.splice(+index, 1, value);
       }
-      responses.push({ id: +id, response: rankingResponse });
+      responses.push({ _id: id, response: rankingResponse });
     }
     const request = new SubmitFormDto();
     request.responses = responses;
     // Submit!
-    await postFormSubmission(confId, formId, { responses }).then(() => {
-      setSubmitted(true)
-    })
-      .catch(err => {
-          setErrors(`Couldn't submit application. ${ err.response.data.error }`);
-        }
-    );
+    await postFormSubmission(formId, { responses })
+      .then(() => {
+        setSubmitted(true);
+      })
+      .catch((err) => {
+        setErrors(`Couldn't submit application. ${err.response.data.error}`);
+      });
   };
 
   const renderFormItem = (
-    { content, description, fieldType, id, required, values }: FormField,
+    { content, description, field_type, _id, required, values }: FormField,
     index: number
   ) => {
-    content = required ? `${content}*` : content
     const fieldInputTypeMap = {
       SHORT_ANSWER: "text",
       LONG_ANSWER: "textarea",
@@ -291,12 +302,12 @@ const SteppedForm = (props: OwnProps) => {
       SECURE_INPUT: "password",
       POSTAL_CODE: "text",
     };
-    const inputType = fieldInputTypeMap[fieldType];
+    const inputType = fieldInputTypeMap[field_type];
 
     let InputContent: JSX.Element;
     switch (inputType) {
       case "textarea":
-        InputContent = <LongSeggsyInput required={required} name={`${id}`} />;
+        InputContent = <LongSeggsyInput required={required} name={`${_id}`} />;
         break;
       case "rank":
         InputContent = (
@@ -321,7 +332,7 @@ const SteppedForm = (props: OwnProps) => {
                   >
                     <SelectSeggsyInput
                       required={required}
-                      name={`${id}-${value.id}-rank`}
+                      name={`${_id}-${value._id}-rank`}
                     >
                       {values.map((_, index) => {
                         return (
@@ -353,12 +364,12 @@ const SteppedForm = (props: OwnProps) => {
               alignItems: "center",
             }}
           >
-            <SelectSeggsyInput required={required} name={`${id}`}>
+            <SelectSeggsyInput required={required} name={`${_id}`}>
               {values.map((value, _) => {
-                return <option value={`${value.id}`}>{value.value}</option>;
+                return <option value={`${value._id}`}>{value.value}</option>;
               })}
             </SelectSeggsyInput>
-            <Icon icon={"chevron-down"} />
+            <Icon icon={"chevron-down"} style={{ zIndex: 10 }} />
           </div>
         );
         break;
@@ -385,8 +396,8 @@ const SteppedForm = (props: OwnProps) => {
                   >
                     <CheckySeggsyInput
                       required={required}
-                      name={`${id}-${index}-input`}
-                      value={value.id}
+                      name={`${_id}-${index}-input`}
+                      value={value._id}
                       type="checkbox"
                     />
                   </div>
@@ -407,69 +418,103 @@ const SteppedForm = (props: OwnProps) => {
       case "text":
       default:
         InputContent = (
-          <SeggsyInput required={required} name={`${id}`} type={inputType} />
+          <SeggsyInput required={required} name={`${_id}`} type={inputType} />
         );
         break;
     }
 
     return (
-      <>
-        <div style={{ marginBottom: description ? "-12px" : "0px" }}>
+      <QuestionContainer>
+        <div
+          style={{
+            marginBottom: description ? "-12px" : "0px",
+            marginTop: required ? "-12px" : "-32px",
+          }}
+        >
+          {required && (
+            <Body margins="0" color="red" size="16px">
+              required *
+            </Body>
+          )}
           <Body>{content}</Body>
         </div>
         {description && (
-          <Body size="14px" styling="italic" margins="12.5px 0 20px 0" mobMargins="12.5px 0 20px 0">
+          <Body
+            size="14px"
+            styling="italic"
+            margins="12.5px 0 20px 0"
+            mobMargins="12.5px 0 20px 0"
+          >
             {description}
           </Body>
         )}
         {InputContent}
-      </>
+      </QuestionContainer>
     );
   };
 
   return (
-    <ComponentWrapper>
+    <ComponentWrapper color={colors.primaryBlue} margins="0" width="100vw">
       {!loading && formData !== null && formData !== undefined && !submitted && (
-        <SubTitle align="left" width="75%" self="center" weight={600}>
+        <SubTitle
+          align="center"
+          width="55%"
+          self="center"
+          weight={400}
+          color="white"
+          margins="60px 0 0 0"
+        >
           {formData.sections[0].intro}
         </SubTitle>
       )}
-      {!loading && formData !== null && formData !== undefined && !submitted &&(
+      {!loading && formData !== null && formData !== undefined && !submitted && (
         <Form onSubmit={handleSubmit}>
-          {formData.sections[0].fields.sort((a, b) => {
-            return a.index - b.index
-          }).map((field, index) => {
-            return renderFormItem(field, index);
-          })}
-           {errorMessage ? <Body color={colors.accentRed}>{errorMessage}</Body> : ""}
-          <SeggsySubmit type="submit" value="Submit" />
+          {formData.sections[0].fields
+            .sort((a, b) => {
+              return a.index - b.index;
+            })
+            .map((field, index) => {
+              return renderFormItem(field, index);
+            })}
+          {errorMessage ? (
+            <Body color={colors.accentOrange}>{errorMessage}</Body>
+          ) : (
+            ""
+          )}
+          <SeggsySubmit type="submit" value="Submit Application" />
         </Form>
       )}
       {!loading && !formData && !submitted && (
-        <SubTitle align="center" width="75%" self="center" weight={300}>
-          Something went wrong while attempting to retrieve this form.
-          Please try again in a few minutes.<br/><br/>If this issue persists,
-          please reach out to us at <a
-            href="mailto:engineering@modelun.net"><u>engineering@modelun.net</u>
-          </a> and we will be able to assist you. Thank you for your cooperation.
+        <SubTitle align="center" width="75%" self="center" weight={300} color={colors.ivory}>
+          Something went wrong while attempting to retrieve this form. Please
+          try again in a few minutes.
+          <br />
+          <br />
+          If this issue persists, please reach out to us at{" "}
+          <a href="mailto:engineering@modelun.net">
+            <u>engineering@modelun.net</u>
+          </a>{" "}
+          and we will be able to assist you. Thank you for your cooperation.
         </SubTitle>
       )}
       {submitted && (
         <>
-          <SubTitle align="center" width="75%" self="center" weight={300}>
-            Your {props.submissionType ? props.submissionType : "submission"} has
-            been received! Thank you so much for your interest in CIMUN XVIII.
-            <br/><br/>
-            We will be in touch with you after reviewing your {
-            props.submissionType
-                ? props.submissionType
-                : "submission"}. In the
+          <SubTitle align="center" width="75%" self="center" weight={300} color={colors.ivory}>
+            Your {props.submissionType ? props.submissionType : "submission"}{" "}
+            has been received! Thank you so much for your interest in CIMUN
+            XIX.
+            <br />
+            <br />
+            We will be in touch with you after reviewing your{" "}
+            {props.submissionType ? props.submissionType : "submission"}. In the
             meantime, if you have any further inquiries, you are welcome to
-            reach out to our Steering Committee at <a
-              href="mailto:sc@cimun.org">
+            reach out to our Steering Committee at{" "}
+            <a href="mailto:sc@cimun.org">
               <u>sc@cimun.org</u>
-            </a> for assistance.
-            <br/><br/>
+            </a>{" "}
+            for assistance.
+            <br />
+            <br />
             Once again, thank you so much for your interest in CIMUN. We hope to
             see you there!
           </SubTitle>

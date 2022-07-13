@@ -74,7 +74,7 @@ const DelegateGuide = () => {
 
 const BackgroundGuides = () => {
   return (
-      <AnnouncementBar backgroundColor={colors.accentRed}>
+      <AnnouncementBar backgroundColor={colors.accentOrange}>
         <Body
             color="white"
             weight={600}

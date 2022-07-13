@@ -4,12 +4,10 @@ import HeaderNav from "../../components/headerNav";
 import Jumbotron from "../../components/jumbotron";
 import Footer from "../../components/footer";
 import SteppedForm from "../../components/stepped-form";
-import { Wrapper, ComponentWrapper} from "../../styles/containers";
-import { SubTitle } from "../../styles/typography";
-import {colors} from "../../styles/colors";
+import { Wrapper } from "../../styles/containers";
 import Announce from "../../components/Announce";
 
-const SchoolRegistration = () => {
+const StaffApps = () => {
   return (
     <Wrapper>
       <Head>
@@ -42,36 +40,15 @@ const SchoolRegistration = () => {
       <Announce.BackgroundGuides/>
       <HeaderNav />
       <Jumbotron
-        titleOne="SCHOOL"
-        titleTwo="REGISTRATION"
-        subTitle="Register for CIMUN XVIII!"
-        height={75}
-        image="awards.jpg"
+        titleOne="STAFF"
+        titleTwo="APPLICATION"
+        height={65}
+        image="cimun-staff.png"
       />
-      <ComponentWrapper margins="auto auto -3vw auto">
-        <SubTitle
-            align="center"
-            color={colors.fadedltGray}
-            width="75%"
-            self="center"
-            weight={500}
-        >
-          {/*<a*/}
-          {/*    href="/registration-information.pdf"*/}
-          {/*    target="_blank"*/}
-          {/*    rel="noopener noreferrer"*/}
-          {/*>*/}
-          {/*  <em>*/}
-          {/*    Looking for pricing & registration details? <strong><u>Click*/}
-          {/*    here</u> to download our registration guide!</strong>*/}
-          {/*  </em>*/}
-          {/*</a>*/}
-        </SubTitle>
-      </ComponentWrapper>
-      <SteppedForm formId="2" submissionType={"registration"} />
+      <SteppedForm formId="62cba0f20000000000dc31fb" submissionType="application" />
       <Footer />
     </Wrapper>
   );
 };
 
-export default SchoolRegistration;
+export default StaffApps;

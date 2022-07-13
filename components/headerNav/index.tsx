@@ -159,7 +159,7 @@ const Icon = styled(FontAwesomeIcon)<{
   font-size: 25px;
   height: 2vw;
   ${breakpoints("height", "px", [{ 1200: 35 }, { 800: 30 }])};
-  color: ${(props) => (props.color ? props.color : colors.dkGray)};
+  color: ${(props) => (props.color ? props.color : colors.fadedltGray)};
 `;
 
 const HeaderNav = () => {
@@ -178,6 +178,11 @@ const HeaderNav = () => {
             <Anchor>Home</Anchor>
           </ListItem>
         </Link>
+        <Link href="/staff-apps">
+          <ListItem>
+            <Anchor>Staff Application</Anchor>
+          </ListItem>
+        </Link>
         <Link href="DelegateGuide.pdf">
           <ListItem>
             <Anchor>Delegate Guide</Anchor>
@@ -192,6 +197,12 @@ const HeaderNav = () => {
           <Link href="/">
             <BurgerListItem>
               <Anchor>Home</Anchor>
+            </BurgerListItem>
+          </Link>
+          <BurgerSeparator />
+          <Link href="/dir-apps">
+            <BurgerListItem>
+              <Anchor>Directorate Application</Anchor>
             </BurgerListItem>
           </Link>
           <BurgerSeparator />

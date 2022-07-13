@@ -34,6 +34,14 @@ const Footer: React.FC = () => (
               Delegate Guide
             </a>
           </div>
+          <div >
+            <a
+                href="/staff-apps"
+                rel="noopener noreferrer"
+            >
+              Staff Applications
+            </a>
+          </div>
         </FooterCol>
         <FooterCol>
           <FootH2>Explore</FootH2>

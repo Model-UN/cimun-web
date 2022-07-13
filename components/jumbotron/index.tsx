@@ -1,6 +1,7 @@
 import { Display, Header } from "../../styles/typography";
 import { ComponentWrapper } from "../../styles/containers";
 import styles from "./Jumbotron.module.css";
+import { colors } from "../../styles/colors";
 
 interface JumboTronProps {
   titleOne: string;
@@ -25,8 +26,10 @@ const Jumbotron = (props: JumboTronProps) => {
 
   let sizeTitleOne = "18vw";
   let sizeTitleTwo = "18vw";
-  if (titleOne.length >= 12) {
-    sizeTitleOne = "12vw";
+  let titleOneOffset = "0 0 0 -3vw";
+  if (titleOne.length >= 10) {
+    sizeTitleOne = "10vw";
+    titleOneOffset = "0 0 0 4vw";
   } else if (titleOne.length >= 6) {
     sizeTitleOne = "13.5vw";
   }
@@ -51,12 +54,16 @@ const Jumbotron = (props: JumboTronProps) => {
       }}
     >
       <div className={styles.middleDisplay}>
-        <Display size={sizeTitleOne} margins="0 0 0 -3vw">
+        <Display
+          size={sizeTitleOne}
+          margins={titleOneOffset}
+          color={colors.ivory}
+        >
           {titleOne}
         </Display>
         <Header
           size="2.3vw"
-          color="white"
+          color={colors.ivory}
           margins="6vw -1vw 0 0"
           line={1.2}
           width="34vw"
@@ -66,7 +73,12 @@ const Jumbotron = (props: JumboTronProps) => {
           {subTitle}
         </Header>
       </div>
-      <Display size={sizeTitleTwo} self="flex-end" margins="0 3vw -3vw 0">
+      <Display
+        size={sizeTitleTwo}
+        self="flex-end"
+        margins="0 3vw -3vw 0"
+        color={colors.ivory}
+      >
         {titleTwo}
       </Display>
     </ComponentWrapper>
