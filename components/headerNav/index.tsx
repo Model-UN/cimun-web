@@ -178,9 +178,9 @@ const HeaderNav = () => {
             <Anchor>Home</Anchor>
           </ListItem>
         </Link>
-        <Link href="/dir-apps">
+        <Link href="/staff-apps">
           <ListItem>
-            <Anchor>Directorate Application</Anchor>
+            <Anchor>Staff Application</Anchor>
           </ListItem>
         </Link>
         <Link href="DelegateGuide.pdf">

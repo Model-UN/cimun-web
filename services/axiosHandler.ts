@@ -1,7 +1,7 @@
 import axios, {AxiosResponse} from "axios";
 
-// const BASE_URL = "https://api.cimun.org/api/v1"
-const BASE_URL = "http://localhost:8000/api/v1"
+const BASE_URL = "https://api.cimun.org/api/v1"
+// const BASE_URL = "http://localhost:8000/api/v1"
 
 export class SubmitFormDto {
   responses: Array<FormFieldResponseDto>;
