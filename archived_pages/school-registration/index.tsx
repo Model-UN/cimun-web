@@ -51,7 +51,7 @@ const SchoolRegistration = () => {
       <ComponentWrapper margins="auto auto -3vw auto">
         <SubTitle
             align="center"
-            color={colors.accentRed}
+            color={colors.fadedltGray}
             width="75%"
             self="center"
             weight={500}

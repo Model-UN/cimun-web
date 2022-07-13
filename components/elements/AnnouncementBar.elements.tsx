@@ -14,7 +14,7 @@ const AnnouncementBar = styled.span<AnnouncementBarProps>`
   background-color: ${
     (props: AnnouncementBarProps) => props.backgroundColor
         ? props.backgroundColor
-        : colors.accentRed
+        : colors.accentOrange
   };
 `;
 
