@@ -200,9 +200,9 @@ const HeaderNav = () => {
             </BurgerListItem>
           </Link>
           <BurgerSeparator />
-          <Link href="/dir-apps">
+          <Link href="/staff-apps">
             <BurgerListItem>
-              <Anchor>Directorate Application</Anchor>
+              <Anchor>Staff Application</Anchor>
             </BurgerListItem>
           </Link>
           <BurgerSeparator />
