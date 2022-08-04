@@ -178,6 +178,11 @@ const HeaderNav = () => {
             <Anchor>Home</Anchor>
           </ListItem>
         </Link>
+        <Link href="/about">
+          <ListItem>
+            <Anchor>About</Anchor>
+          </ListItem>
+        </Link>
         <Link href="/staff-apps">
           <ListItem>
             <Anchor>Staff Application</Anchor>
@@ -197,6 +202,12 @@ const HeaderNav = () => {
           <Link href="/">
             <BurgerListItem>
               <Anchor>Home</Anchor>
+            </BurgerListItem>
+          </Link>
+          <BurgerSeparator />
+          <Link href="/about">
+            <BurgerListItem>
+              <Anchor>About</Anchor>
             </BurgerListItem>
           </Link>
           <BurgerSeparator />
