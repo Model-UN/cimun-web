@@ -1,18 +1,19 @@
 import { Wrapper, ComponentWrapper } from '../../styles/containers'
 import HeaderNav from '../../components/headerNav'
 import About from "../../components/articles/about";
-import {Display} from "../../styles/typography";
+import Jumbotron from "../../components/jumbotron";
 
 const AboutPage = () => {
   return (
       <Wrapper>
         <HeaderNav />
-        <ComponentWrapper height="48.375vw" minHeight="40.5vw" maxHeight="86vh" justify="flex-end" margins="0" style={{
-          backgroundImage: "url(/jumbotron-bg.svg)", backgroundPosition: 'bottom', backgroundSize: 'cover',
-          backgroundRepeat: 'no-repeat'
-        }}>
-          <About/>
-        </ComponentWrapper>
+        <Jumbotron
+            titleOne="CIMUN"
+            titleTwo="XIX"
+            subTitle="THE 19TH ANNUAL CHICAGO INTERNATIONAL MODEL UNITED NATIONS CONFERENCE"
+            height={85}
+        />
+        <About/>
       </Wrapper>
   )
 }

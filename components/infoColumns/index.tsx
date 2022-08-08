@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { SubTitle, Body } from "../../styles/typography";
 import { colors } from "../../styles/colors";
 import {
@@ -6,7 +5,6 @@ import {
   CardWrapper,
   CardContainer,
 } from "./infoColumns.styles";
-import LetterElement from "./letter.element";
 import React from "react";
 
 export default function InfoColumns(): JSX.Element {
