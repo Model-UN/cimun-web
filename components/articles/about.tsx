@@ -1,14 +1,14 @@
 import {Title} from "../infoColumns/infoColumns.styles";
-import {Body} from "../../styles/typography";
+import {Body, SubTitle} from "../../styles/typography";
 import {MaterialCard} from "../../app/components/elements";
 
 export default function About(): JSX.Element {
   return (
     <MaterialCard column noAnimate>
-      <Title margins="2vw 5rem 0 5rem" line={ 0.9 }>
+      <Title margins="2vw 5rem 0 5rem" line={ 0.9 } align={"center"}>
         About the Chicago International Model United Nations
       </Title>
-      <Body margins="2rem 6rem 2rem 6rem" mobMargins="1rem 1rem 0 1rem"
+      <Body margins="2rem 6rem 0.5rem 6rem" mobMargins="0 1rem 0 1rem"
             size="1.1rem" line={ 1.4 } align={ "justify" }>
         <p>CIMUN is a groundbreaking educational political simulation for high
           school students held in-person February 2-5, 2023. Our conference is
@@ -18,7 +18,12 @@ export default function About(): JSX.Element {
           but also ensures they are explored through innovative ways within
           debate.</p>
         <br/>
-        <strong>OUR MISSION</strong>
+      </Body>
+      <SubTitle margins="0 6rem 0 6rem" mobMargins="0 1rem 0 1rem" align={"center"}>
+        OUR MISSION
+      </SubTitle>
+      <Body margins="0 6rem 0.5rem 6rem" mobMargins="0 1rem 0 1rem"
+            size="1.1rem" line={ 1.4 } align={ "justify" }>
         <p>The Model United Nations Development Organization is an independent
           educational organization that has been producing high quality,
           simulation-driven Model UN programs since 2003, including our
@@ -27,8 +32,12 @@ export default function About(): JSX.Element {
           understanding of global politics through realistic, fast-paced
           experiential education programs that promote critical thinking and
           leadership development.</p>
-        <strong>WHY CIMUN?</strong>
-        <br/>
+      </Body>
+      <SubTitle margins="0 6rem 0 6rem" mobMargins="0 1rem 0 1rem" align={"center"}>
+        WHY CIMUN?
+      </SubTitle>
+      <Body margins="0 6rem 0.5rem 6rem" mobMargins="0 1rem 0 1rem"
+            size="1.1rem" line={ 1.4 } align={ "justify" }>
         <br/>
         <strong>Realism</strong>
         <p>The CIMUN philosophy is rooted in realism. We encourage delegates
