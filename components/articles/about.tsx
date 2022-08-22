@@ -75,6 +75,8 @@ export default function About(): JSX.Element {
             talented team of passionate volunteers. Our student-run media gives
             students the chance to experience technology and the ever-changing
             news cycle throughout the conference.
+          <br/>
+          <br/>
         </Body>
       </MaterialCard>)
 }
