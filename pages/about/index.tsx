@@ -3,6 +3,7 @@ import HeaderNav from '../../components/headerNav'
 import About from "../../components/articles/about";
 import Jumbotron from "../../components/jumbotron";
 import React from 'react';
+import Footer from "../../components/footer";
 
 const AboutPage = () => {
   return (
@@ -17,8 +18,9 @@ const AboutPage = () => {
           <ComponentWrapper margins={"0 3.9375vw 0 3.9375vw"}>
             <About/>
           </ComponentWrapper>
+          <Footer />
         </Wrapper>
-  )
+)
 }
 
 export default AboutPage;
