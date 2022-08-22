@@ -8,7 +8,7 @@ export default function About(): JSX.Element {
           About the Chicago International Model United Nations
         </Title>
         <Body margins="2rem 6rem 0.5rem 6rem" mobMargins="0 1rem 0 1rem"
-              size="1.1rem" line={ 1.4 } align={ "justify" }>
+              line={ 1.4 } align={ "justify" }>
           CIMUN is a groundbreaking educational political simulation for high
             school students held in-person February 2-5, 2023. Our conference is
             characterized by its immersive nature, realism and fun. Since 2003,
@@ -24,7 +24,7 @@ export default function About(): JSX.Element {
           OUR MISSION
         </SubTitle>
         <Body margins="2rem 6rem 0rem 6rem" mobMargins="0 1rem 0 1rem"
-              size="1.1rem" line={ 1.4 } align={ "justify" }>
+              line={ 1.4 } align={ "justify" }>
           The Model United Nations Development Organization is an independent
           educational organization that has been producing high quality,
           simulation-driven Model UN programs since 2003, including our
@@ -41,7 +41,7 @@ export default function About(): JSX.Element {
           WHY CIMUN?
         </SubTitle>
         <Body margins="0 6rem 0.5rem 6rem" mobMargins="0 1rem 0 1rem"
-              size="1.1rem" line={ 1.4 } align={ "justify" }>
+              line={ 1.4 } align={ "justify" }>
           <br/>
           <strong>Realism</strong>
           <br/>
