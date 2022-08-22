@@ -94,7 +94,6 @@ export const CardContainer = styled.div<{
 `;
 
 export const Title = styled(SubTitle)`
-  width: 100%;
   font-weight: 1000;
   font-size: 6rem;
   ${breakpoints("font-size", "", [{ 1000: "4rem" }, { 720: "2.25rem" }])};

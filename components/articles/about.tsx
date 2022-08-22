@@ -5,7 +5,7 @@ import {MaterialCard} from "../../app/components/elements";
 export default function About(): JSX.Element {
   return (
     <MaterialCard column noAnimate>
-      <Title margins="0 0 0 6rem" line={ 0.9 }>
+      <Title margins="2vw 5rem 0 5rem" line={ 0.9 }>
         About the Chicago International Model United Nations
       </Title>
       <Body margins="2rem 6rem 2rem 6rem" mobMargins="1rem 1rem 0 1rem"
