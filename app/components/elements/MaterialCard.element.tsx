@@ -7,6 +7,7 @@ interface MaterialCardProps {
   mobMargins?: string;
   column?: boolean;
   noAnimate?: boolean;
+  background?: string;
 }
 
 export const MaterialCard = styled.div<MaterialCardProps>`
@@ -31,7 +32,7 @@ export const MaterialCard = styled.div<MaterialCardProps>`
       : breakpoints("margin", "", [{1000: "0"}])
   }}
   
-  background: #fff;
+  background: ${(props: MaterialCardProps) => props.background ? props.background : "#fff"};
   border-radius: 2px;
   
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
