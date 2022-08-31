@@ -36,6 +36,7 @@ const DirApps = () => {
           rel="stylesheet"
         />
       </Head>
+      <Announce.RegistrationOpen />
       <HeaderNav />
       <Jumbotron
         titleOne="STAFF"
@@ -43,7 +44,7 @@ const DirApps = () => {
         height={85}
         image="cimun-staff.png"
       />
-      <SteppedForm formId="62cba0f20000000000dc31fb" submissionType="application" />
+      <SteppedForm formId="apply" submissionType="application" />
       <Footer />
     </Wrapper>
   );

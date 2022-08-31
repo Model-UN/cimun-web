@@ -3,8 +3,10 @@ import HeaderNav from "../components/headerNav";
 import Jumbotron from "../components/jumbotron";
 import InfoColumns from "../components/infoColumns";
 import Footer from "../components/footer";
+import { Wrapper, ComponentWrapper } from "../styles/containers";
+import Letter from "../components/articles/letter";
 import Announce from "../components/Announce";
-import { Wrapper } from "../styles/containers";
+import React from "react";
 
 export default function Home() {
   return (
@@ -35,6 +37,7 @@ export default function Home() {
           rel="stylesheet"
         />
       </Head>
+      <Announce.RegistrationOpen />
       <HeaderNav />
       <Jumbotron
         titleOne="CIMUN"
@@ -43,6 +46,9 @@ export default function Home() {
         height={85}
       />
       <InfoColumns />
+      <ComponentWrapper margins={"auto"} pad={"0 5rem 0 5rem"}>
+        <Letter />
+      </ComponentWrapper>
       <Footer />
     </Wrapper>
   );

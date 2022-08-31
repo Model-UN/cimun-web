@@ -85,8 +85,7 @@ export const CardContainer = styled.div<{
   ${breakpoints("min-width", "", [{ 1500: "45vw" }])};
   ${breakpoints("width", "", [{ 700: "94vw" }])};
 
-  margin: ${(props) =>
-    props.noMargins ? "1rem 0 0 0" : props.margins ? props.margins : "1rem"};
+  margin: ${(props) => props.noMargins ? "1rem 0 0 0" : props.margins ? props.margins : "1rem"};
   ${breakpoints("margin", "", [{ 1500: "auto", 1000: "10px auto" }])};
 
   padding: ${(props) => (props.pad ? props.pad : "1.5rem")};

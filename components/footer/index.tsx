@@ -27,6 +27,14 @@ const Footer: React.FC = () => (
           <FootH2>CIMUN XIX</FootH2>
           <div >
             <a
+                href="/school-registration"
+                rel="noopener noreferrer"
+            >
+              School Registration
+            </a>
+          </div>
+          <div >
+            <a
                 href="DelegateGuide.pdf"
                 target="_blank"
                 rel="noopener noreferrer"

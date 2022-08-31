@@ -6,23 +6,23 @@ import {colors} from "../styles/colors";
 
 const RegistrationOpen = () => {
   return (
-      <AnnouncementBar>
+      <AnnouncementBar backgroundColor={colors.indigo}>
         <Body
-            color={colors.ltGray}
+            color={colors.ivory}
             weight={600}
             align="center"
-            margins="0 0 0 0"
-            mobMargins="0 0 0 0"
+            margins="1rem 0 1rem 0"
+            mobMargins="0.5rem 0 0.5rem 0"
         >
-          Want to bring your school to CIMUN XVIII? You're in luck!
+          Want to bring your school to CIMUN XIX? You're in luck!
           {" - "}
           <Link href="/school-registration">
             <a><u>Register Now</u></a>
           </Link>
-          {" - "}
-          <Link href="/registration-information.pdf">
-            <a><u>More Information</u></a>
-          </Link>
+          {/*{" - "}*/}
+          {/*<Link href="/registration-information.pdf">*/}
+          {/*  <a><u>More Information</u></a>*/}
+          {/*</Link>*/}
         </Body>
       </AnnouncementBar>
   )

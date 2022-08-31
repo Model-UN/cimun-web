@@ -25,12 +25,13 @@ export const MaterialCard = styled.div<MaterialCardProps>`
   flex-direction: ${(props: MaterialCardProps) => props.column ? "column" : "row"};
   ${breakpoints("flex-direction", "", [{ 600: "column"}])};
   margin: ${(props: MaterialCardProps) => props.margins ? props.margins : "1rem"};
-  padding: ${(props: MaterialCardProps) => props.pad ? props.pad : "1rem"};
   ${(props: MaterialCardProps) => {
     return props.mobMargins
-      ? breakpoints("margin", "", [{1000: props.mobMargins}]) 
-      : breakpoints("margin", "", [{1000: "0"}])
+            ? breakpoints("margin", "", [{1000: props.mobMargins}])
+            : breakpoints("margin", "", [{1000: "0"}])
   }}
+
+  padding: ${(props: MaterialCardProps) => props.pad ? props.pad : "1rem"};
   
   background: ${(props: MaterialCardProps) => props.background ? props.background : "#fff"};
   border-radius: 2px;

@@ -280,7 +280,7 @@ const SteppedForm = (props: OwnProps) => {
         setSubmitted(true);
       })
       .catch((err) => {
-        setErrors(`Couldn't submit application. ${err.response.data.error}`);
+        setErrors(`Couldn't submit application. Please try again later.`);
       });
   };
 
