@@ -178,16 +178,26 @@ const HeaderNav = () => {
             <Anchor>Home</Anchor>
           </ListItem>
         </Link>
+        <Link href="/about">
+          <ListItem>
+            <Anchor>About</Anchor>
+          </ListItem>
+        </Link>
         <Link href="/staff-apps">
           <ListItem>
             <Anchor>Staff Application</Anchor>
           </ListItem>
         </Link>
-        <Link href="DelegateGuide.pdf">
+        <Link href="/school-registration">
           <ListItem>
-            <Anchor>Delegate Guide</Anchor>
+            <Anchor>Register for CIMUN!</Anchor>
           </ListItem>
         </Link>
+        {/*<Link href="DelegateGuide.pdf">*/}
+        {/*  <ListItem>*/}
+        {/*    <Anchor>Delegate Guide</Anchor>*/}
+        {/*  </ListItem>*/}
+        {/*</Link>*/}
       </ListContainer>
       {burgerOpen && (
         <BurgerListContainer>
@@ -200,17 +210,28 @@ const HeaderNav = () => {
             </BurgerListItem>
           </Link>
           <BurgerSeparator />
+          <Link href="/about">
+            <BurgerListItem>
+              <Anchor>About</Anchor>
+            </BurgerListItem>
+          </Link>
+          <BurgerSeparator />
           <Link href="/staff-apps">
             <BurgerListItem>
               <Anchor>Staff Application</Anchor>
             </BurgerListItem>
           </Link>
           <BurgerSeparator />
-          <Link href="/DelegateGuide.pdf">
+          <Link href="/school-registration">
             <BurgerListItem>
-              <Anchor>Delegate Guide</Anchor>
+              <Anchor>School Registration</Anchor>
             </BurgerListItem>
           </Link>
+          {/*<Link href="/DelegateGuide.pdf">*/}
+          {/*  <BurgerListItem>*/}
+          {/*    <Anchor>Delegate Guide</Anchor>*/}
+          {/*  </BurgerListItem>*/}
+          {/*</Link>*/}
         </BurgerListContainer>
       )}
       <Burger onClick={() => setBurgerOpen(!burgerOpen)}>

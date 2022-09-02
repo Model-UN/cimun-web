@@ -45,8 +45,7 @@ export const Display = styled.h1<TextType>`
 
 export const Header = styled.h2<TextType>`
   font-family: ${fonts.header}, serif;
-  font-style: ${(props: TextType) =>
-    props.styling ? props.styling : "normal"};
+  font-style: ${(props: TextType) => props.styling ? props.styling : "normal"};
   align-self: ${(props: TextType) => (props.self ? props.self : "flex-start")};
   margin: ${(props: TextType) => (props.margins ? props.margins : undefined)};
   color: ${(props: TextType) => (props.color ? props.color : "black")};
@@ -91,9 +90,9 @@ export const Body = styled.p<TextType>`
       : breakpoints("margin", "", [{ 1000: "0 0 0 0" }])}
   color: ${(props: TextType) => (props.color ? props.color : "black")};
   font-size: ${(props: TextType) => (props.size ? props.size : "1.2rem")};
-  ${breakpoints("font-size", "", [{ 1000: "1.5rem" }])};
+  ${breakpoints("font-size", "", [{ 1000: "1rem", 400: "0.7rem" }])};
   line-height: ${(props: TextType) => (props.line ? props.line : undefined)};
-  ${breakpoints("line-height", "", [{ 1000: "1.75rem" }])};
+  ${breakpoints("line-height", "", [{ 1000: "1.75rem", 400: "1rem"}])};
   width: ${(props: TextType) => (props.width ? props.width : undefined)};
   text-align: ${(props: TextType) => (props.align ? props.align : "left")};
   font-weight: ${(props: TextType) => (props.weight ? props.weight : 500)};

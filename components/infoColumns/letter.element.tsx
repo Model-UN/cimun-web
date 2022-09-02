@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import {
   CardWrapper, InfoColumnWrapper, Title
 } from "./infoColumns.styles";
