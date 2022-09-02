@@ -44,7 +44,7 @@ const AboutPage = () => {
           subTitle="THE 19TH ANNUAL CHICAGO INTERNATIONAL MODEL UNITED NATIONS CONFERENCE"
           height={85}
       />
-      <ComponentWrapper margins={"0 3.9375vw 0 3.9375vw"} pad={"0 5rem 0 5rem"}>
+      <ComponentWrapper margins={"0 3.9375vw 0 3.9375vw"} pad={"0 10rem 0 10rem"}>
         <About/>
       </ComponentWrapper>
       <Footer />
