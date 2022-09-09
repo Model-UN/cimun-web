@@ -71,8 +71,8 @@ const SeggsySubmit = styled.input`
   font-size: 16px;
   font-weight: 600;
   line-height: normal;
-  background-color: ${colors.carolinaBlue};
-  color: ${colors.ivory};
+  background-color: ${colors.ivory};
+  color: ${colors.indigo};
   transition: 60s width ease-in-out, 60s height ease-in-out,
     60s font-size ease-in-out;
 
@@ -188,8 +188,8 @@ const SteppedForm = (props: OwnProps) => {
   const initForm = async () => {
     setLoading(true);
     await getFormTemplate(formId)
-        .then(data => setFormData(data))
-        .catch(() => setFormData(undefined));
+      .then((data) => setFormData(data))
+      .catch(() => setFormData(undefined));
     setLoading(false);
   };
 
@@ -454,7 +454,7 @@ const SteppedForm = (props: OwnProps) => {
   };
 
   return (
-    <ComponentWrapper color={colors.primaryBlue} margins="0" width="100vw">
+    <ComponentWrapper color={colors.indigo} margins="0" width="100vw">
       {!loading && formData !== null && formData !== undefined && !submitted && (
         <SubTitle
           align="center"
@@ -485,7 +485,13 @@ const SteppedForm = (props: OwnProps) => {
         </Form>
       )}
       {!loading && !formData && !submitted && (
-        <SubTitle align="center" width="75%" self="center" weight={300} color={colors.ivory}>
+        <SubTitle
+          align="center"
+          width="75%"
+          self="center"
+          weight={300}
+          color={colors.ivory}
+        >
           Something went wrong while attempting to retrieve this form. Please
           try again in a few minutes.
           <br />
@@ -499,10 +505,15 @@ const SteppedForm = (props: OwnProps) => {
       )}
       {submitted && (
         <>
-          <SubTitle align="center" width="75%" self="center" weight={300} color={colors.ivory}>
+          <SubTitle
+            align="center"
+            width="75%"
+            self="center"
+            weight={300}
+            color={colors.ivory}
+          >
             Your {props.submissionType ? props.submissionType : "submission"}{" "}
-            has been received! Thank you so much for your interest in CIMUN
-            XIX.
+            has been received! Thank you so much for your interest in CIMUN XIX.
             <br />
             <br />
             We will be in touch with you after reviewing your{" "}

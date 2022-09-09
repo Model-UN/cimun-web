@@ -10,9 +10,12 @@ const HeaderWrapper = styled(ComponentWrapper)`
   height: 3.9375vw;
   min-height: 45px;
   max-height: 7vh;
-  margin: auto;
+  margin: 0;
+  padding: 10px 3rem;
+  ${breakpoints("padding", "", [{ 768: "8px 3vw" }])}
   flex-direction: row;
   justify-content: space-between;
+  background-color: ${colors.indigo};
 `;
 
 const ListContainer = styled.ul`
@@ -33,26 +36,28 @@ const BurgerListContainer = styled.ul`
   position: absolute;
   top: 0;
   left: 0;
-  background-color: ${colors.primaryBlue};
+  background-color: ${colors.plum};
   width: 100%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   list-style-type: none;
   margin: 0;
-  padding: 2vh 2vh;
+  padding: 2vh;
 `;
 
-const ListItem = styled.li`
+const ListItem = styled.li<{ highlighted?: boolean }>`
   display: flex;
   height: 100%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   transition: all 0.2s;
+  background-color: ${(props) =>
+    props.highlighted ? colors.ivory : "transparent"};
+  border-radius: 50px;
 
   &:hover {
-    background-color: ${colors.fadedPrimaryBlue};
     cursor: pointer;
   }
 `;
@@ -82,9 +87,9 @@ const BurgerSeparator = styled.hr`
   color: white;
 `;
 
-const Anchor = styled.a`
+const Anchor = styled.a<{ highlighted?: boolean }>`
   display: flex;
-  color: ${colors.primaryBlue};
+  color: ${(props) => (props.highlighted ? colors.indigo : colors.ivory)};
   text-align: center;
   padding: 0 20px;
   ${breakpoints("padding", "", [
@@ -117,7 +122,7 @@ const LogoWrapper = styled.div`
 `;
 
 const Logo = styled.img`
-  height: 90%;
+  height: 100%;
   object-fit: contain;
   left: 3vw;
 
@@ -166,10 +171,10 @@ const HeaderNav = () => {
   const [burgerOpen, setBurgerOpen] = useState(false);
 
   return (
-    <HeaderWrapper>
+    <HeaderWrapper width="100%">
       <LogoWrapper>
         <Link href="/">
-          <Logo src="/cimun-logo.png" />
+          <Logo src="/White_CIMUN_Logo.png" />
         </Link>
       </LogoWrapper>
       <ListContainer>
@@ -189,8 +194,8 @@ const HeaderNav = () => {
           </ListItem>
         </Link>
         <Link href="/school-registration">
-          <ListItem>
-            <Anchor>Register for CIMUN!</Anchor>
+          <ListItem highlighted>
+            <Anchor highlighted>Register for CIMUN!</Anchor>
           </ListItem>
         </Link>
         {/*<Link href="DelegateGuide.pdf">*/}
