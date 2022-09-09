@@ -36,16 +36,14 @@ const StaffApps = () => {
           rel="stylesheet"
         />
       </Head>
-      <Announce.DelegateGuide/>
-      <Announce.BackgroundGuides/>
+      <Announce.DelegateGuide />
+      <Announce.BackgroundGuides />
       <HeaderNav />
-      <Jumbotron
-        titleOne="STAFF"
-        titleTwo="APPLICATION"
-        height={65}
-        image="cimun-staff.png"
+      <Jumbotron titleOne="STAFF APPLICATION" />
+      <SteppedForm
+        formId="62cba0f20000000000dc31fb"
+        submissionType="application"
       />
-      <SteppedForm formId="62cba0f20000000000dc31fb" submissionType="application" />
       <Footer />
     </Wrapper>
   );

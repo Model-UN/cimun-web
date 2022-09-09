@@ -7,6 +7,38 @@ import { Wrapper, ComponentWrapper } from "../styles/containers";
 import Letter from "../components/articles/letter";
 import Announce from "../components/Announce";
 import React from "react";
+import styled from "styled-components";
+import { breakpoints } from "../styles/breakpoints";
+import { fonts } from "../styles/fonts";
+import { colors } from "../styles/colors";
+import Link from "next/link";
+
+const PoggyButton = styled.div`
+  width: 30%;
+  ${breakpoints("width", "", [{ 800: "65%" }])};
+  ${breakpoints("height", "", [{ 800: "50px" }])};
+  ${breakpoints("font-size", "", [{ 800: "16px" }])};
+  ${breakpoints("margin", "", [{ 800: "2rem 0 0 0" }])};
+  height: 80px;
+  align-self: center;
+  margin: 5rem 0 0 0;
+  padding: 0 16px;
+  border: none;
+  border-radius: 56px;
+  font-family: ${fonts.body}, sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: normal;
+  background-color: ${colors.ivory};
+  color: ${colors.indigo};
+  justify-content: center;
+  align-items: center;
+  display: flex;
+
+  &:hover {
+    cursor: pointer;
+  }
+`;
 
 export default function Home() {
   return (
@@ -40,11 +72,13 @@ export default function Home() {
       <Announce.RegistrationOpen />
       <HeaderNav />
       <Jumbotron
-        titleOne="CIMUN"
-        titleTwo="XIX"
+        titleOne="CIMUN XIX"
         subTitle="THE 19TH ANNUAL CHICAGO INTERNATIONAL MODEL UNITED NATIONS CONFERENCE"
-        height={85}
-      />
+      >
+        <Link href="/about">
+          <PoggyButton>MORE DETAILS</PoggyButton>
+        </Link>
+      </Jumbotron>
       <InfoColumns />
       <ComponentWrapper margins={"auto"} pad={"0 10rem 0 10rem"}>
         <Letter />

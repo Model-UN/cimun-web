@@ -39,10 +39,8 @@ const DirApps = () => {
       <Announce.RegistrationOpen />
       <HeaderNav />
       <Jumbotron
-        titleOne="STAFF"
-        titleTwo="APPLICATION"
-        height={85}
-        image="cimun-staff.png"
+        titleOne="Staff Application"
+        subTitle="THE 19TH ANNUAL CHICAGO INTERNATIONAL MODEL UNITED NATIONS CONFERENCE"
       />
       <SteppedForm formId="apply" submissionType="application" />
       <Footer />
