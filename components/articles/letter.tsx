@@ -6,11 +6,11 @@ import {colors} from "../../styles/colors";
 export default function Letter(): JSX.Element {
   return (
     <MaterialCard column noAnimate background={ colors.ivory }>
-      <Title margins="2vw 5rem 0 5rem" line={ 0.9 } align={ "center" }>
+      <Title margins="2vw 8rem 0 8rem" line={ 0.9 } align={ "center" }>
         From the Office of the Secretary-General
       </Title>
-      <Body margins="2rem 6rem 0.5rem 6rem" mobMargins="0 1rem 0 1rem"
-            line={ 1.4 } align={ "justify" }>
+      <Body margins="0 8rem 0.5rem 8rem" mobMargins="0 1rem 0 1rem"
+            line={ 1.4 } align={ "justify" } size="1.5rem">
         <br/>
         <br/>
         Dear Delegates, Faculty, and Distinguished Guests:

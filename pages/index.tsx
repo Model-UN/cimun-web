@@ -46,7 +46,7 @@ export default function Home() {
         height={85}
       />
       <InfoColumns />
-      <ComponentWrapper margins={"auto"} pad={"0 10rem 0 10rem"}>
+      <ComponentWrapper margins={"auto"} pad={"0 12rem 0 12rem"}>
         <Letter />
       </ComponentWrapper>
       <Footer />

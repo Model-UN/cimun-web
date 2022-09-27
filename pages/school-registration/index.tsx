@@ -4,8 +4,10 @@ import HeaderNav from "../../components/headerNav";
 import Jumbotron from "../../components/jumbotron";
 import Footer from "../../components/footer";
 import SteppedForm from "../../components/stepped-form";
-import { Wrapper } from "../../styles/containers";
+import {ComponentWrapper, Wrapper} from "../../styles/containers";
 import Announce from "../../components/Announce";
+import RegistrationDetails
+  from "../../components/articles/registration-details";
 
 const DirApps = () => {
   return (
@@ -44,6 +46,9 @@ const DirApps = () => {
             height={85}
             image="awards.jpg"
         />
+        <ComponentWrapper margins={"auto"} pad={"0 16rem 0 16rem"}>
+          <RegistrationDetails />
+        </ComponentWrapper>
         <SteppedForm formId="630fddb24c48e8cc088824ca" submissionType="registration form" />
         <Footer />
       </Wrapper>

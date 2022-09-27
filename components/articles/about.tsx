@@ -5,13 +5,13 @@ import {colors} from "../../styles/colors";
 
 export default function About(): JSX.Element {
   return (<MaterialCard column noAnimate background={ colors.ivory }>
-    <Title margins="2vw 5rem 0 5rem" line={ 0.9 } align={ "center" }>
+    <Title margins="2vw 6rem 0 6rem" line={ 0.9 } align={ "center" }>
       About the Chicago International Model United Nations
     </Title>
     <br/>
     <Body margins="2rem 6rem 0.5rem 6rem" mobMargins="0 1rem 0 1rem"
-          line={ 1.4 } align={ "justify" }>
-      The Chicago International Model United Nations, also known as CIMUN, is a
+          line={ 1.4 } align={ "justify" } size="1.5rem">
+      The <strong>Chicago International Model United Nations</strong>, also known as CIMUN, is a
       groundbreaking educational political simulation for high school students.
       Our conference is characterized by its immersive nature, realism and fun.
       Our staff is dedicated to the mission of providing a conference that
@@ -24,9 +24,9 @@ export default function About(): JSX.Element {
               align={ "center" }>
       OUR MISSION
     </SubTitle>
-    <Body margins="2rem 6rem 0rem 6rem" mobMargins="0 1rem 0 1rem" line={ 1.4 }
-          align={ "justify" }>
-      The Model United Nations Development Organization (MUNDO) is an
+    <Body margins="2rem 6rem 0.5rem 6rem" mobMargins="0 1rem 0 1rem"
+          line={ 1.4 } align={ "justify" } size="1.5rem">
+      The <strong>Model United Nations Development Organization</strong> (MUNDO) is an
       independent educational organization that has been producing high quality,
       simulation-driven Model UN programs since 2003 in both Chicago and Mexico
       City. We seek to help students build their understanding of global
@@ -39,12 +39,12 @@ export default function About(): JSX.Element {
               align={ "center" }>
       WHY CIMUN?
     </SubTitle>
-    <Body margins="0 6rem 0.5rem 6rem" mobMargins="0 1rem 0 1rem"
-          line={ 1.4 } align={ "justify" }>
+    <Body margins="0rem 6rem 0.5rem 6rem" mobMargins="0 1rem 0 1rem"
+          line={ 1.4 } align={ "justify" } size="1.5rem">
       <br/>
-      <strong>Realism</strong>
+      <strong>REALISM</strong>
       <br/>
-      The CIMUN philosophy is rooted in realism. We encourage delegates to
+      The CIMUN philosophy is rooted in <em>realism</em>. We encourage delegates to
       demonstrate comprehensive knowledge of both their positions and the
       international system as a whole. As a result, delegations are given the
       opportunity to negotiate in order to best promote their national interest,
@@ -53,10 +53,10 @@ export default function About(): JSX.Element {
       compromising national policy.
       <br/>
       <br/>
-      <strong>Cross-Committee Integration</strong>
+      <strong>CROSS-COMMITTEE INTEGRATION</strong>
       <br/>
       From the start of opening ceremonies, students are immediately introduced
-      to a 24/7, fully integrated simulation. Delegates will be challenged to
+      to a <em>24/7, fully integrated simulation</em>. Delegates will be challenged to
       work across committees and find dynamic ways to confront the complex
       issues facing 21st century states. At CIMUN, all committees feature a
       fully-integrated crisis simulation that will force delegates to think on
@@ -66,10 +66,10 @@ export default function About(): JSX.Element {
       integrated MUN simulations in the world.
       <br/>
       <br/>
-      <strong>Innovation</strong>
+      <strong>INNOVATION</strong>
       <br/>
-      CIMUN's ambitious mission can only be achieved through constant
-      innovation, masterfully designed and implemented by our diverse and
+      CIMUN's ambitious mission can only be achieved through <em>constant
+      innovation</em>, masterfully designed and implemented by our diverse and
       talented team of passionate volunteers. For example, our student-run media
       gives students the chance to experience technology and the ever-changing
       news cycle throughout the conference by publishing their own articles as a
