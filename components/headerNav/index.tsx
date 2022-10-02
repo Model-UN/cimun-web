@@ -227,6 +227,11 @@ const HeaderNav = () => {
               <Anchor>School Registration</Anchor>
             </BurgerListItem>
           </Link>
+          <Link href="/scholarships/kiera-king">
+            <BurgerListItem>
+              <Anchor>Scholarships</Anchor>
+            </BurgerListItem>
+          </Link>
           {/*<Link href="/DelegateGuide.pdf">*/}
           {/*  <BurgerListItem>*/}
           {/*    <Anchor>Delegate Guide</Anchor>*/}

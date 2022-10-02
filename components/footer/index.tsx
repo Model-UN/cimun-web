@@ -50,6 +50,14 @@ const Footer: React.FC = () => (
               Staff Applications
             </a>
           </div>
+          <div >
+            <a
+                href="/scholarships/kiera-king"
+                rel="noopener noreferrer"
+            >
+              Delegate Scholarship Opportunity
+            </a>
+          </div>
         </FooterCol>
         <FooterCol>
           <FootH2>Explore</FootH2>
