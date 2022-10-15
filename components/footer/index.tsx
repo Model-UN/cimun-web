@@ -1,10 +1,16 @@
-import React from 'react';
-import Image from 'next/image';
-import Link from 'next/link'
+import React from "react";
+import Image from "next/image";
 import {
-  FooterSection, StyledFooter, VercelLink, LogoBox,
-  FooterNav, FooterCol, FooterColFirst, Icon, FootH2,
-} from './Footer.styles';
+  FooterSection,
+  StyledFooter,
+  VercelLink,
+  LogoBox,
+  FooterNav,
+  FooterCol,
+  FooterColFirst,
+  Icon,
+  FootH2,
+} from "./Footer.styles";
 
 const Footer: React.FC = () => (
   <StyledFooter>
@@ -13,8 +19,8 @@ const Footer: React.FC = () => (
         <FooterColFirst>
           <div>
             <Image
-              src='/cimun_footer.png'
-              layout='responsive'
+              src="/cimun_footer.png"
+              layout="responsive"
               width={105}
               height={30}
             />
@@ -25,54 +31,41 @@ const Footer: React.FC = () => (
         </FooterColFirst>
         <FooterCol>
           <FootH2>CIMUN XIX</FootH2>
-          <div >
-            <a
-                href="/school-registration"
-                rel="noopener noreferrer"
-            >
+          <div>
+            <a href="/school-registration" rel="noopener noreferrer">
               School Registration
             </a>
           </div>
-          <div >
+          <div>
             <a
-                href="DelegateGuide.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
+              href="DelegateGuide.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Delegate Guide
             </a>
           </div>
-          <div >
-            <a
-                href="/staff-apps"
-                rel="noopener noreferrer"
-            >
+          <div>
+            <a href="/staff-apps" rel="noopener noreferrer">
               Staff Applications
             </a>
           </div>
-          <div >
-            <a
-                href="/scholarships/kiera-king"
-                rel="noopener noreferrer"
-            >
+          <div>
+            <a href="/scholarships/kiera-king" rel="noopener noreferrer">
               Delegate Scholarship Opportunity
             </a>
           </div>
         </FooterCol>
         <FooterCol>
           <FootH2>Explore</FootH2>
-          <div >
+          <div>
             <a href="/about">About CIMUN</a>
           </div>
-          <div >
+          <div>
             <a href="https://www.cimunmerch.org">The CIMUN Store</a>
           </div>
-          <div >
-            <a
-              href="https://www.mimun.mx/"
-              target="_blank"
-              rel="noreferrer"
-            >
+          <div>
+            <a href="https://www.mimun.mx/" target="_blank" rel="noreferrer">
               Check out MIMUN
             </a>
           </div>
@@ -84,41 +77,48 @@ const Footer: React.FC = () => (
           {/*    </a>*/}
           {/*  </Link>*/}
           {/*</div>*/}
-          <br/>
+          <br />
         </FooterCol>
         <FooterCol>
           <FootH2>Connect with Us</FootH2>
-          <div >
-            <a href="https://www.facebook.com/CIMUNMUNDO"
-               target="_blank"
-               rel="noreferrer">
-              <Icon icon={['fab', 'facebook-f']} />
+          <div>
+            <a
+              href="https://www.facebook.com/CIMUNMUNDO"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Icon icon={["fab", "facebook-f"]} />
             </a>
-            <a href="https://www.instagram.com/cimun_mundo/"
-               target="_blank"
-               rel="noreferrer">
-              <Icon icon={['fab', 'instagram']} />
+            <a
+              href="https://www.instagram.com/cimun_mundo/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Icon icon={["fab", "instagram"]} />
             </a>
-            <a href="https://twitter.com/CIMUN_MUNDO" target="_blank" rel="noreferrer">
-              <Icon icon={['fab', 'twitter']} />
+            <a
+              href="https://twitter.com/CIMUN_MUNDO"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Icon icon={["fab", "twitter"]} />
             </a>
           </div>
           <br />
-          <div >
+          <div>
             Email: <a href="mailto:sc@cimun.org">sc@cimun.org</a>
           </div>
-          <br/>
+          <br />
         </FooterCol>
-
       </FooterSection>
       <FooterSection>
-        <div/>
+        <div />
         <VercelLink
           href="https://vercel.com?utm_source=model-un&utm_campaign=oss"
           target="_blank"
           rel="noopener"
         >
-          Powered by{'    '}
+          Powered by{"    "}
           <LogoBox>
             <Image
               alt="Vercel Logo"
@@ -128,7 +128,7 @@ const Footer: React.FC = () => (
             />
           </LogoBox>
         </VercelLink>
-        <div/>
+        <div />
       </FooterSection>
     </FooterNav>
   </StyledFooter>

@@ -9,7 +9,7 @@ import React from "react";
 
 export default function InfoColumns(): JSX.Element {
   return (
-    <InfoColumnWrapper margins="0 0 0 0">
+    <InfoColumnWrapper margins="0">
       <CardWrapper margins="0" direction="column">
         <CardContainer
           margins="0 0.5rem 0 0"
