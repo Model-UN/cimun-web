@@ -31,44 +31,26 @@ const Footer: React.FC = () => (
         </FooterColFirst>
         <FooterCol>
           <FootH2>CIMUN XIX</FootH2>
-          <div>
-            <a href="/school-registration" rel="noopener noreferrer">
-              School Registration
-            </a>
-          </div>
-          <div>
-            <a
-              href="DelegateGuide.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Delegate Guide
-            </a>
-          </div>
-          <div>
-            <a href="/staff-apps" rel="noopener noreferrer">
-              Staff Applications
-            </a>
-          </div>
-          <div>
-            <a href="/scholarships/kiera-king" rel="noopener noreferrer">
-              Delegate Scholarship Opportunity
-            </a>
-          </div>
+          <a href="/school-registration" rel="noopener noreferrer">
+            School Registration
+          </a>
+          <a href="DelegateGuide.pdf" target="_blank" rel="noopener noreferrer">
+            Delegate Guide
+          </a>
+          <a href="/staff-apps" rel="noopener noreferrer">
+            Staff Applications
+          </a>
+          <a href="/scholarships/kiera-king" rel="noopener noreferrer">
+            Delegate Scholarship Opportunity
+          </a>
         </FooterCol>
         <FooterCol>
           <FootH2>Explore</FootH2>
-          <div>
-            <a href="/about">About CIMUN</a>
-          </div>
-          <div>
-            <a href="https://www.cimunmerch.org">The CIMUN Store</a>
-          </div>
-          <div>
-            <a href="https://www.mimun.mx/" target="_blank" rel="noreferrer">
-              Check out MIMUN
-            </a>
-          </div>
+          <a href="/about">About CIMUN</a>
+          <a href="https://www.cimunmerch.org">The CIMUN Store</a>
+          <a href="https://www.mimun.mx/" target="_blank" rel="noreferrer">
+            Check out MIMUN
+          </a>
           {/* TODO: Add open source credits page */}
           {/*<div >*/}
           {/*  <Link href="/open-source">*/}
