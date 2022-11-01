@@ -10,7 +10,7 @@ export const colors = {
   kindaFadedltGray: "#A4BAB775",
   blueGray: "#2C666E",
   accentOrange: "#D69D36",
-  plum: "#66101F",
+  plum: "#8F2D56",
   indigo: "#134c72",
   carolinaBlue: "#009ed8",
   lemonYellow: "#ffee44",

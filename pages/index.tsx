@@ -3,10 +3,11 @@ import HeaderNav from "../components/headerNav";
 import Jumbotron from "../components/jumbotron";
 import InfoColumns from "../components/infoColumns";
 import Footer from "../components/footer";
-import { Wrapper, ComponentWrapper } from "../styles/containers";
+import { Wrapper } from "../styles/containers";
 import Letter from "../components/articles/letter";
 import Announce from "../components/Announce";
 import React from "react";
+import AwardAnnouncementCard from "../components/elements/KieraKingCard.elements";
 
 export default function Home() {
   return (
@@ -46,9 +47,8 @@ export default function Home() {
         height={85}
       />
       <InfoColumns />
-      <ComponentWrapper margins={"auto"} pad={"0 10rem 0 10rem"}>
-        <Letter />
-      </ComponentWrapper>
+      <AwardAnnouncementCard />
+      <Letter />
       <Footer />
     </Wrapper>
   );
