@@ -45,9 +45,6 @@ const KieraKingApp = () => {
             height={90}
             image="committee-session.jpg"
         />
-        <ComponentWrapper margins={"auto"} pad={"0 16rem 0 16rem"}>
-          <KieraKingAwardDetails />
-        </ComponentWrapper>
         <SteppedForm formId="633a015c2950494488e2b262" submissionType="scholarship form" />
         <Footer />
       </Wrapper>
