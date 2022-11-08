@@ -40,9 +40,6 @@ const Footer: React.FC = () => (
           <a href="/staff-apps" rel="noopener noreferrer">
             Staff Applications
           </a>
-          <a href="/scholarships/kiera-king" rel="noopener noreferrer">
-            Delegate Scholarship Opportunity
-          </a>
         </FooterCol>
         <FooterCol>
           <FootH2>Explore</FootH2>
