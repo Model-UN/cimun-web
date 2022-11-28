@@ -16,7 +16,7 @@ const Committees = () => {
         <title>Committees & Cabinets - CIMUN XVIII</title>
         <meta
           name="description"
-          content="Chicago International Model United Nations"
+          content="An Overview of the Committees & Cabinets at CIMUN XIX - February 2nd-5th, 2023 at the Palmer House Hilton Chicago"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
