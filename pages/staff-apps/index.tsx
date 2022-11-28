@@ -11,10 +11,10 @@ const DirApps = () => {
   return (
     <Wrapper>
       <Head>
-        <title>Chicago International Model UN</title>
+        <title>Staff Applications - Chicago International Model UN</title>
         <meta
           name="description"
-          content="Chicago International Model United Nations"
+          content="Apply to join the CIMUN XIX Staff! - February 2nd-5th, 2023 at the Palmer House Hilton Chicago"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
