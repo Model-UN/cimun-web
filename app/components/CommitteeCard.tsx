@@ -71,7 +71,7 @@ export const CommitteeCard = (props: CommitteeCardProps) => {
   );
 
   return (
-    <MaterialCard>
+    <MaterialCard background={colors.ivory}>
       <SealImage src={`/committees/${props.committee.Img}`} />
       <CardItemWrapper>
         <Header line={0.8} mobSize="1.5rem">
