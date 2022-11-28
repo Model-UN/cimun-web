@@ -34,6 +34,13 @@ const Footer: React.FC = () => (
           <a href="/school-registration" rel="noopener noreferrer">
             School Registration
           </a>
+          <a
+            href="CIMUN XIX Schedule.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Conference Schedule
+          </a>
           <a href="DelegateGuide.pdf" target="_blank" rel="noopener noreferrer">
             Delegate Guide
           </a>

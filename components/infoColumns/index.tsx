@@ -50,6 +50,24 @@ export default function InfoColumns(): JSX.Element {
           >
             Join us as we host in person this year!
           </Body>
+          <Body
+            align="start"
+            self="center"
+            margins="0 0 0.25rem 0"
+            size="1.75rem"
+            styling="regular"
+            weight={900}
+            color={colors.ivory}
+          >
+            <br />
+            <a
+              href="CIMUN XIX Schedule.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Click here to view our Conference Schedule!
+            </a>
+          </Body>
         </CardContainer>
       </CardWrapper>
       <CardWrapper margins="0" direction="column">
