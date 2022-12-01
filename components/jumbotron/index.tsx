@@ -9,7 +9,7 @@ interface JumboTronProps {
   height: number;
   subTitle?: string | JSX.Element;
   image?: string; // background image
-  bottomPad?: string;  // margin below jumbotron (default: 3.9375vw)
+  bottomMargin?: string;  // margin below jumbotron (default: 3.9375vw)
 }
 
 const Jumbotron = (props: JumboTronProps) => {
