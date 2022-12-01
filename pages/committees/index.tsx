@@ -46,6 +46,7 @@ const Committees = () => {
         subTitle="CIMUN XIX"
         height={85}
         image="awards.jpg"
+        bottomMargin="1.9688vw"
       />
       <InformationalWrapper>
         <Body align="left" self="center" weight={500}>
