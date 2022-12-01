@@ -61,7 +61,7 @@ const Committees = () => {
           </em>{" "}
           and <em>Historical</em> committees. This year, CIMUN will feature
           committees and cabinets from the year of <strong>1982</strong>.
-          Additionally, delegates may also participate in our unique
+          Additionally, delegates may also participate in our unique{" "}
           <strong>press delegations</strong>, where participating delegates
           report on breaking news as events unfold at CIMUN.
           <br />
