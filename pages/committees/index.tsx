@@ -50,7 +50,7 @@ const Committees = () => {
       <InformationalWrapper>
         <Body align="left" self="center" weight={500}>
           As you prepare to join us for CIMUN XIX, the CIMUN team is excited to
-          present the committees and cabinets for 2022! Delegates will soon find
+          present the committees and cabinets for 2023! Delegates will soon find
           themselves present in these committees, working with their colleagues
           in committee to help solve global issues and tackle complex real-world
           challenges.
@@ -59,9 +59,9 @@ const Committees = () => {
           As usual, delegates will participate in immersive <em>
             Present-Day
           </em>{" "}
-          and Historical committees. This year, CIMUN will feature committees
-          and cabinets from the year of <strong>1950</strong>. Additionally,
-          delegates may also participate in our unique{" "}
+          and <em>Historical</em> committees. This year, CIMUN will feature
+          committees and cabinets from the year of <strong>1982</strong>.
+          Additionally, delegates may also participate in our unique
           <strong>press delegations</strong>, where participating delegates
           report on breaking news as events unfold at CIMUN.
           <br />
