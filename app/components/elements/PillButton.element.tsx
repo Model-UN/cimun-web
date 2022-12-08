@@ -32,7 +32,7 @@ export const PillButton = styled.button<PillProps>`
   border-color: transparent;
   border-style: solid;
 
-  padding: 0.25rem 15px 0.25rem;
+  padding: 0.25rem 15px 0.25rem 15px;
   margin: 0.25rem;
 
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);

@@ -58,13 +58,11 @@ export const CommitteeCard = (props: CommitteeCardProps) => {
       margins="0 0 0 0"
     >
       <br />
-      <strong>
-        <Link href={`bg/${props.committee.Guide}`}>
-          <a target="_blank" rel="noopener noreferrer">
-            Background Guide
-          </a>
-        </Link>
-      </strong>
+      <Link href={`bg/${props.committee.Guide}`}>
+        <a target="_blank" rel="noopener noreferrer">
+          <strong>Background Guide</strong>
+        </a>
+      </Link>
     </Body>
   ) : (
     <></>
