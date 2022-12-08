@@ -43,7 +43,7 @@ export const CommitteeCard = (props: CommitteeCardProps) => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          About the {props.committee.Name}
+          More about the {props.committee.Name}
         </a>
       </strong>
     </Body>
@@ -70,30 +70,61 @@ export const CommitteeCard = (props: CommitteeCardProps) => {
     <></>
   );
 
+  const image = props.committee.Img ? (
+    <SealImage src={`/committees/${props.committee.Img}`} />
+  ) : (
+    <SealImage />
+  );
+
+  const topicHeader =
+    props.committee.Topics.length > 0 ? (
+      <SubTitle
+        size="1.4rem"
+        weight={700}
+        line={0.5}
+        margins="0 0 0 0"
+        mobSize="1.2rem"
+      >
+        Anticipated Topics:
+      </SubTitle>
+    ) : (
+      <SubTitle
+        size="1.4rem"
+        weight={700}
+        line={0.5}
+        margins="0 0 0 0"
+        mobSize="1.2rem"
+      >
+        No official agenda*
+      </SubTitle>
+    );
+
+  const committeeDescription = props.committee.Description ? (
+    <Body size="1.1rem" line={1.5}>
+      <div
+        dangerouslySetInnerHTML={{ __html: props.committee.Description }}
+      ></div>
+    </Body>
+  ) : (
+    <></>
+  );
+
   return (
     <MaterialCard background={colors.ivory}>
-      <SealImage src={`/committees/${props.committee.Img}`} />
+      {image}
       <CardItemWrapper>
         <Header line={0.8} mobSize="1.5rem">
           {props.committee.Name}{" "}
           {props.committee.Abbr ? "(" + props.committee.Abbr + ")" : ""}
           <hr />
         </Header>
-        <SubTitle
-          size="1.4rem"
-          weight={700}
-          line={0.5}
-          margins="0 0 0 0"
-          mobSize="1.2rem"
-        >
-          Anticipated Topics:
-        </SubTitle>
-        <br />
+        {topicHeader}
         <ol>
           <Body size="1.1rem" line={1.5}>
             {topics}
           </Body>
         </ol>
+        {committeeDescription}
         {guide}
         {link}
       </CardItemWrapper>
