@@ -1,6 +1,6 @@
-import React from 'react';
-import {Topic} from ".";
-import {CommitteeCard} from "../components/CommitteeCard";
+import React from "react";
+import { Topic } from ".";
+import { CommitteeCard } from "../components/CommitteeCard";
 
 export class Committee {
   Name: string;
@@ -9,29 +9,30 @@ export class Committee {
   Img: string;
   Size?: number;
   Topics?: Topic[];
-  Guide: string;
+  Guide?: string;
+  Description?: string;
 
   constructor(
-      name: string,
-      abbr: string,
-      site: string,
-      img: string,
-      size?: number,
-      topics?: Topic[],
-      guide?: string,
+    name: string,
+    abbr: string,
+    site: string,
+    img: string,
+    size?: number,
+    topics?: Topic[],
+    guide?: string,
+    description?: string
   ) {
     this.Name = name;
     this.Abbr = abbr;
-    this.Site = site
+    this.Site = site;
     this.Img = img;
     this.Size = size;
     this.Topics = topics;
     this.Guide = guide;
+    this.Description = description;
   }
 
   getJSX() {
-    return (
-        <CommitteeCard committee={this}/>
-    )
+    return <CommitteeCard committee={this} />;
   }
 }

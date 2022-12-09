@@ -41,8 +41,15 @@ const Footer: React.FC = () => (
           >
             Conference Schedule
           </a>
-          <a href="DelegateGuide.pdf" target="_blank" rel="noopener noreferrer">
-            Delegate Guide
+          <a href="/committees" target="_blank" rel="noopener noreferrer">
+            Committees & Cabinets
+          </a>
+          <a
+            href="/DelegateGuide.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Previous Delegate Guide
           </a>
           <a href="/staff-apps" rel="noopener noreferrer">
             Staff Applications

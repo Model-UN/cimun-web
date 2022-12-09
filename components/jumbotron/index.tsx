@@ -9,10 +9,11 @@ interface JumboTronProps {
   height: number;
   subTitle?: string | JSX.Element;
   image?: string; // background image
+  bottomMargin?: string;  // margin below jumbotron (default: 3.9375vw)
 }
 
 const Jumbotron = (props: JumboTronProps) => {
-  const { titleOne, titleTwo, subTitle, height, image } = props;
+  const { titleOne, titleTwo, subTitle, height, image, bottomMargin } = props;
 
   // handle set background image logic
   let bgImage = image;
@@ -23,6 +24,7 @@ const Jumbotron = (props: JumboTronProps) => {
   const heightCalc = height * 0.5625;
   const minDiffCalc = (100 - height) * 0.5625;
   const minHeightCalc = heightCalc - minDiffCalc;
+  const bottomMarginCalc = bottomMargin ? bottomMargin : "3.9375vw"
 
   let sizeTitleOne = "18vw";
   let sizeTitleTwo = "18vw";
@@ -45,7 +47,7 @@ const Jumbotron = (props: JumboTronProps) => {
       minHeight={`${minHeightCalc}vw`}
       maxHeight={`${height}vh`}
       justify="flex-end"
-      margins="0 0 3.9375vw 0"
+      margins={`0 0 ${bottomMarginCalc} 0`}
       style={{
         backgroundImage: `linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)),url(/${bgImage})`,
         backgroundPosition: "bottom",
