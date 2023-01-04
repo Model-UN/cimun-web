@@ -50,7 +50,7 @@ export const CommitteeDetails: CommitteeConfig = {
             "Mitigating the Effects of the Refugee Crisis in the DRC"
           ),
         ],
-        null,
+        "African Union (2023).pdf",
         "Since 2002, the African Union has pushed a vision of “an integrated, prosperous and peaceful Africa, driven by its own citizens and representing a dynamic force in the global arena.” This body has tackled some of the most pressing and long-standing issues facing the continent, including: liberation movements, apartheid, continuing effects of colonialism, and many pressing public health crises. Today, the body faces many more pressing issues and collective and immediate action is required. Climate change is rewriting the status quo for communities and livelihoods worldwide and the African continent is disproportionately affected by the effects of climate change. Conflict areas in the DRC, Ethiopia, South Sudan, Cameroon, and Burkina Faso have created waves of immigrants and internally-displaced persons (IDPs). The most pressing of these areas is the DRC Congo where food insecurity affects about a third of the countries’ population. As part of this body, you are tasked with creating progress and dialogue on these issues. It will not be easy to bring differing voices together and there are often no clear solutions to these issues. However, the current situation is too severe for inaction, and with the right approach, the African Union can yet again show it’s mettle and make the continent a better place."
       ),
     ],
@@ -92,7 +92,7 @@ export const CommitteeDetails: CommitteeConfig = {
         "china.png",
         0,
         [],
-        null,
+        "Cabinet of the PRC (2023).pdf",
         "Two hundred years ago, Emperor Napoleon Bonaparte famously remarked that “China is a sleeping giant. Let her sleep for when she wakes up she will move the world.”<br />" +
           "<br />" +
           "Welcome to the cabinet of the People’s Republic of China. General Secretary Xi Jinping has embraced a precedent-breaking third term as president and is counting on this body to lead this country. It is your duty, as Xi Jinping’s trusted advisors in the Politburo and the national security apparatus, to help navigate the PRC through not only one of the most transformative and impactful periods in history, but also through the multiple crises that are currently developing.<br />" +
@@ -111,7 +111,7 @@ export const CommitteeDetails: CommitteeConfig = {
           new Topic(1, "Surviving the Post-Oil Energy Future"),
           new Topic(2, "Ensuring Continued Domestic Production and Goodwill"),
         ],
-        null,
+        "ExxonMobil (2023).pdf",
         "2023 marks over two centuries since ExxonMobil first formed in 1999. Over the past few decades it has grown to become one of the world’s largest companies by revenue and a true energy powerhouse. Operations have spread out across globally and our 21 oil refineries make us the second largest oil refinery in the world.<br />" +
           "<br />" +
           "The growth worldwide has not come without challenges or criticism. Oil spills like the 1979 Alaska Exxon Valdez incident and the scourge of climate change activism have put ExxonMobil squarely in the eyes of government regulatory bodies. The company has been accused of working with “shadow groups” to lobby against carbon taxes and key portions of President Biden’s climate agenda. One particularly embarrassing incident involved an ExxonMobil employee caught on a recording describing lawmakers as “fish” that he could reel in. In particular, the Democratic party has become much more skeptical of the oil and gas industry, pushing policies and regulatory actions that would shift America away from oil and renewables. In 2022, Exxon Mobil created a low-carbon alternative energy division that could help increase public image in the Hill but it will take time for this division to grow and make up a part of our energy portfolio.<br />" +
@@ -125,7 +125,7 @@ export const CommitteeDetails: CommitteeConfig = {
         "cimun-logo.png",
         0,
         [],
-        null,
+        "The Janes (2023).pdf",
         "In 1965, Heather Booth created a grassroots movement that directed pregnant women who wanted abortions to a network of underground doctors and activists who were willing to help. They were called the Janes after a “Jane” pseudonym that would identify any member of the group to outsiders. Over the course of the group’s lifetime the activists helped an estimated 11,000 women receive abortions. Eventually, the activists were arrested and the passage of Roe vs Wade eliminated the need for the Janes to continue their underground services. Now in 2023, Roe vs Wade has been repealed by the Supreme Court leaving the fate of reproductive rights to a patchwork of varying state laws and attitudes. Some states have implemented strong legislative rights for codifying and protecting rights to abortion while other states have gone in the other direction and implemented new restrictions and deadlines for legal abortions, or in some cases outlawing them all together. By late August 2022, one in three American women had lost access to legal abortion. Tamar Manasseh, a Chicago South Side activist, relaunched the grassroots group under the name We are Jane. As part of this new grassroots movement, you will face challenges with legal repercussions, public sentiment, logistics, and morality in this new unprecedented age."
       ),
       new Committee(
@@ -163,7 +163,7 @@ export const CommitteeDetails: CommitteeConfig = {
           new Topic(2, "The Situation in Afghanistan"),
           new Topic(3, "Ensuring the Peaceful Use of Outer Space"),
         ],
-        null,
+        "UNSC (1982).pdf",
         "The United Nations Security Council is considered to be the most powerful body in the United Nations, with binding power others do not possess. Yet, it often faces questions of its efficacy due to the nature of certain countries possessing veto power over its decisions. National representatives in the Security Council must determine how to resolve the world’s most pressing international crises in the face of Cold War divides threatening to stall all progress they make."
       ),
       new Committee(
@@ -179,7 +179,7 @@ export const CommitteeDetails: CommitteeConfig = {
             "Codifying & Protecting the International Rights of the Child"
           ),
         ],
-        null,
+        "UNGA (1982).pdf",
         "As the international community’s largest, broadest legislative body, the United Nations General Assembly must consider questions of international importance and how they apply to all countries, rather than just those which appear to be the most powerful. In this regard, the UNGA will serve as a platform for all national representatives to make their voices heard and determine how the international community moves forward in the midst of crisis – both those ongoing and soon-to-appear."
       ),
       new Committee(
@@ -225,13 +225,13 @@ export const CommitteeDetails: CommitteeConfig = {
         "Riding high off an overwhelming victory in 1981, President Ronald Reagan’s Cabinet is now beset with the task of actually governing. With Reagan’s government looking to pass an ambitious domestic agenda while balancing a variety of commitments abroad, the U.S. Cabinet may be looking to achieve their ultimate goal – can the United States win the Cold War for good?"
       ),
       new Committee(
-        "Cabinet of the United Kingtom",
+        "Cabinet of the United Kingdom",
         "UK",
         "http://www.cabinetoffice.gov.uk/",
         "uk.png",
         0,
         [],
-        null,
+        "Cabinet of the UK (1982).pdf",
         "With the United Kingdom on the brink of economic crisis and several international conflicts in full force across the world, Prime Minister Margaret Thatcher’s Cabinet must determine how best to navigate the complex tides of domestic governance and international relations. The Cabinet of the United Kingdom must secure its own safety while maintaining its relationships with allies — and perhaps restoring the British reputation across the globe."
       ),
       new Committee(
@@ -241,7 +241,7 @@ export const CommitteeDetails: CommitteeConfig = {
         "soviet-union-hst.png",
         0,
         [],
-        null,
+        "Cabinet of the Soviet Union (1982).pdf",
         "The Soviet Union invaded Afghanistan in 1979 and, consequently, found itself in the midst of a difficult war that is growing more challenging each day. President Leonid Brezhnev and his closest advisors must determine how best to secure the USSR’s dominance throughout the world while battling the influence of an ever-powerful West."
       ),
       new Committee(
@@ -251,7 +251,7 @@ export const CommitteeDetails: CommitteeConfig = {
         "iran.png",
         0,
         [],
-        null,
+        "Cabinet of Iran (1982).pdf",
         "After the 1979 Iranian Revolution, Iran’s theocratic government — controlled by the Ayatollah Ruhollah Khomeini — is shaking off years of Western influence while establishing itself as a regional power. Having fought back Iraq’s invasion to its border and sitting in a position of power, Iran must determine how best to end the Iran-Iraq War: in stalemate or total victory?"
       ),
       new Committee(
@@ -261,7 +261,7 @@ export const CommitteeDetails: CommitteeConfig = {
         "iraq.png",
         0,
         [],
-        null,
+        "Cabinet of Iraq (1982).pdf",
         "President Saddam Hussein’s Iraqi government, seeing opportunity in the Iranian government’s transition, chose to invade its neighbor in 1979. Initially poised for victory, the Iranian army has fought back Iraq’s invasion to its border. On the losing side of the Iran-Iraq War, Saddam and his government must determine how to snatch victory from the jaws of defeat — or else become weakening in the Middle East for years to come."
       ),
     ],

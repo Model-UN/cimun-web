@@ -1,4 +1,4 @@
-import React, { MouseEventHandler, SyntheticEvent, useState } from "react";
+import React, { useState } from "react";
 import { CommitteeDetails } from "../shared/constants";
 import { colors } from "../../styles/colors";
 import { SubTitle, Header, Body } from "../../styles/typography";
