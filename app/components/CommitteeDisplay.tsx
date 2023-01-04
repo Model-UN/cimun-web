@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { CommitteeDetails } from "../shared/constants";
 import { colors } from "../../styles/colors";
 import { SubTitle, Header, Body } from "../../styles/typography";
-import { PillButton, PillButtonRow, PillProps } from "./elements";
+import { PillButton, PillButtonRow } from "./elements";
 import { CommitteeAbbrToCopy } from "../shared/constants";
 
 const CommitteeDisplay = () => {
