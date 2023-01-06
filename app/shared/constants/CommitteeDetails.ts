@@ -16,7 +16,7 @@ export const CommitteeDetails: CommitteeConfig = {
             "Addressing the Complex Geopolitical Fallout Resulting from the Situation in Ukraine"
           ),
         ],
-        null,
+        "UNSC (2023).pdf",
         "The Security Council (UNSC) was formed in 1945 with the founding of the United Nations and since has acted as one of the most powerful organs of the UN. According to the UN charter. It is the responsibility of the Security Council “to maintain international peace and security in accordance with the principles and purposes of the United Nations.” In today’s climate, some of the major issues faced by the Security Council include food insecurity, especially worsened due to recent events and bringing greater attention to the vulnerabilities that ladened the world system, and the violence surrounding the conflict in Ukraine. While the Security Council is focused on solving these issues, competing interests and viewpoints may make it difficult to reach a consensus. Delegates in this body should approach the other members with the spirit of collaboration and dedication that these international crisis’ merit."
       ),
       new Committee(
@@ -30,7 +30,7 @@ export const CommitteeDetails: CommitteeConfig = {
           new Topic(2, "Improving Climate Resiliency"),
           new Topic(3, "Protecting Bio-Diversity in the Ocean Ecosystem"),
         ],
-        null,
+        "UNEA (2023).pdf",
         "The UN’s Environment Programme was started in 1972 and its central body assembly (the UNEA) started in 2012. For decades, UNEA delegates have been a key voice regarding the human harm that results from environmental degradation and the importance of multilateral efforts to combat the grave issues facing our planet. This 2023 Environmental Assembly must consider the ongoing climate crisis affecting countries worldwide, along with recent energy and food shortages impacted by the conflict in Ukraine. These shortages have reverberated through the supply chain, making plans for sustainable development even less certain and putting a brighter spotlight on the push towards advancing greener energy sources. Smaller nations with less resources have called out for more equity in climate funding and pushed for collective action to mitigate the worst effects of climate change and the subsequent natural disasters that come with that change. In  particular, this committee must confront the key issue areas relating to the way countries are endeavoring to transform their energy sector, strengthening climate resilience in the face of natural and man-made crises, and protecting biodiversity in the ocean."
       ),
       new Committee(
@@ -62,7 +62,7 @@ export const CommitteeDetails: CommitteeConfig = {
         "usa.png",
         0,
         [],
-        null,
+        "US Cabinet (2023).pdf",
         "Fresh off a midterm victory, the Biden administration is looking abroad and seeing multiple areas of crisis that demand the urgent attention of this cabinet. First and foremost is the situation in Ukraine, the need to uphold NATO principles and be a counterweight to Russian aggression in Eastern Europe. The US is one of the biggest, if not the biggest, voice upholding NATO solidarity and unity in the face of a Russia that is probing and seeking to recreate its old USSR glory. The NATO alliance has held true for 70 years,even in light of recent isolationist trends domestically. Last year, Russia invaded its neighbor Ukraine, and though many expected Kiev to fall quickly, Ukrainian forces have managed to hold their own and defend their country. Even though Ukraine is not a part of NATO, for both the U.S. and its NATO allies, the country’s recent invasion from Russia can be considered another test of its commitment to NATO and undoubtedly will continue to be hugely significant for American foreign policy. In August 2022, the White House announced an additional $2.98 billion in aid and military aid to top off the over $13 billion sent to Ukraine, but some still argue it is far from enough. <br />" +
           "<br />" +
           "Outside of Ukraine, the Biden administration has sought to lead an international coalition against the PRC’s growing imperialism. PRC, as a rising hegemony keen on promoting authoritarianism, poses potentially the biggest threat to a US-led world order. The PRC has focused on economic diplomacy via its BRI/OBOR initiative to win over key allies in Africa and South America, while building its military capacity to defend Chinese interests in the South China Sea. Particularly troubling is the recent hawkish language by PRC officials with regards to Taiwan, or ROC. While the PRC has always maintained that it intends to reunite the island of Taiwan with the PRC, that language has sharply increased in both tone and urgency over the past year. Military analysts warn that President Xi Jinping could use a potential ROC hostility to distract from protests in Beijing and throughout the country. <br />" +
@@ -76,7 +76,7 @@ export const CommitteeDetails: CommitteeConfig = {
         "russia.png",
         0,
         [],
-        null,
+        "Cabinet of the Russian Federation (2023).pdf",
         "Welcome to the esteemed cabinet of the Russian Federation, led by our beloved President Vladimir Putin. The main crisis facing this cabinet is the special operation in Ukraine. Recently, Russia has led the to demilitarize Ukraine and prevent their hostilities against innocent Russian civilians. Ukraine has responded by funneling western weapons against our people and banning Russian language and culture from their captive population. Moving forward, the Kremlin must continue to prioritize protecting Russian culture and interests as well as embracing national unity in times of uncertainty and strife.<br />" +
           "<br />" +
           "The execution of the special operation in Ukraine has not been flawless. There have been casualties and great costs to Russian forces. Potentially the biggest long term consequence is a push by Europe to cut off Russian oil and gas from not just their markets but from the international markets. Our most valuable oil and gas industry has adapted by finding new strategic allies outside the west, including the PRC and India. Moving forward, we will need to keep cultivating these new allies, pushing western governments to rethink their illegal economic sanctions against us, and innovating new ways to evade and work under crippling European and American sanctions. In doing so, we can avoid being at the beck and call of countries like the US and Germany.<br />" +
@@ -145,7 +145,7 @@ export const CommitteeDetails: CommitteeConfig = {
             "Charting the Future of Al-Jazeera's International Efforts"
           ),
         ],
-        null,
+        "Al Jazeera (2023).pdf",
         "Al Jazeera Media Network is an independent news organization funded in part by the Qatari government. It has expanded over the years to include 70 bureaus across the world in several languages and tackling every aspect of international news. It has been commended for its comprehensive video coverage of conflicts across the Middle East and has received a slew of international awards including the Webby award, responsible media of the year award, and scoop of the year Walkley award. The network has not been without criticism, with many saying that even though the network is nominally independent, it still takes a pro-Qatar bias in its reporting. Regardless, Al Jazeera has become the prominent network for many Arab news readers and readers worldwide, and has successfully fought the “west to the rest” format. “West to the rest” format describes the situation where previously many Arab citizens only’ access to media was from the BBC or other European and American media outlets. As part of this board, you will play a pivotal role in continuing to expand the reach and legitimacy of Al Jazeera, spreading trustworthy news across multiple mediums and platforms."
       ),
     ],
@@ -196,7 +196,7 @@ export const CommitteeDetails: CommitteeConfig = {
             "Strengthening Good Neighborliness between States in the Region"
           ),
         ],
-        null,
+        "Arab League (1982).pdf",
         "In 1982, the Arab region serves as a hotbed for several of the world’s most important international crises, including the Iran-Iraq War and the Soviet Union’s invasion of Afghanistan. Representatives of these countries must determine how and if it is possible to navigate these touchstones with regional solidarity knowing the eyes of the world are planted firmly on their actions."
       ),
       new Committee(
@@ -209,7 +209,7 @@ export const CommitteeDetails: CommitteeConfig = {
           new Topic(1, "Addressing the Domestic Economic Crisis"),
           new Topic(2, "Securing the Homeland Against External Threats"),
         ],
-        null,
+        "British House of Commons (1982).pdf",
         "The British House of Commons is one of the world’s liveliest legislative bodies, steeped in years of tradition (and just as much heckling). As the United Kingdom faces several crises, both internally and externally, BHOC’s Members of Parliament must represent their constituents and their parties in either working to advance Prime Minister Margaret Thatcher’s agenda – or stop it at any cost."
       ),
     ],
@@ -221,7 +221,7 @@ export const CommitteeDetails: CommitteeConfig = {
         "usa.png",
         0,
         [],
-        null,
+        "Cabinet of the United States (1982).pdf",
         "Riding high off an overwhelming victory in 1981, President Ronald Reagan’s Cabinet is now beset with the task of actually governing. With Reagan’s government looking to pass an ambitious domestic agenda while balancing a variety of commitments abroad, the U.S. Cabinet may be looking to achieve their ultimate goal – can the United States win the Cold War for good?"
       ),
       new Committee(
