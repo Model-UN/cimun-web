@@ -8,7 +8,7 @@ import Announce from "../../components/Announce";
 import { InformationalWrapper } from "../../app/components/elements";
 import ResourceHubDisplay from "../../app/components/ResourceHubDisplay";
 
-const Committees = () => {
+const DelegateResourcePage = () => {
   return (
     <Wrapper>
       <Head>
@@ -77,4 +77,4 @@ const Committees = () => {
   );
 };
 
-export default Committees;
+export default DelegateResourcePage;
