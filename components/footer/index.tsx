@@ -105,6 +105,8 @@ const Footer: React.FC = () => (
           <br />
         </FooterCol>
       </FooterSection>
+      <br />
+      <br />
       <FooterSection>
         <div />
         <VercelLink

@@ -60,8 +60,10 @@ const CommitteeDisplay = () => {
         <br />
         <br />
         For more information on Position Papers, check out our{" "}
-        <Link href="CIMUN XIX - Delegate Guide.pdf">Delegate Guide</Link> (pg.
-        14)!
+        <strong>
+          <Link href="CIMUN XIX - Delegate Guide.pdf">Delegate Guide</Link>
+        </strong>{" "}
+        (pg. 14)!
         <br />
         <br />
         <strong>

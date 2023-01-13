@@ -183,11 +183,11 @@ const HeaderNav = () => {
             <Anchor>About</Anchor>
           </ListItem>
         </Link>
-        <Link href="/committees">
-          <ListItem>
-            <Anchor>2023 Committees & Cabinets</Anchor>
-          </ListItem>
-        </Link>
+        {/*<Link href="/committees">*/}
+        {/*  <ListItem>*/}
+        {/*    <Anchor>2023 Committees & Cabinets</Anchor>*/}
+        {/*  </ListItem>*/}
+        {/*</Link>*/}
         <Link href="/resources">
           <ListItem>
             <Anchor>Delegate Resources</Anchor>
@@ -225,12 +225,12 @@ const HeaderNav = () => {
               <Anchor>About</Anchor>
             </BurgerListItem>
           </Link>
-          <BurgerSeparator />
-          <Link href="/committees">
-            <BurgerListItem>
-              <Anchor>2023 Committees & Cabinets</Anchor>
-            </BurgerListItem>
-          </Link>
+          {/*<BurgerSeparator />*/}
+          {/*<Link href="/committees">*/}
+          {/*  <BurgerListItem>*/}
+          {/*    <Anchor>2023 Committees & Cabinets</Anchor>*/}
+          {/*  </BurgerListItem>*/}
+          {/*</Link>*/}
           <BurgerSeparator />
           <Link href="/committees">
             <BurgerListItem>
