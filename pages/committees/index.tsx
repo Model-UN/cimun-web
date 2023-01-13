@@ -13,7 +13,7 @@ const Committees = () => {
   return (
     <Wrapper>
       <Head>
-        <title>Committees & Cabinets - CIMUN XVIII</title>
+        <title>Committees & Cabinets - CIMUN XIX</title>
         <meta
           name="description"
           content="An Overview of the Committees & Cabinets at CIMUN XIX - February 2nd-5th, 2023 at the Palmer House Hilton Chicago"
