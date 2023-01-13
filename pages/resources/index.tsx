@@ -46,7 +46,7 @@ const DelegateResourcePage = () => {
         line={1.2}
         margins="8rem 0 0 0"
       >
-        Delegate Resource Hub
+        Resources for Delegates
       </SubTitle>
       <Header self="center" margins="0 0 -3rem 0">
         CIMUN XIX - February 2nd - 5th, 2023
