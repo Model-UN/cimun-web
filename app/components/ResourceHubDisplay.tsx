@@ -74,7 +74,7 @@ const CommitteeDisplay = () => {
       </Body>
       <PillButtonRow>
         <Link href="https://forms.gle/FwfBNTbxQdootZ7o7">
-          <PillButton selectedColor={colors.plum}>
+          <PillButton selectedColor={colors.carolinaBlue}>
             <br />
             Submit Your Position Papers!
             <br />
