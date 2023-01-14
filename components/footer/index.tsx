@@ -45,11 +45,11 @@ const Footer: React.FC = () => (
             Committees & Cabinets
           </a>
           <a
-            href="/DelegateGuide.pdf"
+            href="CIMUN XIX - Delegate Guide.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Previous Delegate Guide
+            Delegate Guide
           </a>
           <a href="/staff-apps" rel="noopener noreferrer">
             Staff Applications
@@ -58,6 +58,7 @@ const Footer: React.FC = () => (
         <FooterCol>
           <FootH2>Explore</FootH2>
           <a href="/about">About CIMUN</a>
+          <a href="/resources">Delegate Resource Hub</a>
           <a href="https://www.cimunmerch.org">The CIMUN Store</a>
           <a href="https://www.mimun.mx/" target="_blank" rel="noreferrer">
             Check out MIMUN
@@ -104,6 +105,8 @@ const Footer: React.FC = () => (
           <br />
         </FooterCol>
       </FooterSection>
+      <br />
+      <br />
       <FooterSection>
         <div />
         <VercelLink

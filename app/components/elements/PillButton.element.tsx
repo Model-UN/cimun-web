@@ -2,8 +2,8 @@ import styled from "styled-components";
 import { colors } from "../../../styles/colors";
 
 export type PillProps = {
-  id: string;
-  currentSelection: string;
+  id?: string;
+  currentSelection?: string;
   selectedColor?: string;
   defaultColor?: string;
 };
