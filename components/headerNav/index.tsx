@@ -232,7 +232,7 @@ const HeaderNav = () => {
           {/*  </BurgerListItem>*/}
           {/*</Link>*/}
           <BurgerSeparator />
-          <Link href="/committees">
+          <Link href="/resources">
             <BurgerListItem>
               <Anchor>Delegate Resources</Anchor>
             </BurgerListItem>
