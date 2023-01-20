@@ -53,9 +53,8 @@ const CommitteeDisplay = () => {
         <br />
         As with any CIMUN conference, all delegates representing countries in
         general committees (General Assemblies, Regional Bodies, etc.) are
-        required to submit both a white and a black paper for each topic. Double
-        delegation positions are only required to submit one set of papers for
-        each topic. All delegates in cabinet committees are required to only
+        required to submit both a white and a black paper for each topic. 
+        All delegates in cabinet committees are required to only
         submit a black paper for each topic.
         <br />
         <br />
