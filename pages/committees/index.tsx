@@ -67,12 +67,6 @@ const Committees = () => {
           report on breaking news as events unfold at CIMUN.
           <br />
           <br />
-          <em>
-            Background Guides will be posted on a rolling basis over the next
-            few days as they undergo our rigorous editing process.
-          </em>
-          <br />
-          <br />
         </Body>
         <CommitteeDisplay />
       </InformationalWrapper>
