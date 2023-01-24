@@ -11,8 +11,23 @@ const CommitteeDisplay = () => {
         Documents & Information
       </SubTitle>
       <PillButtonRow>
+        <Link href="CIMUN XIX Schedule.pdf">
+          <PillButton selectedColor={colors.carolinaBlue}>
+            <br />
+            Conference Schedule
+            <br />
+            <br />
+          </PillButton>
+        </Link>
+      </PillButtonRow>
+      <PillButtonRow>
         <Link href="CIMUN XIX - Delegate Guide.pdf">
-          <PillButton selectedColor={colors.indigo}>Delegate Guide</PillButton>
+          <PillButton selectedColor={colors.indigo}>
+            <br />
+            Delegate Guide
+            <br />
+            <br />
+          </PillButton>
         </Link>
         <Link href="CIMUN XIX - IPD Delegate Guide.pdf">
           <PillButton selectedColor={colors.indigo}>
@@ -53,9 +68,9 @@ const CommitteeDisplay = () => {
         <br />
         As with any CIMUN conference, all delegates representing countries in
         general committees (General Assemblies, Regional Bodies, etc.) are
-        required to submit both a white and a black paper for each topic. 
-        All delegates in cabinet committees are required to only
-        submit a black paper for each topic.
+        required to submit both a white and a black paper for each topic. All
+        delegates in cabinet committees are required to only submit a black
+        paper for each topic.
         <br />
         <br />
         For more information on Position Papers, check out our{" "}

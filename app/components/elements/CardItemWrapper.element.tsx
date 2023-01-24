@@ -7,5 +7,4 @@ export const CardItemWrapper = styled.div`
   display: flex;
   flex: 1;
   flex-direction: column;
-`
-
+`;

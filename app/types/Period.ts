@@ -1,6 +1,6 @@
-import {Committee} from ".";
+import { Committee } from ".";
 
 export class Period {
   COMMS: Committee[];
   CABS: Committee[];
-};
+}

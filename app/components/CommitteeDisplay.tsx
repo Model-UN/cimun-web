@@ -4,6 +4,7 @@ import { colors } from "../../styles/colors";
 import { SubTitle, Header, Body } from "../../styles/typography";
 import { PillButton, PillButtonRow } from "./elements";
 import { CommitteeAbbrToCopy } from "../shared/constants";
+import { Committee } from "../types";
 
 const CommitteeDisplay = () => {
   const [timePeriod, setTimePeriod] = useState<string>("PD");
@@ -23,6 +24,19 @@ const CommitteeDisplay = () => {
     setCommitteeType(e.currentTarget.id);
     return null;
   };
+
+  const ipdCard = new Committee(
+    "International Press Delegation",
+    "IPD",
+    null,
+    "cimun-logo.png",
+    0,
+    [],
+    "../CIMUN XIX - IPD Delegate Guide.pdf",
+    "The International Press Delegation (IPD) produces The CIMUN Chronicle, a digital newspaper, " +
+      "and partners with the CIMUN News Network (CNN), a staff-run broadcast news program.<br/><br/>" +
+      "All press coverage during CIMUN is provided by Delegates from the International Press Delegation."
+  ).getJSX();
 
   const asterisk =
     committeeType === "CABS" ? (
@@ -97,6 +111,7 @@ const CommitteeDisplay = () => {
       </Header>
       {asterisk}
       {committees}
+      {ipdCard}
     </>
   );
 };

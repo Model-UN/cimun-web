@@ -1,4 +1,4 @@
-import {Period} from ".";
+import { Period } from ".";
 
 export class CommitteeConfig {
   HST: Period;
