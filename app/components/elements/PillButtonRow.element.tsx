@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {colors} from "../../../styles/colors";
+import { colors } from "../../../styles/colors";
 
 export const PillButtonRow = styled.div`
   display: -webkit-box;
@@ -17,6 +17,4 @@ export const PillButtonRow = styled.div`
   margin-bottom: 1rem;
   margin-left: 1rem;
   margin-right: 1rem;
-`
-
-
+`;

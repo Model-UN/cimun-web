@@ -1,2 +1,2 @@
-export {CommitteeDetails} from './CommitteeDetails'
-export {CommitteeAbbrToCopy} from './CommitteeAbbrToCopy'
+export { CommitteeDetails } from "./CommitteeDetails";
+export { CommitteeAbbrToCopy } from "./CommitteeAbbrToCopy";

@@ -29,6 +29,17 @@ export const CommitteeCard = (props: CommitteeCardProps) => {
     );
   });
 
+  const topicList =
+    props.committee.Topics.length > 0 ? (
+      <ol>
+        <Body size="1.1rem" line={1.5}>
+          {topics}
+        </Body>
+      </ol>
+    ) : (
+      <></>
+    );
+
   const link = props.committee.Site ? (
     <Body
       align="center"
@@ -50,23 +61,38 @@ export const CommitteeCard = (props: CommitteeCardProps) => {
   ) : (
     <></>
   );
-  const guide = props.committee.Guide ? (
-    <Body
-      align="center"
-      size="1rem"
-      color={colors.primaryBlue}
-      margins="0 0 0 0"
-    >
-      <br />
-      <Link href={`bg/${props.committee.Guide}`}>
-        <a target="_blank" rel="noopener noreferrer">
-          <strong>Background Guide</strong>
-        </a>
-      </Link>
-    </Body>
-  ) : (
-    <></>
-  );
+  const guide =
+    props.committee.Guide && props.committee.Abbr === "IPD" ? (
+      <Body
+        align="center"
+        size="1rem"
+        color={colors.primaryBlue}
+        margins="0 0 0 0"
+      >
+        <br />
+        <Link href={`bg/${props.committee.Guide}`}>
+          <a target="_blank" rel="noopener noreferrer">
+            <strong>IPD Delegate Guide</strong>
+          </a>
+        </Link>
+      </Body>
+    ) : props.committee.Guide ? (
+      <Body
+        align="center"
+        size="1rem"
+        color={colors.primaryBlue}
+        margins="0 0 0 0"
+      >
+        <br />
+        <Link href={`bg/${props.committee.Guide}`}>
+          <a target="_blank" rel="noopener noreferrer">
+            <strong>Background Guide</strong>
+          </a>
+        </Link>
+      </Body>
+    ) : (
+      <></>
+    );
 
   const image = props.committee.Img ? (
     <SealImage src={`/committees/${props.committee.Img}`} />
@@ -85,6 +111,8 @@ export const CommitteeCard = (props: CommitteeCardProps) => {
       >
         Anticipated Topics:
       </SubTitle>
+    ) : props.committee.Abbr === "IPD" ? (
+      <></>
     ) : (
       <SubTitle
         size="1.4rem"
@@ -117,11 +145,7 @@ export const CommitteeCard = (props: CommitteeCardProps) => {
           <hr />
         </Header>
         {topicHeader}
-        <ol>
-          <Body size="1.1rem" line={1.5}>
-            {topics}
-          </Body>
-        </ol>
+        {topicList}
         {committeeDescription}
         {guide}
         {link}
