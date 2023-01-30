@@ -66,11 +66,18 @@ const CommitteeDisplay = () => {
         access our submission form.
         <br />
         <br />
-        As with any CIMUN conference, all delegates representing countries in
-        general committees (General Assemblies, Regional Bodies, etc.) are
-        required to submit both a white and a black paper for each topic. All
-        delegates in cabinet committees are required to only submit a black
-        paper for each topic.
+        A <em>White paper</em> acts as an open statement of a government's policy 
+        (similar to a press release) and should be about 1 page in length for 
+        each topic, whereas a <em>Black paper</em> is a confidential, internal document 
+        for delegates to state their strategic interests for a particular topic
+        and should be a half page in length for each topic.
+        <br />
+        <br />
+        Committees should write both a White paper and a Black paper. <strong>If a Committee
+        lists more than two topics, delegates only need to choose two to write about</strong>.
+        Cabinets only need to write a Black paper; if a Cabinet doesn't list specific
+        topics, they should plan to write one paper about what they think is most 
+        important from their background guide.
         <br />
         <br />
         For more information on Position Papers, check out our{" "}
