@@ -1,10 +1,61 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { SubTitle, Body } from "../../styles/typography";
 import { PillButton, PillButtonRow } from "./elements";
 import Link from "next/link";
 import { colors } from "../../styles/colors";
+import PdfViewer from "../../components/pdfViewer";
+import styled from "styled-components";
+import {
+  getCommitteesDelegations,
+  getPositionPaper,
+} from "../../services/axiosHandler";
+import { fonts } from "../../styles/fonts";
+import md5 from "md5";
+
+const SelectSeggsyInput = styled.select`
+  width: 100%;
+  height: 56px;
+  position: relative;
+  padding: 4px 16px;
+  margin: 8px 0px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: 2px solid ${colors.kindaFadedltGray};
+  border-radius: 4px;
+  font-family: ${fonts.body}, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+  background-color: ${colors.ivory};
+  color: #282828;
+  outline-color: ${colors.primaryBlue};
+  transition: 0.3s background-color ease-in-out, 0.3s border-color ease-in-out;
+
+  &:hover {
+    border-color: ${colors.ltGray};
+  }
+`;
 
 const CommitteeDisplay = () => {
+  const [delegations, setDelegations] = useState<string[]>([]);
+  const [selectedCommittee, setSelectedCommittee] = useState<string>("");
+  const [selectedDelegations, setSelectedDelegations] = useState<string>("");
+  const [pdfUrl, setPdfUrl] = useState<string>("");
+  const hashId = md5(`${selectedCommittee}${selectedDelegations}`);
+  console.log(hashId);
+
+  console.log("selectedCommittee: ", selectedCommittee);
+
+  useEffect(async () => {
+    const delegationList = await getCommitteesDelegations();
+    setDelegations(delegationList);
+  }, []);
+  useEffect(async () => {
+    const pdfUrl = await getPositionPaper(hashId);
+    setPdfUrl(pdfUrl?.white_paper_s3_url ?? "");
+  }, [selectedCommittee, selectedDelegations]);
+
   return (
     <>
       <SubTitle size="3rem" self="center" align="center" line={1.5} margins="0">
@@ -59,11 +110,11 @@ const CommitteeDisplay = () => {
       </PillButtonRow>
       <SubTitle size="3rem" self="center" align="center" line={1.5} margins="0">
         <hr />
-        Position Paper Submission
+        Position Papers
       </SubTitle>
       <Body align="left" self="center" weight={500}>
-        Ready to submit your position papers? Click on the button below to
-        access our submission form.
+        Ready to view your position papers? Select your committee and delegation
+        to view the correct position paper.
         <br />
         <br />
         As with any CIMUN conference, all delegates representing countries in
@@ -80,22 +131,41 @@ const CommitteeDisplay = () => {
         (pg. 14)!
         <br />
         <br />
-        <strong>
-          Position Papers are due by February 1st at 11:59 PM CST.
-        </strong>
         <br />
         <br />
+        Choose a Committee and then select a delegation to view the correct
+        position paper.
       </Body>
-      <PillButtonRow>
-        <Link href="https://forms.gle/FwfBNTbxQdootZ7o7">
-          <PillButton selectedColor={colors.carolinaBlue}>
-            <br />
-            Submit Your Position Papers!
-            <br />
-            <br />
-          </PillButton>
-        </Link>
-      </PillButtonRow>
+      <SelectSeggsyInput onChange={(e) => setSelectedCommittee(e.target.value)}>
+        <option hidden disabled selected>
+          {" "}
+          -- select a committee --{" "}
+        </option>
+        {Object.keys(delegations).map((item) => (
+          <option key={item} value={item}>
+            {item}
+          </option>
+        ))}
+      </SelectSeggsyInput>
+      {selectedCommittee != null && selectedCommittee.length > 0 && (
+        <SelectSeggsyInput
+          onChange={(e) => setSelectedDelegations(e.target.value)}
+        >
+          <option hidden disabled selected>
+            {" "}
+            -- select a delegation --{" "}
+          </option>
+          {delegations[selectedCommittee].map((item) => (
+            <option key={item} value={item}>
+              {item}
+            </option>
+          ))}
+        </SelectSeggsyInput>
+      )}
+      {selectedCommittee != null &&
+        selectedCommittee.length > 0 &&
+        selectedDelegations != null &&
+        selectedDelegations.length > 0 && <PdfViewer url={pdfUrl} />}
     </>
   );
 };

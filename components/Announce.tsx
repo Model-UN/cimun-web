@@ -30,6 +30,35 @@ const RegistrationOpen = () => {
   );
 };
 
+const PositionPapers = () => {
+  return (
+    <AnnouncementBar backgroundColor={colors.indigo}>
+      <Body
+        color={colors.ivory}
+        weight={600}
+        align="center"
+        margins="1rem 0 1rem 0"
+        mobMargins="0.5rem 0 0.5rem 0"
+      >
+        Position paper submissions have closed!
+        {" - "}
+        <Link href="/resources">
+          <a>
+            <u>View Position Papers</u>
+          </a>
+        </Link>{" "}
+        ... Still need to submit a position paper?
+        {" - "}
+        <Link href="https://forms.gle/FwfBNTbxQdootZ7o7">
+          <a>
+            <u>Late Position Paper Submission</u>
+          </a>
+        </Link>
+      </Body>
+    </AnnouncementBar>
+  );
+};
+
 const VirtualConference = () => {
   return (
     <AnnouncementBar>
@@ -119,6 +148,7 @@ const ResourceHub = () => {
 
 const Announce = {
   RegistrationOpen,
+  PositionPapers,
   VirtualConference,
   DelegateGuide,
   BackgroundGuides,
