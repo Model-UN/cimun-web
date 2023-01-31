@@ -77,7 +77,7 @@ const CommitteeDisplay = () => {
         </Link>
       </PillButtonRow>
       <PillButtonRow>
-        <Link href="https://drive.google.com/file/d/1SbM-aivcAcCJfg1AR9xRmUuRSn2o3jBj/view?usp=drivesdk">
+        <Link href="Delegate Guide - CIMUN XIX.pdf">
           <PillButton selectedColor={colors.indigo}>
             <br />
             Delegate Guide
@@ -131,7 +131,7 @@ const CommitteeDisplay = () => {
         <br />
         For more information on Position Papers, check out our{" "}
         <strong>
-          <Link href="https://drive.google.com/file/d/1SbM-aivcAcCJfg1AR9xRmUuRSn2o3jBj/view?usp=drivesdk">
+          <Link href="Delegate Guide - CIMUN XIX.pdf">
             Delegate Guide
           </Link>
         </strong>{" "}
