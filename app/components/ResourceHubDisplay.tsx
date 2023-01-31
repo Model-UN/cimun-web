@@ -43,17 +43,22 @@ const CommitteeDisplay = () => {
   const [selectedDelegations, setSelectedDelegations] = useState<string>("");
   const [pdfUrl, setPdfUrl] = useState<string>("");
   const hashId = md5(`${selectedCommittee}${selectedDelegations}`);
-  console.log(hashId);
 
-  console.log("selectedCommittee: ", selectedCommittee);
-
-  useEffect(async () => {
+  const fetchDelegations = async () => {
     const delegationList = await getCommitteesDelegations();
     setDelegations(delegationList);
-  }, []);
-  useEffect(async () => {
+  };
+
+  const fetchPositionPaper = async () => {
     const pdfUrl = await getPositionPaper(hashId);
     setPdfUrl(pdfUrl?.white_paper_s3_url ?? "");
+  };
+
+  useEffect(() => {
+    fetchDelegations();
+  }, []);
+  useEffect(() => {
+    fetchPositionPaper();
   }, [selectedCommittee, selectedDelegations]);
 
   return (
