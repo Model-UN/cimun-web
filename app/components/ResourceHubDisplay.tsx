@@ -3,7 +3,7 @@ import { SubTitle, Body } from "../../styles/typography";
 import { PillButton, PillButtonRow } from "./elements";
 import Link from "next/link";
 import { colors } from "../../styles/colors";
-import PdfViewer from "../../components/pdfViewer";
+import PdfViewer from "../../components/pdf";
 import styled from "styled-components";
 import {
   getCommitteesDelegations,
@@ -77,7 +77,7 @@ const CommitteeDisplay = () => {
         </Link>
       </PillButtonRow>
       <PillButtonRow>
-        <Link href="CIMUN XIX - Delegate Guide.pdf">
+        <Link href="https://drive.google.com/file/d/1SbM-aivcAcCJfg1AR9xRmUuRSn2o3jBj/view?usp=drivesdk">
           <PillButton selectedColor={colors.indigo}>
             <br />
             Delegate Guide
@@ -131,7 +131,9 @@ const CommitteeDisplay = () => {
         <br />
         For more information on Position Papers, check out our{" "}
         <strong>
-          <Link href="CIMUN XIX - Delegate Guide.pdf">Delegate Guide</Link>
+          <Link href="https://drive.google.com/file/d/1SbM-aivcAcCJfg1AR9xRmUuRSn2o3jBj/view?usp=drivesdk">
+            Delegate Guide
+          </Link>
         </strong>{" "}
         (pg. 14)!
         <br />
