@@ -38,7 +38,7 @@ export default function Home() {
           rel="stylesheet"
         />
       </Head>
-      <Announce.ResourceHub />
+      <Announce.PositionPapers />
       <HeaderNav />
       <Jumbotron
         titleOne="CIMUN"

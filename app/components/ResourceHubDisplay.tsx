@@ -46,7 +46,8 @@ const CommitteeDisplay = () => {
 
   const fetchDelegations = async () => {
     const delegationList = await getCommitteesDelegations();
-    setDelegations(delegationList);
+    // setDelegations(delegationList);
+    setDelegations([]);
   };
 
   const fetchPositionPaper = async () => {
@@ -138,41 +139,76 @@ const CommitteeDisplay = () => {
         (pg. 14)!
         <br />
         <br />
-        <br />
-        <br />
-        Choose a Committee and then select a delegation to view the correct
-        position paper.
+        {delegations != null && delegations.length > 0 && (
+          <>
+            <br />
+            <br />
+          </>
+        )}
       </Body>
-      <SelectSeggsyInput onChange={(e) => setSelectedCommittee(e.target.value)}>
-        <option hidden disabled selected>
-          {" "}
-          -- select a committee --{" "}
-        </option>
-        {Object.keys(delegations).map((item) => (
-          <option key={item} value={item}>
-            {item}
-          </option>
-        ))}
-      </SelectSeggsyInput>
-      {selectedCommittee != null && selectedCommittee.length > 0 && (
-        <SelectSeggsyInput
-          onChange={(e) => setSelectedDelegations(e.target.value)}
-        >
-          <option hidden disabled selected>
-            {" "}
-            -- select a delegation --{" "}
-          </option>
-          {delegations[selectedCommittee].map((item) => (
-            <option key={item} value={item}>
-              {item}
-            </option>
-          ))}
-        </SelectSeggsyInput>
+      {delegations != null && delegations.length > 0 ? (
+        <Body weight={700}>
+          Choose a Committee and then select a delegation to view the correct
+          position paper.
+        </Body>
+      ) : (
+        <>
+          <Body weight={700}>
+            Thank you for taking the time to submit position papers. White
+            papers will be available for viewing on the website this afternoon.
+            We look forward to seeing you at CIMUN XIX.
+          </Body>
+          <Body weight={700}>
+            If you still need to submit a position paper, you can submit by
+            following the link below.
+          </Body>
+        </>
       )}
-      {selectedCommittee != null &&
-        selectedCommittee.length > 0 &&
-        selectedDelegations != null &&
-        selectedDelegations.length > 0 && <PdfViewer url={pdfUrl} />}
+      {(delegations == null || delegations.length === 0) && (
+        <Link href="https://forms.gle/FwfBNTbxQdootZ7o7">
+          <a>
+            <Body>
+              <u>Late Position Paper Submission</u>
+            </Body>
+          </a>
+        </Link>
+      )}
+      {delegations != null && delegations.length > 0 && (
+        <>
+          <SelectSeggsyInput
+            onChange={(e) => setSelectedCommittee(e.target.value)}
+          >
+            <option hidden disabled selected>
+              {" "}
+              -- select a committee --{" "}
+            </option>
+            {Object.keys(delegations).map((item) => (
+              <option key={item} value={item}>
+                {item}
+              </option>
+            ))}
+          </SelectSeggsyInput>
+          {selectedCommittee != null && selectedCommittee.length > 0 && (
+            <SelectSeggsyInput
+              onChange={(e) => setSelectedDelegations(e.target.value)}
+            >
+              <option hidden disabled selected>
+                {" "}
+                -- select a delegation --{" "}
+              </option>
+              {delegations[selectedCommittee].map((item) => (
+                <option key={item} value={item}>
+                  {item}
+                </option>
+              ))}
+            </SelectSeggsyInput>
+          )}
+          {selectedCommittee != null &&
+            selectedCommittee.length > 0 &&
+            selectedDelegations != null &&
+            selectedDelegations.length > 0 && <PdfViewer url={pdfUrl} />}
+        </>
+      )}
     </>
   );
 };
