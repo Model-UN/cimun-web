@@ -42,7 +42,7 @@ const Footer: React.FC = () => (
             Committees & Cabinets
           </a>
           <a
-            href="https://drive.google.com/file/d/1SbM-aivcAcCJfg1AR9xRmUuRSn2o3jBj/view?usp=drivesdk"
+            href="CIMUN XIX - Delegate Guide.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >
