@@ -27,7 +27,7 @@ const SelectSeggsyInput = styled.select`
   font-size: 16px;
   font-weight: 400;
   line-height: normal;
-  background-color: ${colors.ivory};
+  background-color: "white";
   color: #282828;
   outline-color: ${colors.primaryBlue};
   transition: 0.3s background-color ease-in-out, 0.3s border-color ease-in-out;
@@ -50,7 +50,7 @@ const CommitteeDisplay = () => {
   };
 
   const fetchPositionPaper = async () => {
-    const pdfUrl = await getPositionPaper(hashId);
+    const pdfUrl = await getPositionPaper(hashId ?? "");
     setPdfUrl(pdfUrl?.white_paper_s3_url ?? "");
   };
 
@@ -58,7 +58,14 @@ const CommitteeDisplay = () => {
     fetchDelegations();
   }, []);
   useEffect(() => {
-    fetchPositionPaper();
+    if (
+      selectedCommittee != null &&
+      selectedCommittee.length > 0 &&
+      selectedDelegations != null &&
+      selectedDelegations.length > 0
+    ) {
+      fetchPositionPaper();
+    }
   }, [selectedCommittee, selectedDelegations]);
 
   return (
@@ -77,7 +84,7 @@ const CommitteeDisplay = () => {
         </Link>
       </PillButtonRow>
       <PillButtonRow>
-        <Link href="Delegate Guide - CIMUN XIX.pdf">
+        <Link href="CIMUN XIX - Delegate Guide.pdf">
           <PillButton selectedColor={colors.indigo}>
             <br />
             Delegate Guide
@@ -113,6 +120,7 @@ const CommitteeDisplay = () => {
           </PillButton>
         </Link>
       </PillButtonRow>
+
       <SubTitle size="3rem" self="center" align="center" line={1.5} margins="0">
         <hr />
         Position Papers
@@ -131,19 +139,13 @@ const CommitteeDisplay = () => {
         <br />
         For more information on Position Papers, check out our{" "}
         <strong>
-          <Link href="Delegate Guide - CIMUN XIX.pdf">Delegate Guide</Link>
+          <Link href="CIMUN XIX - Delegate Guide.pdf">Delegate Guide</Link>
         </strong>{" "}
         (pg. 14)!
         <br />
         <br />
-        {delegations != null && delegations.length > 0 && (
-          <>
-            <br />
-            <br />
-          </>
-        )}
       </Body>
-      {delegations != null && delegations.length > 0 ? (
+      {delegations != null && Object.keys(delegations).length > 0 ? (
         <Body weight={700}>
           Choose a Committee and then select a delegation to view the correct
           position paper.
@@ -161,7 +163,7 @@ const CommitteeDisplay = () => {
           </Body>
         </>
       )}
-      {(delegations == null || delegations.length === 0) && (
+      {(delegations == null || Object.keys(delegations).length === 0) && (
         <Link href="https://forms.gle/FwfBNTbxQdootZ7o7">
           <a>
             <Body>
@@ -170,7 +172,7 @@ const CommitteeDisplay = () => {
           </a>
         </Link>
       )}
-      {delegations != null && delegations.length > 0 && (
+      {delegations != null && Object.keys(delegations).length > 0 && (
         <>
           <SelectSeggsyInput
             onChange={(e) => setSelectedCommittee(e.target.value)}
