@@ -46,8 +46,7 @@ const CommitteeDisplay = () => {
 
   const fetchDelegations = async () => {
     const delegationList = await getCommitteesDelegations();
-    // setDelegations(delegationList);
-    setDelegations([]);
+    setDelegations(delegationList);
   };
 
   const fetchPositionPaper = async () => {
@@ -132,9 +131,7 @@ const CommitteeDisplay = () => {
         <br />
         For more information on Position Papers, check out our{" "}
         <strong>
-          <Link href="Delegate Guide - CIMUN XIX.pdf">
-            Delegate Guide
-          </Link>
+          <Link href="Delegate Guide - CIMUN XIX.pdf">Delegate Guide</Link>
         </strong>{" "}
         (pg. 14)!
         <br />
