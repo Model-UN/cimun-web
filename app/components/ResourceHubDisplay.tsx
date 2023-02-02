@@ -103,6 +103,22 @@ const CommitteeDisplay = () => {
           </PillButton>
         </Link>
       </PillButtonRow>
+      <Body align="center" self="center" weight={700}>
+        Follow along with updates from the International Press Delegation and
+        CNN
+        <br />
+        <br />
+      </Body>
+      <PillButtonRow>
+        <Link href=" https://press.cimun.org/">
+          <PillButton selectedColor={colors.carolinaBlue}>
+            <br />
+            The CIMUN Chronicle
+            <br />
+            <br />
+          </PillButton>
+        </Link>
+      </PillButtonRow>
       <Body align="center" self="center" weight={500}>
         To access your <strong>Background Guides</strong> and see more
         information on this year's Committees and Cabinets, please visit our
@@ -120,7 +136,6 @@ const CommitteeDisplay = () => {
           </PillButton>
         </Link>
       </PillButtonRow>
-
       <SubTitle size="3rem" self="center" align="center" line={1.5} margins="0">
         <hr />
         Position Papers
@@ -129,19 +144,21 @@ const CommitteeDisplay = () => {
         Ready to view your position papers? Select your committee and delegation
         to view the correct position paper.
         <br />
+        <br />A <em>White paper</em> acts as an open statement of a government's
+        policy (similar to a press release) and should be about 1 page in length
+        for each topic, whereas a <em>Black paper</em> is a confidential,
+        internal document for delegates to state their strategic interests for a
+        particular topic and should be a half page in length for each topic.
         <br />
-        A <em>White paper</em> acts as an open statement of a government's policy 
-        (similar to a press release) and should be about 1 page in length for 
-        each topic, whereas a <em>Black paper</em> is a confidential, internal document 
-        for delegates to state their strategic interests for a particular topic
-        and should be a half page in length for each topic.
         <br />
-        <br />
-        Committees should write both a White paper and a Black paper. <strong>If a Committee
-        lists more than two topics, delegates only need to choose two to write about</strong>.
-        Cabinets only need to write a Black paper; if a Cabinet doesn't list specific
-        topics, they should plan to write one paper about what they think is most 
-        important from their background guide.
+        Committees should write both a White paper and a Black paper.{" "}
+        <strong>
+          If a Committee lists more than two topics, delegates only need to
+          choose two to write about
+        </strong>
+        . Cabinets only need to write a Black paper; if a Cabinet doesn't list
+        specific topics, they should plan to write one paper about what they
+        think is most important from their background guide.
         <br />
         <br />
         For more information on Position Papers, check out our{" "}

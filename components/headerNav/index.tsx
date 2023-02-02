@@ -188,6 +188,11 @@ const HeaderNav = () => {
             <Anchor>Delegate Resources</Anchor>
           </ListItem>
         </Link>
+        <Link href="https://press.cimun.org/">
+          <ListItem>
+            <Anchor>The CIMUN Chronicle</Anchor>
+          </ListItem>
+        </Link>
       </ListContainer>
       {burgerOpen && (
         <BurgerListContainer>
@@ -212,6 +217,11 @@ const HeaderNav = () => {
             </BurgerListItem>
           </Link>
           <BurgerSeparator />
+          <Link href="https://press.cimun.org/">
+            <BurgerListItem>
+              <Anchor>The CIMUN Chronicle</Anchor>
+            </BurgerListItem>
+          </Link>
         </BurgerListContainer>
       )}
       <Burger onClick={() => setBurgerOpen(!burgerOpen)}>
