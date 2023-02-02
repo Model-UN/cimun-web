@@ -31,9 +31,6 @@ const Footer: React.FC = () => (
         </FooterColFirst>
         <FooterCol>
           <FootH2>CIMUN XIX</FootH2>
-          <a href="/school-registration" rel="noopener noreferrer">
-            School Registration
-          </a>
           <a
             href="CIMUN XIX Schedule.pdf"
             target="_blank"
@@ -51,15 +48,11 @@ const Footer: React.FC = () => (
           >
             Delegate Guide
           </a>
-          <a href="/staff-apps" rel="noopener noreferrer">
-            Staff Applications
-          </a>
         </FooterCol>
         <FooterCol>
           <FootH2>Explore</FootH2>
           <a href="/about">About CIMUN</a>
           <a href="/resources">Delegate Resource Hub</a>
-          <a href="https://www.cimunmerch.org">The CIMUN Store</a>
           <a href="https://www.mimun.mx/" target="_blank" rel="noreferrer">
             Check out MIMUN
           </a>

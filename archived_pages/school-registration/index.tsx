@@ -4,9 +4,9 @@ import HeaderNav from "../../components/headerNav";
 import Jumbotron from "../../components/jumbotron";
 import Footer from "../../components/footer";
 import SteppedForm from "../../components/stepped-form";
-import { Wrapper, ComponentWrapper} from "../../styles/containers";
+import { Wrapper, ComponentWrapper } from "../../styles/containers";
 import { SubTitle } from "../../styles/typography";
-import {colors} from "../../styles/colors";
+import { colors } from "../../styles/colors";
 import Announce from "../../components/Announce";
 
 const SchoolRegistration = () => {
@@ -38,8 +38,7 @@ const SchoolRegistration = () => {
           rel="stylesheet"
         />
       </Head>
-      <Announce.DelegateGuide/>
-      <Announce.BackgroundGuides/>
+      <Announce.PositionPapers />
       <HeaderNav />
       <Jumbotron
         titleOne="SCHOOL"
@@ -50,11 +49,11 @@ const SchoolRegistration = () => {
       />
       <ComponentWrapper margins="auto auto -3vw auto">
         <SubTitle
-            align="center"
-            color={colors.fadedltGray}
-            width="75%"
-            self="center"
-            weight={500}
+          align="center"
+          color={colors.fadedltGray}
+          width="75%"
+          self="center"
+          weight={500}
         >
           {/*<a*/}
           {/*    href="/registration-information.pdf"*/}

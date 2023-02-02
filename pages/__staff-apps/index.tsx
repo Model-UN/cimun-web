@@ -7,14 +7,14 @@ import SteppedForm from "../../components/stepped-form";
 import { Wrapper } from "../../styles/containers";
 import Announce from "../../components/Announce";
 
-const StaffApps = () => {
+const DirApps = () => {
   return (
     <Wrapper>
       <Head>
-        <title>Chicago International Model UN</title>
+        <title>Staff Applications - Chicago International Model UN</title>
         <meta
           name="description"
-          content="Chicago International Model United Nations"
+          content="Apply to join the CIMUN XIX Staff! - February 2nd-5th, 2023 at the Palmer House Hilton Chicago"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
@@ -36,19 +36,18 @@ const StaffApps = () => {
           rel="stylesheet"
         />
       </Head>
-      <Announce.DelegateGuide/>
-      <Announce.BackgroundGuides/>
+      <Announce.PositionPapers />
       <HeaderNav />
       <Jumbotron
         titleOne="STAFF"
         titleTwo="APPLICATION"
-        height={65}
+        height={85}
         image="cimun-staff.png"
       />
-      <SteppedForm formId="62cba0f20000000000dc31fb" submissionType="application" />
+      <SteppedForm formId="apply" submissionType="application" />
       <Footer />
     </Wrapper>
   );
 };
 
-export default StaffApps;
+export default DirApps;

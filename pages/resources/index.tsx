@@ -37,7 +37,7 @@ const DelegateResourcePage = () => {
           rel="stylesheet"
         />
       </Head>
-      <Announce.RegistrationOpen />
+      <Announce.PositionPapers />
       <HeaderNav />
       <SubTitle
         size="4rem"
@@ -64,8 +64,8 @@ const DelegateResourcePage = () => {
           <br />
         </Body>
         <ResourceHubDisplay />
+        <hr />
         <Body align="left" self="center" weight={500}>
-          <hr />
           <strong>
             Additional inquiries? Email us at{" "}
             <a href="mailto:sc@cimun.org">sc@cimun.org</a>!

@@ -183,31 +183,11 @@ const HeaderNav = () => {
             <Anchor>About</Anchor>
           </ListItem>
         </Link>
-        {/*<Link href="/committees">*/}
-        {/*  <ListItem>*/}
-        {/*    <Anchor>2023 Committees & Cabinets</Anchor>*/}
-        {/*  </ListItem>*/}
-        {/*</Link>*/}
         <Link href="/resources">
           <ListItem>
             <Anchor>Delegate Resources</Anchor>
           </ListItem>
         </Link>
-        <Link href="/staff-apps">
-          <ListItem>
-            <Anchor>Staff Application</Anchor>
-          </ListItem>
-        </Link>
-        <Link href="/school-registration">
-          <ListItem>
-            <Anchor>Register for CIMUN!</Anchor>
-          </ListItem>
-        </Link>
-        {/*<Link href="DelegateGuide.pdf">*/}
-        {/*  <ListItem>*/}
-        {/*    <Anchor>Delegate Guide</Anchor>*/}
-        {/*  </ListItem>*/}
-        {/*</Link>*/}
       </ListContainer>
       {burgerOpen && (
         <BurgerListContainer>
@@ -225,12 +205,6 @@ const HeaderNav = () => {
               <Anchor>About</Anchor>
             </BurgerListItem>
           </Link>
-          {/*<BurgerSeparator />*/}
-          {/*<Link href="/committees">*/}
-          {/*  <BurgerListItem>*/}
-          {/*    <Anchor>2023 Committees & Cabinets</Anchor>*/}
-          {/*  </BurgerListItem>*/}
-          {/*</Link>*/}
           <BurgerSeparator />
           <Link href="/resources">
             <BurgerListItem>
@@ -238,22 +212,6 @@ const HeaderNav = () => {
             </BurgerListItem>
           </Link>
           <BurgerSeparator />
-          <Link href="/staff-apps">
-            <BurgerListItem>
-              <Anchor>Staff Application</Anchor>
-            </BurgerListItem>
-          </Link>
-          <BurgerSeparator />
-          <Link href="/school-registration">
-            <BurgerListItem>
-              <Anchor>School Registration</Anchor>
-            </BurgerListItem>
-          </Link>
-          {/*<Link href="/DelegateGuide.pdf">*/}
-          {/*  <BurgerListItem>*/}
-          {/*    <Anchor>Delegate Guide</Anchor>*/}
-          {/*  </BurgerListItem>*/}
-          {/*</Link>*/}
         </BurgerListContainer>
       )}
       <Burger onClick={() => setBurgerOpen(!burgerOpen)}>
