@@ -48,6 +48,13 @@ const Footer: React.FC = () => (
           >
             Delegate Guide
           </a>
+          <a
+            href="https://press.cimun.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            The CIMUN Chronicle
+          </a>
         </FooterCol>
         <FooterCol>
           <FootH2>Explore</FootH2>
