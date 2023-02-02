@@ -53,7 +53,6 @@ const Footer: React.FC = () => (
           <FootH2>Explore</FootH2>
           <a href="/about">About CIMUN</a>
           <a href="/resources">Delegate Resource Hub</a>
-          <a href="https://www.cimunmerch.org">The CIMUN Store</a>
           <a href="https://www.mimun.mx/" target="_blank" rel="noreferrer">
             Check out MIMUN
           </a>
