@@ -38,7 +38,6 @@ const SchoolRegistration = () => {
           rel="stylesheet"
         />
       </Head>
-      <Announce.PositionPapers />
       <HeaderNav />
       <Jumbotron
         titleOne="SCHOOL"

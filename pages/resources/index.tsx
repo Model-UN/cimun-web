@@ -37,7 +37,6 @@ const DelegateResourcePage = () => {
           rel="stylesheet"
         />
       </Head>
-      <Announce.PositionPapers />
       <HeaderNav />
       <SubTitle
         size="4rem"

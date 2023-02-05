@@ -193,6 +193,11 @@ const HeaderNav = () => {
             <Anchor>The CIMUN Chronicle</Anchor>
           </ListItem>
         </Link>
+        <Link href="/leahy">
+          <ListItem>
+            <Anchor>Leahy Fellowship</Anchor>
+          </ListItem>
+        </Link>
       </ListContainer>
       {burgerOpen && (
         <BurgerListContainer>
@@ -220,6 +225,12 @@ const HeaderNav = () => {
           <Link href="https://press.cimun.org/">
             <BurgerListItem>
               <Anchor>The CIMUN Chronicle</Anchor>
+            </BurgerListItem>
+          </Link>
+          <BurgerSeparator />
+          <Link href="/leahy">
+            <BurgerListItem>
+              <Anchor>Leahy Fellowship</Anchor>
             </BurgerListItem>
           </Link>
         </BurgerListContainer>

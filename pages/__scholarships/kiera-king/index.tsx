@@ -37,7 +37,6 @@ const KieraKingApp = () => {
           rel="stylesheet"
         />
       </Head>
-      <Announce.PositionPapers />
       <HeaderNav />
       <Jumbotron
         titleOne=""
