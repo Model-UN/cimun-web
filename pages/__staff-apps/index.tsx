@@ -36,7 +36,6 @@ const DirApps = () => {
           rel="stylesheet"
         />
       </Head>
-      <Announce.PositionPapers />
       <HeaderNav />
       <Jumbotron
         titleOne="STAFF"

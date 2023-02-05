@@ -36,7 +36,6 @@ const AboutPage = () => {
           rel="stylesheet"
         />
       </Head>
-      <Announce.PositionPapers />
       <HeaderNav />
       <Jumbotron
         titleOne="CIMUN"

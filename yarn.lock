@@ -7787,6 +7787,11 @@ next@10.2.1:
     vm-browserify "1.1.2"
     watchpack "2.1.1"
 
+nextjs-redirect@^6.0.1:
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/nextjs-redirect/-/nextjs-redirect-6.0.1.tgz#29416d11f130511e12dbe93ca0c4fa0778bfbae6"
+  integrity sha512-SScRdqhGwbD9HbATM+6KMoRyW5QdsPtBBknPPUBxeItnv3wOrhII4pW+0TrvglWNxeRUwI2GsnrDHCV/6juBtQ==
+
 nice-try@^1.0.4:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/nice-try/-/nice-try-1.0.5.tgz#a3378a7696ce7d223e88fc9b764bd7ef1089e366"

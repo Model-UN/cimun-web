@@ -6,7 +6,6 @@ import Announce from "../../components/Announce";
 const Conference = () => {
   return (
     <Wrapper>
-      <Announce.PositionPapers />
       <HeaderNav />
       <ComponentWrapper
         height="48.375vw"
