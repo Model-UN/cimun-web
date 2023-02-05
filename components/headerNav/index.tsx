@@ -198,6 +198,11 @@ const HeaderNav = () => {
             <Anchor>Leahy Fellowship</Anchor>
           </ListItem>
         </Link>
+        <Link href="/staffcimun20">
+          <ListItem>
+            <Anchor>STAFF CIMUN XX</Anchor>
+          </ListItem>
+        </Link>
       </ListContainer>
       {burgerOpen && (
         <BurgerListContainer>
@@ -231,6 +236,12 @@ const HeaderNav = () => {
           <Link href="/leahy">
             <BurgerListItem>
               <Anchor>Leahy Fellowship</Anchor>
+            </BurgerListItem>
+          </Link>
+          <BurgerSeparator />
+          <Link href="/staffcimun20">
+            <BurgerListItem>
+              <Anchor>STAFF CIMUN XX</Anchor>
             </BurgerListItem>
           </Link>
         </BurgerListContainer>
