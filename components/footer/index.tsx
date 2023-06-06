@@ -29,8 +29,8 @@ const Footer: React.FC = () => (
             It's your world... <strong>fix it!</strong>
           </p>
         </FooterColFirst>
-        <FooterCol>
-          <FootH2>CIMUN XIX</FootH2>
+        {/* <FooterCol>
+          <FootH2>CIMUN XX</FootH2>
           <a
             href="CIMUN XIX Schedule.pdf"
             target="_blank"
@@ -55,7 +55,7 @@ const Footer: React.FC = () => (
           >
             The CIMUN Chronicle
           </a>
-        </FooterCol>
+        </FooterCol> */}
         <FooterCol>
           <FootH2>Explore</FootH2>
           <a href="/about">About CIMUN</a>

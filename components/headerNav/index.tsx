@@ -183,16 +183,16 @@ const HeaderNav = () => {
             <Anchor>About</Anchor>
           </ListItem>
         </Link>
-        <Link href="/resources">
+        {/* <Link href="/resources">
           <ListItem>
             <Anchor>Delegate Resources</Anchor>
           </ListItem>
-        </Link>
-        <Link href="https://press.cimun.org/">
+        </Link> */}
+        {/* <Link href="https://press.cimun.org/">
           <ListItem>
             <Anchor>The CIMUN Chronicle</Anchor>
           </ListItem>
-        </Link>
+        </Link> */}
         <Link href="/leahy">
           <ListItem>
             <Anchor>Leahy Fellowship</Anchor>

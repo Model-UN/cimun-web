@@ -16,7 +16,7 @@ export default function Home() {
         <title>Chicago International Model United Nations</title>
         <meta
           name="description"
-          content="The premier independently organized scholastic Model UN conference. Join us for CIMUN XIX - February 2nd-5th, 2023 at the Palmer House Hilton Chicago!"
+          content="The premier independently organized scholastic Model UN conference. Join us for CIMUN XIX - December 7th-10th, 2023 in Downtown Chicago!"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
@@ -41,13 +41,13 @@ export default function Home() {
       <HeaderNav />
       <Jumbotron
         titleOne="CIMUN"
-        titleTwo="XIX"
-        subTitle="THE 19TH ANNUAL CHICAGO INTERNATIONAL MODEL UNITED NATIONS CONFERENCE"
+        titleTwo="XX"
+        subTitle="THE 20TH ANNUAL CHICAGO INTERNATIONAL MODEL UNITED NATIONS CONFERENCE"
         height={85}
       />
       <InfoColumns />
       <AwardAnnouncementCard />
-      <Letter />
+      {/* <Letter /> */}
       <Footer />
     </Wrapper>
   );

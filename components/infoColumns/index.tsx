@@ -37,9 +37,9 @@ export default function InfoColumns(): JSX.Element {
             line={0.9}
             color={colors.ivory}
           >
-            February 2nd - February 5th, 2023
+            December 7th - December 10th, 2023
           </SubTitle>
-          <Body
+          {/* <Body
             align="start"
             self="start"
             margins="0 0 0.25rem 0"
@@ -49,8 +49,8 @@ export default function InfoColumns(): JSX.Element {
             color={colors.ivory}
           >
             Join us as we host in person this year!
-          </Body>
-          <Body
+          </Body> */}
+          {/* <Body
             align="start"
             self="center"
             margins="0 0 0.25rem 0"
@@ -67,7 +67,7 @@ export default function InfoColumns(): JSX.Element {
             >
               Click here to view our Conference Schedule!
             </a>
-          </Body>
+          </Body> */}
         </CardContainer>
       </CardWrapper>
       <CardWrapper margins="0" direction="column">
@@ -86,7 +86,7 @@ export default function InfoColumns(): JSX.Element {
             deco="underline"
             color={colors.ivory}
           >
-            Join us in 2023 at...
+            Join us in 2023 in...
           </Body>
           <SubTitle
             size="3.5rem"
@@ -98,9 +98,9 @@ export default function InfoColumns(): JSX.Element {
             line={0.9}
             color={colors.ivory}
           >
-            The Palmer House Hilton Chicago
+            Downtown Chicago
           </SubTitle>
-          <Body
+          {/* <Body
             align="start"
             self="start"
             margins="0 0 0.25rem 0"
@@ -110,7 +110,7 @@ export default function InfoColumns(): JSX.Element {
             color={colors.ivory}
           >
             17 E Monroe Street, Chicago, Illinois
-          </Body>
+          </Body> */}
         </CardContainer>
       </CardWrapper>
     </InfoColumnWrapper>
