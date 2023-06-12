@@ -39,8 +39,8 @@ const AboutPage = () => {
       <HeaderNav />
       <Jumbotron
         titleOne="CIMUN"
-        titleTwo="XIX"
-        subTitle="THE 19TH ANNUAL CHICAGO INTERNATIONAL MODEL UNITED NATIONS CONFERENCE"
+        titleTwo="XX"
+        subTitle="THE 20TH ANNUAL CHICAGO INTERNATIONAL MODEL UNITED NATIONS CONFERENCE"
         height={85}
       />
       <ComponentWrapper
