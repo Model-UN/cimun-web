@@ -18,18 +18,13 @@ export default function Letter(): JSX.Element {
           align={"justify"}
           size="1.5rem"
         >
-          <br />
-          <br />
+          <br /><br />
           Dear Delegates, Faculty, and Distinguished Guests:
-          <br />
-          <br />
-          It is our distinct pleasure to welcome you to the nineteenth annual{" "}
+          <br /><br />
+          It is our distinct pleasure to welcome you to the twentieth annual{" "}
           <strong>Chicago International Model United Nations (CIMUN)</strong>,
-          held February 2nd – 5th, 2023. We are excited to announce that we will
-          be in person! (Please knock on wood while reading this, just to be
-          safe).
-          <br />
-          <br />
+          held December 7th – 10th, 2023!
+          <br /><br />
           As one of the nation’s largest independent conferences, CIMUN is
           staffed by a diverse and talented team of students, post-graduates,
           and professionals from over 50 colleges and universities, selected
@@ -39,8 +34,7 @@ export default function Letter(): JSX.Element {
           link on our website. CIMUN also offers one of the lowest
           staff-to-delegate ratios of any major conference, with one staff
           member for every seven delegates!
-          <br />
-          <br />
+          <br /><br />
           It is easier to argue for the way things should be, rather than how
           they actually are. Every day, the world becomes a more divisive and
           tougher place to call home. We struggle to understand why people take
@@ -48,8 +42,7 @@ export default function Letter(): JSX.Element {
           find ourselves feeling helpless, powerless, faithless. CIMUN
           challenges delegates to recognize those emotions, assume these roles
           of power, and portray them in a productive and realistic manner.
-          <br />
-          <br />
+          <br /><br />
           Without having the capacity to understand the problems we face, it is
           impossible to solve them. Leaders across the globe are met with
           difficult and multifaceted issues daily, and we will urge all
@@ -58,28 +51,24 @@ export default function Letter(): JSX.Element {
           with neighboring committees, the result is an unconventional
           conference that immerses students in a global context, and makes CIMUN
           a truly one-of-a-kind Model UN experience.
-          <br />
-          <br />
-          CIMUN XIX will offer 20 unique committees and cabinets, most with 40
-          delegates or less. The historical year of 1982 will immerse delegates
+          <br /><br />
+          CIMUN XX will offer 20 unique committees and cabinets, most with 40
+          delegates or less. The historical year of 1962 will immerse delegates
           in a scenario that requires innovation and originality, as decisions
           they will make can alter geographical and political power for
           generations to come. CIMUN implements delegate’s decisions in
           real-time, allowing them to see the impact of their actions, and
           requiring them to think critically beyond the bounds of any one topic
           to best represent their national interests.
-          <br />
-          <br />
-          I could not be more excited to welcome you in person in 2023!
-          <br />
-          <br />
+          <br /><br />
+          I could not be more excited to welcome you in 2023!
+          <br /><br />
           Sincerely,
           <br />
-          Daniel Benson
+          Harris Laufer
           <br />
-          Secretary-General, CIMUN XIX
-          <br />
-          <br />
+          Secretary-General, CIMUN XX
+          <br /><br />
         </Body>
       </MaterialCard>
     </ComponentWrapper>
