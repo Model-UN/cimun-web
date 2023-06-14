@@ -34,9 +34,18 @@ our continuous deployment needs.
 
 First, run the development server:
 
-```bash
-yarn dev
-```
+Install yarn from the following link: https://classic.yarnpkg.com/lang/en/docs/install/#mac-stable
+
+```bash yarn dev```
+
+If you get a versioning issue, such as: error cimun-web@0.1.0: The engine “node” is incompatible with this module. Expected version “^14.21.3". Got “16.8.0” 
+
+run the following two commands to fix the version where XX.XX.XX is the needed version number:
+```npm install -g n```
+```sudo n XX.XX.XX ```
+
+If next is not installed, install it with the following command:
+```npm install next@10.2.1 react@17.0.2 react-dom@17.0.2```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
@@ -63,5 +72,5 @@ our continuous deployment needs.
 <p align="center">
   <a href="https://vercel.com?utm_source=model-un&utm_campaign=oss" target="blank">
     <img src="public/Vercel/banner/vercel-banner.svg" width="200" alt="Vercel Banner" />
-  </a>
+  </a>ß
 </p>
