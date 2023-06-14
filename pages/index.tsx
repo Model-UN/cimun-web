@@ -47,7 +47,7 @@ export default function Home() {
       />
       <InfoColumns />
       <AwardAnnouncementCard />
-      {/* <Letter /> */}
+       <Letter />
       <Footer />
     </Wrapper>
   );
