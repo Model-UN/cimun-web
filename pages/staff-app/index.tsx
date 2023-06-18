@@ -5,7 +5,7 @@ import Jumbotron from "../../components/jumbotron";
 import Footer from "../../components/footer";
 import SteppedForm from "../../components/stepped-form";
 import { ComponentWrapper, Wrapper } from "../../styles/containers";
-import StaffApp from "../../components/articles/staff.app";
+import StaffApp from "../../app/components/staff.app";
 
 const DirApps = () => {
   return (

@@ -1,4 +1,4 @@
-import { Title } from "../infoColumns/infoColumns.styles";
+import { Title } from "../../components/infoColumns/infoColumns.styles";
 import { Body, SubTitle } from "../../styles/typography";
 import { MaterialCard } from "../../app/components/elements";
 import { colors } from "../../styles/colors";
@@ -34,7 +34,7 @@ const StaffApp = () => {
           </a>
         </Link>
       
-      <strong>Returning staff:</strong> if you are intereseted in a director position, please fill out the following form:
+      <strong>Returning staff:</strong> if you are interested in a director or other specially-appointed position, please fill out the following form:
       
       <Link href="https://docs.google.com/forms/d/e/1FAIpQLSdSTioqDcE7yhfDKNbEV4-z0HNbiGq2fzFP7d7TBFestn7dSA/viewform?usp=sf_link">
           <a>
