@@ -57,7 +57,7 @@ const Committees = () => {
           <br />
           <br />
           As usual, delegates will participate in immersive <em>
-            Present-Day
+          Present-Day
           </em>{" "}
           and <em>Historical</em> committees. This year, CIMUN will feature
           committees and cabinets from the year of <strong>1962</strong>.
