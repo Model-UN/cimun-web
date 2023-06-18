@@ -121,7 +121,7 @@ export const CommitteeCard = (props: CommitteeCardProps) => {
         margins="0 0 0 0"
         mobSize="1.2rem"
       >
-        More details regarding committees will be made available on or before Labor Day.
+        More details regarding committees will be made available soon!
       </SubTitle>
     );
 
