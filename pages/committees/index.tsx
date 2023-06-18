@@ -13,10 +13,10 @@ const Committees = () => {
   return (
     <Wrapper>
       <Head>
-        <title>Committees & Cabinets - CIMUN XIX</title>
+        <title>Committees & Cabinets - CIMUN XX</title>
         <meta
           name="description"
-          content="An Overview of the Committees & Cabinets at CIMUN XIX - February 2nd-5th, 2023 at the Palmer House Hilton Chicago"
+          content="An Overview of the Committees & Cabinets at CIMUN XX - December 7th-10th, 2023"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
@@ -42,15 +42,15 @@ const Committees = () => {
       <Jumbotron
         titleOne="COMMITTEES"
         titleTwo="& CABINETS"
-        subTitle="CIMUN XIX"
+        subTitle="CIMUN XX"
         height={85}
         image="awards.jpg"
         bottomMargin="0.984375vw"
       />
       <InformationalWrapper>
         <Body align="left" self="center" weight={500}>
-          As you prepare to join us for CIMUN XIX, the CIMUN team is excited to
-          present the committees and cabinets for 2023! Delegates will soon find
+          As you prepare to join us, the CIMUN team is excited to
+          present the committees and cabinets for CIMUN XX! Delegates will soon find
           themselves present in these committees, working with their colleagues
           in committee to help solve global issues and tackle complex real-world
           challenges.
@@ -60,7 +60,7 @@ const Committees = () => {
             Present-Day
           </em>{" "}
           and <em>Historical</em> committees. This year, CIMUN will feature
-          committees and cabinets from the year of <strong>1982</strong>.
+          committees and cabinets from the year of <strong>1962</strong>.
           Additionally, delegates may also participate in our unique{" "}
           <strong>press delegations</strong>, where participating delegates
           report on breaking news as events unfold at CIMUN.

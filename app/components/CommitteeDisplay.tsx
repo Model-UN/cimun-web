@@ -40,15 +40,16 @@ const CommitteeDisplay = () => {
 
   const asterisk =
     committeeType === "CABS" ? (
-      <Body size="1.1rem" line={1.5} self="center" color={colors.plum}>
-        *<strong>Note</strong>: Some cabinets will have{" "}
-        <em>no official agenda</em>. Cabinets are designed to be fluid,
-        interactive, and realistic, offering delegates the unique opportunity to
-        drive debate on domestic and international issues in the direction they
-        see fit. To best support this dynamic, cabinet background guides will
-        provide key information and context that is unconstrained by specific
-        topics or agenda items.
-      </Body>
+      <></>
+      // <Body size="1.1rem" line={1.5} self="center" color={colors.plum}>
+      //   *<strong>Note</strong>: Some cabinets will have{" "}
+      //   <em>no official agenda</em>. Cabinets are designed to be fluid,
+      //   interactive, and realistic, offering delegates the unique opportunity to
+      //   drive debate on domestic and international issues in the direction they
+      //   see fit. To best support this dynamic, cabinet background guides will
+      //   provide key information and context that is unconstrained by specific
+      //   topics or agenda items.
+      // </Body>
     ) : (
       <></>
     );
