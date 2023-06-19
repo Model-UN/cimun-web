@@ -29,33 +29,33 @@ const Footer: React.FC = () => (
             It's your world... <strong>fix it!</strong>
           </p>
         </FooterColFirst>
-        {/* <FooterCol>
+        <FooterCol>
           <FootH2>CIMUN XX</FootH2>
-          <a
-            href="CIMUN XIX Schedule.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Conference Schedule
-          </a>
+          {/*<a*/}
+          {/*  href="CIMUN XIX Schedule.pdf"*/}
+          {/*  target="_blank"*/}
+          {/*  rel="noopener noreferrer"*/}
+          {/*>*/}
+          {/*  Conference Schedule*/}
+          {/*</a>*/}
           <a href="/committees" target="_blank" rel="noopener noreferrer">
             Committees & Cabinets
           </a>
-          <a
-            href="CIMUN XIX - Delegate Guide.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Delegate Guide
-          </a>
-          <a
-            href="https://press.cimun.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            The CIMUN Chronicle
-          </a>
-        </FooterCol> */}
+          {/*<a*/}
+          {/*  href="CIMUN XIX - Delegate Guide.pdf"*/}
+          {/*  target="_blank"*/}
+          {/*  rel="noopener noreferrer"*/}
+          {/*>*/}
+          {/*  Delegate Guide*/}
+          {/*</a>*/}
+          {/*<a*/}
+          {/*  href="https://press.cimun.org/"*/}
+          {/*  target="_blank"*/}
+          {/*  rel="noopener noreferrer"*/}
+          {/*>*/}
+          {/*  The CIMUN Chronicle*/}
+          {/*</a>*/}
+        </FooterCol>
         <FooterCol>
           <FootH2>Explore</FootH2>
           <a href="/about">About CIMUN</a>

@@ -16,7 +16,7 @@ export default function Home() {
         <title>Chicago International Model United Nations</title>
         <meta
           name="description"
-          content="The premier independently organized scholastic Model UN conference. Join us for CIMUN XIX - December 7th-10th, 2023 in Downtown Chicago!"
+          content="The premier independently organized scholastic Model UN conference. Join us for CIMUN XX - December 7th-10th, 2023 in Downtown Chicago!"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />

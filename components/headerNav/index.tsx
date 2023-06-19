@@ -183,6 +183,11 @@ const HeaderNav = () => {
             <Anchor>About</Anchor>
           </ListItem>
         </Link>
+        <Link href="/committees">
+          <ListItem>
+            <Anchor>Committees & Cabinets</Anchor>
+          </ListItem>
+        </Link>
         {/* <Link href="/resources">
           <ListItem>
             <Anchor>Delegate Resources</Anchor>
@@ -221,18 +226,23 @@ const HeaderNav = () => {
             </BurgerListItem>
           </Link>
           <BurgerSeparator />
-          <Link href="/resources">
+          <Link href="/committees">
             <BurgerListItem>
-              <Anchor>Delegate Resources</Anchor>
+              <Anchor>Committees & Cabinets</Anchor>
             </BurgerListItem>
           </Link>
           <BurgerSeparator />
-          <Link href="https://press.cimun.org/">
-            <BurgerListItem>
-              <Anchor>The CIMUN Chronicle</Anchor>
-            </BurgerListItem>
-          </Link>
-          <BurgerSeparator />
+          {/*<Link href="/resources">*/}
+          {/*  <BurgerListItem>*/}
+          {/*    <Anchor>Delegate Resources</Anchor>*/}
+          {/*  </BurgerListItem>*/}
+          {/*</Link>*/}
+          {/*<BurgerSeparator />*/}
+          {/*<Link href="https://press.cimun.org/">*/}
+          {/*  <BurgerListItem>*/}
+          {/*    <Anchor>The CIMUN Chronicle</Anchor>*/}
+          {/*  </BurgerListItem>*/}
+          {/*</Link>*/}
           <Link href="/leahy">
             <BurgerListItem>
               <Anchor>Leahy Fellowship</Anchor>
