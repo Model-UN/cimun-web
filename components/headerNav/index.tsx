@@ -203,9 +203,9 @@ const HeaderNav = () => {
             <Anchor>Leahy Fellowship</Anchor>
           </ListItem>
         </Link>
-        <Link href="/staffcimun20">
+        <Link href="/staff-app">
           <ListItem>
-            <Anchor>STAFF CIMUN XX</Anchor>
+            <Anchor>Staff CIMUN XX</Anchor>
           </ListItem>
         </Link>
       </ListContainer>
@@ -249,7 +249,7 @@ const HeaderNav = () => {
             </BurgerListItem>
           </Link>
           <BurgerSeparator />
-          <Link href="/staffcimun20">
+          <Link href="/staff-app">
             <BurgerListItem>
               <Anchor>STAFF CIMUN XX</Anchor>
             </BurgerListItem>
