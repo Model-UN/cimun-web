@@ -117,11 +117,11 @@ export const CommitteeCard = (props: CommitteeCardProps) => {
       <SubTitle
         size="1.4rem"
         weight={700}
-        line={0.5}
+        line={1.5}
         margins="0 0 0 0"
         mobSize="1.2rem"
       >
-        No official agenda*
+        More details regarding committees will be made available soon!
       </SubTitle>
     );
 
