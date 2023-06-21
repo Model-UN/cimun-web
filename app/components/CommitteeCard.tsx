@@ -73,10 +73,9 @@ export const CommitteeCard = (props: CommitteeCardProps) => {
         <Link
           href={`bg/${props.committee.Guide}`}
           target="_blank"
-          rel="noopener noreferrer">
-
+          rel="noopener noreferrer"
+        >
           <strong>IPD Delegate Guide</strong>
-
         </Link>
       </Body>
     ) : props.committee.Guide ? (
@@ -90,10 +89,9 @@ export const CommitteeCard = (props: CommitteeCardProps) => {
         <Link
           href={`bg/${props.committee.Guide}`}
           target="_blank"
-          rel="noopener noreferrer">
-
+          rel="noopener noreferrer"
+        >
           <strong>Background Guide</strong>
-
         </Link>
       </Body>
     ) : (
@@ -113,7 +111,7 @@ export const CommitteeCard = (props: CommitteeCardProps) => {
         weight={700}
         line={0.5}
         margins="0 0 0 0"
-        mobSize="1.2rem"
+        mobsize="1.2rem"
       >
         Anticipated Topics:
       </SubTitle>
@@ -125,7 +123,7 @@ export const CommitteeCard = (props: CommitteeCardProps) => {
         weight={700}
         line={1.5}
         margins="0 0 0 0"
-        mobSize="1.2rem"
+        mobsize="1.2rem"
       >
         More details regarding committees will be made available soon!
       </SubTitle>
@@ -142,10 +140,10 @@ export const CommitteeCard = (props: CommitteeCardProps) => {
   );
 
   return (
-    <MaterialCard background={colors.ivory}>
+    <MaterialCard flexdirection="row" background={colors.ivory}>
       {image}
       <CardItemWrapper>
-        <Header line={0.8} mobSize="1.5rem">
+        <Header line={0.8} mobsize="1.5rem">
           {props.committee.Name}{" "}
           {props.committee.Abbr ? "(" + props.committee.Abbr + ")" : ""}
           <hr />

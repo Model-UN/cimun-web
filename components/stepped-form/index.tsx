@@ -188,8 +188,8 @@ const SteppedForm = (props: OwnProps) => {
   const initForm = async () => {
     setLoading(true);
     await getFormTemplate(formId)
-        .then(data => setFormData(data))
-        .catch(() => setFormData(undefined));
+      .then((data) => setFormData(data))
+      .catch(() => setFormData(undefined));
     setLoading(false);
   };
 
@@ -443,7 +443,7 @@ const SteppedForm = (props: OwnProps) => {
             size="14px"
             styling="italic"
             margins="12.5px 0 20px 0"
-            mobMargins="12.5px 0 20px 0"
+            mobmargins="12.5px 0 20px 0"
           >
             {description}
           </Body>
@@ -485,7 +485,13 @@ const SteppedForm = (props: OwnProps) => {
         </Form>
       )}
       {!loading && !formData && !submitted && (
-        <SubTitle align="center" width="75%" self="center" weight={300} color={colors.ivory}>
+        <SubTitle
+          align="center"
+          width="75%"
+          self="center"
+          weight={300}
+          color={colors.ivory}
+        >
           Something went wrong while attempting to retrieve this form. Please
           try again in a few minutes.
           <br />
@@ -499,10 +505,15 @@ const SteppedForm = (props: OwnProps) => {
       )}
       {submitted && (
         <>
-          <SubTitle align="center" width="75%" self="center" weight={300} color={colors.ivory}>
+          <SubTitle
+            align="center"
+            width="75%"
+            self="center"
+            weight={300}
+            color={colors.ivory}
+          >
             Your {props.submissionType ? props.submissionType : "submission"}{" "}
-            has been received! Thank you so much for your interest in CIMUN
-            XX.
+            has been received! Thank you so much for your interest in CIMUN XX.
             <br />
             <br />
             We will be in touch with you after reviewing your{" "}

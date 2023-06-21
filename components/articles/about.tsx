@@ -5,14 +5,14 @@ import { colors } from "../../styles/colors";
 
 const About = () => {
   return (
-    <MaterialCard column noAnimate background={colors.ivory}>
+    <MaterialCard flexdirection="column" noanimate background={colors.ivory}>
       <Title margins="2vw 6rem 0 6rem" line={0.9} align={"center"}>
         About the Chicago International Model United Nations
       </Title>
       <br />
       <Body
         margins="2rem 6rem 0.5rem 6rem"
-        mobMargins="0 1rem 0 1rem"
+        mobmargins="0 1rem 0 1rem"
         line={1.4}
         align={"justify"}
         size="1.5rem"
@@ -29,14 +29,14 @@ const About = () => {
       </Body>
       <SubTitle
         margins="0rem 6rem 0rem 6rem"
-        mobMargins="0 1rem 0 1rem"
+        mobmargins="0 1rem 0 1rem"
         align={"center"}
       >
         OUR MISSION
       </SubTitle>
       <Body
         margins="2rem 6rem 0.5rem 6rem"
-        mobMargins="0 1rem 0 1rem"
+        mobmargins="0 1rem 0 1rem"
         line={1.4}
         align={"justify"}
         size="1.5rem"
@@ -53,14 +53,14 @@ const About = () => {
       </Body>
       <SubTitle
         margins="0rem 6rem 0rem 6rem"
-        mobMargins="0 1rem 0 1rem"
+        mobmargins="0 1rem 0 1rem"
         align={"center"}
       >
         WHY CIMUN?
       </SubTitle>
       <Body
         margins="0rem 6rem 0.5rem 6rem"
-        mobMargins="0 1rem 0 1rem"
+        mobmargins="0 1rem 0 1rem"
         line={1.4}
         align={"justify"}
         size="1.5rem"

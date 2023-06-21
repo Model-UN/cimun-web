@@ -9,8 +9,8 @@ const Conference = () => {
       <HeaderNav />
       <ComponentWrapper
         height="48.375vw"
-        minHeight="40.5vw"
-        maxHeight="86vh"
+        minheight="40.5vw"
+        maxheight="86vh"
         justify="flex-end"
         margins="0"
         style={{

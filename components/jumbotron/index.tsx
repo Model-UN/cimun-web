@@ -9,7 +9,7 @@ interface JumboTronProps {
   height: number;
   subTitle?: string | JSX.Element;
   image?: string; // background image
-  bottomMargin?: string;  // margin below jumbotron (default: 3.9375vw)
+  bottomMargin?: string; // margin below jumbotron (default: 3.9375vw)
 }
 
 const Jumbotron = (props: JumboTronProps) => {
@@ -24,7 +24,7 @@ const Jumbotron = (props: JumboTronProps) => {
   const heightCalc = height * 0.5625;
   const minDiffCalc = (100 - height) * 0.5625;
   const minHeightCalc = heightCalc - minDiffCalc;
-  const bottomMarginCalc = bottomMargin ? bottomMargin : "3.9375vw"
+  const bottomMarginCalc = bottomMargin ? bottomMargin : "3.9375vw";
 
   let sizeTitleOne = "18vw";
   let sizeTitleTwo = "18vw";
@@ -44,8 +44,8 @@ const Jumbotron = (props: JumboTronProps) => {
   return (
     <ComponentWrapper
       height={`${heightCalc}vw`}
-      minHeight={`${minHeightCalc}vw`}
-      maxHeight={`${height}vh`}
+      minheight={`${minHeightCalc}vw`}
+      maxheight={`${height}vh`}
       justify="flex-end"
       margins={`0 0 ${bottomMarginCalc} 0`}
       style={{
@@ -70,7 +70,7 @@ const Jumbotron = (props: JumboTronProps) => {
           line={1.2}
           width="34vw"
           self="center"
-          mobSize="2vw"
+          mobsize="2vw"
         >
           {subTitle}
         </Header>
