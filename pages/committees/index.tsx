@@ -21,22 +21,6 @@ const Committees = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Mulish:wght@900&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Alegreya:wght@600&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@500&family=Alegreya:wght@600&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@500&family=Alegreya:wght@600&family=Source+Sans+Pro&display=swap"
-          rel="stylesheet"
-        />
       </Head>
       <HeaderNav />
       <Jumbotron
@@ -49,15 +33,15 @@ const Committees = () => {
       />
       <InformationalWrapper>
         <Body align="left" self="center" weight={500}>
-          As you prepare to join us, the CIMUN team is excited to
-          present the committees and cabinets for CIMUN XX! Delegates will soon find
+          As you prepare to join us, the CIMUN team is excited to present the
+          committees and cabinets for CIMUN XX! Delegates will soon find
           themselves present in these committees, working with their colleagues
           in committee to help solve global issues and tackle complex real-world
           challenges.
           <br />
           <br />
           As usual, delegates will participate in immersive <em>
-          Present-Day
+            Present-Day
           </em>{" "}
           and <em>Historical</em> committees. This year, CIMUN will feature
           committees and cabinets from the year of <strong>1962</strong>.
