@@ -70,10 +70,13 @@ export const CommitteeCard = (props: CommitteeCardProps) => {
         margins="0 0 0 0"
       >
         <br />
-        <Link href={`bg/${props.committee.Guide}`}>
-          <a target="_blank" rel="noopener noreferrer">
-            <strong>IPD Delegate Guide</strong>
-          </a>
+        <Link
+          href={`bg/${props.committee.Guide}`}
+          target="_blank"
+          rel="noopener noreferrer">
+
+          <strong>IPD Delegate Guide</strong>
+
         </Link>
       </Body>
     ) : props.committee.Guide ? (
@@ -84,10 +87,13 @@ export const CommitteeCard = (props: CommitteeCardProps) => {
         margins="0 0 0 0"
       >
         <br />
-        <Link href={`bg/${props.committee.Guide}`}>
-          <a target="_blank" rel="noopener noreferrer">
-            <strong>Background Guide</strong>
-          </a>
+        <Link
+          href={`bg/${props.committee.Guide}`}
+          target="_blank"
+          rel="noopener noreferrer">
+
+          <strong>Background Guide</strong>
+
         </Link>
       </Body>
     ) : (

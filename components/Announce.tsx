@@ -17,9 +17,9 @@ const RegistrationOpen = () => {
         Want to bring your school to CIMUN XIX? You're in luck!
         {" - "}
         <Link href="/school-registration">
-          <a>
-            <u>Register Now</u>
-          </a>
+
+          <u>Register Now</u>
+
         </Link>
         {/*{" - "}*/}
         {/*<Link href="/registration-information.pdf">*/}
@@ -43,16 +43,16 @@ const PositionPapers = () => {
         Position paper submissions have closed!
         {" - "}
         <Link href="/resources">
-          <a>
-            <u>View Position Papers</u>
-          </a>
+
+          <u>View Position Papers</u>
+
         </Link>{" "}
         ... Still need to submit a position paper?
         {" - "}
         <Link href="https://forms.gle/FwfBNTbxQdootZ7o7">
-          <a>
-            <u>Late Position Paper Submission</u>
-          </a>
+
+          <u>Late Position Paper Submission</u>
+
         </Link>
       </Body>
     </AnnouncementBar>
@@ -73,9 +73,9 @@ const VirtualConference = () => {
         4th to 6th
         {" - "}
         <Link href="/#letter">
-          <a>
-            <u>Click Here to Read More</u>
-          </a>
+
+          <u>Click Here to Read More</u>
+
         </Link>
       </Body>
     </AnnouncementBar>
@@ -92,11 +92,10 @@ const DelegateGuide = () => {
         margins="0.5rem 0 0.5rem 0"
         mobMargins="0.5rem 0 0.5rem 0"
       >
-        <Link href="DelegateGuide.pdf">
-          <a target="_blank" rel="noopener noreferrer">
-            <strong>DELEGATES!</strong> - Getting ready for CIMUN XVIII? Click{" "}
-            <strong>here</strong> to review our Delegate Guide!
-          </a>
+        <Link href="DelegateGuide.pdf" target="_blank" rel="noopener noreferrer">
+
+          <strong>DELEGATES!</strong>- Getting ready for CIMUN XVIII? Click{" "}
+          <strong>here</strong>to review our Delegate Guide!
         </Link>
       </Body>
     </AnnouncementBar>
@@ -114,10 +113,10 @@ const BackgroundGuides = () => {
         mobMargins="0.5rem 0 0.5rem 0"
       >
         <Link href="committees">
-          <a>
+          
             CIMUN XVIII begins Friday, February 4th. Click here to see our
             Committees & Background Guides!
-          </a>
+          
         </Link>
       </Body>
     </AnnouncementBar>
@@ -134,12 +133,12 @@ const ResourceHub = () => {
         margins="1rem 0 1rem 0"
         mobMargins="0.5rem 0 0.5rem 0"
       >
-        <Link href="resources">
-          <a target="_blank" rel="noopener noreferrer">
+        <Link href="resources" target="_blank" rel="noopener noreferrer">
+          
             Delegates, CIMUN XIX is just around the corner! Check out our
             committees, read our guides, submit your position papers, and get
             ready for CIMUN in our Delegate Resource Hub!
-          </a>
+          
         </Link>
       </Body>
     </AnnouncementBar>

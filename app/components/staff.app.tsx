@@ -25,26 +25,26 @@ const StaffApp = () => {
         <br></br>
         <strong>Please fill out the following google form if interested:</strong>
         <Link href="https://docs.google.com/forms/d/e/1FAIpQLSeOb1NQDFuQ-L4I-Bz9s8muxruEGPzbVzAMdZPTXpORUhySdQ/viewform?usp=sf_link">
-          <a>
-            <Body
-            size="1.75rem"
-            align={"center"}>
-              <u>Staff Application</u>
-            </Body>
-          </a>
+
+          <Body
+          size="1.75rem"
+          align={"center"}>
+            <u>Staff Application</u>
+          </Body>
+
         </Link>
       
       <strong>Returning staff:</strong> if you are interested in a director or other specially-appointed position, please fill out the following form:
       
       <Link href="https://docs.google.com/forms/d/e/1FAIpQLSdSTioqDcE7yhfDKNbEV4-z0HNbiGq2fzFP7d7TBFestn7dSA/viewform?usp=sf_link">
-          <a>
-            <Body
-            size="1.75rem"
-            align={"center"}> 
-              <u>Director Application</u>
-            </Body>
-          </a>
-        </Link>
+
+        <Body
+        size="1.75rem"
+        align={"center"}> 
+          <u>Director Application</u>
+        </Body>
+
+      </Link>
       </Body>
     </MaterialCard>
   );
