@@ -12,7 +12,7 @@ const RegistrationOpen = () => {
         weight={600}
         align="center"
         margins="1rem 0 1rem 0"
-        mobmargins="0.5rem 0 0.5rem 0"
+        $mobMargins="0.5rem 0 0.5rem 0"
       >
         Want to bring your school to CIMUN XIX? You're in luck!
         {" - "}
@@ -36,7 +36,7 @@ const PositionPapers = () => {
         weight={600}
         align="center"
         margins="1rem 0 1rem 0"
-        mobmargins="0.5rem 0 0.5rem 0"
+        $mobMargins="0.5rem 0 0.5rem 0"
       >
         Position paper submissions have closed!
         {" - "}
@@ -61,7 +61,7 @@ const VirtualConference = () => {
         weight={600}
         align="center"
         margins="0.5rem 0 0.5rem 0"
-        mobmargins="0.5rem 0 0.5rem 0"
+        $mobMargins="0.5rem 0 0.5rem 0"
       >
         CIMUN XVIII will take place <em>virtually</em> this year from February
         4th to 6th
@@ -82,7 +82,7 @@ const DelegateGuide = () => {
         weight={600}
         align="center"
         margins="0.5rem 0 0.5rem 0"
-        mobmargins="0.5rem 0 0.5rem 0"
+        $mobMargins="0.5rem 0 0.5rem 0"
       >
         <Link
           href="DelegateGuide.pdf"
@@ -105,7 +105,7 @@ const BackgroundGuides = () => {
         weight={600}
         align="center"
         margins="0.5rem 0 0.5rem 0"
-        mobmargins="0.5rem 0 0.5rem 0"
+        $mobMargins="0.5rem 0 0.5rem 0"
       >
         <Link href="committees">
           CIMUN XVIII begins Friday, February 4th. Click here to see our
@@ -124,7 +124,7 @@ const ResourceHub = () => {
         weight={600}
         align="center"
         margins="1rem 0 1rem 0"
-        mobmargins="0.5rem 0 0.5rem 0"
+        $mobMargins="0.5rem 0 0.5rem 0"
       >
         <Link href="resources" target="_blank" rel="noopener noreferrer">
           Delegates, CIMUN XIX is just around the corner! Check out our

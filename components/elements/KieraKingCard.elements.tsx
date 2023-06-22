@@ -23,7 +23,7 @@ const AwardAnnouncementCard = () => {
         <SubTitle
           size="2.5rem"
           width="80%"
-          mobsize="1.5rem"
+          $mobSize="1.5rem"
           margins="10px 0"
           self="start"
           align="start"

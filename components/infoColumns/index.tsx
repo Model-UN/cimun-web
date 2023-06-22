@@ -30,7 +30,7 @@ export default function InfoColumns(): JSX.Element {
           <SubTitle
             size="3.5rem"
             width="80%"
-            mobsize="2.5rem"
+            $mobSize="2.5rem"
             margins="10px 0"
             self="start"
             align="start"
@@ -91,7 +91,7 @@ export default function InfoColumns(): JSX.Element {
           <SubTitle
             size="3.5rem"
             width="80%"
-            mobsize="2.5rem"
+            $mobSize="2.5rem"
             margins="10px 0"
             self="start"
             align="start"

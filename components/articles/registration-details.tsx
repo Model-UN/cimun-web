@@ -69,13 +69,13 @@ const RegistrationDetails = () => {
         margins="0.33vw 8rem 0 8rem"
         line={1.2}
         align={"left"}
-        mobsize="2.5rem"
+        $mobSize="2.5rem"
       >
         <em>Interested in bringing your school to CIMUN XIX?</em>
       </SubTitle>
       <Body
         margins="2rem 8rem 0.5rem 8rem"
-        mobmargins="1rem 1rem 0 1rem"
+        $mobMargins="1rem 1rem 0 1rem"
         line={1.4}
         align={"justify"}
         size="1.5rem"
@@ -100,7 +100,7 @@ const RegistrationDetails = () => {
       <Pricing />
       <Body
         margins="0 8rem 0.5rem 8rem"
-        mobmargins="1rem 1rem 0 1rem"
+        $mobMargins="1rem 1rem 0 1rem"
         line={1.4}
         align={"justify"}
         size="1.5rem"

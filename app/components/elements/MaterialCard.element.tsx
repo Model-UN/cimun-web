@@ -4,7 +4,7 @@ import { breakpoints } from "../../../styles/breakpoints";
 interface MaterialCardProps {
   margins?: string;
   pad?: string;
-  mobmargins?: string;
+  $mobMargins?: string;
   flexdirection?: string;
   $noAnimate?: boolean;
   background?: string;
@@ -27,8 +27,8 @@ export const MaterialCard = styled.div<MaterialCardProps>`
   margin: ${(props: MaterialCardProps) =>
     props.margins ? props.margins : "1rem"};
   ${(props: MaterialCardProps) => {
-    return props.mobmargins
-      ? breakpoints("margin", "", [{ 1000: props.mobmargins }])
+    return props.$mobMargins
+      ? breakpoints("margin", "", [{ 1000: props.$mobMargins }])
       : breakpoints("margin", "", [{ 1000: "0" }]);
   }}
 

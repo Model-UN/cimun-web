@@ -11,7 +11,7 @@ const KieraKingAwardDetails = () => {
       </Title>
       <Body
         margins="2rem 8rem 0.5rem 8rem"
-        mobmargins="1rem 1rem 0 1rem"
+        $mobMargins="1rem 1rem 0 1rem"
         line={1.4}
         align={"justify"}
         size="1.5rem"

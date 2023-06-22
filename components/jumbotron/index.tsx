@@ -70,7 +70,7 @@ const Jumbotron = (props: JumboTronProps) => {
           line={1.2}
           width="34vw"
           self="center"
-          mobsize="2vw"
+          $mobSize="2vw"
         >
           {subTitle}
         </Header>

@@ -13,7 +13,7 @@ export default function Letter(): JSX.Element {
         </Title>
         <Body
           margins="0 8rem 0.5rem 8rem"
-          mobmargins="0 1rem 0 1rem"
+          $mobMargins="0 1rem 0 1rem"
           line={1.4}
           align={"justify"}
           size="1.5rem"

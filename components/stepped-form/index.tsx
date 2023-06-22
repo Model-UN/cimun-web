@@ -443,7 +443,7 @@ const SteppedForm = (props: OwnProps) => {
             size="14px"
             styling="italic"
             margins="12.5px 0 20px 0"
-            mobmargins="12.5px 0 20px 0"
+            $mobMargins="12.5px 0 20px 0"
           >
             {description}
           </Body>
@@ -455,35 +455,41 @@ const SteppedForm = (props: OwnProps) => {
 
   return (
     <ComponentWrapper color={colors.primaryBlue} margins="0" width="100vw">
-      {!loading && formData !== null && formData !== undefined && !submitted && (
-        <SubTitle
-          align="center"
-          width="55%"
-          self="center"
-          weight={400}
-          color="white"
-          margins="60px 0 0 0"
-        >
-          {formData.sections[0].intro}
-        </SubTitle>
-      )}
-      {!loading && formData !== null && formData !== undefined && !submitted && (
-        <Form onSubmit={handleSubmit}>
-          {formData.sections[0].fields
-            .sort((a, b) => {
-              return a.index - b.index;
-            })
-            .map((field, index) => {
-              return renderFormItem(field, index);
-            })}
-          {errorMessage ? (
-            <Body color={colors.accentOrange}>{errorMessage}</Body>
-          ) : (
-            ""
-          )}
-          <SeggsySubmit type="submit" value="Submit Application" />
-        </Form>
-      )}
+      {!loading &&
+        formData !== null &&
+        formData !== undefined &&
+        !submitted && (
+          <SubTitle
+            align="center"
+            width="55%"
+            self="center"
+            weight={400}
+            color="white"
+            margins="60px 0 0 0"
+          >
+            {formData.sections[0].intro}
+          </SubTitle>
+        )}
+      {!loading &&
+        formData !== null &&
+        formData !== undefined &&
+        !submitted && (
+          <Form onSubmit={handleSubmit}>
+            {formData.sections[0].fields
+              .sort((a, b) => {
+                return a.index - b.index;
+              })
+              .map((field, index) => {
+                return renderFormItem(field, index);
+              })}
+            {errorMessage ? (
+              <Body color={colors.accentOrange}>{errorMessage}</Body>
+            ) : (
+              ""
+            )}
+            <SeggsySubmit type="submit" value="Submit Application" />
+          </Form>
+        )}
       {!loading && !formData && !submitted && (
         <SubTitle
           align="center"
