@@ -5,7 +5,7 @@ import { colors } from "../../styles/colors";
 
 const KieraKingAwardDetails = () => {
   return (
-    <MaterialCard flexdirection="column" noanimate background={colors.ivory}>
+    <MaterialCard flexdirection="column" $noAnimate background={colors.ivory}>
       <Title margins="2vw 8rem 0 8rem" line={1.2} align={"left"}>
         Chicago International Model United Nations: Kiera King Delegate Award
       </Title>

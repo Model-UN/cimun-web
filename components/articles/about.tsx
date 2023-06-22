@@ -5,7 +5,7 @@ import { colors } from "../../styles/colors";
 
 const About = () => {
   return (
-    <MaterialCard flexdirection="column" noanimate background={colors.ivory}>
+    <MaterialCard flexdirection="column" $noAnimate background={colors.ivory}>
       <Title margins="2vw 6rem 0 6rem" line={0.9} align={"center"}>
         About the Chicago International Model United Nations
       </Title>

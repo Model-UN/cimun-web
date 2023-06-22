@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const StaffApp = () => {
   return (
-    <MaterialCard flexdirection="column" noanimate background={colors.ivory}>
+    <MaterialCard flexdirection="column" $noAnimate background={colors.ivory}>
       <Title margins="2vw 6rem 0 6rem" line={0.9} align={"center"}>
         Apply to staff CIMUN XX!
       </Title>

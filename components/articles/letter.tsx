@@ -7,7 +7,7 @@ import { colors } from "../../styles/colors";
 export default function Letter(): JSX.Element {
   return (
     <ComponentWrapper data-nosnippet margins={"auto"} pad={"0 12rem 0 12rem"}>
-      <MaterialCard flexdirection="column" noanimate background={colors.ivory}>
+      <MaterialCard flexdirection="column" $noAnimate background={colors.ivory}>
         <Title margins="2vw 8rem 0 8rem" line={0.9} align={"center"}>
           From the Office of the Secretary-General
         </Title>

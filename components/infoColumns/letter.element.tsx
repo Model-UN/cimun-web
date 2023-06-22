@@ -6,7 +6,7 @@ export default function LetterElement(): JSX.Element {
   return (
     <InfoColumnWrapper id="letter">
       <CardWrapper flex="1" margins="1rem 15% 0 15%" pad="auto">
-        <MaterialCard flexdirection="column" noanimate>
+        <MaterialCard flexdirection="column" $noAnimate>
           <Title margins="1rem 0 0 6rem" line={0.9}>
             From the Desk of the Secretary-General
           </Title>

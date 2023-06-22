@@ -59,7 +59,7 @@ const Pricing = () => {
 
 const RegistrationDetails = () => {
   return (
-    <MaterialCard flexdirection="column" noanimate background={colors.ivory}>
+    <MaterialCard flexdirection="column" $noAnimate background={colors.ivory}>
       <Title margins="2vw 8rem 0 8rem" line={1.2} align={"left"}>
         Registering for CIMUN XIX
       </Title>
