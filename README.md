@@ -1,11 +1,11 @@
-# CIMUN XVIII Front End Web Application
+# CIMUN Front End Web Application
 
-Hello! Welcome to the repository for the CIMUN XVIII web application. This is an
+Hello! Welcome to the repository for the CIMUN web application. This is an
 open-source [Next.js](https://nextjs.org/) project developed and maintained by
 the volunteer-run CIMUN Department of Technology.
 
 Chicago International Model United Nations (CIMUN) is an annual inter-scholastic
-(high school) Model UN conference in Chicago, IL. Our focus is to create realistic 
+(high school) Model UN conference in Chicago, IL. Our focus is to create realistic
 educational opportunities for young leaders in the scholastic MUN community.
 We are organized by the Model United Nations Development Organization (MUNDO).
 
@@ -36,16 +36,16 @@ First, run the development server:
 
 Install yarn from the following link: https://classic.yarnpkg.com/lang/en/docs/install/#mac-stable
 
-```bash yarn dev```
+`bash yarn dev`
 
-If you get a versioning issue, such as: error cimun-web@0.1.0: The engine “node” is incompatible with this module. Expected version “^14.21.3". Got “16.8.0” 
+If you get a versioning issue, such as: error cimun-web@0.1.0: The engine “node” is incompatible with this module. Expected version “^14.21.3". Got “16.8.0”
 
 run the following two commands to fix the version where XX.XX.XX is the needed version number:
-```npm install -g n```
-```sudo n XX.XX.XX ```
+`npm install -g n`
+`sudo n XX.XX.XX `
 
 If next is not installed, install it with the following command:
-```npm install next@10.2.1 react@17.0.2 react-dom@17.0.2```
+`npm install next@10.2.1 react@17.0.2 react-dom@17.0.2`
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
