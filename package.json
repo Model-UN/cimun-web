@@ -16,8 +16,9 @@
     "@fortawesome/free-solid-svg-icons": "^6.4.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "axios": "^1.4.0",
+    "eslint-config-next": "^13.4.7",
     "md5": "^2.3.0",
-    "next": "^13.4.6",
+    "next": "^13.4.7",
     "nextjs-redirect": "^6.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -48,6 +49,7 @@
         ],
         "plugins": [
           [
+            "babel-plugin-styled-components",
             "styled-components",
             {
               "ssr": true,
