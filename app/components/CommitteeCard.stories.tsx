@@ -13,7 +13,7 @@ type Story = StoryObj<typeof CommitteeCard>;
 const ipdCard = new Committee(
   "International Press Delegation",
   "IPD",
-  null,
+  "",
   "cimun-logo.png",
   0,
   [],
