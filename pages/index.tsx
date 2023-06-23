@@ -1,12 +1,12 @@
 import Head from "next/head";
+import React from "react";
 import HeaderNav from "../components/headerNav";
 import Jumbotron from "../components/jumbotron";
 import InfoColumns from "../components/infoColumns";
 import Footer from "../components/footer";
 import { Wrapper } from "../styles/containers";
 import Letter from "../components/articles/letter";
-import Announce from "../components/Announce";
-import React from "react";
+// import Announce from "../components/Announce";
 import AwardAnnouncementCard from "../components/elements/KieraKingCard.elements";
 
 export default function Home() {

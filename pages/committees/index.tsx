@@ -5,7 +5,7 @@ import HeaderNav from "../../components/headerNav";
 import Jumbotron from "../../components/jumbotron";
 import { Body } from "../../styles/typography";
 import Footer from "../../components/footer";
-import Announce from "../../components/Announce";
+// import Announce from "../../components/Announce";
 import { InformationalWrapper } from "../../app/components/elements";
 import CommitteeDisplay from "../../app/components/CommitteeDisplay";
 

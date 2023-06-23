@@ -4,7 +4,7 @@ import { Wrapper } from "../../styles/containers";
 import HeaderNav from "../../components/headerNav";
 import { Header, SubTitle, Body } from "../../styles/typography";
 import Footer from "../../components/footer";
-import Announce from "../../components/Announce";
+// import Announce from "../../components/Announce";
 import { InformationalWrapper } from "../../app/components/elements";
 import ResourceHubDisplay from "../../app/components/ResourceHubDisplay";
 

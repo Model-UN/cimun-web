@@ -1,13 +1,13 @@
-import { ComponentWrapper } from "../../styles/containers";
+import React from "react";
 import Link from "next/link";
+import { ComponentWrapper } from "../../styles/containers";
 import { CardContainer } from "../infoColumns/infoColumns.styles";
 import { colors } from "../../styles/colors";
 import { Body, SubTitle } from "../../styles/typography";
-import React from "react";
 
 const AwardAnnouncementCard = () => {
   return (
-    <ComponentWrapper margins={"auto"} pad={"0rem 6rem 0rem 6rem"}>
+    <ComponentWrapper margins="auto" pad="0rem 6rem 0rem 6rem">
       <CardContainer margins="0" color={colors.plum} radius="8px">
         <Body
           align="start"

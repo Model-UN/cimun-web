@@ -5,7 +5,7 @@ import Jumbotron from "../../components/jumbotron";
 import Footer from "../../components/footer";
 import SteppedForm from "../../components/stepped-form";
 import { ComponentWrapper, Wrapper } from "../../styles/containers";
-import Announce from "../../components/Announce";
+// import Announce from "../../components/Announce";
 import RegistrationDetails from "../../components/articles/registration-details";
 
 const DirApps = () => {
@@ -28,7 +28,7 @@ const DirApps = () => {
         height={85}
         image="awards.jpg"
       />
-      <ComponentWrapper margins={"auto"} pad={"0 16rem 0 16rem"}>
+      <ComponentWrapper margins="auto" pad="0 16rem 0 16rem">
         <RegistrationDetails />
       </ComponentWrapper>
       <SteppedForm

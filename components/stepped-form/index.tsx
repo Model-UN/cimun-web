@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { SubTitle, Body } from "../../styles/typography";
-import { ComponentWrapper } from "../../styles/containers";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { SubTitle, Body } from "../../styles/typography";
+import { ComponentWrapper } from "../../styles/containers";
 import { breakpoints } from "../../styles/breakpoints";
 import { fonts } from "../../styles/fonts";
 import { colors } from "../../styles/colors";
@@ -293,7 +293,7 @@ const SteppedForm = (props: OwnProps) => {
 
   const renderFormItem = (
     { content, description, field_type, _id, required, values }: FormField,
-    index: number
+    index: number,
   ) => {
     const fieldInputTypeMap = {
       SHORT_ANSWER: "text",
@@ -376,7 +376,7 @@ const SteppedForm = (props: OwnProps) => {
                 return <option value={`${value._id}`}>{value.value}</option>;
               })}
             </SelectSeggsyInput>
-            <Icon icon={"chevron-down"} style={{ zIndex: 10 }} />
+            <Icon icon="chevron-down" style={{ zIndex: 10 }} />
           </div>
         );
         break;
@@ -517,32 +517,30 @@ const SteppedForm = (props: OwnProps) => {
         </SubTitle>
       )}
       {submitted && (
-        <>
-          <SubTitle
-            align="center"
-            width="75%"
-            self="center"
-            weight={300}
-            color={colors.ivory}
-          >
-            Your {props.submissionType ? props.submissionType : "submission"}{" "}
-            has been received! Thank you so much for your interest in CIMUN XX.
-            <br />
-            <br />
-            We will be in touch with you after reviewing your{" "}
-            {props.submissionType ? props.submissionType : "submission"}. In the
-            meantime, if you have any further inquiries, you are welcome to
-            reach out to our Steering Committee at{" "}
-            <a href="mailto:sc@cimun.org">
-              <u>sc@cimun.org</u>
-            </a>{" "}
-            for assistance.
-            <br />
-            <br />
-            Once again, thank you so much for your interest in CIMUN. We hope to
-            see you there!
-          </SubTitle>
-        </>
+        <SubTitle
+          align="center"
+          width="75%"
+          self="center"
+          weight={300}
+          color={colors.ivory}
+        >
+          Your {props.submissionType ? props.submissionType : "submission"} has
+          been received! Thank you so much for your interest in CIMUN XX.
+          <br />
+          <br />
+          We will be in touch with you after reviewing your{" "}
+          {props.submissionType ? props.submissionType : "submission"}. In the
+          meantime, if you have any further inquiries, you are welcome to reach
+          out to our Steering Committee at{" "}
+          <a href="mailto:sc@cimun.org">
+            <u>sc@cimun.org</u>
+          </a>{" "}
+          for assistance.
+          <br />
+          <br />
+          Once again, thank you so much for your interest in CIMUN. We hope to
+          see you there!
+        </SubTitle>
       )}
     </ComponentWrapper>
   );

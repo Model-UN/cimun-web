@@ -6,7 +6,7 @@ import { colors } from "../../styles/colors";
 const About = () => {
   return (
     <MaterialCard flexdirection="column" $noAnimate background={colors.ivory}>
-      <Title margins="2vw 6rem 0 6rem" line={0.9} align={"center"}>
+      <Title margins="2vw 6rem 0 6rem" line={0.9} align="center">
         About the Chicago International Model United Nations
       </Title>
       <br />
@@ -14,7 +14,7 @@ const About = () => {
         margins="2rem 6rem 0.5rem 6rem"
         $mobMargins="0 1rem 0 1rem"
         line={1.4}
-        align={"justify"}
+        align="justify"
         size="1.5rem"
       >
         The <strong>Chicago International Model United Nations</strong>, also
@@ -30,7 +30,7 @@ const About = () => {
       <SubTitle
         margins="0rem 6rem 0rem 6rem"
         $mobMargins="0 1rem 0 1rem"
-        align={"center"}
+        align="center"
       >
         OUR MISSION
       </SubTitle>
@@ -38,7 +38,7 @@ const About = () => {
         margins="2rem 6rem 0.5rem 6rem"
         $mobMargins="0 1rem 0 1rem"
         line={1.4}
-        align={"justify"}
+        align="justify"
         size="1.5rem"
       >
         The <strong>Model United Nations Development Organization</strong>{" "}
@@ -54,7 +54,7 @@ const About = () => {
       <SubTitle
         margins="0rem 6rem 0rem 6rem"
         $mobMargins="0 1rem 0 1rem"
-        align={"center"}
+        align="center"
       >
         WHY CIMUN?
       </SubTitle>
@@ -62,7 +62,7 @@ const About = () => {
         margins="0rem 6rem 0.5rem 6rem"
         $mobMargins="0 1rem 0 1rem"
         line={1.4}
-        align={"justify"}
+        align="justify"
         size="1.5rem"
       >
         <br />

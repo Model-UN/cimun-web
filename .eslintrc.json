@@ -1,19 +1,34 @@
-module.exports = {
-  root: true,
-  parser: "@typescript-eslint/parser",
-  plugins: ["@typescript-eslint"],
-  extends: [
-    "next/core-web-vitals",
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "jest": true
+  },
+  "extends": [
+    "next",
     "airbnb",
     "airbnb-typescript",
     "airbnb/hooks",
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:import/typescript",
+    "plugin:prettier/recommended"
   ],
-  parserOptions: {
-    project: "./tsconfig.json",
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "project": "./tsconfig.json"
   },
-  rules: {
+  "plugins": ["react", "@typescript-eslint", "prettier"],
+  "rules": {
+    "react/react-in-jsx-scope": ["off"],
+    "react/jsx-uses-react": ["off"],
+    "react/jsx-props-no-spreading": ["warn"],
+    "react/no-unescaped-entities": ["off"],
     // Clarifications are provided for each suppression
 
     /**
@@ -38,23 +53,23 @@ module.exports = {
     "react/jsx-tag-spacing": [
       1,
       {
-        closingSlash: "never", // <Element>< /Element> or <Element/ >
-        afterOpening: "never", // < Element></ Element> or < Element/>
-        beforeClosing: "never", // <Element ></Element >
-        beforeSelfClosing: "always", // <Element />
-      },
+        "closingSlash": "never", // <Element>< /Element> or <Element/ >
+        "afterOpening": "never", // < Element></ Element> or < Element/>
+        "beforeClosing": "never", // <Element ></Element >
+        "beforeSelfClosing": "always" // <Element />
+      }
     ],
     /**
      * Function components are superior, that is all.
      */
     "react/function-component-definition": [
       2,
-      { namedComponents: "arrow-function" },
+      { "namedComponents": "arrow-function" }
     ],
     /**
      * It's really up to the project maintainers to say what is and is not
      * 'restricted' in a language, tbh. Just do good code reviews is what I say.
      */
-    "no-restricted-syntax": "off",
-  },
-};
+    "no-restricted-syntax": "off"
+  }
+}

@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { ComponentWrapper } from "../../styles/containers";
-import { colors } from "../../styles/colors";
-import { breakpoints } from "../../styles/breakpoints";
 import Link from "next/link";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { ComponentWrapper } from "../../styles/containers";
+import { colors } from "../../styles/colors";
+import { breakpoints } from "../../styles/breakpoints";
 
 const HeaderWrapper = styled(ComponentWrapper)`
   height: 3.9375vw;
@@ -232,17 +232,17 @@ const HeaderNav = () => {
             </BurgerListItem>
           </Link>
           <BurgerSeparator />
-          {/*<Link href="/resources">*/}
-          {/*  <BurgerListItem>*/}
-          {/*    <Anchor>Delegate Resources</Anchor>*/}
-          {/*  </BurgerListItem>*/}
-          {/*</Link>*/}
-          {/*<BurgerSeparator />*/}
-          {/*<Link href="https://press.cimun.org/">*/}
-          {/*  <BurgerListItem>*/}
-          {/*    <Anchor>The CIMUN Chronicle</Anchor>*/}
-          {/*  </BurgerListItem>*/}
-          {/*</Link>*/}
+          {/* <Link href="/resources"> */}
+          {/*  <BurgerListItem> */}
+          {/*    <Anchor>Delegate Resources</Anchor> */}
+          {/*  </BurgerListItem> */}
+          {/* </Link> */}
+          {/* <BurgerSeparator /> */}
+          {/* <Link href="https://press.cimun.org/"> */}
+          {/*  <BurgerListItem> */}
+          {/*    <Anchor>The CIMUN Chronicle</Anchor> */}
+          {/*  </BurgerListItem> */}
+          {/* </Link> */}
           <Link href="/leahy" legacyBehavior>
             <BurgerListItem>
               <Anchor>Leahy Fellowship</Anchor>
@@ -258,9 +258,9 @@ const HeaderNav = () => {
       )}
       <Burger onClick={() => setBurgerOpen(!burgerOpen)}>
         {!burgerOpen ? (
-          <Icon icon={"bars"} />
+          <Icon icon="bars" />
         ) : (
-          <Icon icon={"times"} color="white" />
+          <Icon icon="times" color="white" />
         )}
       </Burger>
     </HeaderWrapper>

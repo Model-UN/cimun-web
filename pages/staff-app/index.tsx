@@ -29,7 +29,7 @@ const DirApps = () => {
         height={85}
         image="cimun-staff.png"
       />
-      <ComponentWrapper margins={"auto"} pad={"0 16rem 0 16rem"}>
+      <ComponentWrapper margins="auto" pad="0 16rem 0 16rem">
         <StaffApp />
       </ComponentWrapper>
       <SteppedForm formId="apply" submissionType="application" />

@@ -20,7 +20,7 @@ export class Committee {
     size?: number,
     topics?: Topic[],
     guide?: string,
-    description?: string
+    description?: string,
   ) {
     this.Name = name;
     this.Abbr = abbr;

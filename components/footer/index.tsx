@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/legacy/image";
+import Link from "next/link";
 import {
   FooterSection,
   StyledFooter,
@@ -31,46 +32,46 @@ const Footer: React.FC = () => (
         </FooterColFirst>
         <FooterCol>
           <FootH2>CIMUN XX</FootH2>
-          {/*<a*/}
-          {/*  href="CIMUN XIX Schedule.pdf"*/}
-          {/*  target="_blank"*/}
-          {/*  rel="noopener noreferrer"*/}
-          {/*>*/}
-          {/*  Conference Schedule*/}
-          {/*</a>*/}
+          {/* <a */}
+          {/*  href="CIMUN XIX Schedule.pdf" */}
+          {/*  target="_blank" */}
+          {/*  rel="noopener noreferrer" */}
+          {/* > */}
+          {/*  Conference Schedule */}
+          {/* </a> */}
           <a href="/committees" target="_blank" rel="noopener noreferrer">
             Committees & Cabinets
           </a>
-          {/*<a*/}
-          {/*  href="CIMUN XIX - Delegate Guide.pdf"*/}
-          {/*  target="_blank"*/}
-          {/*  rel="noopener noreferrer"*/}
-          {/*>*/}
-          {/*  Delegate Guide*/}
-          {/*</a>*/}
-          {/*<a*/}
-          {/*  href="https://press.cimun.org/"*/}
-          {/*  target="_blank"*/}
-          {/*  rel="noopener noreferrer"*/}
-          {/*>*/}
-          {/*  The CIMUN Chronicle*/}
-          {/*</a>*/}
+          {/* <a */}
+          {/*  href="CIMUN XIX - Delegate Guide.pdf" */}
+          {/*  target="_blank" */}
+          {/*  rel="noopener noreferrer" */}
+          {/* > */}
+          {/*  Delegate Guide */}
+          {/* </a> */}
+          {/* <a */}
+          {/*  href="https://press.cimun.org/" */}
+          {/*  target="_blank" */}
+          {/*  rel="noopener noreferrer" */}
+          {/* > */}
+          {/*  The CIMUN Chronicle */}
+          {/* </a> */}
         </FooterCol>
         <FooterCol>
           <FootH2>Explore</FootH2>
-          <a href="/about">About CIMUN</a>
-          <a href="/resources">Delegate Resource Hub</a>
+          <Link href="/about">About CIMUN</Link>
+          <Link href="/resources">Delegate Resource Hub</Link>
           <a href="https://www.mimun.mx/" target="_blank" rel="noreferrer">
             Check out MIMUN
           </a>
           {/* TODO: Add open source credits page */}
-          {/*<div >*/}
-          {/*  <Link href="/open-source">*/}
-          {/*    <a>*/}
-          {/*      Licenses & Credits*/}
-          {/*    </a>*/}
-          {/*  </Link>*/}
-          {/*</div>*/}
+          {/* <div > */}
+          {/*  <Link href="/open-source"> */}
+          {/*    <a> */}
+          {/*      Licenses & Credits */}
+          {/*    </a> */}
+          {/*  </Link> */}
+          {/* </div> */}
           <br />
         </FooterCol>
         <FooterCol>

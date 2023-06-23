@@ -19,10 +19,10 @@ const RegistrationOpen = () => {
         <Link href="/school-registration">
           <u>Register Now</u>
         </Link>
-        {/*{" - "}*/}
-        {/*<Link href="/registration-information.pdf">*/}
-        {/*  <a><u>More Information</u></a>*/}
-        {/*</Link>*/}
+        {/* {" - "} */}
+        {/* <Link href="/registration-information.pdf"> */}
+        {/*  <a><u>More Information</u></a> */}
+        {/* </Link> */}
       </Body>
     </AnnouncementBar>
   );

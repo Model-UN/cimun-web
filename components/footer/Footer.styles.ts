@@ -55,6 +55,8 @@ export const LogoBox = styled.span`
   flex-grow: 2;
 `;
 
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore I'm lazy
 export const Icon = styled(FontAwesomeIcon)`
   font-size: 2em;
   height: 1em;

@@ -1,3 +1,4 @@
+import React from "react";
 import { SubTitle, Body } from "../../styles/typography";
 import { colors } from "../../styles/colors";
 import {
@@ -5,7 +6,6 @@ import {
   CardWrapper,
   CardContainer,
 } from "./infoColumns.styles";
-import React from "react";
 
 export default function InfoColumns(): JSX.Element {
   return (
