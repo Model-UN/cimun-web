@@ -10,7 +10,7 @@ type CommitteeCardProps = {
 };
 
 export const CommitteeCard = (props: CommitteeCardProps) => {
-  const topics = props.committee.Topics.map((topic) => {
+  const topics = props.committee.Topics?.map((topic) => {
     if (topic.Title.includes(":")) {
       const titleItems = topic.Title.split(":");
       const title = titleItems[0];
@@ -30,6 +30,7 @@ export const CommitteeCard = (props: CommitteeCardProps) => {
   });
 
   const topicList =
+    //@ts-ignore
     props.committee.Topics.length > 0 ? (
       <ol>
         <Body size="1.1rem" line={1.5}>
@@ -105,6 +106,7 @@ export const CommitteeCard = (props: CommitteeCardProps) => {
   );
 
   const topicHeader =
+    //@ts-ignore
     props.committee.Topics.length > 0 ? (
       <SubTitle
         size="1.4rem"
