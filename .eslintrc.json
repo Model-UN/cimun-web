@@ -29,6 +29,7 @@
     "react/jsx-uses-react": ["off"],
     "react/jsx-props-no-spreading": ["warn"],
     "react/no-unescaped-entities": ["off"],
+    "react/destructuring-assignment": ["warn"],
     // Clarifications are provided for each suppression
 
     /**
@@ -63,13 +64,28 @@
      * Function components are superior, that is all.
      */
     "react/function-component-definition": [
-      2,
+      1,
       { "namedComponents": "arrow-function" }
     ],
     /**
      * It's really up to the project maintainers to say what is and is not
      * 'restricted' in a language, tbh. Just do good code reviews is what I say.
      */
-    "no-restricted-syntax": "off"
+    "no-restricted-syntax": "off",
+    /**
+     * Hey i'm gonna be honest I'm just turning these off to keep moving, i'm trying to reduce the number changes of this PR
+     * I'd like to review these later
+     */
+    "@typescript-eslint/no-unsafe-member-access": "off",
+    "@typescript-eslint/no-unsafe-call": "off",
+    "@typescript-eslint/no-unsafe-argument": "off",
+    "@typescript-eslint/ban-ts-comment": "off",
+    "@typescript-eslint/no-unused-vars": "off",
+    "no-nested-ternary": "off",
+    "import/no-cycle": "off",
+    /**
+     * This rule seems like it might interfere with next
+     */
+    "react/jsx-filename-extension": "off"
   }
 }

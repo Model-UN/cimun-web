@@ -222,11 +222,11 @@ const SteppedForm = (props: OwnProps) => {
               rankingMap[responseId][idx] = value;
               break;
             }
-            //@ts-ignore I don't want to overhaul another area of code right now
+            // @ts-ignore I don't want to overhaul another area of code right now
             responses.push({ _id: response.name, response: response.value });
             break;
           case "dropdown":
-            //@ts-ignore I don't want to overhaul another area of code right now
+            // @ts-ignore I don't want to overhaul another area of code right now
             responses.push({ _id: response.name, response: response.value });
             break;
           case "checkbox":
@@ -239,7 +239,7 @@ const SteppedForm = (props: OwnProps) => {
             break;
           case "date":
             if (response.value) {
-              //@ts-ignore I don't want to overhaul another area of code right now
+              // @ts-ignore I don't want to overhaul another area of code right now
               responses.push({
                 _id: response.name,
                 response: new Date(response.value),
@@ -254,7 +254,7 @@ const SteppedForm = (props: OwnProps) => {
           case "email":
           case "tel":
           default:
-            //@ts-ignore I don't want to overhaul another area of code right now
+            // @ts-ignore I don't want to overhaul another area of code right now
             responses.push({ _id: response.name, response: response.value });
             break;
         }
@@ -262,7 +262,7 @@ const SteppedForm = (props: OwnProps) => {
     }
     // handle creating checkbox responses
     for (const id in checkboxMap) {
-      //@ts-ignore I don't want to overhaul another area of code right now
+      // @ts-ignore I don't want to overhaul another area of code right now
       responses.push({ _id: id, response: checkboxMap[id] });
     }
     // handle creating ranking responses
@@ -273,10 +273,10 @@ const SteppedForm = (props: OwnProps) => {
       const rankingResponse = [];
       for (const index in rankingMap[id]) {
         const value = rankingMap[id][index];
-        //@ts-ignore I don't want to overhaul another area of code right now
+        // @ts-ignore I don't want to overhaul another area of code right now
         rankingResponse.splice(+index, 1, value);
       }
-      //@ts-ignore I don't want to overhaul another area of code right now
+      // @ts-ignore I don't want to overhaul another area of code right now
       responses.push({ _id: id, response: rankingResponse });
     }
     const request = new SubmitFormDto();
