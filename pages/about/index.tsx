@@ -5,7 +5,7 @@ import HeaderNav from "../../components/headerNav";
 import About from "../../components/articles/about";
 import Jumbotron from "../../components/jumbotron";
 import Footer from "../../components/footer";
-import Announce from "../../components/Announce";
+// import Announce from "../../components/Announce";
 
 const AboutPage = () => {
   return (

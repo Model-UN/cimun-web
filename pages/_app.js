@@ -10,4 +10,9 @@ const MyApp = ({ Component, pageProps }) => {
   return <Component {...pageProps} />;
 };
 
+MyApp.propTypes = {
+  Component: PropTypes.Component.isRequired,
+  pageProps: PropTypes.object.isRequired,
+};
+
 export default MyApp;
