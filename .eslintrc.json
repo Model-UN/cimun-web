@@ -81,11 +81,20 @@
     "@typescript-eslint/no-unsafe-argument": "off",
     "@typescript-eslint/ban-ts-comment": "off",
     "@typescript-eslint/no-unused-vars": "off",
+    "@typescript-eslint/no-unsafe-assignment": "off",
+    "@typescript-eslint/no-unsafe-return": "off",
+    "@typescript-eslint/no-shadow": "off",
     "no-nested-ternary": "off",
     "import/no-cycle": "off",
+    "react/jsx-no-useless-fragment": "off",
+    "react/prop-types": "off",
+    "react/require-default-props": "off",
+    "react-hooks/exhaustive-deps": "warn",
     /**
      * This rule seems like it might interfere with next
      */
-    "react/jsx-filename-extension": "off"
+    "react/jsx-filename-extension": "off",
+    "no-underscore-dangle": "off",
+    "@typescipt-eslint/no-unsafe-assignment": "off"
   }
 }

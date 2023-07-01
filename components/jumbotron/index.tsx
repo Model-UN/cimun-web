@@ -24,7 +24,7 @@ const Jumbotron = (props: JumboTronProps) => {
   const heightCalc = height * 0.5625;
   const minDiffCalc = (100 - height) * 0.5625;
   const minHeightCalc = heightCalc - minDiffCalc;
-  const bottomMarginCalc = bottomMargin ? bottomMargin : "3.9375vw";
+  const bottomMarginCalc = bottomMargin || "3.9375vw";
 
   let sizeTitleOne = "18vw";
   let sizeTitleTwo = "18vw";

@@ -30,7 +30,7 @@ export const CommitteeCard = (props: CommitteeCardProps) => {
   });
 
   const topicList =
-    //@ts-ignore
+    // @ts-ignore
     props.committee.Topics.length > 0 ? (
       <ol>
         <Body size="1.1rem" line={1.5}>
@@ -106,7 +106,7 @@ export const CommitteeCard = (props: CommitteeCardProps) => {
   );
 
   const topicHeader =
-    //@ts-ignore
+    // @ts-ignore
     props.committee.Topics.length > 0 ? (
       <SubTitle
         size="1.4rem"
@@ -133,9 +133,7 @@ export const CommitteeCard = (props: CommitteeCardProps) => {
 
   const committeeDescription = props.committee.Description ? (
     <Body size="1.1rem" line={1.5}>
-      <div
-        dangerouslySetInnerHTML={{ __html: props.committee.Description }}
-      ></div>
+      <div dangerouslySetInnerHTML={{ __html: props.committee.Description }} />
     </Body>
   ) : (
     <></>
@@ -147,7 +145,7 @@ export const CommitteeCard = (props: CommitteeCardProps) => {
       <CardItemWrapper>
         <Header line={0.8} $mobSize="1.5rem">
           {props.committee.Name}{" "}
-          {props.committee.Abbr ? "(" + props.committee.Abbr + ")" : ""}
+          {props.committee.Abbr ? `(${props.committee.Abbr})` : ""}
           <hr />
         </Header>
         {topicHeader}

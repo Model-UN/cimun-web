@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-floating-promises */
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import styled from "styled-components";

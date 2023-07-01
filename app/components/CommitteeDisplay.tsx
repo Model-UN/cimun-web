@@ -8,7 +8,7 @@ import { Committee } from "../types";
 const CommitteeDisplay = () => {
   const [timePeriod, setTimePeriod] = useState<string>("PD");
   const [committeeType, setCommitteeType] = useState<string>("COMMS");
-  let committees = CommitteeDetails[timePeriod][committeeType].map(
+  const committees = CommitteeDetails[timePeriod][committeeType].map(
     (committee) => committee.getJSX(),
   );
 

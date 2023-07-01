@@ -1,3 +1,11 @@
+/* eslint-disable @typescript-eslint/no-unused-expressions */
+/* eslint-disable @typescript-eslint/no-misused-promises */
+/* eslint-disable @typescript-eslint/restrict-template-expressions */
+/* eslint-disable no-continue */
+/* eslint-disable @typescript-eslint/no-shadow */
+/* eslint-disable guard-for-in */
+/* eslint-disable @typescript-eslint/no-floating-promises */
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -230,8 +238,8 @@ const SteppedForm = (props: OwnProps) => {
             responses.push({ _id: response.name, response: response.value });
             break;
           case "checkbox":
-            const responseId = response.name.split("-")[0];
             if (response.checked) {
+              const responseId = response.name.split("-")[0];
               checkboxMap[responseId]
                 ? checkboxMap[responseId].push(response.value)
                 : (checkboxMap[responseId] = [response.value]);
