@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Link from "next/link";
 import {
   FooterSection,
@@ -20,6 +20,7 @@ const Footer: React.FC = () => (
         <FooterColFirst>
           <div>
             <Image
+              alt="CIMUN logo"
               src="/cimun_footer.png"
               layout="responsive"
               width={105}
