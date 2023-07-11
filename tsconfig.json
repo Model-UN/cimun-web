@@ -26,13 +26,13 @@
     "pages",
     "public",
     "app",
-    "**/*.{js, ts, tsx, d.ts}",
+    "**/*.{js, jsx, ts, tsx, d.ts, d.tsx}",
     ".next/types/**/*.ts"
   ],
   "exclude": [
     "node_modules",
     ".vscode",
     ".next",
-    "**/*.stories.{ts,tsx,d.ts,js,jsx}"
+    "**/*.stories.{ts,tsx,js,jsx}"
   ]
 }
