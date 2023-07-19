@@ -1,8 +1,16 @@
+/* eslint-disable @typescript-eslint/no-unused-expressions */
+/* eslint-disable @typescript-eslint/no-misused-promises */
+/* eslint-disable @typescript-eslint/restrict-template-expressions */
+/* eslint-disable no-continue */
+/* eslint-disable @typescript-eslint/no-shadow */
+/* eslint-disable guard-for-in */
+/* eslint-disable @typescript-eslint/no-floating-promises */
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from "react";
-import { SubTitle, Body } from "../../styles/typography";
-import { ComponentWrapper } from "../../styles/containers";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { SubTitle, Body } from "../../styles/typography";
+import { ComponentWrapper } from "../../styles/containers";
 import { breakpoints } from "../../styles/breakpoints";
 import { fonts } from "../../styles/fonts";
 import { colors } from "../../styles/colors";
@@ -188,8 +196,8 @@ const SteppedForm = (props: OwnProps) => {
   const initForm = async () => {
     setLoading(true);
     await getFormTemplate(formId)
-        .then(data => setFormData(data))
-        .catch(() => setFormData(undefined));
+      .then((data) => setFormData(data))
+      .catch(() => setFormData(undefined));
     setLoading(false);
   };
 
@@ -222,14 +230,16 @@ const SteppedForm = (props: OwnProps) => {
               rankingMap[responseId][idx] = value;
               break;
             }
+            // @ts-ignore I don't want to overhaul another area of code right now
             responses.push({ _id: response.name, response: response.value });
             break;
           case "dropdown":
+            // @ts-ignore I don't want to overhaul another area of code right now
             responses.push({ _id: response.name, response: response.value });
             break;
           case "checkbox":
-            const responseId = response.name.split("-")[0];
             if (response.checked) {
+              const responseId = response.name.split("-")[0];
               checkboxMap[responseId]
                 ? checkboxMap[responseId].push(response.value)
                 : (checkboxMap[responseId] = [response.value]);
@@ -237,6 +247,7 @@ const SteppedForm = (props: OwnProps) => {
             break;
           case "date":
             if (response.value) {
+              // @ts-ignore I don't want to overhaul another area of code right now
               responses.push({
                 _id: response.name,
                 response: new Date(response.value),
@@ -251,6 +262,7 @@ const SteppedForm = (props: OwnProps) => {
           case "email":
           case "tel":
           default:
+            // @ts-ignore I don't want to overhaul another area of code right now
             responses.push({ _id: response.name, response: response.value });
             break;
         }
@@ -258,6 +270,7 @@ const SteppedForm = (props: OwnProps) => {
     }
     // handle creating checkbox responses
     for (const id in checkboxMap) {
+      // @ts-ignore I don't want to overhaul another area of code right now
       responses.push({ _id: id, response: checkboxMap[id] });
     }
     // handle creating ranking responses
@@ -268,8 +281,10 @@ const SteppedForm = (props: OwnProps) => {
       const rankingResponse = [];
       for (const index in rankingMap[id]) {
         const value = rankingMap[id][index];
+        // @ts-ignore I don't want to overhaul another area of code right now
         rankingResponse.splice(+index, 1, value);
       }
+      // @ts-ignore I don't want to overhaul another area of code right now
       responses.push({ _id: id, response: rankingResponse });
     }
     const request = new SubmitFormDto();
@@ -286,7 +301,7 @@ const SteppedForm = (props: OwnProps) => {
 
   const renderFormItem = (
     { content, description, field_type, _id, required, values }: FormField,
-    index: number
+    index: number,
   ) => {
     const fieldInputTypeMap = {
       SHORT_ANSWER: "text",
@@ -312,7 +327,7 @@ const SteppedForm = (props: OwnProps) => {
       case "rank":
         InputContent = (
           <>
-            {values.map((value, _) => {
+            {values?.map((value, _) => {
               return (
                 <div
                   style={{
@@ -334,7 +349,7 @@ const SteppedForm = (props: OwnProps) => {
                       required={required}
                       name={`${_id}-${value._id}-rank`}
                     >
-                      {values.map((_, index) => {
+                      {values?.map((_, index) => {
                         return (
                           <option value={`${index + 1}`}>{index + 1}</option>
                         );
@@ -365,18 +380,18 @@ const SteppedForm = (props: OwnProps) => {
             }}
           >
             <SelectSeggsyInput required={required} name={`${_id}`}>
-              {values.map((value, _) => {
+              {values?.map((value, _) => {
                 return <option value={`${value._id}`}>{value.value}</option>;
               })}
             </SelectSeggsyInput>
-            <Icon icon={"chevron-down"} style={{ zIndex: 10 }} />
+            <Icon icon="chevron-down" style={{ zIndex: 10 }} />
           </div>
         );
         break;
       case "checkbox":
         InputContent = (
           <>
-            {values.map((value, index) => {
+            {values?.map((value, index) => {
               return (
                 <div
                   style={{
@@ -443,7 +458,7 @@ const SteppedForm = (props: OwnProps) => {
             size="14px"
             styling="italic"
             margins="12.5px 0 20px 0"
-            mobMargins="12.5px 0 20px 0"
+            $mobMargins="12.5px 0 20px 0"
           >
             {description}
           </Body>
@@ -455,37 +470,49 @@ const SteppedForm = (props: OwnProps) => {
 
   return (
     <ComponentWrapper color={colors.primaryBlue} margins="0" width="100vw">
-      {!loading && formData !== null && formData !== undefined && !submitted && (
+      {!loading &&
+        formData !== null &&
+        formData !== undefined &&
+        !submitted && (
+          <SubTitle
+            align="center"
+            width="55%"
+            self="center"
+            weight={400}
+            color="white"
+            margins="60px 0 0 0"
+          >
+            {formData.sections[0].intro}
+          </SubTitle>
+        )}
+      {!loading &&
+        formData !== null &&
+        formData !== undefined &&
+        !submitted && (
+          <Form onSubmit={handleSubmit}>
+            {formData.sections[0].fields
+              .sort((a, b) => {
+                return a.index - b.index;
+              })
+              .map((field, index) => {
+                return renderFormItem(field, index);
+              })}
+            {errorMessage ? (
+              <Body color={colors.accentOrange}>{errorMessage}</Body>
+            ) : (
+              ""
+            )}
+            <SeggsySubmit type="submit" value="Submit Application" />
+          </Form>
+        )}
+      {!loading && !formData && !submitted && (
         <SubTitle
           align="center"
-          width="55%"
+          width="75%"
           self="center"
-          weight={400}
-          color="white"
-          margins="60px 0 0 0"
+          weight={300}
+          color={colors.ivory}
         >
-          {formData.sections[0].intro}
-        </SubTitle>
-      )}
-      {!loading && formData !== null && formData !== undefined && !submitted && (
-        <Form onSubmit={handleSubmit}>
-          {formData.sections[0].fields
-            .sort((a, b) => {
-              return a.index - b.index;
-            })
-            .map((field, index) => {
-              return renderFormItem(field, index);
-            })}
-          {errorMessage ? (
-            <Body color={colors.accentOrange}>{errorMessage}</Body>
-          ) : (
-            ""
-          )}
-          <SeggsySubmit type="submit" value="Submit Application" />
-        </Form>
-      )}
-      {!loading && !formData && !submitted && (
-        <SubTitle align="center" width="75%" self="center" weight={300} color={colors.ivory}>
           Something went wrong while attempting to retrieve this form. Please
           try again in a few minutes.
           <br />
@@ -498,27 +525,30 @@ const SteppedForm = (props: OwnProps) => {
         </SubTitle>
       )}
       {submitted && (
-        <>
-          <SubTitle align="center" width="75%" self="center" weight={300} color={colors.ivory}>
-            Your {props.submissionType ? props.submissionType : "submission"}{" "}
-            has been received! Thank you so much for your interest in CIMUN
-            XX.
-            <br />
-            <br />
-            We will be in touch with you after reviewing your{" "}
-            {props.submissionType ? props.submissionType : "submission"}. In the
-            meantime, if you have any further inquiries, you are welcome to
-            reach out to our Steering Committee at{" "}
-            <a href="mailto:sc@cimun.org">
-              <u>sc@cimun.org</u>
-            </a>{" "}
-            for assistance.
-            <br />
-            <br />
-            Once again, thank you so much for your interest in CIMUN. We hope to
-            see you there!
-          </SubTitle>
-        </>
+        <SubTitle
+          align="center"
+          width="75%"
+          self="center"
+          weight={300}
+          color={colors.ivory}
+        >
+          Your {props.submissionType ? props.submissionType : "submission"} has
+          been received! Thank you so much for your interest in CIMUN XX.
+          <br />
+          <br />
+          We will be in touch with you after reviewing your{" "}
+          {props.submissionType ? props.submissionType : "submission"}. In the
+          meantime, if you have any further inquiries, you are welcome to reach
+          out to our Steering Committee at{" "}
+          <a href="mailto:sc@cimun.org">
+            <u>sc@cimun.org</u>
+          </a>{" "}
+          for assistance.
+          <br />
+          <br />
+          Once again, thank you so much for your interest in CIMUN. We hope to
+          see you there!
+        </SubTitle>
       )}
     </ComponentWrapper>
   );

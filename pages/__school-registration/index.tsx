@@ -5,7 +5,7 @@ import Jumbotron from "../../components/jumbotron";
 import Footer from "../../components/footer";
 import SteppedForm from "../../components/stepped-form";
 import { ComponentWrapper, Wrapper } from "../../styles/containers";
-import Announce from "../../components/Announce";
+// import Announce from "../../components/Announce";
 import RegistrationDetails from "../../components/articles/registration-details";
 
 const DirApps = () => {
@@ -20,22 +20,6 @@ const DirApps = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Mulish:wght@900&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Alegreya:wght@600&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@500&family=Alegreya:wght@600&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@500&family=Alegreya:wght@600&family=Source+Sans+Pro&display=swap"
-          rel="stylesheet"
-        />
       </Head>
       <HeaderNav />
       <Jumbotron
@@ -44,7 +28,7 @@ const DirApps = () => {
         height={85}
         image="awards.jpg"
       />
-      <ComponentWrapper margins={"auto"} pad={"0 16rem 0 16rem"}>
+      <ComponentWrapper margins="auto" pad="0 16rem 0 16rem">
         <RegistrationDetails />
       </ComponentWrapper>
       <SteppedForm

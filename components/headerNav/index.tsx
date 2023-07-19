@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { ComponentWrapper } from "../../styles/containers";
-import { colors } from "../../styles/colors";
-import { breakpoints } from "../../styles/breakpoints";
 import Link from "next/link";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { ComponentWrapper } from "../../styles/containers";
+import { colors } from "../../styles/colors";
+import { breakpoints } from "../../styles/breakpoints";
 
 const HeaderWrapper = styled(ComponentWrapper)`
   height: 3.9375vw;
@@ -168,22 +168,22 @@ const HeaderNav = () => {
   return (
     <HeaderWrapper>
       <LogoWrapper>
-        <Link href="/">
+        <Link href="/" legacyBehavior>
           <Logo src="/cimun-logo.png" />
         </Link>
       </LogoWrapper>
       <ListContainer>
-        <Link href="/">
+        <Link href="/" legacyBehavior>
           <ListItem>
             <Anchor>Home</Anchor>
           </ListItem>
         </Link>
-        <Link href="/about">
+        <Link href="/about" legacyBehavior>
           <ListItem>
             <Anchor>About</Anchor>
           </ListItem>
         </Link>
-        <Link href="/committees">
+        <Link href="/committees" legacyBehavior>
           <ListItem>
             <Anchor>Committees & Cabinets</Anchor>
           </ListItem>
@@ -198,12 +198,12 @@ const HeaderNav = () => {
             <Anchor>The CIMUN Chronicle</Anchor>
           </ListItem>
         </Link> */}
-        <Link href="/leahy">
+        <Link href="/leahy" legacyBehavior>
           <ListItem>
             <Anchor>Leahy Fellowship</Anchor>
           </ListItem>
         </Link>
-        <Link href="/staff-app">
+        <Link href="/staff-app" legacyBehavior>
           <ListItem>
             <Anchor>Staff CIMUN XX</Anchor>
           </ListItem>
@@ -214,42 +214,42 @@ const HeaderNav = () => {
           <LogoWrapper>
             <BurgerLogo src="/White_CIMUN_Logo.png" />
           </LogoWrapper>
-          <Link href="/">
+          <Link href="/" legacyBehavior>
             <BurgerListItem>
               <Anchor>Home</Anchor>
             </BurgerListItem>
           </Link>
           <BurgerSeparator />
-          <Link href="/about">
+          <Link href="/about" legacyBehavior>
             <BurgerListItem>
               <Anchor>About</Anchor>
             </BurgerListItem>
           </Link>
           <BurgerSeparator />
-          <Link href="/committees">
+          <Link href="/committees" legacyBehavior>
             <BurgerListItem>
               <Anchor>Committees & Cabinets</Anchor>
             </BurgerListItem>
           </Link>
           <BurgerSeparator />
-          {/*<Link href="/resources">*/}
-          {/*  <BurgerListItem>*/}
-          {/*    <Anchor>Delegate Resources</Anchor>*/}
-          {/*  </BurgerListItem>*/}
-          {/*</Link>*/}
-          {/*<BurgerSeparator />*/}
-          {/*<Link href="https://press.cimun.org/">*/}
-          {/*  <BurgerListItem>*/}
-          {/*    <Anchor>The CIMUN Chronicle</Anchor>*/}
-          {/*  </BurgerListItem>*/}
-          {/*</Link>*/}
-          <Link href="/leahy">
+          {/* <Link href="/resources"> */}
+          {/*  <BurgerListItem> */}
+          {/*    <Anchor>Delegate Resources</Anchor> */}
+          {/*  </BurgerListItem> */}
+          {/* </Link> */}
+          {/* <BurgerSeparator /> */}
+          {/* <Link href="https://press.cimun.org/"> */}
+          {/*  <BurgerListItem> */}
+          {/*    <Anchor>The CIMUN Chronicle</Anchor> */}
+          {/*  </BurgerListItem> */}
+          {/* </Link> */}
+          <Link href="/leahy" legacyBehavior>
             <BurgerListItem>
               <Anchor>Leahy Fellowship</Anchor>
             </BurgerListItem>
           </Link>
           <BurgerSeparator />
-          <Link href="/staff-app">
+          <Link href="/staff-app" legacyBehavior>
             <BurgerListItem>
               <Anchor>STAFF CIMUN XX</Anchor>
             </BurgerListItem>
@@ -258,9 +258,9 @@ const HeaderNav = () => {
       )}
       <Burger onClick={() => setBurgerOpen(!burgerOpen)}>
         {!burgerOpen ? (
-          <Icon icon={"bars"} />
+          <Icon icon="bars" />
         ) : (
-          <Icon icon={"times"} color="white" />
+          <Icon icon="times" color="white" />
         )}
       </Burger>
     </HeaderWrapper>

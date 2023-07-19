@@ -1,16 +1,15 @@
 import React, { useState } from "react";
-import { CommitteeDetails } from "../shared/constants";
+import { CommitteeDetails, CommitteeAbbrToCopy } from "../shared/constants";
 import { colors } from "../../styles/colors";
 import { SubTitle, Header, Body } from "../../styles/typography";
 import { PillButton, PillButtonRow } from "./elements";
-import { CommitteeAbbrToCopy } from "../shared/constants";
 import { Committee } from "../types";
 
 const CommitteeDisplay = () => {
   const [timePeriod, setTimePeriod] = useState<string>("PD");
   const [committeeType, setCommitteeType] = useState<string>("COMMS");
-  let committees = CommitteeDetails[timePeriod][committeeType].map(
-    (committee) => committee.getJSX()
+  const committees = CommitteeDetails[timePeriod][committeeType].map(
+    (committee) => committee.getJSX(),
   );
 
   const handleSelectPeriod = (e) => {
@@ -28,19 +27,20 @@ const CommitteeDisplay = () => {
   const ipdCard = new Committee(
     "International Press Delegation",
     "IPD",
-    null,
+    "",
     "cimun-logo.png",
     0,
     [],
     "../CIMUN XIX - IPD Delegate Guide.pdf",
     "The International Press Delegation (IPD) produces The CIMUN Chronicle, a digital newspaper, " +
       "and partners with the CIMUN News Network (CNN), a staff-run broadcast news program.<br/><br/>" +
-      "All press coverage during CIMUN is provided by Delegates from the International Press Delegation."
+      "All press coverage during CIMUN is provided by Delegates from the International Press Delegation.",
   ).getJSX();
 
   const asterisk =
     committeeType === "CABS" ? (
       <></>
+    ) : (
       // <Body size="1.1rem" line={1.5} self="center" color={colors.plum}>
       //   *<strong>Note</strong>: Some cabinets will have{" "}
       //   <em>no official agenda</em>. Cabinets are designed to be fluid,
@@ -50,7 +50,6 @@ const CommitteeDisplay = () => {
       //   provide key information and context that is unconstrained by specific
       //   topics or agenda items.
       // </Body>
-    ) : (
       <></>
     );
 

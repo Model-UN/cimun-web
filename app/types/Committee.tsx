@@ -4,12 +4,19 @@ import { CommitteeCard } from "../components/CommitteeCard";
 
 export class Committee {
   Name: string;
+
   Abbr: string;
+
   Site: string;
+
   Img: string;
+
   Size?: number;
+
   Topics?: Topic[];
+
   Guide?: string;
+
   Description?: string;
 
   constructor(
@@ -20,7 +27,7 @@ export class Committee {
     size?: number,
     topics?: Topic[],
     guide?: string,
-    description?: string
+    description?: string,
   ) {
     this.Name = name;
     this.Abbr = abbr;
