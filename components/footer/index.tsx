@@ -9,9 +9,11 @@ import {
   FooterNav,
   FooterCol,
   FooterColFirst,
-  Icon,
   FootH2,
+  SocialAnchor
 } from "./Footer.styles";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 
 const Footer: React.FC = () => (
   <StyledFooter>
@@ -78,27 +80,21 @@ const Footer: React.FC = () => (
         <FooterCol>
           <FootH2>Connect with Us</FootH2>
           <div>
-            <a
-              href="https://www.facebook.com/CIMUNMUNDO"
+            <SocialAnchor href="https://www.facebook.com/CIMUNMUNDO"
               target="_blank"
-              rel="noreferrer"
-            >
-              <Icon icon={["fab", "facebook-f"]} />
-            </a>
-            <a
-              href="https://www.instagram.com/cimun_mundo/"
+              rel="noreferrer">
+              <FontAwesomeIcon icon={["fab", "facebook-f"]} />
+            </SocialAnchor>
+            <SocialAnchor href="https://www.instagram.com/cimun_mundo/"
               target="_blank"
-              rel="noreferrer"
-            >
-              <Icon icon={["fab", "instagram"]} />
-            </a>
-            <a
-              href="https://twitter.com/CIMUN_MUNDO"
+              rel="noreferrer">
+              <FontAwesomeIcon icon={["fab", "instagram"]} />
+            </SocialAnchor>
+            <SocialAnchor href="https://twitter.com/CIMUN_MUNDO"
               target="_blank"
-              rel="noreferrer"
-            >
-              <Icon icon={["fab", "twitter"]} />
-            </a>
+              rel="noreferrer">
+              <FontAwesomeIcon icon={["fab", "twitter"]} />
+            </SocialAnchor>
           </div>
           <br />
           <div>
@@ -129,7 +125,7 @@ const Footer: React.FC = () => (
         <div />
       </FooterSection>
     </FooterNav>
-  </StyledFooter>
+  </StyledFooter >
 );
 
 export default Footer;
