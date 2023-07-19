@@ -46,7 +46,7 @@ const DirApps = () => {
       <ComponentWrapper margins={"auto"} pad={"0 16rem 0 16rem"}>
         <StaffApp />
       </ComponentWrapper>
-      <SteppedForm formId="apply" submissionType="application" />
+{/*       <SteppedForm formId="apply" submissionType="application" /> */}
       <Footer />
     </Wrapper>
   );
