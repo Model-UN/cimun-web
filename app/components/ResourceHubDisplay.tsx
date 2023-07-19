@@ -1,16 +1,17 @@
+/* eslint-disable @typescript-eslint/no-floating-promises */
 import React, { useEffect, useState } from "react";
+import Link from "next/link";
+import styled from "styled-components";
+import md5 from "md5";
 import { SubTitle, Body } from "../../styles/typography";
 import { PillButton, PillButtonRow } from "./elements";
-import Link from "next/link";
 import { colors } from "../../styles/colors";
 import PdfViewer from "../../components/pdf";
-import styled from "styled-components";
 import {
   getCommitteesDelegations,
   getPositionPaper,
 } from "../../services/axiosHandler";
 import { fonts } from "../../styles/fonts";
-import md5 from "md5";
 
 const SelectSeggsyInput = styled.select`
   width: 100%;
@@ -74,7 +75,7 @@ const CommitteeDisplay = () => {
         Documents & Information
       </SubTitle>
       <PillButtonRow>
-        <Link href="CIMUN XIX Schedule.pdf">
+        <Link href="CIMUN XIX Schedule.pdf" legacyBehavior>
           <PillButton selectedColor={colors.carolinaBlue}>
             <br />
             Conference Schedule
@@ -84,7 +85,7 @@ const CommitteeDisplay = () => {
         </Link>
       </PillButtonRow>
       <PillButtonRow>
-        <Link href="CIMUN XIX - Delegate Guide.pdf">
+        <Link href="CIMUN XIX - Delegate Guide.pdf" legacyBehavior>
           <PillButton selectedColor={colors.indigo}>
             <br />
             Delegate Guide
@@ -92,12 +93,12 @@ const CommitteeDisplay = () => {
             <br />
           </PillButton>
         </Link>
-        <Link href="CIMUN XIX - IPD Delegate Guide.pdf">
+        <Link href="CIMUN XIX - IPD Delegate Guide.pdf" legacyBehavior>
           <PillButton selectedColor={colors.indigo}>
             IPD Delegate Guide
           </PillButton>
         </Link>
-        <Link href="CIMUN XIX - Guide to Crisis.pdf">
+        <Link href="CIMUN XIX - Guide to Crisis.pdf" legacyBehavior>
           <PillButton selectedColor={colors.indigo}>
             Delegate Guide to Crisis
           </PillButton>
@@ -110,7 +111,7 @@ const CommitteeDisplay = () => {
         <br />
       </Body>
       <PillButtonRow>
-        <Link href=" https://press.cimun.org/">
+        <Link href=" https://press.cimun.org/" legacyBehavior>
           <PillButton selectedColor={colors.carolinaBlue}>
             <br />
             The CIMUN Chronicle
@@ -127,7 +128,7 @@ const CommitteeDisplay = () => {
         <br />
       </Body>
       <PillButtonRow>
-        <Link href="/committees">
+        <Link href="/committees" legacyBehavior>
           <PillButton selectedColor={colors.plum}>
             <br />
             CIMUN XIX Committees & Cabinets
@@ -189,11 +190,9 @@ const CommitteeDisplay = () => {
       )}
       {(delegations == null || Object.keys(delegations).length === 0) && (
         <Link href="https://forms.gle/FwfBNTbxQdootZ7o7">
-          <a>
-            <Body>
-              <u>Late Position Paper Submission</u>
-            </Body>
-          </a>
+          <Body>
+            <u>Late Position Paper Submission</u>
+          </Body>
         </Link>
       )}
       {delegations != null && Object.keys(delegations).length > 0 && (

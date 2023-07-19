@@ -58,7 +58,7 @@ export const CardContainer = styled.div<{
   color?: string;
   margins?: string;
   pad?: string;
-  mobMargins?: string;
+  $mobMargins?: string;
   noMargins?: boolean;
   align?: string;
   radius?: string;
@@ -85,7 +85,8 @@ export const CardContainer = styled.div<{
   ${breakpoints("min-width", "", [{ 1500: "45vw" }])};
   ${breakpoints("width", "", [{ 700: "94vw" }])};
 
-  margin: ${(props) => props.noMargins ? "1rem 0 0 0" : props.margins ? props.margins : "1rem"};
+  margin: ${(props) =>
+    props.noMargins ? "1rem 0 0 0" : props.margins ? props.margins : "1rem"};
   ${breakpoints("margin", "", [{ 1500: "auto", 1000: "10px auto" }])};
 
   padding: ${(props) => (props.pad ? props.pad : "1.5rem")};
@@ -98,7 +99,7 @@ export const Title = styled(SubTitle)`
   ${breakpoints("font-size", "", [{ 1000: "4rem" }])};
   margin: ${(props) => (props.margins ? props.margins : "0rem")};
   ${(props) =>
-    props.mobMargins
-      ? breakpoints("margin", "", [{ 1000: props.mobMargins }])
+    props.$mobMargins
+      ? breakpoints("margin", "", [{ 1000: props.$mobMargins }])
       : breakpoints("margin", "", [{ 1000: "1rem 1rem 0 1rem" }])}
 `;

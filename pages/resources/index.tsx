@@ -4,7 +4,7 @@ import { Wrapper } from "../../styles/containers";
 import HeaderNav from "../../components/headerNav";
 import { Header, SubTitle, Body } from "../../styles/typography";
 import Footer from "../../components/footer";
-import Announce from "../../components/Announce";
+// import Announce from "../../components/Announce";
 import { InformationalWrapper } from "../../app/components/elements";
 import ResourceHubDisplay from "../../app/components/ResourceHubDisplay";
 
@@ -20,22 +20,6 @@ const DelegateResourcePage = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Mulish:wght@900&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Alegreya:wght@600&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@500&family=Alegreya:wght@600&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@500&family=Alegreya:wght@600&family=Source+Sans+Pro&display=swap"
-          rel="stylesheet"
-        />
       </Head>
       <HeaderNav />
       <SubTitle

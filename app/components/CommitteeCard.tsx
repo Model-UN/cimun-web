@@ -10,7 +10,7 @@ type CommitteeCardProps = {
 };
 
 export const CommitteeCard = (props: CommitteeCardProps) => {
-  const topics = props.committee.Topics.map((topic) => {
+  const topics = props.committee.Topics?.map((topic) => {
     if (topic.Title.includes(":")) {
       const titleItems = topic.Title.split(":");
       const title = titleItems[0];
@@ -30,6 +30,7 @@ export const CommitteeCard = (props: CommitteeCardProps) => {
   });
 
   const topicList =
+    // @ts-ignore
     props.committee.Topics.length > 0 ? (
       <ol>
         <Body size="1.1rem" line={1.5}>
@@ -70,10 +71,12 @@ export const CommitteeCard = (props: CommitteeCardProps) => {
         margins="0 0 0 0"
       >
         <br />
-        <Link href={`bg/${props.committee.Guide}`}>
-          <a target="_blank" rel="noopener noreferrer">
-            <strong>IPD Delegate Guide</strong>
-          </a>
+        <Link
+          href={`bg/${props.committee.Guide}`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <strong>IPD Delegate Guide</strong>
         </Link>
       </Body>
     ) : props.committee.Guide ? (
@@ -84,10 +87,12 @@ export const CommitteeCard = (props: CommitteeCardProps) => {
         margins="0 0 0 0"
       >
         <br />
-        <Link href={`bg/${props.committee.Guide}`}>
-          <a target="_blank" rel="noopener noreferrer">
-            <strong>Background Guide</strong>
-          </a>
+        <Link
+          href={`bg/${props.committee.Guide}`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <strong>Background Guide</strong>
         </Link>
       </Body>
     ) : (
@@ -101,13 +106,14 @@ export const CommitteeCard = (props: CommitteeCardProps) => {
   );
 
   const topicHeader =
+    // @ts-ignore
     props.committee.Topics.length > 0 ? (
       <SubTitle
         size="1.4rem"
         weight={700}
         line={0.5}
         margins="0 0 0 0"
-        mobSize="1.2rem"
+        $mobSize="1.2rem"
       >
         Anticipated Topics:
       </SubTitle>
@@ -119,7 +125,7 @@ export const CommitteeCard = (props: CommitteeCardProps) => {
         weight={700}
         line={1.5}
         margins="0 0 0 0"
-        mobSize="1.2rem"
+        $mobSize="1.2rem"
       >
         More details regarding committees will be made available soon!
       </SubTitle>
@@ -127,21 +133,19 @@ export const CommitteeCard = (props: CommitteeCardProps) => {
 
   const committeeDescription = props.committee.Description ? (
     <Body size="1.1rem" line={1.5}>
-      <div
-        dangerouslySetInnerHTML={{ __html: props.committee.Description }}
-      ></div>
+      <div dangerouslySetInnerHTML={{ __html: props.committee.Description }} />
     </Body>
   ) : (
     <></>
   );
 
   return (
-    <MaterialCard background={colors.ivory}>
+    <MaterialCard flexdirection="row" background={colors.ivory}>
       {image}
       <CardItemWrapper>
-        <Header line={0.8} mobSize="1.5rem">
+        <Header line={0.8} $mobSize="1.5rem">
           {props.committee.Name}{" "}
-          {props.committee.Abbr ? "(" + props.committee.Abbr + ")" : ""}
+          {props.committee.Abbr ? `(${props.committee.Abbr})` : ""}
           <hr />
         </Header>
         {topicHeader}

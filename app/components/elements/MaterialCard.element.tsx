@@ -4,9 +4,9 @@ import { breakpoints } from "../../../styles/breakpoints";
 interface MaterialCardProps {
   margins?: string;
   pad?: string;
-  mobMargins?: string;
-  column?: boolean;
-  noAnimate?: boolean;
+  $mobMargins?: string;
+  flexdirection?: string;
+  $noAnimate?: boolean;
   background?: string;
 }
 
@@ -22,14 +22,13 @@ export const MaterialCard = styled.div<MaterialCardProps>`
   width: 100%;
   min-height: 100px;
 
-  flex-direction: ${(props: MaterialCardProps) =>
-    props.column ? "column" : "row"};
+  flex-direction: ${(props: MaterialCardProps) => props.flexdirection};
   ${breakpoints("flex-direction", "", [{ 600: "column" }])};
   margin: ${(props: MaterialCardProps) =>
     props.margins ? props.margins : "1rem"};
   ${(props: MaterialCardProps) => {
-    return props.mobMargins
-      ? breakpoints("margin", "", [{ 1000: props.mobMargins }])
+    return props.$mobMargins
+      ? breakpoints("margin", "", [{ 1000: props.$mobMargins }])
       : breakpoints("margin", "", [{ 1000: "0" }]);
   }}
 
@@ -39,15 +38,17 @@ export const MaterialCard = styled.div<MaterialCardProps>`
     props.background ? props.background : "#fff"};
   border-radius: 2px;
 
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  box-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.12),
+    0 1px 2px rgba(0, 0, 0, 0.24);
 
   transition: ${(props: MaterialCardProps) => {
-    return props.noAnimate ? "none" : "all 0.3s cubic-bezier(.25,.8,.25,1)";
+    return props.$noAnimate ? "none" : "all 0.3s cubic-bezier(.25,.8,.25,1)";
   }};
 
   :hover {
     box-shadow: ${(props: MaterialCardProps) => {
-      return props.noAnimate
+      return props.$noAnimate
         ? "0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)"
         : "0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)";
     }};

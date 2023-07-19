@@ -1,3 +1,4 @@
+import React from "react";
 import { SubTitle, Body } from "../../styles/typography";
 import { colors } from "../../styles/colors";
 import {
@@ -5,7 +6,6 @@ import {
   CardWrapper,
   CardContainer,
 } from "./infoColumns.styles";
-import React from "react";
 
 export default function InfoColumns(): JSX.Element {
   return (
@@ -30,7 +30,7 @@ export default function InfoColumns(): JSX.Element {
           <SubTitle
             size="3.5rem"
             width="80%"
-            mobSize="2.5rem"
+            $mobSize="2.5rem"
             margins="10px 0"
             self="start"
             align="start"
@@ -91,7 +91,7 @@ export default function InfoColumns(): JSX.Element {
           <SubTitle
             size="3.5rem"
             width="80%"
-            mobSize="2.5rem"
+            $mobSize="2.5rem"
             margins="10px 0"
             self="start"
             align="start"
