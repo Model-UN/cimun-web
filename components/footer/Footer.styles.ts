@@ -1,4 +1,3 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "styled-components";
 import { colors } from "../../styles/colors";
 
@@ -55,13 +54,24 @@ export const LogoBox = styled.span`
   flex-grow: 2;
 `;
 
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore I'm lazy
-export const Icon = styled(FontAwesomeIcon)`
-  font-size: 2em;
-  height: 1em;
-  margin-left: 0.5rem;
-`;
 export const FootH2 = styled.h2`
   margin-top: 0;
 `;
+
+export const SocialAnchor = styled.a`
+  display: inline-block;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 100%;
+  padding: 0.5rem;
+  margin-left: 0.5rem;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.1)
+  }
+
+  svg {
+    height: 100%;
+    width: 100%;
+  }
+`
