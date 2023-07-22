@@ -53,6 +53,7 @@ const Jumbotron = (props: JumboTronProps) => {
         backgroundPosition: "bottom",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
+        overflow: "hidden",
       }}
     >
       <div className={styles.middleDisplay}>
