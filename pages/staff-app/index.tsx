@@ -16,7 +16,7 @@ const DirApps = () => {
         </title>
         <meta
           name="description"
-          content="Apply to join the CIMUN XX Staff! - December 7-10th, 2023 in Downtown Chicago"
+          content="Apply to join the CIMUN XX Staff! - December 7-10th, 2023 at the Fairmont Hotel in Downtown Chicago"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
@@ -32,7 +32,7 @@ const DirApps = () => {
       <ComponentWrapper margins="auto" pad="0 16rem 0 16rem">
         <StaffApp />
       </ComponentWrapper>
-{/*       <SteppedForm formId="apply" submissionType="application" /> */}
+      {/*       <SteppedForm formId="apply" submissionType="application" /> */}
       <Footer />
     </Wrapper>
   );
