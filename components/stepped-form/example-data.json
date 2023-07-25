@@ -272,7 +272,7 @@
           "sectionId": 1,
           "required": true,
           "fieldType": "SELECTION",
-          "content": "Have you ever staffed a MUNDO conference before, if so how many?",
+          "content": "Have you ever staffed a CIMUN or MIMUN conference before, if so how many?",
           "description": "",
           "values": [
             {

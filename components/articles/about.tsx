@@ -41,13 +41,11 @@ const About = () => {
         align="justify"
         size="1.5rem"
       >
-        The <strong>Model United Nations Development Organization</strong>{" "}
-        (MUNDO) is an independent educational organization that has been
-        producing high quality, simulation-driven Model UN programs since 2003
-        in both Chicago and Mexico City. We seek to help students build their
-        understanding of global politics through realistic, fast-paced
-        experiential education programs that promote critical thinking and
-        leadership development.
+        The team behind CIMUN has been producing high quality, simulation-driven
+        Model UN programs since 2003 in both Chicago and Mexico City. We seek to
+        help students build their understanding of global politics through
+        realistic, fast-paced experiential education programs that promote
+        critical thinking and leadership development.
         <br />
         <br />
       </Body>
