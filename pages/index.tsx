@@ -6,7 +6,7 @@ import InfoColumns from "../components/infoColumns";
 import Footer from "../components/footer";
 import { Wrapper } from "../styles/containers";
 import Letter from "../components/articles/letter";
-// import Announce from "../components/Announce";
+import Announce from "../components/Announce";
 import AwardAnnouncementCard from "../components/elements/KieraKingCard.elements";
 
 export default function Home() {
@@ -22,6 +22,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
       </Head>
+      <Announce.RegistrationOpen />
       <HeaderNav />
       <Jumbotron
         titleOne="CIMUN"

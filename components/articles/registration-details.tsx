@@ -2,7 +2,11 @@ import styled from "styled-components";
 import Link from "next/link";
 import { Title } from "../infoColumns/infoColumns.styles";
 import { Body, SubTitle } from "../../styles/typography";
-import { MaterialCard } from "../../app/components/elements";
+import {
+  MaterialCard,
+  PillButton,
+  PillButtonRow,
+} from "../../app/components/elements";
 import { colors } from "../../styles/colors";
 
 const PricingTable = styled.table`
@@ -61,7 +65,7 @@ const RegistrationDetails = () => {
   return (
     <MaterialCard flexdirection="column" $noAnimate background={colors.ivory}>
       <Title margins="2vw 8rem 0 8rem" line={1.2} align="left">
-        Registering for CIMUN XIX
+        Registering for CIMUN XX
       </Title>
       <SubTitle
         color={colors.indigo}
@@ -71,7 +75,7 @@ const RegistrationDetails = () => {
         align="left"
         $mobSize="2.5rem"
       >
-        <em>Interested in bringing your school to CIMUN XIX?</em>
+        <em>Interested in bringing your school to CIMUN XX?</em>
       </SubTitle>
       <Body
         margins="2rem 8rem 0.5rem 8rem"
@@ -81,23 +85,33 @@ const RegistrationDetails = () => {
         size="1.5rem"
       >
         Advisors, you are invited to use the form below to apply your Model UN
-        delegation for CIMUN XIX!
+        delegation for CIMUN XX!
         <br />
         <br />
-        CIMUN XIX will be held{" "}
+        CIMUN XX will be held{" "}
         <strong>
-          in-person at the Palmer House Hilton in Chicago, IL from February
-          2nd-5th, 2023
+          in-person at the Fairmont Hotel in Chicago, IL from December 7th-10th,
+          2023
         </strong>
         !
         <br />
         <br />
-        More information for our delegation, advisor, and meal plan pricing can
+        {/* More information for our delegation, advisor, and meal plan pricing can
         be found below.
         <br />
-        <br />
+        <br /> */}
       </Body>
-      <Pricing />
+      <PillButtonRow>
+        <Link href="https://docs.google.com/forms/d/1LfPwbh78TJnkGgwd5_WyGYI8rpbaPsse_Od8Gx56sgI">
+          <PillButton selectedColor={colors.carolinaBlue}>
+            <br />
+            Register Now
+            <br />
+            <br />
+          </PillButton>
+        </Link>
+      </PillButtonRow>
+      {/* <Pricing />
       <Body
         margins="0 8rem 0.5rem 8rem"
         $mobMargins="1rem 1rem 0 1rem"
@@ -112,6 +126,7 @@ const RegistrationDetails = () => {
         </strong>
         <br />
         <br />
+
         <strong>IMPORTANT DATES</strong>
         <ul>
           <li>
@@ -127,7 +142,7 @@ const RegistrationDetails = () => {
             <strong>January 11th</strong> - Delegate and Hotel room rosters due
           </li>
         </ul>
-      </Body>
+      </Body> */}
     </MaterialCard>
   );
 };
