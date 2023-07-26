@@ -133,7 +133,7 @@ export const CommitteeCard = (props: CommitteeCardProps) => {
 
   const committeeDescription = props.committee.Description ? (
     <Body size="1.1rem" line={1.5}>
-      <div dangerouslySetInnerHTML={{ __html: props.committee.Description }} />
+      <span dangerouslySetInnerHTML={{ __html: props.committee.Description }} />
     </Body>
   ) : (
     <></>

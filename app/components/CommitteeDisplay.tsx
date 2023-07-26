@@ -9,7 +9,7 @@ const CommitteeDisplay = () => {
   const [timePeriod, setTimePeriod] = useState<string>("PD");
   const [committeeType, setCommitteeType] = useState<string>("COMMS");
   const committees = CommitteeDetails[timePeriod][committeeType].map(
-    (committee) => committee.getJSX(),
+    (committee, index) => committee.getJSX(index),
   );
 
   const handleSelectPeriod = (e) => {
