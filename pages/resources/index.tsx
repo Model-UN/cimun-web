@@ -15,7 +15,7 @@ const DelegateResourcePage = () => {
         <title>Delegate Resources - CIMUN XIX</title>
         <meta
           name="description"
-          content="Important guides, resources, and links for CIMUN XIX Delegates - February 2nd-5th, 2023 at the Palmer House Hilton Chicago"
+          content="Important guides, resources, and links for CIMUN XX Delegates - December 7th-10th, 2023 at the Fairmont Hotel"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
@@ -32,17 +32,17 @@ const DelegateResourcePage = () => {
         Resources for Delegates
       </SubTitle>
       <Header self="center" margins="0 0 -3rem 0">
-        CIMUN XIX - February 2nd - 5th, 2023
+        CIMUN XX - December 7th - 10th, 2023
         <hr />
       </Header>
       <InformationalWrapper>
         <Body align="left" self="center" weight={500}>
           Delegates, below you will find resources that will help you be
-          successful at CIMUN XIX. This page houses our delegate guide, paper
+          successful at CIMUN XX. This page houses our delegate guide, paper
           submission, relevant dates, and many more details to help you prepare
           for CIMUN! With these tools at your fingertips, we could not be more
-          excited for you to join us in Chicago from February 2nd to February
-          5th for an amazing conference!
+          excited for you to join us in Chicago from December 7th to December
+          10th for an amazing conference!
           <br />
           <br />
         </Body>

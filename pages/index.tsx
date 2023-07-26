@@ -6,7 +6,7 @@ import InfoColumns from "../components/infoColumns";
 import Footer from "../components/footer";
 import { Wrapper } from "../styles/containers";
 import Letter from "../components/articles/letter";
-// import Announce from "../components/Announce";
+import Announce from "../components/Announce";
 import AwardAnnouncementCard from "../components/elements/KieraKingCard.elements";
 
 export default function Home() {
@@ -16,12 +16,13 @@ export default function Home() {
         <title>Chicago International Model United Nations</title>
         <meta
           name="description"
-          content="The premier independently organized scholastic Model UN conference. Join us for CIMUN XX - December 7th-10th, 2023 in Downtown Chicago!"
+          content="The premier independently organized scholastic Model UN conference. Join us for CIMUN XX - December 7th-10th, 2023 at the Fairmont Hotel in Downtown Chicago!"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
       </Head>
+      <Announce.RegistrationOpen />
       <HeaderNav />
       <Jumbotron
         titleOne="CIMUN"

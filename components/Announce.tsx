@@ -14,7 +14,7 @@ const RegistrationOpen = () => {
         margins="1rem 0 1rem 0"
         $mobMargins="0.5rem 0 0.5rem 0"
       >
-        Want to bring your school to CIMUN XIX? You're in luck!
+        Want to bring your school to CIMUN XX? You're in luck!
         {" - "}
         <Link href="/school-registration">
           <u>Register Now</u>

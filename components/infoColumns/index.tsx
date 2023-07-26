@@ -86,7 +86,7 @@ export default function InfoColumns(): JSX.Element {
             deco="underline"
             color={colors.ivory}
           >
-            Join us in 2023 in...
+            Join us in 2023 at...
           </Body>
           <SubTitle
             size="3.5rem"
@@ -98,9 +98,9 @@ export default function InfoColumns(): JSX.Element {
             line={0.9}
             color={colors.ivory}
           >
-            Downtown Chicago
+            Fairmont Chicago Millenium Park
           </SubTitle>
-          {/* <Body
+          <Body
             align="start"
             self="start"
             margins="0 0 0.25rem 0"
@@ -109,8 +109,8 @@ export default function InfoColumns(): JSX.Element {
             weight={900}
             color={colors.ivory}
           >
-            17 E Monroe Street, Chicago, Illinois
-          </Body> */}
+            200 N Columbus Dr, Chicago, Illinois
+          </Body>
         </CardContainer>
       </CardWrapper>
     </InfoColumnWrapper>

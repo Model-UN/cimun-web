@@ -31,10 +31,10 @@ const DirApps = () => {
       <ComponentWrapper margins="auto" pad="0 16rem 0 16rem">
         <RegistrationDetails />
       </ComponentWrapper>
-      <SteppedForm
+      {/* <SteppedForm
         formId="630fddb24c48e8cc088824ca"
         submissionType="registration form"
-      />
+      /> */}
       <Footer />
     </Wrapper>
   );
