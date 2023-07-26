@@ -73,7 +73,7 @@ const KieraKingAwardDetails = () => {
         receive the Kiera King Award.
         <br />
         <br />
-        Yours in MUNDO,
+        Yours in MUN,
         <br />
         Masha Polupan, Chief of Staff
       </Body>

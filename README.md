@@ -7,7 +7,6 @@ the volunteer-run CIMUN Department of Technology.
 Chicago International Model United Nations (CIMUN) is an annual inter-scholastic
 (high school) Model UN conference in Chicago, IL. Our focus is to create realistic
 educational opportunities for young leaders in the scholastic MUN community.
-We are organized by the Model United Nations Development Organization (MUNDO).
 
 This project is the first iteration of hopefully many projects from the CIMUN
 engineering team to provide future conference organizers with the tools necessary
