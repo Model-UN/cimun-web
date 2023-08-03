@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   HeaderWrapper,
@@ -21,8 +22,8 @@ const HeaderNav = () => {
   return (
     <HeaderWrapper>
       <LogoWrapper>
-        <Link href="/" legacyBehavior>
-          <Logo src="/cimun-logo.png" />
+        <Link href="/" aria-label="CIMUN Home">
+          <Image height={32} width={32} alt="" src="/cimun-logo.png" />
         </Link>
       </LogoWrapper>
       <ListContainer>

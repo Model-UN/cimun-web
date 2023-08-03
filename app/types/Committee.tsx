@@ -39,7 +39,7 @@ export class Committee {
     this.Description = description;
   }
 
-  getJSX() {
-    return <CommitteeCard committee={this} />;
+  getJSX(index?) {
+    return <CommitteeCard key={index} committee={this} />;
   }
 }
