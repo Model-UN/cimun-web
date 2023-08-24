@@ -96,7 +96,7 @@ export const CardContainer = styled.div<{
 export const Title = styled(SubTitle)`
   font-weight: 1000;
   font-size: 6rem;
-  ${breakpoints("font-size", "", [{ 1000: "4rem" }])};
+  ${breakpoints("font-size", "", [{ 1000: "3rem" }])};
   margin: ${(props) => (props.margins ? props.margins : "0rem")};
   ${(props) =>
     props.$mobMargins

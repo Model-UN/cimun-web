@@ -65,7 +65,7 @@ const RegistrationDetails = () => {
   return (
     <MaterialCard flexdirection="column" $noAnimate background={colors.ivory}>
       <Title margins="2vw 8rem 0 8rem" line={1.2} align="left">
-        Registering for CIMUN XX
+        Registering for <span className="nowrap">CIMUN XX</span>
       </Title>
       <SubTitle
         color={colors.indigo}
