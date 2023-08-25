@@ -1,10 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import { Wrapper } from "../../styles/containers";
-import HeaderNav from "../../components/headerNav";
 import { Header, SubTitle, Body } from "../../styles/typography";
-import Footer from "../../components/footer";
-// import Announce from "../../components/Announce";
 import { InformationalWrapper } from "../../app/components/elements";
 import ResourceHubDisplay from "../../app/components/ResourceHubDisplay";
 
@@ -21,7 +18,6 @@ const DelegateResourcePage = () => {
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
       </Head>
-      <HeaderNav />
       <SubTitle
         size="4rem"
         self="center"
@@ -55,7 +51,6 @@ const DelegateResourcePage = () => {
           </strong>
         </Body>
       </InformationalWrapper>
-      <Footer />
     </Wrapper>
   );
 };

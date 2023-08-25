@@ -20,7 +20,7 @@ export const ListContainer = styled.ul`
   list-style-type: none;
   margin: 0;
   padding: 0;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 900px) {
     display: none;
   }
 `;
@@ -40,7 +40,7 @@ export const BurgerListContainer = styled.ul`
   padding: 2vh 2vh;
 
   ${breakpoints("display", "", [
-  { 768: "flex" }
+  { 900: "flex" }
 ])};
 `;
 
@@ -104,7 +104,7 @@ export const Anchor = styled.a`
   { 450: "0.9rem" },
 ])};
   ${breakpoints("color", "", [
-  { 768: "white" }
+  { 900: "white" }
 ])};
   text-decoration: none;
   svg {
@@ -119,7 +119,7 @@ export const LogoWrapper = styled.div`
   display: flex;
   align-items: center;
 
-  ${breakpoints("width", "", [{ 768: "100%" }])}
+  ${breakpoints("width", "", [{ 900: "100%" }])}
 `;
 
 export const Logo = styled.img`
@@ -141,7 +141,7 @@ export const BurgerLogo = styled.img`
 
 export const Burger = styled.button`
   display: none;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 900px) {
     height: 2rem;
     ${breakpoints("height", "px", [{ 550: 35 }, { 300: 30 }])};
     display: flex;

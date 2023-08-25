@@ -1,8 +1,6 @@
 import React from "react";
 import Head from "next/head";
-import HeaderNav from "../../components/headerNav";
 import Jumbotron from "../../components/jumbotron";
-import Footer from "../../components/footer";
 import SteppedForm from "../../components/stepped-form";
 import { ComponentWrapper, Wrapper } from "../../styles/containers";
 import StaffApp from "../../app/components/staff.app";
@@ -22,7 +20,6 @@ const DirApps = () => {
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
       </Head>
-      <HeaderNav />
       <Jumbotron
         titleOne="STAFF"
         titleTwo="APPLICATION"
@@ -33,7 +30,6 @@ const DirApps = () => {
         <StaffApp />
       </ComponentWrapper>
       {/*       <SteppedForm formId="apply" submissionType="application" /> */}
-      <Footer />
     </Wrapper>
   );
 };
