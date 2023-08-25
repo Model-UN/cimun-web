@@ -59,5 +59,5 @@ export const ComponentWrapper = styled.div<ContainerType>`
   align-items: ${(props: ContainerType) =>
     props.align ? props.align : "center"};
   border-radius: ${(props: ContainerType) =>
-    props.radius ? props.radius : "none"};
+    props.radius ? props.radius : "0"};
 `;

@@ -118,8 +118,6 @@ export const LogoWrapper = styled.div`
   height: 100%;
   display: flex;
   align-items: center;
-
-  ${breakpoints("width", "", [{ 768: "100%" }])}
 `;
 
 export const Logo = styled.img`
@@ -145,8 +143,6 @@ export const Burger = styled.button`
     height: 2rem;
     ${breakpoints("height", "px", [{ 550: 35 }, { 300: 30 }])};
     display: flex;
-    position: absolute;
-    right: 3vw;
     z-index: 10;
     align-items: center;
     justify-content: center;
