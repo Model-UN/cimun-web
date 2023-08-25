@@ -28,6 +28,7 @@ export const ListContainer = styled.ul`
 export const BurgerListContainer = styled.ul`
   display: none;
   position: absolute;
+  z-index: 10;
   top: 0;
   left: 0;
   background-color: ${colors.primaryBlue};
