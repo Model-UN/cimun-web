@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -18,6 +19,14 @@ import {
 
 const HeaderNav = () => {
   const [burgerOpen, setBurgerOpen] = useState(false);
+
+  const pathname = usePathname();
+
+  useEffect(() => {
+    if (burgerOpen) {
+      setBurgerOpen(false);
+    }
+  }, [pathname]);
 
   return (
     <HeaderWrapper>
@@ -54,6 +63,11 @@ const HeaderNav = () => {
             <Anchor>The CIMUN Chronicle</Anchor>
           </ListItem>
         </Link> */}
+          <ListItem>
+            <Link href="/school-registration" passHref legacyBehavior>
+              <Anchor>Register</Anchor>
+            </Link>
+          </ListItem>
           <ListItem>
             <Link href="/staff-app" passHref legacyBehavior>
               <Anchor>Staff CIMUN XX</Anchor>
@@ -97,6 +111,12 @@ const HeaderNav = () => {
             {/*    <Anchor>The CIMUN Chronicle</Anchor> */}
             {/*  </BurgerListItem> */}
             {/* </Link> */}
+            <BurgerSeparator />
+            <BurgerListItem>
+              <Link href="/school-registration" passHref legacyBehavior>
+                <Anchor>Register</Anchor>
+              </Link>
+            </BurgerListItem>
             <BurgerSeparator />
             <BurgerListItem>
               <Link href="/staff-app" passHref legacyBehavior>

@@ -1,10 +1,8 @@
 import React from "react";
 import Head from "next/head";
 import { Wrapper, ComponentWrapper } from "../../styles/containers";
-import HeaderNav from "../../components/headerNav";
 import About from "../../components/articles/about";
 import Jumbotron from "../../components/jumbotron";
-import Footer from "../../components/footer";
 // import Announce from "../../components/Announce";
 
 const AboutPage = () => {
@@ -20,7 +18,6 @@ const AboutPage = () => {
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
       </Head>
-      <HeaderNav />
       <Jumbotron
         titleOne="CIMUN"
         titleTwo="XX"
@@ -30,7 +27,6 @@ const AboutPage = () => {
       <ComponentWrapper margins="0 3.9375vw 0 3.9375vw" pad="0 10rem 0 10rem">
         <About />
       </ComponentWrapper>
-      <Footer />
     </Wrapper>
   );
 };

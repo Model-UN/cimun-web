@@ -1,8 +1,6 @@
 import React from "react";
 import Head from "next/head";
-import HeaderNav from "../../../components/headerNav";
 import Jumbotron from "../../../components/jumbotron";
-import Footer from "../../../components/footer";
 import SteppedForm from "../../../components/stepped-form";
 import { ComponentWrapper, Wrapper } from "../../../styles/containers";
 import Announce from "../../../components/Announce";
@@ -21,7 +19,6 @@ const KieraKingApp = () => {
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
       </Head>
-      <HeaderNav />
       <Jumbotron
         titleOne=""
         titleTwo="THE KIERA KING AWARD"
@@ -32,7 +29,6 @@ const KieraKingApp = () => {
         formId="633a015c2950494488e2b262"
         submissionType="scholarship form"
       />
-      <Footer />
     </Wrapper>
   );
 };
