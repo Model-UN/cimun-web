@@ -1,13 +1,10 @@
 import React from "react";
 import Head from "next/head";
-import HeaderNav from "../../components/headerNav";
 import Jumbotron from "../../components/jumbotron";
-import Footer from "../../components/footer";
 import SteppedForm from "../../components/stepped-form";
 import { Wrapper, ComponentWrapper } from "../../styles/containers";
 import { SubTitle } from "../../styles/typography";
 import { colors } from "../../styles/colors";
-import Announce from "../../components/Announce";
 
 const SchoolRegistration = () => {
   return (
@@ -22,7 +19,6 @@ const SchoolRegistration = () => {
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
       </Head>
-      <HeaderNav />
       <Jumbotron
         titleOne="SCHOOL"
         titleTwo="REGISTRATION"
@@ -51,7 +47,6 @@ const SchoolRegistration = () => {
         </SubTitle>
       </ComponentWrapper>
       <SteppedForm formId="2" submissionType={"registration"} />
-      <Footer />
     </Wrapper>
   );
 };

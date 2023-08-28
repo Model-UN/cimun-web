@@ -1,11 +1,8 @@
 import React from "react";
 import Head from "next/head";
 import { Wrapper } from "../../styles/containers";
-import HeaderNav from "../../components/headerNav";
 import Jumbotron from "../../components/jumbotron";
 import { Body } from "../../styles/typography";
-import Footer from "../../components/footer";
-// import Announce from "../../components/Announce";
 import { InformationalWrapper } from "../../app/components/elements";
 import CommitteeDisplay from "../../app/components/CommitteeDisplay";
 
@@ -22,7 +19,6 @@ const Committees = () => {
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
       </Head>
-      <HeaderNav />
       <Jumbotron
         titleOne="COMMITTEES"
         titleTwo="& CABINETS"
@@ -53,7 +49,6 @@ const Committees = () => {
         </Body>
         <CommitteeDisplay />
       </InformationalWrapper>
-      <Footer />
     </Wrapper>
   );
 };

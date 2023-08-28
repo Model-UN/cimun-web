@@ -10,6 +10,7 @@ const AnnouncementBar = styled.span<AnnouncementBarProps>`
   display: flex;
   place-content: center;
   width: 100%;
+  padding: 0 1rem;
 
   background-color: ${(props: AnnouncementBarProps) =>
     props.backgroundColor ? props.backgroundColor : colors.accentOrange};

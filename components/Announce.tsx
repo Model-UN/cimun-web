@@ -17,7 +17,7 @@ const RegistrationOpen = () => {
         Want to bring your school to CIMUN XX? You're in luck!
         {" - "}
         <Link href="/school-registration">
-          <u>Register Now</u>
+          <u className="nowrap">Register Now</u>
         </Link>
         {/* {" - "} */}
         {/* <Link href="/registration-information.pdf"> */}
