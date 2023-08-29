@@ -64,11 +64,6 @@ const HeaderNav = () => {
           </ListItem>
         </Link> */}
           <ListItem>
-            <Anchor href="https://forms.gle/pRseknBXa8EzTmuD9" target="_blank">
-              Leahy Fellowship
-            </Anchor>
-          </ListItem>
-          <ListItem>
             <Link href="/school-registration" passHref legacyBehavior>
               <Anchor>Register</Anchor>
             </Link>
@@ -116,14 +111,6 @@ const HeaderNav = () => {
             {/*    <Anchor>The CIMUN Chronicle</Anchor> */}
             {/*  </BurgerListItem> */}
             {/* </Link> */}
-            <BurgerListItem>
-              <Anchor
-                href="https://forms.gle/pRseknBXa8EzTmuD9"
-                target="_blank"
-              >
-                Leahy Fellowship
-              </Anchor>
-            </BurgerListItem>
             <BurgerSeparator />
             <BurgerListItem>
               <Link href="/school-registration" passHref legacyBehavior>
