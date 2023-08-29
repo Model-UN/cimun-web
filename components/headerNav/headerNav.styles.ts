@@ -4,12 +4,18 @@ import { colors } from "../../styles/colors";
 import { breakpoints } from "../../styles/breakpoints";
 
 export const HeaderWrapper = styled(ComponentWrapper)`
-  height: 3.9375vw;
-  min-height: 45px;
-  max-height: 7vh;
+  height: 60px;
   margin: auto;
   flex-direction: row;
   justify-content: space-between;
+`;
+
+export const DesktopNav = styled.div`
+  display: block;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const ListContainer = styled.ul`
@@ -20,12 +26,9 @@ export const ListContainer = styled.ul`
   list-style-type: none;
   margin: 0;
   padding: 0;
-  @media screen and (max-width: 900px) {
-    display: none;
-  }
 `;
 
-export const BurgerListContainer = styled.ul`
+export const MobileNavContainer = styled.div`
   display: none;
   position: absolute;
   z-index: 10;
@@ -33,15 +36,11 @@ export const BurgerListContainer = styled.ul`
   left: 0;
   background-color: ${colors.primaryBlue};
   width: 100%;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  list-style-type: none;
   margin: 0;
-  padding: 2vh 2vh;
+  padding: 46px 16px 16px;
 
   ${breakpoints("display", "", [
-  { 900: "flex" }
+  { 768: "block" }
 ])};
 `;
 
@@ -59,6 +58,12 @@ export const ListItem = styled.li`
   }
 `;
 
+export const BurgerUnorderedList = styled.ul`
+  margin: 0 auto;
+  width: 70%;
+  padding: 0;
+`
+
 export const BurgerListItem = styled.li`
   display: flex;
   height: 5vh;
@@ -67,22 +72,18 @@ export const BurgerListItem = styled.li`
   align-items: center;
   justify-content: center;
   transition: all 0.2s;
+  border-bottom: 1px solid white;
 
   &:hover {
     background-color: ${colors.fadedPrimaryBlue};
     cursor: pointer;
   }
+
+  &:last-child {
+    border: none;
+  }
 `;
 
-export const BurgerSeparator = styled.hr`
-  display: flex;
-  size: 1px;
-  width: 70%;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: white;
-`;
 
 export const Anchor = styled.a`
   display: flex;
@@ -105,7 +106,7 @@ export const Anchor = styled.a`
   { 450: "0.9rem" },
 ])};
   ${breakpoints("color", "", [
-  { 900: "white" }
+  { 768: "white" }
 ])};
   text-decoration: none;
   svg {
@@ -119,8 +120,6 @@ export const LogoWrapper = styled.div`
   height: 100%;
   display: flex;
   align-items: center;
-
-  ${breakpoints("width", "", [{ 900: "100%" }])}
 `;
 
 export const Logo = styled.img`
@@ -142,17 +141,14 @@ export const BurgerLogo = styled.img`
 
 export const Burger = styled.button`
   display: none;
-  @media screen and (max-width: 900px) {
-    height: 2rem;
-    ${breakpoints("height", "px", [{ 550: 35 }, { 300: 30 }])};
-    display: flex;
-    position: absolute;
-    right: 3vw;
+  @media screen and (max-width: 768px) {
+    height: 44px;
+    width: 44px;
+    display: block;
     z-index: 10;
-    align-items: center;
-    justify-content: center;
     background: none;
     border: none;
+    padding: 0.375rem;
   }
 
   &:hover {
