@@ -8,7 +8,7 @@ const Layout = ({ children }: PropsWithChildren) => {
     <>
       <Announce.RegistrationOpen></Announce.RegistrationOpen>
       <HeaderNav />
-      {children}
+      <main>{children}</main>
       <Footer />
     </>
   );
