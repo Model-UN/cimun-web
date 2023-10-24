@@ -39,7 +39,7 @@ export const CommitteeDetails: CommitteeConfig = {
         0,
         [
           new Topic(1, "Public Safety"),
-          new Topic(2, "Housing"),
+          new Topic(2, "Housing for all Chicagoans"),
           new Topic(3, "Municipal Marketing"),
         ],
         "",
