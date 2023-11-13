@@ -4,6 +4,27 @@ import { Body } from "../styles/typography";
 import AnnouncementBar from "./elements/AnnouncementBar.elements";
 import { colors } from "../styles/colors";
 
+const TempDelegateGuide = () => {
+  return (
+    <AnnouncementBar backgroundColor={colors.indigo}>
+      <Body
+        color={colors.ivory}
+        weight={600}
+        align="center"
+        margins="1rem 0 1rem 0"
+        $mobMargins="0.5rem 0 0.5rem 0"
+      >
+        Click{" "}
+        <Link href="https://docs.google.com/document/d/1Nzqys7Be-mpcHbwP_5ruhzwv7rv2_53LkguOBfaGKew/edit?usp=sharing">
+          {" "}
+          Here
+        </Link>{" "}
+        to access the Delegate Guide Prerelease!
+      </Body>
+    </AnnouncementBar>
+  );
+};
+
 const RegistrationOpen = () => {
   return (
     <AnnouncementBar backgroundColor={colors.indigo}>
@@ -137,6 +158,7 @@ const ResourceHub = () => {
 };
 
 const Announce = {
+  TempDelegateGuide,
   RegistrationOpen,
   PositionPapers,
   VirtualConference,
