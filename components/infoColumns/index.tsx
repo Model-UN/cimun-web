@@ -25,21 +25,9 @@ export default function InfoColumns(): JSX.Element {
             deco="underline"
             color={colors.ivory}
           >
-            Conference Date
+            Important Dates
           </Body>
-          <SubTitle
-            size="3.5rem"
-            width="80%"
-            $mobSize="2.5rem"
-            margins="10px 0"
-            self="start"
-            align="start"
-            line={0.9}
-            color={colors.ivory}
-          >
-            December 7th - December 10th, 2023
-          </SubTitle>
-          {/* <Body
+          <Body
             align="start"
             self="start"
             margins="0 0 0.25rem 0"
@@ -48,8 +36,30 @@ export default function InfoColumns(): JSX.Element {
             weight={900}
             color={colors.ivory}
           >
-            Join us as we host in person this year!
-          </Body> */}
+            Full Delegate Guide will be posted November 15th
+          </Body>
+          <Body
+            align="start"
+            self="start"
+            margins="0 0 0.25rem 0"
+            size="2rem"
+            styling="italic"
+            weight={900}
+            color={colors.ivory}
+          >
+            Background Guide links will be posted on November 17th
+          </Body>
+          <Body
+            align="start"
+            self="start"
+            margins="0 0 0.25rem 0"
+            size="2rem"
+            styling="italic"
+            weight={900}
+            color={colors.ivory}
+          >
+            The link to the Faculty Guide will be posted November 23rd
+          </Body>
           {/* <Body
             align="start"
             self="center"
@@ -86,7 +96,7 @@ export default function InfoColumns(): JSX.Element {
             deco="underline"
             color={colors.ivory}
           >
-            Join us in 2023 at...
+            Join us December 7th - December 10th, 2023 at...
           </Body>
           <SubTitle
             size="3.5rem"
