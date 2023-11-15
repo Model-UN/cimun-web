@@ -10,20 +10,22 @@ type CommitteeCardProps = {
 };
 
 export const CommitteeCard = (props: CommitteeCardProps) => {
-  const topics = props.committee.Topics?.map((topic) => {
+  const topics = props.committee.Topics?.map((topic, index) => {
     if (topic.Title.includes(":")) {
       const titleItems = topic.Title.split(":");
       const title = titleItems[0];
       const subtitle = titleItems.slice(1).join("");
 
       return (
-        <li>
-          <strong>{title}</strong>: {subtitle}
+        <li key={index}>
+          <Body size="1.1rem" line={1.5}>
+            <strong>{title}</strong>: {subtitle}
+          </Body>
         </li>
       );
     }
     return (
-      <li>
+      <li key={index}>
         <strong>{topic.Title}</strong>
       </li>
     );
@@ -31,15 +33,7 @@ export const CommitteeCard = (props: CommitteeCardProps) => {
 
   const topicList =
     // @ts-ignore
-    props.committee.Topics.length > 0 ? (
-      <ol>
-        <Body size="1.1rem" line={1.5}>
-          {topics}
-        </Body>
-      </ol>
-    ) : (
-      <></>
-    );
+    props.committee.Topics.length > 0 ? <ol>{topics}</ol> : <></>;
 
   const link = props.committee.Site ? (
     <Body
