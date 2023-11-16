@@ -15,11 +15,11 @@ const TempDelegateGuide = () => {
         $mobMargins="0.5rem 0 0.5rem 0"
       >
         Click{" "}
-        <Link href="https://docs.google.com/document/d/1Nzqys7Be-mpcHbwP_5ruhzwv7rv2_53LkguOBfaGKew/edit?usp=sharing">
+        <Link href="https://docs.google.com/document/d/1zLm38NF6D6q-6jpzuStzHUlCOBW9mpiCMUHHvDJhqGQ/edit?usp=sharing">
           {" "}
           Here
         </Link>{" "}
-        to access the Delegate Guide Prerelease!
+        to access the Delegate Guide!
       </Body>
     </AnnouncementBar>
   );
