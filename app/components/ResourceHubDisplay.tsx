@@ -31,7 +31,9 @@ const SelectSeggsyInput = styled.select`
   background-color: "white";
   color: #282828;
   outline-color: ${colors.primaryBlue};
-  transition: 0.3s background-color ease-in-out, 0.3s border-color ease-in-out;
+  transition:
+    0.3s background-color ease-in-out,
+    0.3s border-color ease-in-out;
 
   &:hover {
     border-color: ${colors.ltGray};
@@ -93,9 +95,9 @@ const CommitteeDisplay = () => {
             <br />
           </PillButton>
         </Link>
-        <Link href="CIMUN XIX - IPD Delegate Guide.pdf" legacyBehavior>
+        <Link href="IPD Journalist Guide.pdf" legacyBehavior>
           <PillButton selectedColor={colors.indigo}>
-            IPD Delegate Guide
+            IPD Journalist Guide
           </PillButton>
         </Link>
         <Link href="CIMUN XIX - Guide to Crisis.pdf" legacyBehavior>

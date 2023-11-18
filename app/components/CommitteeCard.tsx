@@ -70,7 +70,7 @@ export const CommitteeCard = (props: CommitteeCardProps) => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <strong>IPD Delegate Guide</strong>
+          <strong>IPD Journalist Guide</strong>
         </Link>
       </Body>
     ) : props.committee.Guide ? (
