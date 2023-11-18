@@ -36,30 +36,9 @@ export default function InfoColumns(): JSX.Element {
             weight={900}
             color={colors.ivory}
           >
-            Full Delegate Guide will be posted November 15th
-          </Body>
-          <Body
-            align="start"
-            self="start"
-            margins="0 0 0.25rem 0"
-            size="2rem"
-            styling="italic"
-            weight={900}
-            color={colors.ivory}
-          >
-            Background Guide links will be posted on November 17th
-          </Body>
-          <Body
-            align="start"
-            self="start"
-            margins="0 0 0.25rem 0"
-            size="2rem"
-            styling="italic"
-            weight={900}
-            color={colors.ivory}
-          >
             The link to the Faculty Guide will be posted November 23rd
           </Body>
+          {/* TODO: Update Schedule */}
           {/* <Body
             align="start"
             self="center"

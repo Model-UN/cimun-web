@@ -14,7 +14,7 @@ export const CommitteeDetails: CommitteeConfig = {
           new Topic(2, "Preventing Future Ideological Conflicts"),
           new Topic(3, "Enforcing Global Digital Borders"),
         ],
-        "",
+        "UNSC - CIMUN XX (PD).pdf",
         "",
       ),
       new Committee(
@@ -28,7 +28,7 @@ export const CommitteeDetails: CommitteeConfig = {
           new Topic(2, "Combatting the Growing Climate Crisis"),
           new Topic(3, "Preventing Ideological Wars of Expansion"),
         ],
-        "",
+        "UNGA - CIMUN XX (PD).pdf",
         "",
       ),
       new Committee(
@@ -42,7 +42,7 @@ export const CommitteeDetails: CommitteeConfig = {
           new Topic(2, "Housing for all Chicagoans"),
           new Topic(3, "Municipal Marketing"),
         ],
-        "",
+        "CCC - CIMUN XX (PD).pdf",
         "",
       ),
     ],
@@ -64,7 +64,7 @@ export const CommitteeDetails: CommitteeConfig = {
             "Combatting the Spread of Disinnformation & Racial Supremacy",
           ),
         ],
-        "",
+        "US Cab - CIMUN XX (PD).pdf",
         "",
       ),
       new Committee(
@@ -78,7 +78,7 @@ export const CommitteeDetails: CommitteeConfig = {
           new Topic(2, "Promoting the Expansionof Chinese Governance"),
           new Topic(3, "Seizing Opportunity Born from Global Conflict"),
         ],
-        "",
+        "PRC Cab - CIMUN XX (PD).pdf",
         "",
       ),
       new Committee(
@@ -92,7 +92,7 @@ export const CommitteeDetails: CommitteeConfig = {
           new Topic(2, "Development of Technological Independence"),
           new Topic(3, "Strategies for a Globally Assertive Chinese Market"),
         ],
-        "",
+        "TNCT BoD - CIMUN XX (PD).pdf",
         "",
       ),
       new Committee(
@@ -106,7 +106,7 @@ export const CommitteeDetails: CommitteeConfig = {
           new Topic(2, "Promotion of Global X Influence"),
           new Topic(3, "All Encompassing Personal Utility Tools"),
         ],
-        "",
+        "X BoD - CIMUN XX (PD).pdf",
         "",
       ),
     ],
