@@ -133,6 +133,28 @@ export const CommitteeCard = (props: CommitteeCardProps) => {
     <></>
   );
 
+  const letter = props.committee.Letter ? (
+    <Body
+      align="center"
+      size="1rem"
+      color={colors.primaryBlue}
+      margins="0 0 0 0"
+    >
+      <br />
+      <strong>
+        <a
+          href={props.committee.Letter}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          ROP Introduction Letter for the {props.committee.Name}
+        </a>
+      </strong>
+    </Body>
+  ): (
+    <></>
+  );
+
   return (
     <MaterialCard flexdirection="row" background={colors.ivory}>
       {image}
@@ -146,6 +168,7 @@ export const CommitteeCard = (props: CommitteeCardProps) => {
         {topicList}
         {committeeDescription}
         {guide}
+        {letter}
         {link}
       </CardItemWrapper>
     </MaterialCard>

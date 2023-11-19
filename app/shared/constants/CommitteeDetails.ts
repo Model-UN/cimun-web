@@ -44,7 +44,8 @@ export const CommitteeDetails: CommitteeConfig = {
         ],
         "CCC - CIMUN XX (PD).pdf",
         "",
-      ),
+        "https://docs.google.com/document/d/1nFCFUKim8jJ76KRglIGTcHtHNuIimkk1BCJa2zoAhbs/edit?usp=sharing"      
+        ),
     ],
     CABS: [
       new Committee(
@@ -160,6 +161,7 @@ export const CommitteeDetails: CommitteeConfig = {
         ],
         "SENATE - CIMUN XX (1962).pdf",
         "",
+        "https://docs.google.com/document/d/1bYOmfrtdO98_8AX3W2Y5wDyBr6-AR0jEIaZ2Sx5WZqY/edit?usp=sharing"
       ),
       new Committee(
         "Presidential Commission on the Status of Women",

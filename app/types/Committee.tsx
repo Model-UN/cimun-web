@@ -19,6 +19,8 @@ export class Committee {
 
   Description?: string;
 
+  Letter?: string;
+
   constructor(
     name: string,
     abbr: string,
@@ -28,6 +30,7 @@ export class Committee {
     topics?: Topic[],
     guide?: string,
     description?: string,
+    letter?: string,
   ) {
     this.Name = name;
     this.Abbr = abbr;
@@ -37,6 +40,7 @@ export class Committee {
     this.Topics = topics;
     this.Guide = guide;
     this.Description = description;
+    this.Letter = letter
   }
 
   getJSX(index?) {
