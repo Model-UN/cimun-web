@@ -51,9 +51,9 @@ const AwardAnnouncementCard = () => {
           <br />
           <br />
           <strong>
-            <u>
-              For more information, contact us at{" "}
-              <Link href="mailto:sc@cimun.org">sc@cimun.org.</Link>
+              Advisors must nominate students using this google form:  
+              <u>
+              <Link href="https://forms.gle/GJ8RmBZ6XXeAoWCR6">Nominaion Form</Link>
             </u>
           </strong>
         </Body>
