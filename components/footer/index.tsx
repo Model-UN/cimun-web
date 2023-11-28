@@ -44,7 +44,7 @@ const Footer: React.FC = () => (
             Committees & Cabinets
           </a>
           {/* <a */}
-          {/*  href="CIMUN XIX - Delegate Guide.pdf" */}
+          {/*  href="CIMUN XX - Delegate Guide.pdf" */}
           {/*  target="_blank" */}
           {/*  rel="noopener noreferrer" */}
           {/* > */}
