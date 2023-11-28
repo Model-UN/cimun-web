@@ -4,7 +4,7 @@ import Link from "next/link";
 import styled from "styled-components";
 import md5 from "md5";
 import { SubTitle, Body } from "../../styles/typography";
-import { PillButton, PillButtonRow } from "./elements";
+import { InformationalWrapper, PillButton, PillButtonRow } from "./elements";
 import { colors } from "../../styles/colors";
 import PdfViewer from "../../components/pdf";
 import {
@@ -76,7 +76,7 @@ const CommitteeDisplay = () => {
       <SubTitle size="3rem" self="center" align="center" line={1.5} margins="0">
         Documents & Information
       </SubTitle>
-      <PillButtonRow>
+      {/* <PillButtonRow>
         <Link href="CIMUN XIX Schedule.pdf" legacyBehavior>
           <PillButton selectedColor={colors.carolinaBlue}>
             <br />
@@ -85,9 +85,9 @@ const CommitteeDisplay = () => {
             <br />
           </PillButton>
         </Link>
-      </PillButtonRow>
+      </PillButtonRow> */}
       <PillButtonRow>
-        <Link href="CIMUN XIX - Delegate Guide.pdf" legacyBehavior>
+        <Link href="CIMUN XX - Delegate Guide.pdf" legacyBehavior>
           <PillButton selectedColor={colors.indigo}>
             <br />
             Delegate Guide
@@ -100,13 +100,13 @@ const CommitteeDisplay = () => {
             IPD Journalist Guide
           </PillButton>
         </Link>
-        <Link href="CIMUN XIX - Guide to Crisis.pdf" legacyBehavior>
+        {/* <Link href="CIMUN XIX - Guide to Crisis.pdf" legacyBehavior>
           <PillButton selectedColor={colors.indigo}>
             Delegate Guide to Crisis
           </PillButton>
-        </Link>
+        </Link> */}
       </PillButtonRow>
-      <Body align="center" self="center" weight={700}>
+      {/* <Body align="center" self="center" weight={700}>
         Follow along with updates from the International Press Delegation and
         CNN
         <br />
@@ -121,19 +121,19 @@ const CommitteeDisplay = () => {
             <br />
           </PillButton>
         </Link>
-      </PillButtonRow>
-      <Body align="center" self="center" weight={500}>
+      </PillButtonRow> */}
+      {/* <Body align="center" self="center" weight={500}>
         To access your <strong>Background Guides</strong> and see more
         information on this year's Committees and Cabinets, please visit our
         "Committees & Cabinets" page below!
         <br />
         <br />
-      </Body>
+      </Body> */}
       <PillButtonRow>
         <Link href="/committees" legacyBehavior>
           <PillButton selectedColor={colors.plum}>
             <br />
-            CIMUN XIX Committees & Cabinets
+            CIMUN XX Committees & Cabinets
             <br />
             <br />
           </PillButton>
@@ -141,9 +141,71 @@ const CommitteeDisplay = () => {
       </PillButtonRow>
       <SubTitle size="3rem" self="center" align="center" line={1.5} margins="0">
         <hr />
-        Position Papers
+        Position Papers and IPD Assignments
       </SubTitle>
-      <Body align="left" self="center" weight={500}>
+
+      <InformationalWrapper>
+        <SubTitle margins="10px 0" align="left" self="center" weight={500}>
+          Position Paper Guidelines
+        </SubTitle>
+        <Body align="left" self="center" weight={500}>
+          Position Papers are required for each delegate.
+          <br />
+          <br />
+          For committees, each topic requires a White Paper. This paper outlines
+          your delegation's position on the topic. A Black Paper is optional,
+          and this outlines your delegation's agenda. The content within the
+          Black Paper is confidential and is for the purposes of notifying CIMUN
+          staff of your intentions within committee.
+          <br />
+          <br />
+          For cabinets, each topic requires a Black Paper. The content within
+          the Black Paper is confidential and is for the purposes of notifying
+          CIMUN staff of your intentions within committee.
+          <br />
+          <br />
+          <i>
+            White Papers are expected to be 1 page in length, double spaced, and
+            Times New Roman Size 12.
+          </i>
+          <br />
+          <br />
+          <i>
+            Black Papers are expected to be 1/2 page in length, double spaced,
+            and Times New Roman Size 12.
+          </i>
+          <br />
+          <br /> Please Include the following header at the beginning of each
+          paper:
+          <br />
+          <br /> Name
+          <br /> Delegation
+          <br /> School
+          <br /> Committee (include year)
+          <br /> Topic
+          <br />
+          <br /> Example:
+          <br />
+          <br /> John Doe
+          <br /> United States of America
+          <br /> High School of America
+          <br /> United Nations General Assembly 2023
+          <br /> Promotion of Beneficial AI
+        </Body>
+      </InformationalWrapper>
+
+      <PillButtonRow>
+        <Link href="https://form.typeform.com/to/HGG3NRdF" legacyBehavior>
+          <PillButton selectedColor={colors.carolinaBlue}>
+            <br />
+            Delegate Assignment Submission
+            <br />
+            <br />
+          </PillButton>
+        </Link>
+      </PillButtonRow>
+
+      {/* <Body align="left" self="center" weight={500}>
         Ready to view your position papers? Select your committee and delegation
         to view the correct position paper.
         <br />
@@ -166,7 +228,7 @@ const CommitteeDisplay = () => {
         <br />
         For more information on Position Papers, check out our{" "}
         <strong>
-          <Link href="CIMUN XIX - Delegate Guide.pdf">Delegate Guide</Link>
+          <Link href="CIMUN XX - Delegate Guide.pdf">Delegate Guide</Link>
         </strong>{" "}
         (pg. 14)!
         <br />
@@ -232,7 +294,7 @@ const CommitteeDisplay = () => {
             selectedDelegations != null &&
             selectedDelegations.length > 0 && <PdfViewer url={pdfUrl} />}
         </>
-      )}
+      )} */}
     </>
   );
 };

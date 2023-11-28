@@ -45,56 +45,6 @@ const Committees = () => {
           <strong>press delegations</strong>, where participating delegates
           report on breaking news as events unfold at CIMUN.
         </Body>
-        <SubTitle margins="10px 0" align="left" self="center" weight={500}>
-          Position Paper Guidelines
-        </SubTitle>
-        <Body align="left" self="center" weight={500}>
-          Position Papers are required for each delegate.
-          <br />
-          <br />
-          For committees, each topic requires a White Paper. This paper outlines
-          your delegation's position on the topic. A Black Paper is optional,
-          and this outlines your delegation's agenda. The content within the
-          Black Paper is confidential and is for the purposes of notifying CIMUN
-          staff of your intentions within committee.
-          <br />
-          <br />
-          For cabinets, each topic requires a Black Paper. The content within
-          the Black Paper is confidential and is for the purposes of notifying
-          CIMUN staff of your intentions within committee.
-          <br />
-          <br />
-          <i>
-            White Papers are expected to be 1 page in length, double spaced, and
-            Times New Roman Size 12.
-          </i>
-          <br />
-          <br />
-          <i>
-            Black Papers are expected to be 1/2 page in length, double spaced,
-            and Times New Roman Size 12.
-          </i>
-          <br />
-          <br /> Please Include the following header at the beginning of each
-          paper:
-          <br />
-          <br /> Name
-          <br /> Delegation
-          <br /> School
-          <br /> Committee (include year)
-          <br /> Topic
-          <br />
-          <br /> Example:
-          <br />
-          <br /> John Doe
-          <br /> United States of America
-          <br /> High School of America
-          <br /> United Nations General Assembly 2023
-          <br /> Promotion of Beneficial AI
-        </Body>
-        <Body align="left" weight={500} size="1rem">
-          Upload will be available soon.
-        </Body>
         <CommitteeDisplay />
       </InformationalWrapper>
     </Wrapper>

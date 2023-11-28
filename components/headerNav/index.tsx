@@ -62,11 +62,11 @@ const HeaderNav = () => {
                 <Anchor>Committees & Cabinets</Anchor>
               </Link>
             </ListItem>
-            {/* <Link href="/resources">
-          <ListItem>
-            <Anchor>Delegate Resources</Anchor>
-          </ListItem>
-        </Link> */}
+            <ListItem>
+              <Link href="/resources" legacyBehavior>
+                <Anchor>Delegate Resources</Anchor>
+              </Link>
+            </ListItem>
             {/* <Link href="https://press.cimun.org/">
           <ListItem>
             <Anchor>The CIMUN Chronicle</Anchor>
@@ -131,6 +131,11 @@ const HeaderNav = () => {
                   <Anchor onClick={() => setBurgerOpen(false)}>
                     Committees & Cabinets
                   </Anchor>
+                </Link>
+              </BurgerListItem>
+              <BurgerListItem>
+                <Link href="/resources">
+                  <Anchor>Delegate Resources</Anchor>
                 </Link>
               </BurgerListItem>
               {/* <Link href="/resources"> */}
