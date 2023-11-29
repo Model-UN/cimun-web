@@ -16,10 +16,9 @@ const TempDelegateGuide = () => {
       >
         Click{" "}
         <Link href="https://docs.google.com/document/d/1zLm38NF6D6q-6jpzuStzHUlCOBW9mpiCMUHHvDJhqGQ/edit?usp=sharing">
-          {" "}
           Here
         </Link>{" "}
-        to access the Delegate Guide!
+        to submit your position papers and permission slip!
       </Body>
     </AnnouncementBar>
   );
