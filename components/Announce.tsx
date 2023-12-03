@@ -14,12 +14,8 @@ const TempDelegateGuide = () => {
         margins="1rem 0 1rem 0"
         $mobMargins="0.5rem 0 0.5rem 0"
       >
-        Click{" "}
-        <Link href="https://docs.google.com/document/d/1zLm38NF6D6q-6jpzuStzHUlCOBW9mpiCMUHHvDJhqGQ/edit?usp=sharing">
-          {" "}
-          Here
-        </Link>{" "}
-        to access the Delegate Guide!
+        Click <Link href="https://form.typeform.com/to/HGG3NRdF">Here</Link> to
+        submit your position papers and permission slip!
       </Body>
     </AnnouncementBar>
   );

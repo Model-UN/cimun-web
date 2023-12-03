@@ -51,10 +51,10 @@ const AwardAnnouncementCard = () => {
           <br />
           <br />
           <strong>
-              Advisors must nominate students using this google form:  
-              <u>
-              <Link href="https://forms.gle/GJ8RmBZ6XXeAoWCR6">Nominaion Form</Link>
-            </u>
+            Advisors must nominate students using this google form:
+            <Link href="https://forms.gle/GJ8RmBZ6XXeAoWCR6">
+              Nomination Form
+            </Link>
           </strong>
         </Body>
       </CardContainer>

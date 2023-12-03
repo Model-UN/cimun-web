@@ -12,6 +12,7 @@ import {
   getPositionPaper,
 } from "../../services/axiosHandler";
 import { fonts } from "../../styles/fonts";
+import { PillLink } from "./elements/PillButton.element";
 
 const SelectSeggsyInput = styled.select`
   width: 100%;
@@ -40,39 +41,46 @@ const SelectSeggsyInput = styled.select`
   }
 `;
 
-const CommitteeDisplay = () => {
-  const [delegations, setDelegations] = useState<string[]>([]);
-  const [selectedCommittee, setSelectedCommittee] = useState<string>("");
-  const [selectedDelegations, setSelectedDelegations] = useState<string>("");
-  const [pdfUrl, setPdfUrl] = useState<string>("");
-  const hashId = md5(`${selectedCommittee}${selectedDelegations}`);
+const ResourceHubDisplay = () => {
+  // const [delegations, setDelegations] = useState<string[]>([]);
+  // const [selectedCommittee, setSelectedCommittee] = useState<string>("");
+  // const [selectedDelegations, setSelectedDelegations] = useState<string>("");
+  // const [pdfUrl, setPdfUrl] = useState<string>("");
+  // const hashId = md5(`${selectedCommittee}${selectedDelegations}`);
 
-  const fetchDelegations = async () => {
-    const delegationList = await getCommitteesDelegations();
-    setDelegations(delegationList);
-  };
+  // const fetchDelegations = async () => {
+  //   const delegationList = await getCommitteesDelegations();
+  //   setDelegations(delegationList);
+  // };
 
-  const fetchPositionPaper = async () => {
-    const pdfUrl = await getPositionPaper(hashId ?? "");
-    setPdfUrl(pdfUrl?.white_paper_s3_url ?? "");
-  };
+  // const fetchPositionPaper = async () => {
+  //   const pdfUrl = await getPositionPaper(hashId ?? "");
+  //   setPdfUrl(pdfUrl?.white_paper_s3_url ?? "");
+  // };
 
-  useEffect(() => {
-    fetchDelegations();
-  }, []);
-  useEffect(() => {
-    if (
-      selectedCommittee != null &&
-      selectedCommittee.length > 0 &&
-      selectedDelegations != null &&
-      selectedDelegations.length > 0
-    ) {
-      fetchPositionPaper();
-    }
-  }, [selectedCommittee, selectedDelegations]);
+  // useEffect(() => {
+  //   fetchDelegations();
+  // }, []);
+  // useEffect(() => {
+  //   if (
+  //     selectedCommittee != null &&
+  //     selectedCommittee.length > 0 &&
+  //     selectedDelegations != null &&
+  //     selectedDelegations.length > 0
+  //   ) {
+  //     fetchPositionPaper();
+  //   }
+  // }, [selectedCommittee, selectedDelegations]);
 
   return (
     <>
+      <PillButtonRow>
+        <Link href="https://form.typeform.com/to/HGG3NRdF" legacyBehavior>
+          <PillLink selectedColor={colors.carolinaBlue}>
+            Position Paper and Permission Slip Submission
+          </PillLink>
+        </Link>
+      </PillButtonRow>
       <SubTitle size="3rem" self="center" align="center" line={1.5} margins="0">
         Documents & Information
       </SubTitle>
@@ -87,18 +95,13 @@ const CommitteeDisplay = () => {
         </Link>
       </PillButtonRow> */}
       <PillButtonRow>
-        <Link href="CIMUN XX - Delegate Guide.pdf" legacyBehavior>
-          <PillButton selectedColor={colors.indigo}>
-            <br />
-            Delegate Guide
-            <br />
-            <br />
-          </PillButton>
+        <Link href="CIMUN XX - Delegate Guide.pdf" legacyBehavior passHref>
+          <PillLink selectedColor={colors.indigo}>Delegate Guide</PillLink>
         </Link>
-        <Link href="IPD Journalist Guide.pdf" legacyBehavior>
-          <PillButton selectedColor={colors.indigo}>
+        <Link href="IPD Journalist Guide.pdf" legacyBehavior passHref>
+          <PillLink selectedColor={colors.indigo}>
             IPD Journalist Guide
-          </PillButton>
+          </PillLink>
         </Link>
         {/* <Link href="CIMUN XIX - Guide to Crisis.pdf" legacyBehavior>
           <PillButton selectedColor={colors.indigo}>
@@ -130,13 +133,10 @@ const CommitteeDisplay = () => {
         <br />
       </Body> */}
       <PillButtonRow>
-        <Link href="/committees" legacyBehavior>
-          <PillButton selectedColor={colors.plum}>
-            <br />
+        <Link href="/committees" legacyBehavior passHref>
+          <PillLink selectedColor={colors.plum}>
             CIMUN XX Committees & Cabinets
-            <br />
-            <br />
-          </PillButton>
+          </PillLink>
         </Link>
       </PillButtonRow>
       <SubTitle size="3rem" self="center" align="center" line={1.5} margins="0">
@@ -144,66 +144,53 @@ const CommitteeDisplay = () => {
         Position Papers and IPD Assignments
       </SubTitle>
 
-      <InformationalWrapper>
-        <SubTitle margins="10px 0" align="left" self="center" weight={500}>
-          Position Paper Guidelines
-        </SubTitle>
-        <Body align="left" self="center" weight={500}>
-          Position Papers are required for each delegate.
-          <br />
-          <br />
-          For committees, each topic requires a White Paper. This paper outlines
-          your delegation's position on the topic. A Black Paper is optional,
-          and this outlines your delegation's agenda. The content within the
-          Black Paper is confidential and is for the purposes of notifying CIMUN
-          staff of your intentions within committee.
-          <br />
-          <br />
-          For cabinets, each topic requires a Black Paper. The content within
-          the Black Paper is confidential and is for the purposes of notifying
-          CIMUN staff of your intentions within committee.
-          <br />
-          <br />
-          <i>
-            White Papers are expected to be 1 page in length, double spaced, and
-            Times New Roman Size 12.
-          </i>
-          <br />
-          <br />
-          <i>
-            Black Papers are expected to be 1/2 page in length, double spaced,
-            and Times New Roman Size 12.
-          </i>
-          <br />
-          <br /> Please Include the following header at the beginning of each
-          paper:
-          <br />
-          <br /> Name
-          <br /> Delegation
-          <br /> School
-          <br /> Committee (include year)
-          <br /> Topic
-          <br />
-          <br /> Example:
-          <br />
-          <br /> John Doe
-          <br /> United States of America
-          <br /> High School of America
-          <br /> United Nations General Assembly 2023
-          <br /> Promotion of Beneficial AI
-        </Body>
-      </InformationalWrapper>
-
-      <PillButtonRow>
-        <Link href="https://form.typeform.com/to/HGG3NRdF" legacyBehavior>
-          <PillButton selectedColor={colors.carolinaBlue}>
-            <br />
-            Delegate Assignment Submission
-            <br />
-            <br />
-          </PillButton>
-        </Link>
-      </PillButtonRow>
+      <SubTitle margins="10px 0" align="left" self="center" weight={500}>
+        Position Paper Guidelines
+      </SubTitle>
+      <Body align="left" self="center" weight={500}>
+        Position Papers are required for each delegate.
+        <br />
+        <br />
+        For committees, each topic requires a White Paper. This paper outlines
+        your delegation's position on the topic. A Black Paper is optional, and
+        this outlines your delegation's agenda. The content within the Black
+        Paper is confidential and is for the purposes of notifying CIMUN staff
+        of your intentions within committee.
+        <br />
+        <br />
+        For cabinets, each topic requires a Black Paper. The content within the
+        Black Paper is confidential and is for the purposes of notifying CIMUN
+        staff of your intentions within committee.
+        <br />
+        <br />
+        <i>
+          White Papers are expected to be 1 page in length, double spaced, and
+          Times New Roman Size 12.
+        </i>
+        <br />
+        <br />
+        <i>
+          Black Papers are expected to be 1/2 page in length, double spaced, and
+          Times New Roman Size 12.
+        </i>
+        <br />
+        <br /> Please Include the following header at the beginning of each
+        paper:
+        <br />
+        <br /> Name
+        <br /> Delegation
+        <br /> School
+        <br /> Committee (include year)
+        <br /> Topic
+        <br />
+        <br /> Example:
+        <br />
+        <br /> John Doe
+        <br /> United States of America
+        <br /> High School of America
+        <br /> United Nations General Assembly 2023
+        <br /> Promotion of Beneficial AI
+      </Body>
 
       {/* <Body align="left" self="center" weight={500}>
         Ready to view your position papers? Select your committee and delegation
@@ -299,4 +286,4 @@ const CommitteeDisplay = () => {
   );
 };
 
-export default CommitteeDisplay;
+export default ResourceHubDisplay;
