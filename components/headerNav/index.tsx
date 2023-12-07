@@ -67,12 +67,12 @@ const HeaderNav = () => {
                 <Anchor>Delegate Resources</Anchor>
               </Link>
             </ListItem>
-            {/* <Link href="https://press.cimun.org/">
-          <ListItem>
-            <Anchor>The CIMUN Chronicle</Anchor>
-          </ListItem>
-        </Link> */}
             <ListItem>
+              <Link href="https://live.cimun.org/" legacyBehavior>
+                <Anchor>The CIMUN Chronicle</Anchor>
+              </Link>
+            </ListItem>
+            {/* <ListItem>
               <Link href="/school-registration" passHref legacyBehavior>
                 <Anchor>Register</Anchor>
               </Link>
@@ -81,7 +81,7 @@ const HeaderNav = () => {
               <Link href="/staff-app" passHref legacyBehavior>
                 <Anchor>Staff CIMUN XX</Anchor>
               </Link>
-            </ListItem>
+            </ListItem> */}
           </ListContainer>
         </DesktopNav>
 
@@ -138,18 +138,17 @@ const HeaderNav = () => {
                   <Anchor>Delegate Resources</Anchor>
                 </Link>
               </BurgerListItem>
+              <BurgerListItem>
+                <Link href="https://live.cimun.org/">
+                  <Anchor> The CIMUN Chronicle</Anchor>
+                </Link>
+              </BurgerListItem>
               {/* <Link href="/resources"> */}
               {/*  <BurgerListItem> */}
               {/*    <Anchor>Delegate Resources</Anchor> */}
               {/*  </BurgerListItem> */}
               {/* </Link> */}
-              {/* <BurgerSeparator /> */}
-              {/* <Link href="https://press.cimun.org/"> */}
-              {/*  <BurgerListItem> */}
-              {/*    <Anchor>The CIMUN Chronicle</Anchor> */}
-              {/*  </BurgerListItem> */}
-              {/* </Link> */}
-              <BurgerListItem>
+              {/* <BurgerListItem>
                 <Link href="/school-registration" passHref legacyBehavior>
                   <Anchor onClick={() => setBurgerOpen(false)}>Register</Anchor>
                 </Link>
@@ -160,7 +159,7 @@ const HeaderNav = () => {
                     STAFF CIMUN XX
                   </Anchor>
                 </Link>
-              </BurgerListItem>
+              </BurgerListItem> */}
             </BurgerUnorderedList>
           </MobileNavContainer>
         )}
