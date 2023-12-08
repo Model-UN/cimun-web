@@ -6,7 +6,7 @@ import HeaderNav from "../components/headerNav";
 const Layout = ({ children }: PropsWithChildren) => {
   return (
     <>
-      <Announce.TempDelegateGuide></Announce.TempDelegateGuide>
+      {/* <Announce.TempDelegateGuide></Announce.TempDelegateGuide> */}
       <HeaderNav />
       <main>{children}</main>
       <Footer />

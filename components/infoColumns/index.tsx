@@ -36,7 +36,7 @@ export default function InfoColumns(): JSX.Element {
             weight={900}
             color={colors.ivory}
           >
-            The link to the Faculty Guide will be posted November 23rd
+            CIMUN XX has started!
           </Body>
           {/* TODO: Update Schedule */}
           {/* <Body
