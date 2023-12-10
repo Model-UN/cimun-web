@@ -36,7 +36,13 @@ export default function InfoColumns(): JSX.Element {
             weight={900}
             color={colors.ivory}
           >
-            CIMUN XX has started!
+             <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSd8bVQf7UIEnS3bvKv7t9td3I5xBn0vNZq0Gi3BlfS81BnndA/viewform"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Click here for the Staff Interest Form!
+            </a>
           </Body>
           {/* TODO: Update Schedule */}
           {/* <Body
