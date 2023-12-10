@@ -21,22 +21,17 @@ export default function InfoColumns(): JSX.Element {
             self="start"
             margins="0 0 0.25rem 0"
             size="2rem"
-            weight={900}
-            deco="underline"
-            color={colors.ivory}
-          >
-            Important Dates
-          </Body>
-          <Body
-            align="start"
-            self="start"
-            margins="0 0 0.25rem 0"
-            size="2rem"
             styling="italic"
             weight={900}
             color={colors.ivory}
           >
-            CIMUN XX has started!
+             <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSd8bVQf7UIEnS3bvKv7t9td3I5xBn0vNZq0Gi3BlfS81BnndA/viewform"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Click Here for the Staff Interest Form
+            </a>
           </Body>
           {/* TODO: Update Schedule */}
           {/* <Body
