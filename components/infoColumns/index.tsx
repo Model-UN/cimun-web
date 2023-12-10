@@ -25,7 +25,7 @@ export default function InfoColumns(): JSX.Element {
             deco="underline"
             color={colors.ivory}
           >
-            Important Dates
+            Staff Interest Form
           </Body>
           <Body
             align="start"
@@ -41,7 +41,7 @@ export default function InfoColumns(): JSX.Element {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Click here for the Staff Interest Form!
+              Click Here
             </a>
           </Body>
           {/* TODO: Update Schedule */}
