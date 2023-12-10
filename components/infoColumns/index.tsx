@@ -21,17 +21,6 @@ export default function InfoColumns(): JSX.Element {
             self="start"
             margins="0 0 0.25rem 0"
             size="2rem"
-            weight={900}
-            deco="underline"
-            color={colors.ivory}
-          >
-            Staff Interest Form
-          </Body>
-          <Body
-            align="start"
-            self="start"
-            margins="0 0 0.25rem 0"
-            size="2rem"
             styling="italic"
             weight={900}
             color={colors.ivory}
@@ -41,7 +30,7 @@ export default function InfoColumns(): JSX.Element {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Click Here
+              Click Here for the Staff Interest Form
             </a>
           </Body>
           {/* TODO: Update Schedule */}
