@@ -72,7 +72,7 @@ const HeaderNav = () => {
                 <Anchor>The CIMUN Chronicle</Anchor>
               </Link>
             </ListItem>
-            {/* <ListItem>
+            <ListItem>
               <Link href="/school-registration" passHref legacyBehavior>
                 <Anchor>Register</Anchor>
               </Link>
@@ -81,7 +81,7 @@ const HeaderNav = () => {
               <Link href="/staff-app" passHref legacyBehavior>
                 <Anchor>Staff CIMUN XX</Anchor>
               </Link>
-            </ListItem> */}
+            </ListItem> 
           </ListContainer>
         </DesktopNav>
 

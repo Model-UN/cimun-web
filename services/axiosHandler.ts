@@ -66,3 +66,18 @@ export const postFormSubmission = async (
 ): Promise<AxiosResponse> => {
   return await axios.post(`${BASE_URL}/forms/${formId}`, submitFormDto);
 };
+
+
+export const addStudent = async () => {
+  let responseData;
+  await axios
+    .post("https://idea-api-419802.uc.r.appspot.com/student/")
+    .then((response) => {
+      console.log(response);
+      responseData = response.data;
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+  return responseData;
+};

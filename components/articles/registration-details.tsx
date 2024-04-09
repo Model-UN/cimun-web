@@ -8,6 +8,9 @@ import {
   PillButtonRow,
 } from "../../app/components/elements";
 import { colors } from "../../styles/colors";
+import{
+  addStudent,
+} from "../../services/axiosHandler";
 
 const PricingTable = styled.table`
   font-size: 1.5rem;
@@ -61,6 +64,11 @@ const Pricing = () => {
   );
 };
 
+async function addNewStudent() {
+    const response = await addStudent();
+    console.log(response);
+  };
+
 const RegistrationDetails = () => {
   return (
     <MaterialCard flexdirection="column" $noAnimate background={colors.ivory}>
@@ -110,6 +118,14 @@ const RegistrationDetails = () => {
             <br />
           </PillButton>
         </Link>
+      </PillButtonRow>
+      <PillButtonRow>
+          <PillButton selectedColor={colors.carolinaBlue} onClick={() => addNewStudent()}>
+            <br />
+            Register Student
+            <br />
+            <br />
+          </PillButton>
       </PillButtonRow>
       {/* <Pricing />
       <Body
