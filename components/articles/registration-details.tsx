@@ -64,11 +64,6 @@ const Pricing = () => {
   );
 };
 
-async function addNewStudent() {
-    const response = await addStudent();
-    console.log(response);
-  };
-
 const RegistrationDetails = () => {
   return (
     <MaterialCard flexdirection="column" $noAnimate background={colors.ivory}>
@@ -120,12 +115,14 @@ const RegistrationDetails = () => {
         </Link>
       </PillButtonRow>
       <PillButtonRow>
-          <PillButton selectedColor={colors.carolinaBlue} onClick={() => addNewStudent()}>
+      <Link href="/register-student">
+          <PillButton selectedColor={colors.carolinaBlue}>
             <br />
             Register Student
             <br />
             <br />
           </PillButton>
+      </Link>
       </PillButtonRow>
       {/* <Pricing />
       <Body
